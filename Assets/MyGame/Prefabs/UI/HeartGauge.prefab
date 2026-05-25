@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &1763331285824116844
 GameObject:
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6359757209484108155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c13275ac5ad9494b8595069cf52a687, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ac7a3186923884aba2373e2e89af9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeartGauge
   progress: {fileID: 4720319920903435969}

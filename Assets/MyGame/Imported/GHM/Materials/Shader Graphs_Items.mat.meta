@@ -1,11 +1,8 @@
-fileFormatVersion: 2
-guid: 20329c6a68a27764daceb9b567565f1a
-MonoImporter:
+﻿fileFormatVersion: 2
+guid: 4cbf1914eab0e2547b559b8c13462cbf
+NativeFormatImporter:
   externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -14,5 +11,5 @@ AssetOrigin:
   productId: 278941
   packageName: Gem Hunter Match - 2D Sample Project
   packageVersion: 1.6
-  assetPath: Assets/MyGame/Scripts/Editor/BonusGemEditor.cs
+  assetPath: Assets/MyGame/Imported/GHM/Materials/Shader Graphs_Items.mat
   uploadId: 699660

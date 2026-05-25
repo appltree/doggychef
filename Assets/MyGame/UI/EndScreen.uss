@@ -1,5 +1,5 @@
-/* =========================================================
-   End Screen — 게임 종료 오버레이
+﻿/* =========================================================
+   End Screen ??寃뚯엫 醫낅즺 ?ㅻ쾭?덉씠
    ========================================================= */
 #EndTitleContent {
     display: none;
@@ -72,7 +72,7 @@
     font-style: normal;
     font-weight: bold;
     flex-grow: 1;
-    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_Button_Blue.png?fileID=2800000&guid=3e154db55e714bc499bdaecb3f0b36e8&type=3#Sprite_Button_Blue");
+    background-image: url("project://database/Assets/MyGame/Imported/GHM/Images/UI/Sprite_Button_Blue.png?fileID=2800000&guid=3e154db55e714bc499bdaecb3f0b36e8&type=3#Sprite_Button_Blue");
     -unity-slice-scale: 1px;
     -unity-slice-left: 129;
     -unity-slice-top: 67;
@@ -88,5 +88,5 @@
 }
 
 .end-screen__button--green {
-    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_Button_green.png?fileID=2800000&guid=2b72ed0757b2e7b4bb73630d21bc8a32&type=3#Sprite_Button_green");
+    background-image: url("project://database/Assets/MyGame/Imported/GHM/Images/UI/Sprite_Button_green.png?fileID=2800000&guid=2b72ed0757b2e7b4bb73630d21bc8a32&type=3#Sprite_Button_green");
 }

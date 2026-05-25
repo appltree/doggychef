@@ -1,5 +1,5 @@
-/* =========================================================
-   Top HUD — 전체 컨테이너
+﻿/* =========================================================
+   Top HUD ???꾩껜 而⑦뀒?대꼫
    ========================================================= */
 .top-hud {
     flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 /* =========================================================
-   Stars Area — 별점 3개 (탑바 위 중앙)
+   Stars Area ??蹂꾩젏 3媛?(?묐컮 ??以묒븰)
    ========================================================= */
 .stars__area {
     flex-direction: row;
@@ -22,7 +22,7 @@
     height: 48px;
     margin-left: 4px;
     margin-right: 4px;
-    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/StarAlbedo.png?fileID=21300000&guid=8ab432f8a7a1a8049afc24cec79e3e4a&type=3#StarAlbedo");
+    background-image: url("project://database/Assets/MyGame/Imported/GHM/Images/UI/StarAlbedo.png?fileID=21300000&guid=8ab432f8a7a1a8049afc24cec79e3e4a&type=3#StarAlbedo");
     -unity-background-scale-mode: scale-to-fit;
 }
 
@@ -31,7 +31,7 @@
 }
 
 /* =========================================================
-   TopBar — 한 줄 레이아웃
+   TopBar ????以??덉씠?꾩썐
    ========================================================= */
 .topbar {
     flex-direction: row;
@@ -39,7 +39,7 @@
     padding: 8px 16px 12px 16px;
 }
 
-/* 일시정지 버튼 */
+/* ?쇱떆?뺤? 踰꾪듉 */
 .topbar__pause-btn {
     width: 74px;
     height: 74px;
@@ -47,7 +47,7 @@
     border-width: 0;
     margin-right: 14px;
     background-color: rgba(30, 30, 30, 0.75);
-    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_UI_setupicon.png?fileID=21300000&guid=2ff87e2a3f41b164c82d17ef1e3edb55&type=3#Sprite_UI_setupicon");
+    background-image: url("project://database/Assets/MyGame/Imported/GHM/Images/UI/Sprite_UI_setupicon.png?fileID=21300000&guid=2ff87e2a3f41b164c82d17ef1e3edb55&type=3#Sprite_UI_setupicon");
     -unity-background-scale-mode: scale-to-fit;
     flex-shrink: 0;
 }
@@ -56,7 +56,7 @@
     -unity-background-image-tint-color: rgb(255, 244, 151);
 }
 
-/* 패널 공통 (코인, 타이머) */
+/* ?⑤꼸 怨듯넻 (肄붿씤, ??대㉧) */
 .topbar__panel {
     flex-direction: row;
     align-items: center;
@@ -66,7 +66,7 @@
     margin-right: 12px;
 }
 
-/* 아이콘 공통 */
+/* ?꾩씠肄?怨듯넻 */
 .topbar__icon {
     width: 62px;
     height: 62px;
@@ -77,7 +77,7 @@
 
 .topbar__icon--coin {
     background-color: rgb(255, 195, 0);
-    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_coin_icon.png?fileID=21300000&guid=7d9a84c1c2c8a0f4c9a3a48fa7fc2be5&type=3#Sprite_coin_icon");
+    background-image: url("project://database/Assets/MyGame/Imported/GHM/Images/UI/Sprite_coin_icon.png?fileID=21300000&guid=7d9a84c1c2c8a0f4c9a3a48fa7fc2be5&type=3#Sprite_coin_icon");
 }
 
 .topbar__icon--timer {
@@ -86,7 +86,7 @@
     border-color: rgb(180, 180, 180);
 }
 
-/* 패널 우측 정보 영역 */
+/* ?⑤꼸 ?곗륫 ?뺣낫 ?곸뿭 */
 .topbar__panel__info {
     flex-direction: column;
     margin-left: 10px;
@@ -94,7 +94,7 @@
     min-width: 140px;
 }
 
-/* 점수 값 */
+/* ?먯닔 媛?*/
 .topbar__score-value {
     font-size: 38px;
     -unity-font-style: bold;
@@ -104,7 +104,7 @@
     margin-bottom: 2px;
 }
 
-/* 이동 횟수 / 하트 (타이쿤: ♥ n/max) */
+/* ?대룞 ?잛닔 / ?섑듃 (??댁엘: ??n/max) */
 .topbar__move-text {
     font-size: 36px;
     -unity-font-style: bold;
@@ -115,7 +115,7 @@
 }
 
 /* =========================================================
-   Progress Bars — 탑바 내 가로 프로그레스 바
+   Progress Bars ???묐컮 ??媛濡??꾨줈洹몃젅??諛?
    ========================================================= */
 .progressbar {
     height: 20px;

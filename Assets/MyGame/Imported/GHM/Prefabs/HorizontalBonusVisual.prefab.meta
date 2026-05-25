@@ -1,11 +1,7 @@
-fileFormatVersion: 2
-guid: 20329c6a68a27764daceb9b567565f1a
-MonoImporter:
+﻿fileFormatVersion: 2
+guid: 2f499eb51442d584c8fbe1967c62e2fa
+PrefabImporter:
   externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -14,5 +10,5 @@ AssetOrigin:
   productId: 278941
   packageName: Gem Hunter Match - 2D Sample Project
   packageVersion: 1.6
-  assetPath: Assets/MyGame/Scripts/Editor/BonusGemEditor.cs
+  assetPath: Assets/MyGame/Imported/GHM/Prefabs/HorizontalBonusVisual.prefab
   uploadId: 699660

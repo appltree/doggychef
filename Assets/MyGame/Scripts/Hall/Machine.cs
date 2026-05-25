@@ -61,7 +61,7 @@ namespace MyMatch3
         {
             StartProduction();
             SubscribeToTableEvents();
-            SubscribeToBlockEvents();
+            SubscribeToGemEvents();
         }
 
 
@@ -70,7 +70,7 @@ namespace MyMatch3
             StopAllCoroutines();
             StopGlowPulse();
             UnsubscribeFromTableEvents();
-            UnsubscribeFromBlockEvents();
+            UnsubscribeFromGemEvents();
         }
 
         void Update()
@@ -338,22 +338,22 @@ namespace MyMatch3
             }
         }
 
-        // 블록 이벤트 구독
-        private void SubscribeToBlockEvents()
+        // 젬 이벤트 구독
+        private void SubscribeToGemEvents()
         {
-            BlockController.OnBlockDragged += HandleBlockDragged;
+            Board.OnGemDragged += HandleGemDragged;
         }
 
-        // 블록 이벤트 구독 해제
-        private void UnsubscribeFromBlockEvents()
+        // 젬 이벤트 구독 해제
+        private void UnsubscribeFromGemEvents()
         {
-            BlockController.OnBlockDragged -= HandleBlockDragged;
+            Board.OnGemDragged -= HandleGemDragged;
         }
 
-        // 블록 드래그 이벤트 처리
-        private void HandleBlockDragged(Block block, DragDirection direction)
+        // 젬 드래그 이벤트 처리
+        private void HandleGemDragged(Gem gem, Vector3Int direction)
         {
-            // Active 상태에서 블록이 드래그되면 Completed 상태로 변경
+            // Active 상태에서 젬이 드래그되면 Completed 상태로 변경
             if (currentState == MachineState.Active)
             {
                 currentState = MachineState.Completed;

@@ -540,8 +540,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1,000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e30d05f73d3af54dbab3b7fa196f0f1, type: 2}
-  m_sharedMaterial: {fileID: 7430584026539730111, guid: 0e30d05f73d3af54dbab3b7fa196f0f1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1433,17 +1433,22 @@ Tilemap:
       m_AllTileFlags: 1073741826
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 0
+  - serializedVersion: 2
+    m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 64
+  - serializedVersion: 2
+    m_RefCount: 64
     m_Data: {fileID: 11400000, guid: 78a0642b3440fe847806b2971f82dfaa, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 0
+  - serializedVersion: 2
+    m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 64
+  - serializedVersion: 2
+    m_RefCount: 64
     m_Data: {fileID: -4010933853722667251, guid: c01a8e59e522b724f8273e61a8fd1c75, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 64
+  - serializedVersion: 2
+    m_RefCount: 64
     m_Data:
       e00: 1
       e01: 0
@@ -1462,9 +1467,11 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 64
+  - serializedVersion: 2
+    m_RefCount: 64
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 0
+  - serializedVersion: 2
+    m_RefCount: 0
     m_Data: {r: 0, g: 0, b: 0, a: 0}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1544,10 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85550e82e0c36b44bbce5cd7eef99ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.HallManager
-  Tables:
-  - {fileID: 393283430}
-  - {fileID: 1451153251}
-  - {fileID: 1432304870}
+  Tables: []
   IngredientSlotPrefab: {fileID: 0}
   AllRecipes:
   - {fileID: 11400000, guid: fb1682971b3c2a64ea90ad54beefc074, type: 2}
@@ -2046,17 +2050,6 @@ MonoBehaviour:
   Background: {fileID: 0}
   Music: {fileID: 0}
   ObjectiveText: 
---- !u!114 &393283430 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
-  m_PrefabInstance: {fileID: 3438872706669254535}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!4 &393283433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2823604730970090567, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
@@ -4529,7 +4522,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 24.256447, y: 1.26}
+  m_Size: {x: 1.19, y: 1.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4539,33 +4532,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1000000002, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
   m_PrefabInstance: {fileID: 197614412}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1432304870 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
-  m_PrefabInstance: {fileID: 187811551}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!4 &1432304871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2823604730970090567, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
   m_PrefabInstance: {fileID: 187811551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1451153251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
-  m_PrefabInstance: {fileID: 1968847663}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!4 &1451153252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2823604730970090567, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
@@ -4648,6 +4619,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -5483,7 +5455,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 8.4, y: 8.4}
+  m_Size: {x: 1.45, y: 1.4125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6998,29 +6970,40 @@ Tilemap:
       m_AllTileFlags: 0
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 51
+  - serializedVersion: 2
+    m_RefCount: 51
     m_Data: {fileID: 11400000, guid: 897673843edf2274ba89efd75c204458, type: 2}
-  - m_RefCount: 10
+  - serializedVersion: 2
+    m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 00e27f3a770a0f245953ce1e697aa3bb, type: 2}
-  - m_RefCount: 8
+  - serializedVersion: 2
+    m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 22b9a88ac17d66c4ca46e9f3f62a2cdc, type: 2}
-  - m_RefCount: 1
+  - serializedVersion: 2
+    m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c54f075afb559ee4488e6ced529d13c2, type: 2}
-  - m_RefCount: 2
+  - serializedVersion: 2
+    m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 2f98a7f2911868d4f9e3623a1f4f7519, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 51
+  - serializedVersion: 2
+    m_RefCount: 51
     m_Data: {fileID: 21300000, guid: 5de282f08cea35641a6e20feb05395a0, type: 3}
-  - m_RefCount: 10
+  - serializedVersion: 2
+    m_RefCount: 10
     m_Data: {fileID: -732709845924896499, guid: cd3039c7a73c38143852a2d30846932c, type: 3}
-  - m_RefCount: 8
+  - serializedVersion: 2
+    m_RefCount: 8
     m_Data: {fileID: 7482667652216324306, guid: 913563f5796b73e468e928882211cad7, type: 3}
-  - m_RefCount: 1
+  - serializedVersion: 2
+    m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 57aba4f057e4ef746a075dd02e338ce1, type: 3}
-  - m_RefCount: 2
+  - serializedVersion: 2
+    m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 1586ac626f851c34a81029d958c0635b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 72
+  - serializedVersion: 2
+    m_RefCount: 72
     m_Data:
       e00: 1
       e01: 0
@@ -7039,7 +7022,8 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 72
+  - serializedVersion: 2
+    m_RefCount: 72
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

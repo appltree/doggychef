@@ -180,6 +180,7 @@ namespace MyMatch3
         //    Vector3 → 파괴 위치 (날아가는 애니메이션 시작점)
         // ══════════════════════════════════════════════════════════
         public static event Action<Gem, Vector3> OnGemExploded;
+        public static event Action<Gem, Vector3Int> OnGemDragged;
 
         // SmallBomb 머지 연출이 끝난 후 지연 발화하는 폭발 이벤트.
         // Gem 오브젝트가 이미 파괴된 시점이므로 필요한 데이터를 미리 추출해 전달합니다.
@@ -1644,6 +1645,7 @@ namespace MyMatch3
                     m_StartSwipe = startCell;
                     m_EndSwipe = endCell;
                     m_SwipeQueued = true;
+                    OnGemDragged?.Invoke(startCellContent.ContainingGem, endCell - startCell);
                 }
             }
         }

@@ -86,7 +86,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.1692308, y: 1.1692308}
+  m_Size: {x: 1.52, y: 1.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -177,7 +177,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8333333, y: 0.825}
+  m_Size: {x: 0.7692308, y: 0.76153845}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -288,10 +288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ed975d9597d394a96c5ee732e3dcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.ColorClean
-  GemType: -3
   MatchEffectPrefabs: []
   UISprite: {fileID: 21300000, guid: 8367ac4afe7d5904fb2bd22c931e9bc6, type: 3}
   SpeedMultiplier: 1
+  GemType: -3
+  ExplodeCount: 1
   Shapes:
   - CanMirror: 0
     CanRotate: 1

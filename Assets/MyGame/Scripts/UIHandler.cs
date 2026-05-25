@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 namespace MyMatch3
 {
     // 원본 GemHunterMatch의 UIHandler를 MyMatch3 구조에 맞게 그대로 복제한 버전입니다.
-    // - BottomBar: m_BottomBarRoot.Children() 순회 + "selected" CSS 클래스 방식
     // - Win/Lose:  EndTitleContent(타이틀) + EndScreen(결과창) 분리 구조
     // - UpdateTopBarData: CoinLabel / LiveLabel / StarLabel 갱신
     public class UIHandler : MonoBehaviour
@@ -22,10 +21,6 @@ namespace MyMatch3
 
         // ── Canvas HUD 페이드인 ──
         private CanvasGroup m_HUDCanvasGroup;
-
-        // ── BottomBar (원본 그대로) ──
-        private VisualElement m_BottomBarRoot;
-        private VisualElement m_SelectedBonusItem;   // 원본: m_SelectedBonusItem
 
         // ── 종료 화면 (원본: EndTitleContent + EndScreen 분리) ──
         private VisualElement m_EndTitleContent;
@@ -72,9 +67,6 @@ namespace MyMatch3
             m_EndTitleContent.style.display = DisplayStyle.None;
             m_EndScreen.style.display = DisplayStyle.None;
 
-            // 하단 부스터 루트
-            m_BottomBarRoot = root.Q<VisualElement>("BoosterZone");
-
             // ReplayButton
             var replayBtn = root.Q<Button>("ReplayButton");
             if (replayBtn != null)
@@ -110,9 +102,6 @@ namespace MyMatch3
                 m_FadeCallback?.Invoke();
                 m_FadeCallback = null;
             });
-
-            // BottomBar 구성
-            CreateBottomBar();
 
             // ── GameState 이벤트 구독 ──
             // Closing → 보드 입력 차단 / Result → ShowEnd() 호출
@@ -152,126 +141,6 @@ namespace MyMatch3
                 m_EndScreen.style.display = DisplayStyle.None;
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  하단바 : 원본 CreateBottomBar / UpdateBottomBar / DeselectBonusItem
-        // ─────────────────────────────────────────────────────────────
-
-        /// <summary>
-        /// 원본 UIHandler.CreateBottomBar() 와 동일한 구조.
-        /// m_BottomBarRoot.Children() 을 순회하며 각 슬롯에 BonusItems 연결.
-        /// </summary>
-        public void CreateBottomBar()
-        {
-            if (m_BottomBarRoot == null)
-            {
-                Debug.LogWarning("BoosterZone (BottomBarRoot) 을 찾을 수 없습니다!");
-                return;
-            }
-
-            int bonusCount = GameManager.Instance.BonusItems.Count;
-
-            int currentBonusIndex = 0;
-            foreach (var child in m_BottomBarRoot.Children())
-            {
-                var icon = child.Q<VisualElement>("ImageBooster");
-                var bonusButton = child.Q<Button>("ButtonBooster");
-
-                if (currentBonusIndex < bonusCount)
-                {
-                    var entry = GameManager.Instance.BonusItems[currentBonusIndex];
-
-                    if (entry.Item != null)
-                    {
-                        icon.style.display = DisplayStyle.Flex;
-                        if (entry.Item.UISprite != null)
-                        {
-                            icon.style.backgroundImage = Background.FromSprite(entry.Item.UISprite);
-                        }
-
-                        // 클릭 이벤트 할당 (캡처 변수 사용)
-                        var itemToActivate = entry.Item;
-                        var childToSelect = child;
-                        var capturedEntry = entry;
-
-                        bonusButton.clicked += () =>
-                        {
-                            // ── 즉시형 부스터 (IsInstant == true) ──
-                            // 보드 클릭 없이 버튼을 누르는 순간 바로 효과 발동
-                            if (itemToActivate.IsInstant)
-                            {
-                                if (capturedEntry.Amount > 0)
-                                {
-                                    itemToActivate.UseInstant();
-                                    capturedEntry.Amount -= 1;
-                                    UpdateBottomBar();
-                                }
-                                return;
-                            }
-
-                            // ── 일반 부스터 (보드 클릭 필요) ──
-                            var currentSelected = m_SelectedBonusItem;
-                            DeselectBonusItem();
-
-                            // 이미 선택된 슬롯을 다시 누르면 해제
-                            if (currentSelected == childToSelect)
-                            {
-                                GameManager.Instance.ActivateBonusItem(null);
-                                return;
-                            }
-
-                            m_SelectedBonusItem = childToSelect;
-                            m_SelectedBonusItem.AddToClassList("booster__container--selected");
-
-                            GameManager.Instance.ActivateBonusItem(itemToActivate);
-                        };
-                    }
-                }
-                else
-                {
-                    if (icon != null) icon.style.display = DisplayStyle.None;
-                }
-
-                currentBonusIndex++;
-            }
-
-            UpdateBottomBar();
-        }
-
-        /// <summary>원본 UIHandler.UpdateBottomBar() 그대로</summary>
-        public void UpdateBottomBar()
-        {
-            if (m_BottomBarRoot == null) return;
-
-            int currentBonus = 0;
-            foreach (var child in m_BottomBarRoot.Children())
-            {
-                var count = child.Q<Label>("LabelBoosterNumber");
-                var bonusButton = child.Q<Button>("ButtonBooster");
-
-                if (currentBonus < GameManager.Instance.BonusItems.Count)
-                {
-                    var item = GameManager.Instance.BonusItems[currentBonus];
-                    count.text = item.Amount.ToString();
-                    bonusButton.SetEnabled(item.Amount != 0);
-                }
-
-                currentBonus++;
-            }
-        }
-
-        /// <summary>원본 UIHandler.DeselectBonusItem() 그대로</summary>
-        public void DeselectBonusItem()
-        {
-            if (m_SelectedBonusItem == null) return;
-
-            GameManager.Instance.ActivateBonusItem(null);
-            m_SelectedBonusItem.RemoveFromClassList("booster__container--selected");  // BEM 구조 적용
-            m_SelectedBonusItem = null;
-        }
-
-        // ─────────────────────────────────────────────────────────────
-        //  종료화면 통계 갱신 — UpdateTopBarData()
-        // ─────────────────────────────────────────────────────────────
         public void UpdateTopBarData()
         {
             int earned = LevelData.Instance != null ? LevelData.Instance.EarnedMoney : GameManager.Instance.Coins;

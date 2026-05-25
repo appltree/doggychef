@@ -342,11 +342,6 @@ namespace MyMatch3
                 // Canvas BoosterPanel 없음 — 즉시 발동 후 UIHandler로 폴백
                 existingItem.Item.MoveTo(cell);
                 existingItem.Item.Use(null, true);
-                if (UIHandler.Instance != null)
-                {
-                    UIHandler.Instance.DeselectBonusItem();
-                    UIHandler.Instance.UpdateBottomBar();
-                }
             }
         }
 

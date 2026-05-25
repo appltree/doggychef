@@ -2,6 +2,5 @@
  *
  *   Common.uss    — 공통 변수, 게임 영역, 커버
  *   TopHUD.uss    — 별점, 탑바, 가로 프로그레스 바
- *   BottomHUD.uss — 부스터 슬롯
  *   EndScreen.uss — 엔드 스크린
  */

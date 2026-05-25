@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         editor-extension-mode="False">
+
+    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
+    <Style src="project://database/Assets/MyGame/UI/TopHUD.uss" />
+
+    <ui:VisualElement name="TopHUD" class="top-hud">
+
+        <!-- 별점 (상단 중앙) -->
+        <ui:VisualElement name="StarsArea" class="stars__area" style="display: none;">
+            <ui:VisualElement name="Star1" class="star__icon star__icon--filled" />
+            <ui:VisualElement name="Star2" class="star__icon star__icon--filled" />
+            <ui:VisualElement name="Star3" class="star__icon star__icon--empty" />
+        </ui:VisualElement>
+
+        <!-- 탑바 한 줄: [일시정지] [코인+점수바] [타이머바] -->
+        <ui:VisualElement name="TopBar" class="topbar">
+
+            <!-- 일시정지 버튼 -->
+            <ui:Button name="PauseButton" class="topbar__pause-btn" style="display: none;" />
+
+            <!-- 코인 / 점수 패널 -->
+            <ui:VisualElement name="ScorePanel" class="topbar__panel" style="display: none;">
+                <ui:VisualElement name="CoinIcon" class="topbar__icon topbar__icon--coin" />
+                <ui:VisualElement class="topbar__panel__info">
+                    <ui:Label name="ScoreText" text="3333" class="topbar__score-value" />
+                    <ui:VisualElement class="progressbar">
+                        <ui:VisualElement name="ScoreBarFill" class="progressbar__fill progressbar__fill--orange" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- 타이머 패널 -->
+            <ui:VisualElement name="TimerPanel" class="topbar__panel" style="display: none;">
+                <ui:VisualElement name="TimerIcon" class="topbar__icon topbar__icon--timer" />
+                <ui:VisualElement class="progressbar progressbar--wide">
+                    <ui:VisualElement name="TimerBarFill" class="progressbar__fill progressbar__fill--green" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- 이동 횟수 / 하트 (타이쿤 모드: ♥ n/max) -->
+            <ui:Label name="MoveText" text="" class="topbar__move-text" style="display: none;" />
+
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+
+</ui:UXML>

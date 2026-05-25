@@ -1,0 +1,59 @@
+/* =========================================================
+   공통 변수 & 폰트
+   ========================================================= */
+:root {
+    --design-width: 1080px;
+    --design-height: 1920px;
+    --main-color: rgb(0, 127, 226);
+    --main-radius: 20px;
+    --main-text-color: white;
+    --secondary-color: rgb(0, 159, 249);
+    -unity-font: url("project://database/Assets/MyGame/Fonts/Binggrae.ttf?fileID=12800000&guid=8690645e2043f094891d27388a3d602e&type=3#Binggrae");
+    font-family: url("project://database/Assets/MyGame/Fonts/Binggrae.ttf?fileID=12800000&guid=8690645e2043f094891d27388a3d602e&type=3#Binggrae");
+    -unity-font-definition: url("project://database/Assets/MyGame/Fonts/Binggrae%20SDF.asset?fileID=11400000&guid=6ae739ab846a2be45bfaee4ed5ce4b37&type=2#Binggrae SDF");
+    color: rgb(38, 41, 104);
+}
+
+/* =========================================================
+   Game Area — 보드 뒤에 렌더링, 투명 컨테이너
+   ========================================================= */
+.game-area {
+    flex-grow: 1;
+    position: relative;
+}
+
+/* =========================================================
+   Right Progress Bar — 우측 세로 인디케이터
+   ========================================================= */
+.right-progress-bar {
+    position: absolute;
+    right: 18px;
+    top: 24px;
+    bottom: 24px;
+    width: 26px;
+    background-color: rgba(80, 60, 100, 0.25);
+    border-radius: 13px;
+    overflow: hidden;
+    -unity-overflow-clip-box: content-box;
+}
+
+.right-progress-bar__fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    border-radius: 13px;
+    background-color: rgb(210, 100, 230);
+}
+
+/* =========================================================
+   Cover — 페이드 인/아웃
+   ========================================================= */
+#Cover {
+    transition-duration: 2s;
+}
+
+.no-transition {
+    transition-duration: 0s;
+}

@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         editor-extension-mode="False">
+
+    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
+    <Style src="project://database/Assets/MyGame/UI/EndScreen.uss" />
+
+    <!-- 승/패 타이틀 (게임 종료 시 표시, 기본 숨김) -->
+    <ui:VisualElement name="EndTitleContent">
+        <ui:Label name="WinTitle" text="VICTORY!" />
+        <ui:Label name="LoseTitle" text="GAME OVER" />
+    </ui:VisualElement>
+
+    <!-- 결과 화면 (타이틀 이후 3초 뒤 표시, 기본 숨김) -->
+    <ui:VisualElement name="EndScreen">
+
+        <!-- 통계 수치 -->
+        <ui:VisualElement class="end-screen__stats">
+            <ui:VisualElement class="end-screen__stat-item">
+                <ui:Label text="SCORE" class="end-screen__title" />
+                <ui:Label name="CoinLabel" text="0" class="end-screen__value" />
+            </ui:VisualElement>
+            <ui:VisualElement class="end-screen__stat-item">
+                <ui:Label text="LIVES" class="end-screen__title" />
+                <ui:Label name="LiveLabel" text="5" class="end-screen__value" />
+            </ui:VisualElement>
+            <ui:VisualElement class="end-screen__stat-item">
+                <ui:Label text="STARS" class="end-screen__title" />
+                <ui:Label name="StarLabel" text="0" class="end-screen__value" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- 액션 버튼 -->
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Button name="SelectLevelButton" text="Select Level"
+                       class="end-screen__button end-screen__button--green" />
+            <ui:Button name="ReplayButton" text="Replay"
+                       class="end-screen__button" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+
+</ui:UXML>

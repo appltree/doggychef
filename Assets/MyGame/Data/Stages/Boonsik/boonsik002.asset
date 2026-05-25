@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29f496b3c156834d811a1d7060d4736, type: 3}
+  m_Name: boonsik002
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.StageData
+  Number: 2
+  TimeLimit: 300
+  GoalGold: 2000
+  GoalPerpect: 3500
+  FeverHeartCount: 15
+  AvailableGems:
+  - {fileID: 11400000, guid: c3050a84326208b488a3ba80797aab45, type: 2}
+  - {fileID: 11400000, guid: 36be6083e923dd74ea37145b1c40a98a, type: 2}
+  - {fileID: 11400000, guid: 9839afe5399aab64a8f1a9bfc6c1a161, type: 2}
+  - {fileID: 11400000, guid: 1df124d5eb9ffff49ad00101fa34b563, type: 2}
+  - {fileID: 11400000, guid: 811150f479a6a624483c6a92c52874f8, type: 2}
+  - {fileID: 11400000, guid: a1bc411978f1fd5489b09567346cb830, type: 2}
+  - {fileID: 11400000, guid: 8cfec0c1f58a1594da10eb1fdba1438d, type: 2}

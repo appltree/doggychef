@@ -1,0 +1,64 @@
+/* =========================================================
+   Bottom Bar — 부스터 슬롯
+   ========================================================= */
+.bottom-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.booster__zone {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.booster__container {
+    min-width: 100px;
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+    transition-property: scale;
+    transition-duration: 0.1s;
+}
+
+.booster__container--selected {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out-back;
+    transition-property: scale;
+    scale: 1.2 1.2;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_UI_booster_glow.png?fileID=21300000&guid=69efe69291e4b49c780b6afb6f2215d8&type=3#Sprite_UI_booster_glow");
+    -unity-background-image-tint-color: rgb(255, 252, 160);
+}
+
+.booster__button {
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_UI_booster.png?fileID=21300000&guid=9cd5722168f304daa826dd2aabb7d8ea&type=3#Sprite_UI_booster");
+    -unity-background-scale-mode: scale-to-fit;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.booster__image {
+    position: absolute;
+    left: 13%;
+    top: 16%;
+    width: 74%;
+    height: 68%;
+    display: none;
+}
+
+.booster__label {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    font-size: 26px;
+    color: white;
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+}

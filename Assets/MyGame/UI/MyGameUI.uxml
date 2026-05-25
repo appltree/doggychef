@@ -1,0 +1,44 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ui="UnityEngine.UIElements"
+         xmlns:uie="UnityEditor.UIElements"
+         noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+         editor-extension-mode="False">
+
+    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
+
+    <!-- 기능별 분리된 UXML 템플릿 선언 -->
+    <ui:Template name="TopHUD"    src="project://database/Assets/MyGame/UI/TopHUD.uxml" />
+    <ui:Template name="BottomHUD" src="project://database/Assets/MyGame/UI/BottomHUD.uxml" />
+    <ui:Template name="EndScreen" src="project://database/Assets/MyGame/UI/EndScreen.uxml" />
+
+    <!-- FullContent: 전체 화면 루트, 세로 플렉스 컬럼 -->
+    <ui:VisualElement name="FullContent"
+        style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; flex-direction: column;">
+
+        <!-- ① 상단 HUD: 별점 + 탑바 (일시정지 / 점수 / 타이머) -->
+        <ui:Instance template="TopHUD" name="TopHUDRoot" />
+
+        <!-- ② 게임 영역: 보드가 뒤에 렌더링됨, 투명 컨테이너 -->
+        <ui:VisualElement name="GameArea" class="game-area">
+
+            <!-- 우측 세로 프로그레스 바 (콤보/점수 인디케이터) -->
+            <ui:VisualElement name="RightProgressBar" class="right-progress-bar" style="display: none;">
+                <ui:VisualElement name="RightProgressBarFill" class="right-progress-bar__fill" />
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- ③ 하단 HUD: 부스터 슬롯 3개 -->
+        <ui:Instance template="BottomHUD" name="BottomHUDRoot" />
+
+        <!-- ④ 엔드 스크린: 승/패 오버레이 (position: absolute 로 전체 덮음) -->
+        <ui:Instance template="EndScreen" name="EndScreenRoot"
+            style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+
+    </ui:VisualElement>
+
+    <!-- Cover: 페이드 인/아웃용 검은 화면 (항상 최상위) -->
+    <ui:VisualElement name="Cover" picking-mode="Ignore"
+        style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 0; background-color: rgb(0,0,0);" />
+
+</ui:UXML>

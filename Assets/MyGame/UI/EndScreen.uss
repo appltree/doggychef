@@ -1,0 +1,92 @@
+/* =========================================================
+   End Screen — 게임 종료 오버레이
+   ========================================================= */
+#EndTitleContent {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    right: 0;
+    align-items: center;
+}
+
+#WinTitle {
+    display: none;
+    font-size: 72px;
+    color: rgb(255, 220, 0);
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#LoseTitle {
+    display: none;
+    font-size: 64px;
+    color: rgb(255, 80, 80);
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#EndScreen {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.end-screen__stats {
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.end-screen__stat-item {
+    align-items: center;
+    margin: 16px;
+}
+
+.end-screen__title {
+    color: white;
+    font-size: 28px;
+}
+
+.end-screen__value {
+    font-size: 52px;
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.end-screen__button {
+    border-radius: var(--main-radius);
+    color: white;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 66px;
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+    flex-grow: 1;
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_Button_Blue.png?fileID=2800000&guid=3e154db55e714bc499bdaecb3f0b36e8&type=3#Sprite_Button_Blue");
+    -unity-slice-scale: 1px;
+    -unity-slice-left: 129;
+    -unity-slice-top: 67;
+    -unity-slice-right: 129;
+    -unity-slice-bottom: 71;
+    border-width: 0;
+    padding-bottom: 22px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.end-screen__button:hover {
+    -unity-background-image-tint-color: rgb(255, 244, 151);
+}
+
+.end-screen__button--green {
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_Button_green.png?fileID=2800000&guid=2b72ed0757b2e7b4bb73630d21bc8a32&type=3#Sprite_Button_green");
+}

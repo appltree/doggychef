@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 05_cheesekimbob
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.RecipeData
+  RecipeTag: boonsik_cheesekimbob
+  Type: 1
+  Name: "\uCE58\uC988 \uAE40\uBC25"
+  Description: "\uCE58\uC988\uB97C \uB123\uC5B4 \uB9CC\uB4E0 \uACE0\uC18C\uD55C \uAE40\uBC25"
+  ResultSprite: {fileID: 21300000, guid: 1bc3883414c0a8149ad791cfef687b6f, type: 3}
+  ExclusiveStageNumber: 4
+  PurchasePrice: 3000
+  SpecialPrice: 0
+  SellPrice: 150
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 1df124d5eb9ffff49ad00101fa34b563, type: 2}
+    Count: 3
+  - MaterialGem: {fileID: 11400000, guid: c3050a84326208b488a3ba80797aab45, type: 2}
+    Count: 4

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45ff127a7c2da44aa9f9d2a67757959, type: 3}
+  m_Name: KimbobGem
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.GemPlacerTile
+  PreviewEditorSprite: {fileID: -732709845924896499, guid: cd3039c7a73c38143852a2d30846932c, type: 3}
+  PlacedGem: {fileID: 11400000, guid: 1df124d5eb9ffff49ad00101fa34b563, type: 2}

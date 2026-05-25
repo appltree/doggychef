@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 09_hotddukbokki
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.RecipeData
+  RecipeTag: boonsik_hotddukbokki
+  Type: 1
+  Name: "\uB9E4\uC6B4 \uB5A1\uBCF6\uC774"
+  Description: "\uCCAD\uC591\uACE0\uCD94\uB97C \uC1A1\uC1A1 \uC370\uC5B4 \uB123\uC5B4
+    \uB9CC\uB4E0 \uB9DB\uC788\uAC8C \uB9E4\uC6B4 \uB5A1\uBCF6\uC774"
+  ResultSprite: {fileID: 21300000, guid: 2dcfbc30f760f7f41b22e47d428c2cb8, type: 3}
+  ExclusiveStageNumber: 21
+  PurchasePrice: 13000
+  SpecialPrice: 0
+  SellPrice: 350
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 36be6083e923dd74ea37145b1c40a98a, type: 2}
+    Count: 4
+  - MaterialGem: {fileID: 11400000, guid: a1bc411978f1fd5489b09567346cb830, type: 2}
+    Count: 4

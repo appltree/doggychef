@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721a53911b00ce849a69f242641f80cb, type: 3}
+  m_Name: kimbob
+  m_EditorClassIdentifier: 
+  blockTag: kimbob
+  sprite: {fileID: 21300000, guid: 5af9b382fed4d0047b9ea3766f02e40a, type: 3}
+  foodSfx: {fileID: 8300000, guid: fe7e66b0935bc46468474221982a80e6, type: 3}
+  mappingKey: 107

@@ -1,0 +1,145 @@
+/* =========================================================
+   Top HUD — 전체 컨테이너
+   ========================================================= */
+.top-hud {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* =========================================================
+   Stars Area — 별점 3개 (탑바 위 중앙)
+   ========================================================= */
+.stars__area {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+.star__icon {
+    width: 48px;
+    height: 48px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/StarAlbedo.png?fileID=21300000&guid=8ab432f8a7a1a8049afc24cec79e3e4a&type=3#StarAlbedo");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.star__icon--empty {
+    -unity-background-image-tint-color: rgba(80, 80, 80, 0.5);
+}
+
+/* =========================================================
+   TopBar — 한 줄 레이아웃
+   ========================================================= */
+.topbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px 12px 16px;
+}
+
+/* 일시정지 버튼 */
+.topbar__pause-btn {
+    width: 74px;
+    height: 74px;
+    border-radius: 37px;
+    border-width: 0;
+    margin-right: 14px;
+    background-color: rgba(30, 30, 30, 0.75);
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_UI_setupicon.png?fileID=21300000&guid=2ff87e2a3f41b164c82d17ef1e3edb55&type=3#Sprite_UI_setupicon");
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+.topbar__pause-btn:hover {
+    -unity-background-image-tint-color: rgb(255, 244, 151);
+}
+
+/* 패널 공통 (코인, 타이머) */
+.topbar__panel {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 40px;
+    padding: 8px 18px 8px 8px;
+    margin-right: 12px;
+}
+
+/* 아이콘 공통 */
+.topbar__icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 31px;
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+.topbar__icon--coin {
+    background-color: rgb(255, 195, 0);
+    background-image: url("project://database/Assets/GemHunterMatch/Images/UI/Sprite_coin_icon.png?fileID=21300000&guid=7d9a84c1c2c8a0f4c9a3a48fa7fc2be5&type=3#Sprite_coin_icon");
+}
+
+.topbar__icon--timer {
+    background-color: white;
+    border-width: 3px;
+    border-color: rgb(180, 180, 180);
+}
+
+/* 패널 우측 정보 영역 */
+.topbar__panel__info {
+    flex-direction: column;
+    margin-left: 10px;
+    flex-grow: 1;
+    min-width: 140px;
+}
+
+/* 점수 값 */
+.topbar__score-value {
+    font-size: 38px;
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(38, 41, 104);
+    margin-bottom: 2px;
+}
+
+/* 이동 횟수 / 하트 (타이쿤: ♥ n/max) */
+.topbar__move-text {
+    font-size: 36px;
+    -unity-font-style: bold;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(255, 80, 80);
+    margin-left: 10px;
+}
+
+/* =========================================================
+   Progress Bars — 탑바 내 가로 프로그레스 바
+   ========================================================= */
+.progressbar {
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.progressbar--wide {
+    min-width: 190px;
+}
+
+.progressbar__fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progressbar__fill--orange {
+    background-color: rgb(255, 155, 0);
+    width: 60%;
+}
+
+.progressbar__fill--green {
+    background-color: rgb(90, 215, 60);
+    width: 80%;
+}

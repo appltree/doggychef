@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23ddb8eaa0ec8f43b0ccf2d44ec127f, type: 3}
+  m_Name: LightBall
+  m_EditorClassIdentifier: 
+  bombType: 4
+  bombPrefab: {fileID: 45356526935092459, guid: 4638724142932124f87e16cc38d3cdbc, type: 3}
+  blockTag: LightBallBomb
+  mappingKey: 76

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca82925923f9ec4c8e281bbec75e77b, type: 3}
+  m_Name: Boonsik
+  m_EditorClassIdentifier: Assembly-CSharp::ShopSO
+  type: 0
+  symbol: {fileID: 21300000, guid: 582dbf1e67fc63a4ab5b9205e0e70952, type: 3}
+  mainColor: {r: 0.9882353, g: 0.42352942, b: 0.20784314, a: 1}
+  shopName: "\uBD84\uC2DD\uC9D1"
+  stages:
+  - {fileID: 11400000, guid: 3b56fa319e45c2945bac37ccc049d0e9, type: 2}
+  - {fileID: 11400000, guid: f6c73476256e6f447aeba31dcf589ff3, type: 2}
+  - {fileID: 11400000, guid: 6c4bf30c6decba74cb5ddb18af9ca4a5, type: 2}
+  recipes:
+  - {fileID: 11400000, guid: b6ba2344ac6500c428f1d94c4ff12ae4, type: 2}
+  - {fileID: 11400000, guid: a7bd1f98c4fa94d48a4d5b991a20e2bd, type: 2}
+  - {fileID: 11400000, guid: 096d79329574a0d44a8c1d2201dc7245, type: 2}
+  - {fileID: 11400000, guid: abda21a4dcafc484298bb0e85832b731, type: 2}
+  - {fileID: 11400000, guid: e0d19f9313eff4940a4c14628778117f, type: 2}
+  - {fileID: 11400000, guid: 28e42b49b48612f46abff767478e09d1, type: 2}
+  - {fileID: 11400000, guid: 597a8a61eb6b595418a64d1cab303b6b, type: 2}
+  - {fileID: 11400000, guid: 2b356bca7912f754bbf3859da01e2126, type: 2}
+  - {fileID: 11400000, guid: 54e4354c84f5d1343bab3de23597a9a0, type: 2}
+  - {fileID: 11400000, guid: 70d44876c7f612b409a01c280eb94b18, type: 2}
+  - {fileID: 11400000, guid: 1f6ab52b9c62fbd4f9061dfe390d59fb, type: 2}
+  - {fileID: 11400000, guid: 0b51238feccefae42a6a92c9a22e664e, type: 2}

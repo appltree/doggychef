@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c213dc4a45f473944bb87defc2764496, type: 3}
+  m_Name: 10_hotcheeseramen
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeSO
+  recipeTag: boonsik_hotcheeseramen
+  shopType: 0
+  recipeType: 1
+  recipeName: "\uB9E4\uC6B4 \uCE58\uC988 \uB77C\uBA74"
+  description: "\uB9F5\uC9C0\uB9CC \uBD80\uB4DC\uB7EC\uC6B4 \uAD6D\uBB3C\uC774 \uB05D\uB0B4\uC918\uC694!"
+  resultSprite: {fileID: 21300000, guid: eca0b979e14f91d45baf45e87066e62a, type: 3}
+  exclusiveStageNumber: 25
+  purchasePrice: 16000
+  dellyPrice: 0
+  sellPrice: 450
+  ingredients:
+  - block: {fileID: 11400000, guid: 34cdb00be0cc3434aa2cba6660b0fb12, type: 2}
+    count: 4
+  - block: {fileID: 11400000, guid: e93c37a383ea0da4fa2fb65441a77d03, type: 2}
+    count: 4
+  - block: {fileID: 11400000, guid: f2d356c9d71aeaa4bb8830b0b6dbab69, type: 2}
+    count: 4

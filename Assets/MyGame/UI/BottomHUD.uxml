@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         editor-extension-mode="False">
+
+    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
+    <Style src="project://database/Assets/MyGame/UI/BottomHUD.uss" />
+
+    <!-- 하단바: 부스터 슬롯은 Canvas BoosterPanel로 이전됨 -->
+    <ui:VisualElement name="BottomBar" class="bottom-bar">
+        <ui:VisualElement name="BoosterZone" class="booster__zone" style="display: none;">
+
+            <!-- 슬롯 1 -->
+            <ui:VisualElement name="ButtonBoosterContainer1" class="booster__container">
+                <ui:Button name="ButtonBooster" class="booster__button">
+                    <ui:VisualElement name="ImageBooster" class="booster__image" />
+                    <ui:Label name="LabelBoosterNumber" text="" class="booster__label" />
+                </ui:Button>
+            </ui:VisualElement>
+
+            <!-- 슬롯 2 -->
+            <ui:VisualElement name="ButtonBoosterContainer2" class="booster__container">
+                <ui:Button name="ButtonBooster" class="booster__button">
+                    <ui:VisualElement name="ImageBooster" class="booster__image" />
+                    <ui:Label name="LabelBoosterNumber" text="" class="booster__label" />
+                </ui:Button>
+            </ui:VisualElement>
+
+            <!-- 슬롯 3 -->
+            <ui:VisualElement name="ButtonBoosterContainer3" class="booster__container">
+                <ui:Button name="ButtonBooster" class="booster__button">
+                    <ui:VisualElement name="ImageBooster" class="booster__image" />
+                    <ui:Label name="LabelBoosterNumber" text="" class="booster__label" />
+                </ui:Button>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+</ui:UXML>

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c005dd57e9bc08e418ae9e0840d92a59, type: 3}
+  m_Name: Hamburger
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.ShopData
+  Type: 1
+  Symbol: {fileID: 21300000, guid: 8c94428a87d1d1f4dbb32d6319e9414a, type: 3}
+  MainColor: {r: 0.125, g: 0.686, b: 0.475, a: 1}
+  ShopName: "\uD584\uBC84\uAC70"
+  Stages: []
+  Recipes: []

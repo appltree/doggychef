@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1548072158641324473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260557733883575849}
+  - component: {fileID: 2915924097088216570}
+  m_Layer: 0
+  m_Name: BombBooster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260557733883575849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548072158641324473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.44284, y: -2.79915, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2915924097088216570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548072158641324473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2673e7a8fc7fd5f4ba35d0ba0b72e734, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.BombBooster
+  MatchEffectPrefabs: []
+  UISprite: {fileID: -9182071257217424528, guid: 6b0706f80a439e847b326018776f3c41, type: 3}
+  SpeedMultiplier: 1
+  GemType: 0
+  ExplodeCount: 1
+  Shapes: []
+  UseSound: {fileID: 8300000, guid: cdfcce695c787534299110180492b7c9, type: 3}
+  AnimSprite: {fileID: -1225664405420300010, guid: dbf651c9683435b4cb16286c0683d1bf, type: 3}
+  TriggerSound: {fileID: 8300000, guid: a0c2ee4f79bd4cc4e9272ac886118f48, type: 3}
+  ExplosionEffectPrefab: {fileID: 8043283713383838315, guid: acdc83db558d1d440ad0cba067c06ccb, type: 3}

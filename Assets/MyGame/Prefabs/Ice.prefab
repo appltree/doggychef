@@ -103,7 +103,7 @@ Animator:
   m_GameObject: {fileID: 224206743391356699}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b3eb80f369480041afe0f397562f0c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 21e093ab48e65cd48b54c16eb515f8c5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,5 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f59936152762b747a16193db6753469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.IceBlock
-  LockState: []
   BreakSfx: {fileID: 8300000, guid: 4c203db7728bbe344b2322397f365011, type: 3}

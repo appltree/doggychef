@@ -1,112 +1,109 @@
 fileFormatVersion: 2
-guid: b633fa2bd3f54f14686e3f038fb1a053
+guid: c12d2d5973ddb214ba6326029b5e344d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1075993247170539406
-    second: cat_0
+      213: -5250314731094043848
+    second: animal_cat_0
   - first:
-      213: 3463857228526754693
-    second: cat_1
+      213: -5623774675526264622
+    second: animal_cat_1
   - first:
-      213: 7196534093254501055
-    second: cat_2
+      213: -1336931177300187153
+    second: animal_cat_2
   - first:
-      213: 5076971892968362947
-    second: cat_3
+      213: 4265203817343050459
+    second: animal_cat_3
   - first:
-      213: 4516387037990142955
-    second: cat_4
+      213: -8633360310814174070
+    second: animal_cat_4
   - first:
-      213: 4785180388622165704
-    second: cat_5
+      213: -5448533023377768916
+    second: animal_cat_5
   - first:
-      213: -2666075053548052033
-    second: cat_6
+      213: 6202085749165071956
+    second: animal_cat_6
   - first:
-      213: -1452714511649490640
-    second: cat_7
+      213: 776575857234471830
+    second: animal_cat_7
   - first:
-      213: 7780358614470776179
-    second: cat_8
+      213: 4957714849903230751
+    second: animal_cat_8
   - first:
-      213: 7892033834191237442
-    second: cat_9
+      213: -5502655064684508806
+    second: animal_cat_9
   - first:
-      213: 4015063438408095402
-    second: cat_10
+      213: -7720940846890683244
+    second: animal_cat_10
   - first:
-      213: -2653735917790409300
-    second: cat_11
+      213: 6341830774723235882
+    second: animal_cat_11
   - first:
-      213: -4762345550913035320
-    second: cat_12
+      213: 1611484891033597060
+    second: animal_cat_12
   - first:
-      213: -5607423812347924107
-    second: cat_13
+      213: 5130866309987781273
+    second: animal_cat_13
   - first:
-      213: 7067646878219523604
-    second: cat_14
+      213: 4986140642314078265
+    second: animal_cat_14
   - first:
-      213: -8183501194736795486
-    second: cat_15
+      213: -1083146814177442054
+    second: animal_cat_15
   - first:
-      213: -2955775087615397681
-    second: cat_16
+      213: -8703630190321411599
+    second: animal_cat_16
   - first:
-      213: -8350665498307785012
-    second: cat_17
+      213: 993743182071714360
+    second: animal_cat_17
   - first:
-      213: -962452503970461453
-    second: cat_18
+      213: -9126304527109513742
+    second: animal_cat_18
   - first:
-      213: 1402343792810867211
-    second: cat_19
+      213: -2951871942516280426
+    second: animal_cat_19
   - first:
-      213: 1814841896407691742
-    second: cat_20
+      213: 5815713545179860618
+    second: animal_cat_20
   - first:
-      213: 8994069460169432890
-    second: cat_21
+      213: 6600568832892411212
+    second: animal_cat_21
   - first:
-      213: 5850746420685760223
-    second: cat_22
+      213: 1532687295402345934
+    second: animal_cat_22
   - first:
-      213: 22797412263831086
-    second: cat_23
+      213: -7697627409817930356
+    second: animal_cat_23
   - first:
-      213: -1450499486565631765
-    second: cat_24
+      213: -6324110063790629322
+    second: animal_cat_24
   - first:
-      213: -1759533010204427464
-    second: cat_25
+      213: 462376689903313384
+    second: animal_cat_25
   - first:
-      213: 4207106177059746982
-    second: cat_26
+      213: -3219295838880236075
+    second: animal_cat_26
   - first:
-      213: 4238875406199508272
-    second: cat_27
+      213: -7983717905343338830
+    second: animal_cat_27
   - first:
-      213: 4798630443320371394
-    second: cat_28
+      213: -386335408367687807
+    second: animal_cat_28
   - first:
-      213: -5119705434168272699
-    second: cat_29
+      213: 7601863422723372976
+    second: animal_cat_29
   - first:
-      213: 7921504526205116523
-    second: cat_30
+      213: 5032842818088139439
+    second: animal_cat_30
   - first:
-      213: 5943522070454545206
-    second: cat_31
+      213: 7467321872425101959
+    second: animal_cat_31
   - first:
-      213: -7851364157194835669
-    second: cat_32
+      213: -3108627129426338662
+    second: animal_cat_32
   - first:
-      213: -6999461949777507088
-    second: cat_33
-  - first:
-      213: -1192939570940672332
-    second: cat_34
+      213: -8840316383187201226
+    second: animal_cat_33
   externalObjects: {}
   serializedVersion: 13
   mipmaps:

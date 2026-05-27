@@ -4,11 +4,11 @@
          noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
          editor-extension-mode="False">
 
-    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
+    <Style src="project://database/Assets/Core/UI/Common.uss" />
 
     <!-- 기능별 분리된 UXML 템플릿 선언 -->
-    <!-- <ui:Template name="TopHUD"    src="project://database/Assets/MyGame/UI/TopHUD.uxml" /> -->
-    <ui:Template name="EndScreen" src="project://database/Assets/MyGame/UI/EndScreen.uxml" />
+    <!-- <ui:Template name="TopHUD"    src="project://database/Assets/Core/UI/TopHUD.uxml" /> -->
+    <ui:Template name="EndScreen" src="project://database/Assets/Core/UI/EndScreen.uxml" />
 
     <!-- FullContent: 전체 화면 루트, 세로 플렉스 컬럼 -->
     <ui:VisualElement name="FullContent"

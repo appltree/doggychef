@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          editor-extension-mode="False">
 
-    <Style src="project://database/Assets/MyGame/UI/Common.uss" />
-    <Style src="project://database/Assets/MyGame/UI/EndScreen.uss" />
+    <Style src="project://database/Assets/Core/UI/Common.uss" />
+    <Style src="project://database/Assets/Core/UI/EndScreen.uss" />
 
     <!-- 승/패 타이틀 (게임 종료 시 표시, 기본 숨김) -->
     <ui:VisualElement name="EndTitleContent">

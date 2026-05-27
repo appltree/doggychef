@@ -30,8 +30,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6190214727974493007}
   - {fileID: 8679744862746119232}
+  - {fileID: 4164031704725831745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &328101155485762139
@@ -59,7 +59,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b3cf0d6a018e156479ff9d175bf15983, type: 3}
   - {fileID: 8300000, guid: 9544db9e6453c5a4785ce702f3fa0eae, type: 3}
   SfxHappy: {fileID: 0}
---- !u!1 &3323015776132200711
+--- !u!1 &3848006320971200480
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,10 +67,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6190214727974493007}
-  - component: {fileID: 4276177955399432092}
-  - component: {fileID: 3347868229176878856}
-  - component: {fileID: 5876602561594205150}
+  - component: {fileID: 4164031704725831745}
+  - component: {fileID: 192090266659199894}
+  - component: {fileID: 1788656231760193998}
+  - component: {fileID: 7397458020408524552}
+  - component: {fileID: 5126349003819120369}
   m_Layer: 0
   m_Name: Spine GameObject (cat)
   m_TagString: Untagged
@@ -78,13 +79,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6190214727974493007
+--- !u!4 &4164031704725831745
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323015776132200711}
+  m_GameObject: {fileID: 3848006320971200480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -93,21 +94,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7526351976802534156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4276177955399432092
+--- !u!33 &192090266659199894
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323015776132200711}
+  m_GameObject: {fileID: 3848006320971200480}
   m_Mesh: {fileID: 0}
---- !u!23 &3347868229176878856
+--- !u!23 &1788656231760193998
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323015776132200711}
+  m_GameObject: {fileID: 3848006320971200480}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -126,7 +127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: efdf8047d6a5ba142855dc635df46b9b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,13 +151,61 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5876602561594205150
+--- !u!114 &7397458020408524552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3323015776132200711}
+  m_GameObject: {fileID: 3848006320971200480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: spine-unity::Spine.Unity.SkeletonRenderer
+  skeletonDataAsset: {fileID: 11400000, guid: 6893905e41ddbcf459b03724fa1c0817, type: 2}
+  initialSkinName: 
+  initialFlipX: 0
+  initialFlipY: 0
+  meshSettings:
+    useClipping: 1
+    zSpacing: 0
+    tintBlack: 0
+    canvasGroupCompatible: 0
+    pmaVertexColors: 1
+    addNormals: 0
+    calculateTangents: 0
+    immutableTriangles: 0
+  updateWhenInvisible: 3
+  clearStateOnDisable: 0
+  separatorSlotNames: []
+  enableSeparatorSlots: 0
+  disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsPositionInheritanceLimit: {x: Infinity, y: Infinity}
+  physicsRotationInheritanceLimit: 3.4028235e+38
+  physicsMovementRelativeTo: {fileID: 0}
+  threadedMeshGeneration: 2
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  maskInteraction: 0
+  fixPrefabOverrideViaMeshFilter: 2
+  wasDeprecatedTransferred: 1
+  zSpacingDeprecated: 0
+  useClippingDeprecated: 1
+  immutableTrianglesDeprecated: 0
+  pmaVertexColorsDeprecated: 1
+  tintBlackDeprecated: 0
+  addNormalsDeprecated: 0
+  calculateTangentsDeprecated: 0
+--- !u!114 &5126349003819120369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848006320971200480}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
@@ -169,7 +218,7 @@ MonoBehaviour:
   timeScale: 1
   unscaledTime: 0
   wasDeprecatedTransferred: 1
-  skeletonDataAssetDeprecated: {fileID: 11400000, guid: 6893905e41ddbcf459b03724fa1c0817, type: 2}
+  skeletonDataAssetDeprecated: {fileID: 0}
   initialSkinNameDeprecated: 
   editorSkipSkinSyncDeprecated: 0
   initialFlipXDeprecated: 0

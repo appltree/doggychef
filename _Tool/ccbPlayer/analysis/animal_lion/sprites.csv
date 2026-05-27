@@ -1,0 +1,20 @@
+nodeId,path,parentId,depth,displayName,atlasPlist,frameName,position,positionBase,anchorPoint,scale,rotation,rotationBase,flipX,flipY,visible,visibleBase,visibleSequences,positionSequences,rotationSequences,displayFrameSequences
+2,0.0.0,1,2,CCSpriteHair,animal/animal_lion.plist,animal_lion_hair_03.png,"[-7, 92, 0]","[-7, 92]","[0.5, 0]","[1, 1, false, 0]",0,0,false,false,,,,2:walkin | 3:order | 4:like | 5:angry | 6:eat,6:eat,5:angry
+3,0.0.1,1,2,CCSpriteLegLeft,animal/animal_lion.plist,animal_lion_leg_01.png,"[13, 55, 0]","[13, 55]","[0.5, 1]","[1, 1, false, 0]",0,0,false,false,true,0,2:walkin | 3:order | 4:like | 5:angry | 6:eat,2:walkin,2:walkin,
+4,0.0.2,1,2,CCSpriteArmLeft,animal/animal_lion.plist,animal_lion_arm_01.png,"[24, 84, 0]","[17, 99]","[0.5, 1]","[1, 1, false, 0]",-140,-30,true,false,true,0,2:walkin | 3:order | 5:angry,2:walkin | 5:angry,2:walkin | 5:angry,
+5,0.0.3,1,2,CCSpriteLegRight,animal/animal_lion.plist,animal_lion_leg_01.png,"[-19, 55, 0]","[-19, 55]","[0.5, 1]","[1, 1, false, 0]",0,0,false,false,true,0,2:walkin | 3:order | 4:like | 5:angry | 6:eat,2:walkin,2:walkin,
+6,0.0.4,1,2,CCSpriteArmLeft2,animal/animal_lion.plist,animal_lion_arm_02.png,"[41, 102, 0]","[41, 102]","[1, 1]","[1, 1, false, 0]",,,true,false,false,0,4:like | 6:eat,4:like,,
+7,0.0.5,1,2,CCSpriteBody,animal/animal_lion.plist,animal_lion_body_01.png,"[-2, 68, 0]","[-2, 68]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,,,,4:like | 5:angry,,
+8,0.0.6,1,2,CCSpriteArmRight2,animal/animal_lion.plist,animal_lion_arm_02.png,"[-44, 99, 0]","[-44, 99]","[0, 1]","[1, 1, false, 0]",,,false,false,false,0,4:like,4:like,,
+9,0.0.7,1,2,CCSpriteArmLeft2,animal/animal_lion.plist,animal_lion_arm_02.png,"[44, 100, 0]","[44, 100]","[1, 1]","[1, 1, false, 0]",,,true,false,false,0,4:like,4:like,,
+10,0.0.8,1,2,CCSpriteHand,animal/animal_lion.plist,animal_lion_hand_01.png,"[0, 71, 0]","[0, 71]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,4:like,4:like,,
+11,0.0.9,1,2,CCSpriteFace,animal/animal_lion.plist,animal_lion_face_02.png,"[-4, 91, 0]","[-4, 90]","[0.5, 0]","[1, 1, false, 0]",0,0,false,false,,,,4:like | 5:angry | 6:eat,6:eat,5:angry
+12,0.0.9.0,11,3,CCSpriteEye,animal/animal_lion.plist,animal_lion_eye_03.png,"[54, 45, 0]","[54, 43]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,true,0,2:walkin | 3:order | 4:like | 5:angry | 6:eat,5:angry,,2:walkin | 3:order | 4:like | 5:angry | 6:eat
+13,0.0.9.1,11,3,CCSpriteMouse,animal/animal_lion.plist,animal_lion_mouse_04.png,"[54, 40, 0]","[56, 40]","[0.5, 1]","[1, 1, false, 0]",0,0,false,false,,,,2:walkin | 3:order | 4:like | 5:angry | 6:eat,5:angry,2:walkin | 3:order | 4:like | 5:angry | 6:eat
+14,0.0.10,1,2,CCSpriteArmRight,animal/animal_lion.plist,animal_lion_arm_01.png,"[-31, 77, 0]","[-28, 97]","[0.5, 1]","[1, 1, false, 0]",140,30,false,false,true,0,2:walkin | 3:order | 5:angry,2:walkin | 5:angry,2:walkin | 5:angry,
+15,0.0.11,1,2,CCSpriteArmRight3,animal/animal_lion.plist,animal_lion_arm_02.png,"[-46, 97, 0]","[-46, 97]","[0, 1]","[1, 1, false, 0]",0,0,false,false,false,0,6:eat,6:eat,6:eat,
+16,0.0.12,1,2,CCSpriteArmLeft3,animal/animal_lion.plist,animal_lion_arm_03.png,"[38, 65, 0]","[38, 65]","[0.5, 0]","[1, 1, false, 0]",-45,-45,false,false,false,0,6:eat,6:eat,6:eat,
+17,0.0.13,1,2,CCSpriteEffectSmile,animal/animal_lion.plist,animal_lion_smile_effect_02.png,"[73, 181, 0]","[73, 181]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,4:like,4:like,,4:like
+18,0.0.14,1,2,CCSpriteEffectEat1,animal/animal_lion.plist,animal_lion_eat_effect0002.png,"[-18, 99, 0]",,"[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,6:eat,,,6:eat
+19,0.0.15,1,2,CCSpriteEffectEat2,animal/animal_lion.plist,animal_lion_eat_effect0001.png,"[28, 103, 0]",,"[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,6:eat,,,6:eat
+20,0.0.16,1,2,CCSpriteEffectAngry,animal/animal_lion.plist,animal_lion_angry_03.png,"[-4, 258, 0]","[-4, 235]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,5:angry,5:angry,,5:angry

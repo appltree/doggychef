@@ -1,0 +1,2 @@
+nodeId,path,parentId,depth,displayName,atlasPlist,frameName,position,positionBase,anchorPoint,scale,rotation,rotationBase,flipX,flipY,visible,visibleBase,visibleSequences,positionSequences,rotationSequences,displayFrameSequences
+1,0.0,0,1,CCSprite,staff/cashier.plist,cashier_normal_body.png,,,"[0.5, 0]","[1, 1, false, 0]",,,false,false,,,,,,6:work

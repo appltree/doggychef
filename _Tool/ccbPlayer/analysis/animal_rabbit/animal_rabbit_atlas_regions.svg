@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="512" viewBox="0 0 340 512">
+<rect x="0" y="0" width="256" height="512" fill="#ff00ff"/>
+<image href="../../data/animal_rabbit/animal_rabbit.png" x="0" y="0" width="256" height="512"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=26 plist=26 rotated=13 missing=0</text>
+<g>
+<title>animal_rabbit_arm_0.png | nodes=2/8/9/39/40 | rect=2,253,23,45 | rotated=true | sourceSize=47x51 | offset=-1,0</title>
+<rect x="2" y="253" width="45" height="23" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 34 257 l 8 0 l 0 8 M 42 257 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="2" y="239" width="112" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="249" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#2/8/9/39/40 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_arm_1.png | nodes=41 | rect=210,158,43,25 | rotated=false | sourceSize=43x27 | offset=0,0</title>
+<rect x="210" y="158" width="43" height="25" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="210" y="144" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="212" y="154" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#41</text>
+</g>
+<g>
+<title>animal_rabbit_arm_2.png | nodes=42 | rect=165,251,30,21 | rotated=true | sourceSize=32x25 | offset=0,0</title>
+<rect x="165" y="251" width="21" height="30" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 173 255 l 8 0 l 0 8 M 181 255 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="165" y="237" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="167" y="247" fill="#50e678" font-family="Consolas, monospace" font-size="10">#42 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_body.png | nodes=5/6 | rect=2,154,70,70 | rotated=false | sourceSize=74x72 | offset=-2,1</title>
+<rect x="2" y="154" width="70" height="70" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="2" y="140" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="150" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#5/6</text>
+</g>
+<g>
+<title>animal_rabbit_ear_0.png | nodes=19/31/38 | rect=205,218,28,48 | rotated=true | sourceSize=46x56 | offset=0,1</title>
+<rect x="205" y="218" width="48" height="28" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 240 222 l 8 0 l 0 8 M 248 222 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="165" y="204" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="167" y="214" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#19/31/38 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_ear_1.png | nodes=18/24 | rect=210,185,31,34 | rotated=true | sourceSize=37x40 | offset=1,0</title>
+<rect x="210" y="185" width="34" height="31" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 231 189 l 8 0 l 0 8 M 239 189 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="186" y="171" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="188" y="181" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#18/24 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_ear_2.png | nodes=22/23 | rect=59,247,26,46 | rotated=true | sourceSize=44x54 | offset=0,1</title>
+<rect x="59" y="247" width="46" height="26" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 92 251 l 8 0 l 0 8 M 100 251 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="59" y="233" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="61" y="243" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#22/23 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_eye_eat.png | nodes=28 | rect=188,248,54,25 | rotated=false | sourceSize=54x25 | offset=0,0</title>
+<rect x="188" y="248" width="54" height="25" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="188" y="234" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="190" y="244" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#28</text>
+</g>
+<g>
+<title>animal_rabbit_eye_normal_0.png | nodes=35 | rect=131,224,55,25 | rotated=false | sourceSize=55x25 | offset=0,0</title>
+<rect x="131" y="224" width="55" height="25" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="131" y="210" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="133" y="220" fill="#50e678" font-family="Consolas, monospace" font-size="10">#35</text>
+</g>
+<g>
+<title>animal_rabbit_eye_normal_1.png | nodes=36 | rect=2,226,55,25 | rotated=false | sourceSize=55x25 | offset=0,0</title>
+<rect x="2" y="226" width="55" height="25" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="2" y="212" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="222" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#36</text>
+</g>
+<g>
+<title>animal_rabbit_eye_normal_2.png | nodes=37 | rect=74,220,55,25 | rotated=false | sourceSize=55x25 | offset=0,0</title>
+<rect x="74" y="220" width="55" height="25" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="74" y="206" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="76" y="216" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#37</text>
+</g>
+<g>
+<title>animal_rabbit_face_0.png | nodes=20/25 | rect=2,2,85,80 | rotated=false | sourceSize=85x80 | offset=0,0</title>
+<rect x="2" y="2" width="85" height="80" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="2" y="0" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#20/25</text>
+</g>
+<g>
+<title>animal_rabbit_face_1.png | nodes=21 | rect=175,2,84,79 | rotated=true | sourceSize=84x79 | offset=0,0</title>
+<rect x="175" y="2" width="79" height="84" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 241 6 l 8 0 l 0 8 M 249 6 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="175" y="0" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="177" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#21 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_face_2.png | nodes=26 | rect=2,84,81,68 | rotated=false | sourceSize=81x68 | offset=0,0</title>
+<rect x="2" y="84" width="81" height="68" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="2" y="70" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="80" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#26</text>
+</g>
+<g>
+<title>animal_rabbit_face_3.png | nodes=27 | rect=89,2,84,80 | rotated=false | sourceSize=86x82 | offset=0,0</title>
+<rect x="89" y="2" width="84" height="80" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="89" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="91" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#27</text>
+</g>
+<g>
+<title>animal_rabbit_leg.png | nodes=3/4/7/10 | rect=131,251,29,32 | rotated=true | sourceSize=29x32 | offset=0,0</title>
+<rect x="131" y="251" width="32" height="29" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 150 255 l 8 0 l 0 8 M 158 255 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="131" y="237" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="133" y="247" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#3/4/7/10 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_mouse_cry_0.png | nodes=32 | rect=146,158,62,29 | rotated=false | sourceSize=62x29 | offset=0,0</title>
+<rect x="146" y="158" width="62" height="29" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="146" y="144" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="148" y="154" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#32</text>
+</g>
+<g>
+<title>animal_rabbit_mouse_cry_1.png | nodes=33 | rect=146,189,57,33 | rotated=false | sourceSize=57x33 | offset=0,0</title>
+<rect x="146" y="189" width="57" height="33" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="146" y="175" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="148" y="185" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#33</text>
+</g>
+<g>
+<title>animal_rabbit_mouse_eat_0.png | nodes=29 | rect=131,282,26,31 | rotated=true | sourceSize=26x31 | offset=0,0</title>
+<rect x="131" y="282" width="31" height="26" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 149 286 l 8 0 l 0 8 M 157 286 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="131" y="268" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="133" y="278" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#29 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_mouse_eat_1.png | nodes=30 | rect=49,275,30,22 | rotated=false | sourceSize=30x22 | offset=0,0</title>
+<rect x="49" y="275" width="30" height="22" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="49" y="261" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="51" y="271" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#30</text>
+</g>
+<g>
+<title>animal_rabbit_mouse_normal.png | nodes=34 | rect=237,88,16,22 | rotated=false | sourceSize=16x22 | offset=0,0</title>
+<rect x="237" y="88" width="16" height="22" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="214" y="74" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="216" y="84" fill="#50e678" font-family="Consolas, monospace" font-size="10">#34</text>
+</g>
+<g>
+<title>animal_rabbit_spit_0.png | nodes=43/45 | rect=107,247,34,22 | rotated=true | sourceSize=40x30 | offset=0,0</title>
+<rect x="107" y="247" width="22" height="34" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 116 251 l 8 0 l 0 8 M 124 251 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="107" y="233" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="109" y="243" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#43/45 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_spit_1.png | nodes=44/46 | rect=81,275,30,20 | rotated=true | sourceSize=40x30 | offset=-2,3</title>
+<rect x="81" y="275" width="20" height="30" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 88 279 l 8 0 l 0 8 M 96 279 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="81" y="261" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="83" y="271" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#44/46 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_tear_0.png | nodes=12/15 | rect=85,84,68,76 | rotated=true | sourceSize=70x80 | offset=-1,-1</title>
+<rect x="85" y="84" width="76" height="68" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 148 88 l 8 0 l 0 8 M 156 88 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="85" y="70" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="87" y="80" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#12/15 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_tear_1.png | nodes=16 | rect=74,154,64,70 | rotated=true | sourceSize=70x80 | offset=-3,1</title>
+<rect x="74" y="154" width="70" height="64" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 131 158 l 8 0 l 0 8 M 139 158 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="74" y="140" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="76" y="150" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#16 ROT</text>
+</g>
+<g>
+<title>animal_rabbit_tear_2.png | nodes=13/14/17 | rect=163,88,68,72 | rotated=true | sourceSize=70x80 | offset=-1,2</title>
+<rect x="163" y="88" width="72" height="68" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 222 92 l 8 0 l 0 8 M 230 92 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="163" y="74" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="165" y="84" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#13/14/17 ROT</text>
+</g>
+</svg>

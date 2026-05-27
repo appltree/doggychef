@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="512" viewBox="0 0 340 512">
+<rect x="0" y="0" width="256" height="512" fill="#ff00ff"/>
+<image href="../../data/animal_duck/animal_duck.png" x="0" y="0" width="256" height="512"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=17 plist=17 rotated=0 missing=0</text>
+<g>
+<title>animal_duck_arm.png | nodes=2/3/10/17/18 | rect=202,0,50,52 | rotated=false | sourceSize=50x52 | offset=0,0</title>
+<rect x="202" y="0" width="50" height="52" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="165" y="0" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="167" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#2/3/10/17/18</text>
+</g>
+<g>
+<title>animal_duck_body.png | nodes=6/7 | rect=101,204,80,69 | rotated=false | sourceSize=80x69 | offset=0,0</title>
+<rect x="101" y="204" width="80" height="69" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="101" y="190" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="103" y="200" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#6/7</text>
+</g>
+<g>
+<title>animal_duck_leg.png | nodes=4/5/8/9 | rect=202,54,33,43 | rotated=false | sourceSize=33x43 | offset=0,0</title>
+<rect x="202" y="54" width="33" height="43" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="200" y="40" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="202" y="50" fill="#50e678" font-family="Consolas, monospace" font-size="10">#4/5/8/9</text>
+</g>
+<g>
+<title>animal_duck_normal.png | nodes=11/13 | rect=0,102,99,100 | rotated=false | sourceSize=99x100 | offset=0,0</title>
+<rect x="0" y="102" width="99" height="100" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="0" y="88" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="98" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#11/13</text>
+</g>
+<g>
+<title>animal_duck_normal_close_eye.png | nodes=12 | rect=101,102,99,100 | rotated=false | sourceSize=99x100 | offset=0,0</title>
+<rect x="101" y="102" width="99" height="100" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="101" y="88" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="103" y="98" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#12</text>
+</g>
+<g>
+<title>animal_duck_normal_cry.png | nodes=16 | rect=0,0,99,100 | rotated=false | sourceSize=99x100 | offset=0,0</title>
+<rect x="0" y="0" width="99" height="100" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="0" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="10" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#16</text>
+</g>
+<g>
+<title>animal_duck_normal_smile_0.png | nodes=14 | rect=0,204,99,100 | rotated=false | sourceSize=99x100 | offset=0,0</title>
+<rect x="0" y="204" width="99" height="100" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="0" y="190" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="200" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#14</text>
+</g>
+<g>
+<title>animal_duck_normal_smile_1.png | nodes=15 | rect=101,0,99,100 | rotated=false | sourceSize=99x100 | offset=0,0</title>
+<rect x="101" y="0" width="99" height="100" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="101" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="103" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#15</text>
+</g>
+<g>
+<title>animal_duck_spit_0.png | nodes=27 | rect=202,151,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="202" y="151" width="21" height="24" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="202" y="137" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="204" y="147" fill="#50e678" font-family="Consolas, monospace" font-size="10">#27</text>
+</g>
+<g>
+<title>animal_duck_spit_1.png | nodes=28 | rect=225,125,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="225" y="125" width="21" height="24" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="214" y="111" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="216" y="121" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#28</text>
+</g>
+<g>
+<title>animal_duck_spit_2.png | nodes=29 | rect=202,125,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="202" y="125" width="21" height="24" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="202" y="111" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="204" y="121" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#29</text>
+</g>
+<g>
+<title>animal_duck_spit_3.png | nodes=30 | rect=225,99,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="225" y="99" width="21" height="24" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="214" y="85" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="216" y="95" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#30</text>
+</g>
+<g>
+<title>animal_duck_spit_4.png | nodes=31 | rect=202,99,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="202" y="99" width="21" height="24" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="202" y="85" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="204" y="95" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#31</text>
+</g>
+<g>
+<title>animal_duck_tears_0.png | nodes=19/23 | rect=101,275,78,59 | rotated=false | sourceSize=78x59 | offset=0,0</title>
+<rect x="101" y="275" width="78" height="59" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="101" y="261" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="103" y="271" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#19/23</text>
+</g>
+<g>
+<title>animal_duck_tears_1.png | nodes=20/24 | rect=0,306,78,59 | rotated=false | sourceSize=78x59 | offset=0,0</title>
+<rect x="0" y="306" width="78" height="59" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="0" y="292" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="302" fill="#50e678" font-family="Consolas, monospace" font-size="10">#20/24</text>
+</g>
+<g>
+<title>animal_duck_tears_2.png | nodes=21/25 | rect=0,367,78,59 | rotated=false | sourceSize=78x59 | offset=0,0</title>
+<rect x="0" y="367" width="78" height="59" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="0" y="353" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="363" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#21/25</text>
+</g>
+<g>
+<title>animal_duck_tears_3.png | nodes=22/26 | rect=80,336,78,59 | rotated=false | sourceSize=78x59 | offset=0,0</title>
+<rect x="80" y="336" width="78" height="59" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="80" y="322" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="82" y="332" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#22/26</text>
+</g>
+</svg>

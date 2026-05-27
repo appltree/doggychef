@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="256" viewBox="0 0 340 256">
+<rect x="0" y="0" width="256" height="256" fill="#ff00ff"/>
+<image href="../../data/animal_delivery/animal_delivery.png" x="0" y="0" width="256" height="256"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=8 plist=8 rotated=3 missing=0</text>
+<g>
+<title>animal_delivery_arm_01.png | nodes=7/15/17 | rect=2,177,39,50 | rotated=false | sourceSize=53x56 | offset=0,-1</title>
+<rect x="2" y="177" width="39" height="50" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="2" y="163" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="173" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#7/15/17</text>
+</g>
+<g>
+<title>animal_delivery_arm_02.png | nodes=2/11 | rect=2,114,37,46 | rotated=false | sourceSize=49x50 | offset=-1,0</title>
+<rect x="2" y="114" width="37" height="46" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="2" y="100" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="110" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#2/11</text>
+</g>
+<g>
+<title>animal_delivery_bag.png | nodes=14 | rect=198,109,66,50 | rotated=true | sourceSize=66x50 | offset=0,0</title>
+<rect x="198" y="109" width="50" height="66" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 235 113 l 8 0 l 0 8 M 243 113 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="198" y="95" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="200" y="105" fill="#50e678" font-family="Consolas, monospace" font-size="10">#14 ROT</text>
+</g>
+<g>
+<title>animal_delivery_body.png | nodes=6/13 | rect=119,71,77,66 | rotated=false | sourceSize=77x66 | offset=0,0</title>
+<rect x="119" y="71" width="77" height="66" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="119" y="57" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="121" y="67" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#6/13</text>
+</g>
+<g>
+<title>animal_delivery_head.png | nodes=8/16 | rect=2,2,115,110 | rotated=false | sourceSize=115x110 | offset=0,0</title>
+<rect x="2" y="2" width="115" height="110" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="2" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#8/16</text>
+</g>
+<g>
+<title>animal_delivery_leg.png | nodes=4/5/9/10 | rect=198,71,36,52 | rotated=true | sourceSize=36x52 | offset=0,0</title>
+<rect x="198" y="71" width="52" height="36" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 237 75 l 8 0 l 0 8 M 245 75 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="165" y="57" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="167" y="67" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#4/5/9/10 ROT</text>
+</g>
+<g>
+<title>animal_delivery_pizza.png | nodes=18 | rect=119,2,103,67 | rotated=false | sourceSize=103x67 | offset=0,0</title>
+<rect x="119" y="2" width="103" height="67" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="119" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="121" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#18</text>
+</g>
+<g>
+<title>animal_delivery_tail.png | nodes=3/12 | rect=224,2,35,20 | rotated=true | sourceSize=35x20 | offset=0,0</title>
+<rect x="224" y="2" width="20" height="35" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 231 6 l 8 0 l 0 8 M 239 6 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="193" y="0" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="195" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#3/12 ROT</text>
+</g>
+</svg>

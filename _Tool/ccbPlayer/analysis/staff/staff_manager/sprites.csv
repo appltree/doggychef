@@ -1,0 +1,2 @@
+nodeId,path,parentId,depth,displayName,atlasPlist,frameName,position,positionBase,anchorPoint,scale,rotation,rotationBase,flipX,flipY,visible,visibleBase,visibleSequences,positionSequences,rotationSequences,displayFrameSequences
+1,0.0,0,1,CCSprite,staff/manager.plist,manager_close_eye_body_manager02.png,,,"[0.5, 0]","[1, 1, false, 0]",,,false,false,,,,,,6:work | 7:serve

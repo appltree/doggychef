@@ -1,0 +1,246 @@
+nodeId,path,parentId,depth,baseClass,displayName,sequenceId,sequenceName,property,keyframeType,keyframeCount,times,values,easingTypes,baseValue
+1,0.0,0,1,CCLayer,CCLayerHorse,1,walkout,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 18] | [0, 13] | [0, 18] | [0, 13] | [0, 18]",1 | 1 | 1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,1,walkout,visible,1,1,0,true,1,1
+1,0.0,0,1,CCLayer,CCLayerHorse,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 0] | [0, 5] | [0, 0] | [0, 5] | [0, 0]",1 | 1 | 1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,2,walkin,visible,1,1,0,true,1,1
+1,0.0,0,1,CCLayer,CCLayerHorse,3,order,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,3,order,rotation,2,1,0,0,1,0
+1,0.0,0,1,CCLayer,CCLayerHorse,3,order,visible,1,1,0,true,1,1
+1,0.0,0,1,CCLayer,CCLayerHorse,4,like,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,4,like,visible,1,1,0,true,1,1
+1,0.0,0,1,CCLayer,CCLayerHorse,5,angry,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,5,angry,visible,1,1,0,true,1,1
+1,0.0,0,1,CCLayer,CCLayerHorse,6,eat,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayerHorse,6,eat,visible,1,1,0,true,1,1
+2,0.0.0,1,2,CCSprite,CCSpriteLegDanceRight_0,4,like,position,3,4,0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,"[2, 57] | [2, 57] | [2, 57] | [2, 57]",1 | 1 | 1 | 1,"[-776, 880]"
+2,0.0.0,1,2,CCSprite,CCSpriteLegDanceRight_0,4,like,rotation,2,4,0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,-10 | 0 | -10 | 0,1 | 1 | 1 | 1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegDanceRight_0,4,like,visible,1,4,0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,true | true | true | true,1 | 1 | 1 | 1,1
+3,0.0.1,1,2,CCSprite,CCSpriteLegDanceRight_1,4,like,position,3,6,0 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,"[4, 46] | [4, 46] | [4, 46] | [4, 46] | [4, 46] | [4, 46]",1 | 1 | 1 | 1 | 1 | 1,"[-799, 894]"
+3,0.0.1,1,2,CCSprite,CCSpriteLegDanceRight_1,4,like,rotation,2,6,0 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,0 | 0 | -20 | 0 | -20 | 0,1 | 1 | 1 | 1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegDanceRight_1,4,like,visible,1,5,0 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.2999999523162842,true | true | true | true | true,1 | 1 | 1 | 1 | 1,1
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[18, 46] | [14, 42] | [1, 41] | [14, 42] | [18, 46]",1 | 1 | 1 | 1 | 1,"[-739, 881]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-20 | 0 | 30 | 0 | -20,1 | 1 | 1 | 1 | 1,0
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,2,walkin,visible,1,1,0,true,1,1
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,3,order,position,3,1,0,"[17, 48]",1,"[-739, 881]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,3,order,rotation,2,1,0,0,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,3,order,visible,1,1,0,true,1,1
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,5,angry,position,3,1,0,"[17, 48]",1,"[-739, 881]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,5,angry,rotation,2,1,0,0,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,5,angry,visible,1,1,0,true,1,1
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,6,eat,position,3,1,0,"[17, 48]",1,"[-739, 881]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegRight,6,eat,visible,1,1,0,true,1,1
+5,0.0.3,1,2,CCSprite,CCSpriteArmRight,3,order,position,3,1,0,"[18, 98]",1,"[-768, 929]"
+5,0.0.3,1,2,CCSprite,CCSpriteArmRight,3,order,rotation,2,1,0,0,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteArmRight,3,order,visible,1,1,0,true,1,1
+5,0.0.3,1,2,CCSprite,CCSpriteArmRight,5,angry,position,3,1,0,"[18, 98]",1,"[-768, 929]"
+5,0.0.3,1,2,CCSprite,CCSpriteArmRight,5,angry,visible,1,1,0,true,1,1
+6,0.0.4,1,2,CCSprite,CCSpriteArmRightNormal,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[25, 100] | [14, 91] | [21, 93] | [14, 91] | [25, 100]",1 | 1 | 1 | 1 | 1,"[-773, 845]"
+6,0.0.4,1,2,CCSprite,CCSpriteArmRightNormal,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,20 | -30 | -40 | -30 | 20,1 | 1 | 1 | 1 | 1,0
+6,0.0.4,1,2,CCSprite,CCSpriteArmRightNormal,2,walkin,visible,1,1,0,true,1,1
+7,0.0.5,1,2,CCSprite,CCSpriteHair,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-21, 83] | [-21, 83] | [-20, 84] | [-21, 83] | [-21, 83]",1 | 1 | 1 | 1 | 1,"[-739, 866]"
+7,0.0.5,1,2,CCSprite,CCSpriteHair,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 3 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHair,2,walkin,visible,1,1,0,true,1,1
+7,0.0.5,1,2,CCSprite,CCSpriteHair,3,order,position,3,1,0,"[-21, 81]",1,"[-739, 866]"
+7,0.0.5,1,2,CCSprite,CCSpriteHair,3,order,rotation,2,1,0,0,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHair,3,order,visible,1,1,0,true,1,1
+7,0.0.5,1,2,CCSprite,CCSpriteHair,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[-21, 81] | [-20, 82] | [-21, 81] | [-20, 82] | [-21, 81] | [-22, 82] | [-21, 81] | [-22, 82] | [-21, 81]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-739, 866]"
+7,0.0.5,1,2,CCSprite,CCSpriteHair,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,0 | 5 | 0 | 5 | 0 | -5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHair,4,like,visible,1,1,0,true,1,1
+7,0.0.5,1,2,CCSprite,CCSpriteHair,5,angry,position,3,1,0,"[-21, 81]",1,"[-739, 866]"
+7,0.0.5,1,2,CCSprite,CCSpriteHair,5,angry,rotation,2,1,0,0,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHair,5,angry,visible,1,1,0,true,1,1
+7,0.0.5,1,2,CCSprite,CCSpriteHair,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-21, 81] | [-20, 80] | [-21, 81] | [-20, 80] | [-21, 81]",1 | 1 | 1 | 1 | 1,"[-739, 866]"
+7,0.0.5,1,2,CCSprite,CCSpriteHair,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | -5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHair,6,eat,visible,1,1,0,true,1,1
+8,0.0.6,1,2,CCSprite,CCSpriteTail,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-18, 65] | [-18, 63] | [-18, 63] | [-18, 63] | [-18, 65]",1 | 1 | 1 | 1 | 1,"[-691, 973]"
+8,0.0.6,1,2,CCSprite,CCSpriteTail,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,20 | 10 | 0 | 10 | 20,1 | 1 | 1 | 1 | 1,-10
+8,0.0.6,1,2,CCSprite,CCSpriteTail,2,walkin,visible,1,1,0,true,1,1
+8,0.0.6,1,2,CCSprite,CCSpriteTail,3,order,position,3,1,0,"[-24, 61]",1,"[-691, 973]"
+8,0.0.6,1,2,CCSprite,CCSpriteTail,3,order,rotation,2,1,0,-10,1,-10
+8,0.0.6,1,2,CCSprite,CCSpriteTail,3,order,visible,1,1,0,true,1,1
+8,0.0.6,1,2,CCSprite,CCSpriteTail,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[-22, 63] | [-19, 62] | [-22, 63] | [-19, 62] | [-22, 63] | [-22, 63] | [-22, 63] | [-22, 63] | [-22, 63]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-691, 973]"
+8,0.0.6,1,2,CCSprite,CCSpriteTail,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,-10 | 25 | -10 | 25 | -10 | -20 | -10 | -10 | -10,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,-10
+8,0.0.6,1,2,CCSprite,CCSpriteTail,4,like,visible,1,1,0,true,1,1
+8,0.0.6,1,2,CCSprite,CCSpriteTail,5,angry,position,3,1,0,"[-24, 61]",1,"[-691, 973]"
+8,0.0.6,1,2,CCSprite,CCSpriteTail,5,angry,rotation,2,1,0,-10,1,-10
+8,0.0.6,1,2,CCSprite,CCSpriteTail,5,angry,visible,1,1,0,true,1,1
+8,0.0.6,1,2,CCSprite,CCSpriteTail,6,eat,position,3,1,0,"[-22, 63]",1,"[-691, 973]"
+8,0.0.6,1,2,CCSprite,CCSpriteTail,6,eat,rotation,2,1,0,-10,1,-10
+8,0.0.6,1,2,CCSprite,CCSpriteTail,6,eat,visible,1,1,0,true,1,1
+9,0.0.7,1,2,CCSprite,CCSpriteLegLeft,1,walkout,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-8, 30] | [-12, 34] | [11, 31] | [-12, 34] | [-8, 30]",1 | 1 | 1 | 1 | 1,"[-727, 887]"
+9,0.0.7,1,2,CCSprite,CCSpriteLegLeft,1,walkout,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,60 | 0 | -70 | 0 | 60,1 | 1 | 1 | 1 | 1,60
+9,0.0.7,1,2,CCSprite,CCSpriteLegLeft,1,walkout,visible,1,1,0,true,1,1
+10,0.0.8,1,2,CCSprite,CCSpriteHairOut,1,walkout,position,3,1,0,"[23, 135]",1,"[-707, 908]"
+10,0.0.8,1,2,CCSprite,CCSpriteHairOut,1,walkout,rotation,2,1,0,0,1,0
+10,0.0.8,1,2,CCSprite,CCSpriteHairOut,1,walkout,visible,1,1,0,true,1,1
+11,0.0.9,1,2,CCSprite,CCSpriteTailOut,1,walkout,position,3,1,0,"[24, 42]",1,"[-792, 911]"
+11,0.0.9,1,2,CCSprite,CCSpriteTailOut,1,walkout,rotation,2,1,0,-50,1,-50
+11,0.0.9,1,2,CCSprite,CCSpriteTailOut,1,walkout,visible,1,1,0,true,1,1
+12,0.0.10,1,2,CCSprite,CCSpriteArmOutLeft,1,walkout,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-3, 82] | [-3, 82] | [-3, 82] | [-3, 82] | [-3, 82]",1 | 1 | 1 | 1 | 1,"[-750, 896]"
+12,0.0.10,1,2,CCSprite,CCSpriteArmOutLeft,1,walkout,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,60 | 40 | 60 | 40 | 60,1 | 1 | 1 | 1 | 1,60
+12,0.0.10,1,2,CCSprite,CCSpriteArmOutLeft,1,walkout,visible,1,1,0,true,1,1
+13,0.0.11,1,2,CCSprite,CCSpriteBodyOut,1,walkout,position,3,1,0,"[3, 52]",1,"[-783, 870]"
+13,0.0.11,1,2,CCSprite,CCSpriteBodyOut,1,walkout,rotation,2,1,0,0,1,0
+13,0.0.11,1,2,CCSprite,CCSpriteBodyOut,1,walkout,visible,1,1,0,true,1,1
+14,0.0.11.0,13,3,CCSprite,CCSpriteLegRight,1,walkout,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[47, 19] | [53, 20] | [26, 15] | [53, 20] | [47, 19]",1 | 1 | 1 | 1 | 1,"[47, 19]"
+14,0.0.11.0,13,3,CCSprite,CCSpriteLegRight,1,walkout,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-70 | 0 | 60 | 0 | -70,1 | 1 | 1 | 1 | 1,-70
+14,0.0.11.0,13,3,CCSprite,CCSpriteLegRight,1,walkout,visible,1,1,0,true,1,1
+15,0.0.11.1,13,3,CCSprite,CCSpriteCloth,1,walkout,position,3,1,0,"[37, 41]",1,"[37, 41]"
+15,0.0.11.1,13,3,CCSprite,CCSpriteCloth,1,walkout,rotation,2,1,0,0,1,0
+15,0.0.11.1,13,3,CCSprite,CCSpriteCloth,1,walkout,visible,1,1,0,true,1,1
+16,0.0.12,1,2,CCSprite,CCSpriteArmOutRight,1,walkout,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[24, 86] | [24, 86] | [24, 86] | [24, 86] | [24, 86]",1 | 1 | 1 | 1 | 1,"[-794, 935]"
+16,0.0.12,1,2,CCSprite,CCSpriteArmOutRight,1,walkout,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-50 | -30 | -50 | -30 | -50,1 | 1 | 1 | 1 | 1,-50
+16,0.0.12,1,2,CCSprite,CCSpriteArmOutRight,1,walkout,visible,1,1,0,true,1,1
+17,0.0.13,1,2,CCSprite,CCSpriteFaceOut,1,walkout,position,3,1,0,"[-3, 74]",1,"[-758, 837]"
+17,0.0.13,1,2,CCSprite,CCSpriteFaceOut,1,walkout,rotation,2,1,0,0,1,0
+17,0.0.13,1,2,CCSprite,CCSpriteFaceOut,1,walkout,visible,1,1,0,true,1,1
+18,0.0.13.0,17,3,CCSprite,CCSpriteEye,1,walkout,displayFrame,7,1,0,"[animal_horse_eye_01.png, animal/animal_horse.plist]",0,"[animal_horse_eye_01.png, animal/animal_horse.plist]"
+18,0.0.13.0,17,3,CCSprite,CCSpriteEye,1,walkout,position,3,1,0,"[59, 49]",1,"[59, 49]"
+18,0.0.13.0,17,3,CCSprite,CCSpriteEye,1,walkout,visible,1,1,0,true,1,1
+19,0.0.13.1,17,3,CCSprite,CCSpriteMouse,1,walkout,position,3,1,0,"[58, 13]",1,"[58, 13]"
+19,0.0.13.1,17,3,CCSprite,CCSpriteMouse,1,walkout,rotation,2,1,0,0,1,0
+19,0.0.13.1,17,3,CCSprite,CCSpriteMouse,1,walkout,visible,1,1,0,true,1,1
+20,0.0.14,1,2,CCSprite,CCSpriteBody,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[2, 64] | [2, 64] | [3, 64] | [2, 64] | [2, 64]",1 | 1 | 1 | 1 | 1,"[-724, 855]"
+20,0.0.14,1,2,CCSprite,CCSpriteBody,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 4 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+20,0.0.14,1,2,CCSprite,CCSpriteBody,2,walkin,visible,1,1,0,true,1,1
+20,0.0.14,1,2,CCSprite,CCSpriteBody,3,order,position,3,1,0,"[2, 62]",1,"[-724, 855]"
+20,0.0.14,1,2,CCSprite,CCSpriteBody,3,order,rotation,2,1,0,0,1,0
+20,0.0.14,1,2,CCSprite,CCSpriteBody,3,order,visible,1,1,0,true,1,1
+20,0.0.14,1,2,CCSprite,CCSpriteBody,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[2, 62] | [3, 63] | [2, 62] | [3, 63] | [2, 62] | [1, 63] | [2, 62] | [1, 63] | [2, 62]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-724, 855]"
+20,0.0.14,1,2,CCSprite,CCSpriteBody,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,0 | 5 | 0 | 5 | 0 | -5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,0
+20,0.0.14,1,2,CCSprite,CCSpriteBody,4,like,visible,1,1,0,true,1,1
+20,0.0.14,1,2,CCSprite,CCSpriteBody,5,angry,position,3,1,0,"[2, 62]",1,"[-724, 855]"
+20,0.0.14,1,2,CCSprite,CCSpriteBody,5,angry,rotation,2,1,0,0,1,0
+20,0.0.14,1,2,CCSprite,CCSpriteBody,5,angry,visible,1,1,0,true,1,1
+20,0.0.14,1,2,CCSprite,CCSpriteBody,6,eat,position,3,1,0,"[2, 62]",1,"[-724, 855]"
+20,0.0.14,1,2,CCSprite,CCSpriteBody,6,eat,rotation,2,1,0,0,1,0
+20,0.0.14,1,2,CCSprite,CCSpriteBody,6,eat,visible,1,1,0,true,1,1
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[20, 19] | [21, 17] | [35, 14] | [21, 17] | [20, 19]",1 | 1 | 1 | 1 | 1,"[-697, 800]"
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,30 | 10 | -30 | 10 | 30,1 | 1 | 1 | 1 | 1,0
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,2,walkin,visible,1,1,0,true,1,1
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,3,order,position,3,1,0,"[17, 24]",1,"[-697, 800]"
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,3,order,rotation,2,1,0,0,1,0
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,3,order,visible,1,1,0,true,1,1
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,5,angry,position,3,1,0,"[17, 24]",1,"[-697, 800]"
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,5,angry,visible,1,1,0,true,1,1
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,6,eat,position,3,1,0,"[17, 24]",1,"[-697, 800]"
+21,0.0.14.0,20,3,CCSprite,CCSpriteLegLeft,6,eat,visible,1,1,0,true,1,1
+22,0.0.14.1,20,3,CCSprite,CCSpriteLegLeftDance_0,4,like,position,3,4,0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[39.18515396118164, 31.66299819946289] | [38, 34] | [39, 31] | [38, 34]",1 | 1 | 1 | 1,"[-708, 890]"
+22,0.0.14.1,20,3,CCSprite,CCSpriteLegLeftDance_0,4,like,rotation,2,4,0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 0 | 0,1 | 1 | 1 | 1,0
+22,0.0.14.1,20,3,CCSprite,CCSpriteLegLeftDance_0,4,like,visible,1,4,0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,true | true | true | true,1 | 1 | 1 | 1,1
+23,0.0.14.2,20,3,CCSprite,CCSpriteLegLeftDance_1,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[32, 22] | [36.33340072631836, 18.36384391784668] | [32, 22] | [36, 18] | [32, 22]",1 | 1 | 1 | 1 | 1,"[-673, 857]"
+23,0.0.14.2,20,3,CCSprite,CCSpriteLegLeftDance_1,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 20 | 0 | 20 | 0,1 | 1 | 1 | 1 | 1,0
+23,0.0.14.2,20,3,CCSprite,CCSpriteLegLeftDance_1,4,like,visible,1,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,true | true | true | true | true,1 | 1 | 1 | 1 | 1,1
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,2,walkin,position,3,1,0,"[34, 41]",1,"[-59, 858]"
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,2,walkin,rotation,2,1,0,0,1,0
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,2,walkin,visible,1,1,0,true,1,1
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,3,order,position,3,1,0,"[35, 41]",1,"[-59, 858]"
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,3,order,rotation,2,1,0,0,1,0
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,3,order,visible,1,1,0,true,1,1
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,4,like,position,3,1,0,"[34, 41]",1,"[-59, 858]"
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,4,like,rotation,2,1,0,0,1,0
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,4,like,visible,1,1,0,true,1,1
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,5,angry,position,3,1,0,"[35, 41]",1,"[-59, 858]"
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,5,angry,visible,1,1,0,true,1,1
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,6,eat,position,3,1,0,"[35, 41]",1,"[-59, 858]"
+24,0.0.14.3,20,3,CCSprite,CCSpriteCloth,6,eat,visible,1,1,0,true,1,1
+25,0.0.14.4,20,3,CCSprite,CCSpriteArmLeft,3,order,position,3,1,0,"[22, 71]",1,"[-716.6588134765625, 894.652587890625]"
+25,0.0.14.4,20,3,CCSprite,CCSpriteArmLeft,3,order,rotation,2,1,0,0,1,0
+25,0.0.14.4,20,3,CCSprite,CCSpriteArmLeft,3,order,visible,1,1,0,true,1,1
+25,0.0.14.4,20,3,CCSprite,CCSpriteArmLeft,5,angry,position,3,1,0,"[22, 71]",1,"[-716.6588134765625, 894.652587890625]"
+25,0.0.14.4,20,3,CCSprite,CCSpriteArmLeft,5,angry,visible,1,1,0,true,1,1
+26,0.0.14.5,20,3,CCSprite,CCSpriteArmLeftNormal,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[4, 73] | [9, 71] | [11, 71] | [9, 71] | [4, 73]",1 | 1 | 1 | 1 | 1,"[-705, 923]"
+26,0.0.14.5,20,3,CCSprite,CCSpriteArmLeftNormal,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-20 | 20 | 40 | 20 | -20,1 | 1 | 1 | 1 | 1,0
+26,0.0.14.5,20,3,CCSprite,CCSpriteArmLeftNormal,2,walkin,visible,1,1,0,true,1,1
+27,0.0.15,1,2,CCSprite,CCSpriteFaceAngry,5,angry,position,3,1,0,"[8, 81]",1,"[-769, 825]"
+27,0.0.15,1,2,CCSprite,CCSpriteFaceAngry,5,angry,visible,1,1,0,true,1,1
+28,0.0.15.0,27,3,CCSprite,CCSpriteEye,5,angry,position,3,1,0,"[60, 51]",1,"[60, 51]"
+28,0.0.15.0,27,3,CCSprite,CCSpriteEye,5,angry,visible,1,1,0,true,1,1
+29,0.0.15.1,27,3,CCSprite,CCSpriteMouse,5,angry,position,3,1,0,"[64, 20]",1,"[64, 20]"
+29,0.0.15.1,27,3,CCSprite,CCSpriteMouse,5,angry,visible,1,1,0,true,1,1
+30,0.0.16,1,2,CCSprite,CCSpriteFace,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[8, 83] | [8, 83] | [9, 82] | [8, 83] | [8, 83]",1 | 1 | 1 | 1 | 1,"[-742, 896]"
+30,0.0.16,1,2,CCSprite,CCSpriteFace,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 3 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+30,0.0.16,1,2,CCSprite,CCSpriteFace,2,walkin,visible,1,1,0,true,1,1
+30,0.0.16,1,2,CCSprite,CCSpriteFace,3,order,position,3,1,0,"[8, 81]",1,"[-742, 896]"
+30,0.0.16,1,2,CCSprite,CCSpriteFace,3,order,rotation,2,1,0,0,1,0
+30,0.0.16,1,2,CCSprite,CCSpriteFace,3,order,visible,1,1,0,true,1,1
+30,0.0.16,1,2,CCSprite,CCSpriteFace,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[8, 81] | [9, 80] | [8, 81] | [9, 80] | [8, 81] | [7, 82] | [8, 81] | [7, 82] | [8, 81]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-742, 896]"
+30,0.0.16,1,2,CCSprite,CCSpriteFace,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,0 | 5 | 0 | 5 | 0 | -5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,0
+30,0.0.16,1,2,CCSprite,CCSpriteFace,4,like,visible,1,1,0,true,1,1
+30,0.0.16,1,2,CCSprite,CCSpriteFace,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[8, 81] | [8, 81] | [8, 81] | [8, 81] | [8, 81]",1 | 1 | 1 | 1 | 1,"[-742, 896]"
+30,0.0.16,1,2,CCSprite,CCSpriteFace,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | -5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1,0
+30,0.0.16,1,2,CCSprite,CCSpriteFace,6,eat,visible,1,1,0,true,1,1
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,2,walkin,position,3,1,0,"[57, 49]",1,"[-701, 812]"
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,2,walkin,rotation,2,1,0,0,1,0
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,2,walkin,visible,1,1,0,true,1,1
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,3,order,position,3,1,0,"[57, 49]",1,"[-701, 812]"
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,3,order,rotation,2,1,0,0,1,0
+31,0.0.16.0,30,3,CCSprite,CCSpriteEye,3,order,visible,1,3,0 | 0.1666666716337204 | 0.36666667461395264,true | true | true,1 | 1 | 1,1
+32,0.0.16.1,30,3,CCSprite,CCSpriteEyeClose_0,3,order,position,3,1,0.1666666716337204,"[57, 49]",1,"[-638, 708]"
+32,0.0.16.1,30,3,CCSprite,CCSpriteEyeClose_0,3,order,visible,1,4,0.1666666716337204 | 0.23333333432674408 | 0.30000001192092896 | 0.36666667461395264,true | true | true | true,1 | 1 | 1 | 1,1
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,3,order,position,3,1,0.23333333432674408,"[57, 49]",1,"[-711, 700]"
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,3,order,visible,1,2,0.23333333432674408 | 0.30000001192092896,true | true,1 | 1,1
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,4,like,position,3,1,0,"[57, 49]",1,"[-711, 700]"
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,4,like,rotation,2,1,0,0,1,0
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,4,like,visible,1,1,0,true,1,1
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,6,eat,position,3,1,0,"[57, 49]",1,"[-711, 700]"
+33,0.0.16.2,30,3,CCSprite,CCSpriteEyeSmile,6,eat,visible,1,1,0,true,1,1
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,2,walkin,position,3,1,0,"[57, 14]",1,"[-700, 786]"
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,2,walkin,rotation,2,1,0,0,1,0
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,2,walkin,visible,1,1,0,true,1,1
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,3,order,position,3,1,0,"[57, 14]",1,"[-700, 786]"
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,3,order,rotation,2,1,0,0,1,0
+34,0.0.16.3,30,3,CCSprite,CCSpriteMouse,3,order,visible,1,1,0,true,1,1
+35,0.0.16.4,30,3,CCSprite,CCSpriteMouseDance,4,like,position,3,1,0,"[57, 19]",1,"[-708, 736]"
+35,0.0.16.4,30,3,CCSprite,CCSpriteMouseDance,4,like,rotation,2,1,0,0,1,0
+35,0.0.16.4,30,3,CCSprite,CCSpriteMouseDance,4,like,visible,1,1,0,true,1,1
+36,0.0.16.5,30,3,CCSprite,CCSpriteMouseEat_0,6,eat,position,3,1,0,"[59, 14]",1,"[-655, 656]"
+36,0.0.16.5,30,3,CCSprite,CCSpriteMouseEat_0,6,eat,visible,1,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6333333253860474,true | true | true | true | true,1 | 1 | 1 | 1 | 1,1
+37,0.0.16.6,30,3,CCSprite,CCSpriteMouseEat_1,6,eat,position,3,1,0.1666666716337204,"[59, 16]",1,"[-663, 682]"
+37,0.0.16.6,30,3,CCSprite,CCSpriteMouseEat_1,6,eat,visible,1,4,0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6333333253860474,true | true | true | true,1 | 1 | 1 | 1,1
+38,0.0.17,1,2,CCSprite,CCSpriteArmLeftOut,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[35, 88] | [41, 82] | [35, 88] | [41, 82] | [35, 88] | [33, 92] | [35, 88] | [33, 92] | [35, 88]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-722, 851]"
+38,0.0.17,1,2,CCSprite,CCSpriteArmLeftOut,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,0 | 20 | 0 | 20 | 0 | 0 | 0 | 0 | 0,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,0
+38,0.0.17,1,2,CCSprite,CCSpriteArmLeftOut,4,like,visible,1,1,0,true,1,1
+39,0.0.18,1,2,CCSprite,CCSpriteArmRightOut,4,like,position,3,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,"[-40, 91] | [-40, 92] | [-40, 91] | [-40, 92] | [-40, 91] | [-40, 84] | [-40, 91] | [-40, 84] | [-40, 91]",1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,"[-760, 893]"
+39,0.0.18,1,2,CCSprite,CCSpriteArmRightOut,4,like,rotation,2,9,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816 | 0.8333333134651184 | 1 | 1.1666666269302368 | 1.3333333730697632,0 | -10 | 0 | -10 | 0 | -20 | 0 | -20 | 0,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,0
+39,0.0.18,1,2,CCSprite,CCSpriteArmRightOut,4,like,visible,1,1,0,true,1,1
+40,0.0.19,1,2,CCSprite,CCSpriteMusicEffect0,4,like,position,3,1,0,"[98, 158]",1,"[-767, 880]"
+40,0.0.19,1,2,CCSprite,CCSpriteMusicEffect0,4,like,visible,1,6,0 | 0.03333333507180214 | 0.5666666626930237 | 0.6000000238418579 | 1 | 1.0333333015441895,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+41,0.0.20,1,2,CCSprite,CCSpriteMusicEffect1,4,like,position,3,1,0.03333333507180214,"[98, 158]",1,"[-690, 905]"
+41,0.0.20,1,2,CCSprite,CCSpriteMusicEffect1,4,like,visible,1,6,0.03333333507180214 | 0.06666667014360428 | 0.6000000238418579 | 0.6333333253860474 | 1.0333333015441895 | 1.0666667222976685,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+42,0.0.21,1,2,CCSprite,CCSpriteMusicEffect2,4,like,position,3,1,0.06666667014360428,"[98, 158]",1,"[-779, 859]"
+42,0.0.21,1,2,CCSprite,CCSpriteMusicEffect2,4,like,visible,1,6,0.06666667014360428 | 0.10000000149011612 | 0.6333333253860474 | 0.6666666865348816 | 1.0666667222976685 | 1.100000023841858,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+43,0.0.22,1,2,CCSprite,CCSpriteMusicEffect3,4,like,position,3,1,0.10000000149011612,"[98, 158]",1,"[-704, 908]"
+43,0.0.22,1,2,CCSprite,CCSpriteMusicEffect3,4,like,visible,1,6,0.10000000149011612 | 0.13333334028720856 | 0.6666666865348816 | 0.699999988079071 | 1.100000023841858 | 1.1333333253860474,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+44,0.0.23,1,2,CCSprite,CCSpriteMusicEffect4,4,like,position,3,1,0.13333334028720856,"[98, 158]",1,"[-720, 916]"
+44,0.0.23,1,2,CCSprite,CCSpriteMusicEffect4,4,like,visible,1,6,0.13333334028720856 | 0.1666666716337204 | 0.699999988079071 | 0.7333333492279053 | 1.1333333253860474 | 1.1666666269302368,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+45,0.0.24,1,2,CCSprite,CCSpriteMusicEffect5,4,like,position,3,1,0.1666666716337204,"[98, 158]",1,"[-699, 875]"
+45,0.0.24,1,2,CCSprite,CCSpriteMusicEffect5,4,like,visible,1,6,0.1666666716337204 | 0.20000000298023224 | 0.7333333492279053 | 0.7666666507720947 | 1.1666666269302368 | 1.2000000476837158,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+46,0.0.25,1,2,CCSprite,CCSpriteMusicEffect6,4,like,position,3,1,0.20000000298023224,"[98, 158]",1,"[-766, 922]"
+46,0.0.25,1,2,CCSprite,CCSpriteMusicEffect6,4,like,visible,1,6,0.20000000298023224 | 0.23333333432674408 | 0.7666666507720947 | 0.800000011920929 | 1.2000000476837158 | 1.2333333492279053,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+47,0.0.26,1,2,CCSprite,CCSpriteMusicEffect7,4,like,position,3,1,0.23333333432674408,"[98, 158]",1,"[-790, 834]"
+47,0.0.26,1,2,CCSprite,CCSpriteMusicEffect7,4,like,visible,1,6,0.23333333432674408 | 0.2666666805744171 | 0.800000011920929 | 0.8333333134651184 | 1.2333333492279053 | 1.2666666507720947,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+48,0.0.27,1,2,CCSprite,CCSpriteMusicEffect8,4,like,position,3,1,0.2666666805744171,"[98, 158]",1,"[-740, 851]"
+48,0.0.27,1,2,CCSprite,CCSpriteMusicEffect8,4,like,visible,1,6,0.2666666805744171 | 0.30000001192092896 | 0.8333333134651184 | 0.8666666746139526 | 1.2666666507720947 | 1.2999999523162842,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+49,0.0.28,1,2,CCSprite,CCSpriteMusicEffect9,4,like,position,3,2,0.30000001192092896 | 1.3333333730697632,"[98, 158] | [-718, 796]",1 | 1,"[-738, 799]"
+49,0.0.28,1,2,CCSprite,CCSpriteMusicEffect9,4,like,visible,1,6,0.30000001192092896 | 0.3333333432674408 | 0.8666666746139526 | 0.8999999761581421 | 1.2999999523162842 | 1.3333333730697632,true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1,1
+50,0.1,0,1,CCSprite,CCSpriteAngryEffect_0,5,angry,position,3,1,0,"[75, 171]",1,"[-765, 863]"
+50,0.1,0,1,CCSprite,CCSpriteAngryEffect_0,5,angry,visible,1,4,0 | 0.06666667014360428 | 0.3333333432674408 | 0.4000000059604645,true | true | true | true,1 | 1 | 1 | 1,1
+51,0.2,0,1,CCSprite,CCSpriteAngryEffect_1,5,angry,position,3,1,0.06666667014360428,"[75, 171]",1,"[-758, 869]"
+51,0.2,0,1,CCSprite,CCSpriteAngryEffect_1,5,angry,visible,1,4,0.06666667014360428 | 0.13333334028720856 | 0.4000000059604645 | 0.46666666865348816,true | true | true | true,1 | 1 | 1 | 1,1
+52,0.3,0,1,CCSprite,CCSpriteAngryEffect_2,5,angry,position,3,1,0.13333334028720856,"[75, 171]",1,"[-777, 831]"
+52,0.3,0,1,CCSprite,CCSpriteAngryEffect_2,5,angry,visible,1,4,0.13333334028720856 | 0.20000000298023224 | 0.46666666865348816 | 0.5333333611488342,true | true | true | true,1 | 1 | 1 | 1,1
+53,0.4,0,1,CCSprite,CCSpriteArmEatLeft,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-39, 92] | [-31, 96] | [-25, 101] | [-31, 96] | [-39, 92]",1 | 1 | 1 | 1 | 1,"[-735, 842]"
+53,0.4,0,1,CCSprite,CCSpriteArmEatLeft,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-110 | -70 | -50 | -70 | -110,1 | 1 | 1 | 1 | 1,0
+53,0.4,0,1,CCSprite,CCSpriteArmEatLeft,6,eat,visible,1,1,0,true,1,1
+54,0.5,0,1,CCSprite,CCSpriteArmEatRight,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[39, 77] | [39, 77] | [38, 75] | [39, 77] | [39, 77]",1 | 1 | 1 | 1 | 1,"[-802, 779]"
+54,0.5,0,1,CCSprite,CCSpriteArmEatRight,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-30 | -30 | 30 | -30 | -30,1 | 1 | 1 | 1 | 1,0
+54,0.5,0,1,CCSprite,CCSpriteArmEatRight,6,eat,visible,1,1,0,true,1,1
+55,0.6,0,1,CCSprite,CCSpriteEatEffectLeft_0,6,eat,position,3,1,0,"[-24, 91]",1,"[-767, 943]"
+55,0.6,0,1,CCSprite,CCSpriteEatEffectLeft_0,6,eat,visible,1,10,0 | 0.06666667014360428 | 0.13333334028720856 | 0.20000000298023224 | 0.2666666805744171 | 0.3333333432674408 | 0.4000000059604645 | 0.46666666865348816 | 0.5333333611488342 | 0.6000000238418579,true | true | true | true | true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,1
+56,0.7,0,1,CCSprite,CCSpriteEatEffectLeft_1,6,eat,position,3,1,0.06666667014360428,"[-21, 87]",1,"[-728, 892]"
+56,0.7,0,1,CCSprite,CCSpriteEatEffectLeft_1,6,eat,visible,1,9,0.06666667014360428 | 0.13333334028720856 | 0.20000000298023224 | 0.2666666805744171 | 0.3333333432674408 | 0.4000000059604645 | 0.46666666865348816 | 0.5333333611488342 | 0.6000000238418579,true | true | true | true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,1
+57,0.8,0,1,CCSprite,CCSpriteEatEffectRight_0,6,eat,position,3,1,0,"[34, 87]",1,"[-727, 929]"
+57,0.8,0,1,CCSprite,CCSpriteEatEffectRight_0,6,eat,visible,1,10,0 | 0.06666667014360428 | 0.13333334028720856 | 0.20000000298023224 | 0.2666666805744171 | 0.3333333432674408 | 0.4000000059604645 | 0.46666666865348816 | 0.5333333611488342 | 0.6000000238418579,true | true | true | true | true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,1
+58,0.9,0,1,CCSprite,CCSpriteEatEffectRight_1,6,eat,position,3,1,0.06666667014360428,"[34, 86]",1,"[-787, 864]"
+58,0.9,0,1,CCSprite,CCSpriteEatEffectRight_1,6,eat,visible,1,9,0.06666667014360428 | 0.13333334028720856 | 0.20000000298023224 | 0.2666666805744171 | 0.3333333432674408 | 0.4000000059604645 | 0.46666666865348816 | 0.5333333611488342 | 0.6000000238418579,true | true | true | true | true | true | true | true | true,1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1,1

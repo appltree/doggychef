@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" fill="#ff00ff"/>
+<image href="../../data/animal_horse/animal_horse.png" x="0" y="0" width="512" height="512"/>
+<rect x="0" y="0" width="512" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=36 plist=36 rotated=19 missing=0</text>
+<g>
+<title>animal_horse_angry_effect0001.png | nodes=50 | rect=64,363,70,50 | rotated=true | sourceSize=70x50 | offset=0,0</title>
+<rect x="64" y="363" width="50" height="70" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 101 367 l 8 0 l 0 8 M 109 367 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="64" y="349" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="66" y="359" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#50 ROT</text>
+</g>
+<g>
+<title>animal_horse_angry_effect0003.png | nodes=51 | rect=54,439,70,50 | rotated=true | sourceSize=70x50 | offset=0,0</title>
+<rect x="54" y="439" width="50" height="70" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 91 443 l 8 0 l 0 8 M 99 443 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="54" y="425" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="56" y="435" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#51 ROT</text>
+</g>
+<g>
+<title>animal_horse_angry_effect0006.png | nodes=52 | rect=2,439,70,50 | rotated=true | sourceSize=70x50 | offset=0,0</title>
+<rect x="2" y="439" width="50" height="70" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 39 443 l 8 0 l 0 8 M 47 443 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="2" y="425" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="435" fill="#50e678" font-family="Consolas, monospace" font-size="10">#52 ROT</text>
+</g>
+<g>
+<title>animal_horse_arm_01.png | nodes=6/12/16/26 | rect=106,435,64,69 | rotated=false | sourceSize=64x69 | offset=0,0</title>
+<rect x="106" y="435" width="64" height="69" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="106" y="421" width="77" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="108" y="431" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#6/12/16/26</text>
+</g>
+<g>
+<title>animal_horse_arm_02.png | nodes=5/25/53 | rect=206,315,40,52 | rotated=true | sourceSize=40x52 | offset=0,0</title>
+<rect x="206" y="315" width="52" height="40" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 245 319 l 8 0 l 0 8 M 253 319 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="206" y="301" width="84" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="208" y="311" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#5/25/53 ROT</text>
+</g>
+<g>
+<title>animal_horse_arm_03.png | nodes=39 | rect=172,428,65,48 | rotated=true | sourceSize=65x48 | offset=0,0</title>
+<rect x="172" y="428" width="48" height="65" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 207 432 l 8 0 l 0 8 M 215 432 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="172" y="414" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="174" y="424" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#39 ROT</text>
+</g>
+<g>
+<title>animal_horse_arm_04.png | nodes=38 | rect=116,361,64,65 | rotated=false | sourceSize=64x65 | offset=0,0</title>
+<rect x="116" y="361" width="64" height="65" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="116" y="347" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="118" y="357" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#38</text>
+</g>
+<g>
+<title>animal_horse_arm_05.png | nodes=54 | rect=230,357,56,53 | rotated=true | sourceSize=56x53 | offset=0,0</title>
+<rect x="230" y="357" width="53" height="56" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 270 361 l 8 0 l 0 8 M 278 361 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="230" y="343" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="232" y="353" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#54 ROT</text>
+</g>
+<g>
+<title>animal_horse_best.png | nodes=15/24 | rect=2,363,74,60 | rotated=true | sourceSize=74x60 | offset=0,0</title>
+<rect x="2" y="363" width="60" height="74" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 49 367 l 8 0 l 0 8 M 57 367 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="2" y="349" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="359" fill="#50e678" font-family="Consolas, monospace" font-size="10">#15/24 ROT</text>
+</g>
+<g>
+<title>animal_horse_body.png | nodes=13/20 | rect=2,290,71,76 | rotated=true | sourceSize=71x76 | offset=0,0</title>
+<rect x="2" y="290" width="76" height="71" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 65 294 l 8 0 l 0 8 M 73 294 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="2" y="276" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="286" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#13/20 ROT</text>
+</g>
+<g>
+<title>animal_horse_eat0001.png | nodes=55/57 | rect=211,162,40,30 | rotated=true | sourceSize=40x30 | offset=0,0</title>
+<rect x="211" y="162" width="30" height="40" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 228 166 l 8 0 l 0 8 M 236 166 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="211" y="148" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="213" y="158" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#55/57 ROT</text>
+</g>
+<g>
+<title>animal_horse_eat0002.png | nodes=56/58 | rect=211,120,40,30 | rotated=true | sourceSize=40x30 | offset=0,0</title>
+<rect x="211" y="120" width="30" height="40" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 228 124 l 8 0 l 0 8 M 236 124 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="211" y="106" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="213" y="116" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#56/58 ROT</text>
+</g>
+<g>
+<title>animal_horse_eye_01.png | nodes=18/31/18 | rect=209,284,55,19 | rotated=false | sourceSize=55x19 | offset=0,0</title>
+<rect x="209" y="284" width="55" height="19" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="209" y="270" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="211" y="280" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#18/31/18</text>
+</g>
+<g>
+<title>animal_horse_eye_02.png | nodes=32 | rect=94,208,57,20 | rotated=true | sourceSize=57x20 | offset=0,0</title>
+<rect x="94" y="208" width="20" height="57" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 101 212 l 8 0 l 0 8 M 109 212 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="94" y="194" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="96" y="204" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#32 ROT</text>
+</g>
+<g>
+<title>animal_horse_eye_angry.png | nodes=28 | rect=94,267,55,20 | rotated=true | sourceSize=55x20 | offset=0,0</title>
+<rect x="94" y="267" width="20" height="55" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 101 271 l 8 0 l 0 8 M 109 271 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="94" y="253" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="96" y="263" fill="#50e678" font-family="Consolas, monospace" font-size="10">#28 ROT</text>
+</g>
+<g>
+<title>animal_horse_eye_smile.png | nodes=33 | rect=172,495,53,15 | rotated=false | sourceSize=53x15 | offset=0,0</title>
+<rect x="172" y="495" width="53" height="15" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="172" y="481" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="174" y="491" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#33</text>
+</g>
+<g>
+<title>animal_horse_face.png | nodes=17/30 | rect=2,106,115,100 | rotated=false | sourceSize=115x100 | offset=0,0</title>
+<rect x="2" y="106" width="115" height="100" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="2" y="92" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="102" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#17/30</text>
+</g>
+<g>
+<title>animal_horse_face_angry.png | nodes=27 | rect=2,2,121,102 | rotated=false | sourceSize=121x102 | offset=0,0</title>
+<rect x="2" y="2" width="121" height="102" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="2" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#27</text>
+</g>
+<g>
+<title>animal_horse_horse_hair.png | nodes=7/10 | rect=125,2,116,116 | rotated=false | sourceSize=116x116 | offset=0,0</title>
+<rect x="125" y="2" width="116" height="116" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="125" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="127" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#7/10</text>
+</g>
+<g>
+<title>animal_horse_horse_leg.png | nodes=4/9/14/21 | rect=132,324,32,50 | rotated=true | sourceSize=32x50 | offset=0,0</title>
+<rect x="132" y="324" width="50" height="32" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 169 328 l 8 0 l 0 8 M 177 328 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="132" y="310" width="98" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="134" y="320" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#4/9/14/21 ROT</text>
+</g>
+<g>
+<title>animal_horse_leg_02.png | nodes=2/22 | rect=222,420,53,59 | rotated=false | sourceSize=53x59 | offset=0,0</title>
+<rect x="222" y="420" width="53" height="59" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="222" y="406" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="224" y="416" fill="#50e678" font-family="Consolas, monospace" font-size="10">#2/22</text>
+</g>
+<g>
+<title>animal_horse_leg_03.png | nodes=3/23 | rect=80,324,35,50 | rotated=true | sourceSize=35x50 | offset=0,0</title>
+<rect x="80" y="324" width="50" height="35" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 117 328 l 8 0 l 0 8 M 125 328 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="80" y="310" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="82" y="320" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#3/23 ROT</text>
+</g>
+<g>
+<title>animal_horse_mouse_01.png | nodes=19/34 | rect=144,284,38,18 | rotated=true | sourceSize=38x18 | offset=0,0</title>
+<rect x="144" y="284" width="18" height="38" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 149 288 l 8 0 l 0 8 M 157 288 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="144" y="270" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="146" y="280" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#19/34 ROT</text>
+</g>
+<g>
+<title>animal_horse_mouse_02.png | nodes=36 | rect=116,284,38,26 | rotated=true | sourceSize=38x26 | offset=0,0</title>
+<rect x="116" y="284" width="26" height="38" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 129 288 l 8 0 l 0 8 M 137 288 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="116" y="270" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="118" y="280" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#36 ROT</text>
+</g>
+<g>
+<title>animal_horse_mouse_03.png | nodes=37 | rect=164,284,43,29 | rotated=false | sourceSize=43x29 | offset=0,0</title>
+<rect x="164" y="284" width="43" height="29" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="164" y="270" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="166" y="280" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#37</text>
+</g>
+<g>
+<title>animal_horse_mouse_04.png | nodes=29/35 | rect=184,315,41,20 | rotated=true | sourceSize=41x20 | offset=0,0</title>
+<rect x="184" y="315" width="20" height="41" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 191 319 l 8 0 l 0 8 M 199 319 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="184" y="301" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="186" y="311" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#29/35 ROT</text>
+</g>
+<g>
+<title>animal_horse_music_0001.png | nodes=40 | rect=2,208,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="2" y="208" width="90" height="80" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="2" y="194" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="204" fill="#50e678" font-family="Consolas, monospace" font-size="10">#40</text>
+</g>
+<g>
+<title>animal_horse_music_0002.png | nodes=41 | rect=119,202,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="119" y="202" width="90" height="80" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="119" y="188" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="121" y="198" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#41</text>
+</g>
+<g>
+<title>animal_horse_music_0003.png | nodes=42 | rect=119,120,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="119" y="120" width="90" height="80" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="119" y="106" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="121" y="116" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#42</text>
+</g>
+<g>
+<title>animal_horse_music_0004.png | nodes=43 | rect=427,94,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="427" y="94" width="80" height="90" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 494 98 l 8 0 l 0 8 M 502 98 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="427" y="80" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="429" y="90" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#43 ROT</text>
+</g>
+<g>
+<title>animal_horse_music_0005.png | nodes=44 | rect=335,84,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="335" y="84" width="90" height="80" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="335" y="70" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="337" y="80" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#44</text>
+</g>
+<g>
+<title>animal_horse_music_0006.png | nodes=45/46 | rect=243,84,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="243" y="84" width="90" height="80" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="243" y="70" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="245" y="80" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#45/46</text>
+</g>
+<g>
+<title>animal_horse_music_0007.png | nodes=47 | rect=427,2,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="427" y="2" width="80" height="90" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 494 6 l 8 0 l 0 8 M 502 6 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="427" y="0" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="429" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#47 ROT</text>
+</g>
+<g>
+<title>animal_horse_music_0008.png | nodes=48 | rect=335,2,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="335" y="2" width="90" height="80" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="335" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="337" y="10" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#48</text>
+</g>
+<g>
+<title>animal_horse_music_0009.png | nodes=49 | rect=243,2,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="243" y="2" width="90" height="80" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="243" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="245" y="10" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#49</text>
+</g>
+<g>
+<title>animal_horse_tail.png | nodes=8/11 | rect=182,358,46,60 | rotated=false | sourceSize=46x60 | offset=0,0</title>
+<rect x="182" y="358" width="46" height="60" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="182" y="344" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="184" y="354" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#8/11</text>
+</g>
+</svg>

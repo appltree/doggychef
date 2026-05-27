@@ -1,0 +1,4 @@
+sequenceId,name,length,resolution,autoPlay,chainedSequenceId,offset,position,scale
+5,default,0.666670024394989,30,false,5,0,0,512
+6,work,1,30,false,5,0,0.800000011920929,512
+7,candy,1,30,false,5,0,1,512

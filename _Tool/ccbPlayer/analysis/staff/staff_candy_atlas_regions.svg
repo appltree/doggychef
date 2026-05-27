@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="512" viewBox="0 0 340 512">
+<rect x="0" y="0" width="256" height="512" fill="#ff00ff"/>
+<image href="../../data/staff/staff_candy.png" x="0" y="0" width="256" height="512"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=11 plist=11 rotated=8 missing=0</text>
+<g>
+<title>staff_candy_body01.png | nodes=1/1 | rect=120,93,89,116 | rotated=true | sourceSize=93x118 | offset=1,-1</title>
+<rect x="120" y="93" width="116" height="89" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 223 97 l 8 0 l 0 8 M 231 97 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="120" y="79" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="122" y="89" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#1/1 ROT</text>
+</g>
+<g>
+<title>staff_candy_body02.png | nodes=1 | rect=120,2,89,116 | rotated=true | sourceSize=93x118 | offset=1,-1</title>
+<rect x="120" y="2" width="116" height="89" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 223 6 l 8 0 l 0 8 M 231 6 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="120" y="0" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="122" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#1 ROT</text>
+</g>
+<g>
+<title>staff_candy_body03_1.png | nodes=1 | rect=2,193,90,113 | rotated=true | sourceSize=98x115 | offset=3,-1</title>
+<rect x="2" y="193" width="113" height="90" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 102 197 l 8 0 l 0 8 M 110 197 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="2" y="179" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="189" fill="#50e678" font-family="Consolas, monospace" font-size="10">#1 ROT</text>
+</g>
+<g>
+<title>staff_candy_body03_2.png | nodes=1 | rect=118,184,90,113 | rotated=true | sourceSize=98x115 | offset=3,-1</title>
+<rect x="118" y="184" width="113" height="90" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 218 188 l 8 0 l 0 8 M 226 188 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="118" y="170" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="120" y="180" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#1 ROT</text>
+</g>
+<g>
+<title>staff_candy_body04.png | nodes=1 | rect=2,100,91,114 | rotated=true | sourceSize=91x114 | offset=0,0</title>
+<rect x="2" y="100" width="114" height="91" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 103 104 l 8 0 l 0 8 M 111 104 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="2" y="86" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="96" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#1 ROT</text>
+</g>
+<g>
+<title>staff_candy_body05.png | nodes=1/1 | rect=2,2,96,116 | rotated=true | sourceSize=96x118 | offset=0,-1</title>
+<rect x="2" y="2" width="116" height="96" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 105 6 l 8 0 l 0 8 M 113 6 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="2" y="0" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#1/1 ROT</text>
+</g>
+<g>
+<title>staff_candy_hand_wait.png | nodes=2 | rect=238,2,55,15 | rotated=true | sourceSize=59x21 | offset=0,0</title>
+<rect x="238" y="2" width="15" height="55" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 240 6 l 8 0 l 0 8 M 248 6 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="214" y="0" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="216" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#2 ROT</text>
+</g>
+<g>
+<title>staff_candy_heart01.png | nodes=3 | rect=233,184,20,20 | rotated=false | sourceSize=34x34 | offset=-2,1</title>
+<rect x="233" y="184" width="20" height="20" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="214" y="170" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="216" y="180" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#3</text>
+</g>
+<g>
+<title>staff_candy_heart02.png | nodes=3 | rect=145,276,22,22 | rotated=false | sourceSize=34x34 | offset=-2,1</title>
+<rect x="145" y="276" width="22" height="22" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="145" y="262" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="147" y="272" fill="#50e678" font-family="Consolas, monospace" font-size="10">#3</text>
+</g>
+<g>
+<title>staff_candy_heart03.png | nodes=3 | rect=117,276,24,26 | rotated=true | sourceSize=34x34 | offset=-2,2</title>
+<rect x="117" y="276" width="26" height="24" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 130 280 l 8 0 l 0 8 M 138 280 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="117" y="262" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="119" y="272" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#3 ROT</text>
+</g>
+<g>
+<title>staff_candy_heart04.png | nodes=3/3 | rect=145,276,22,22 | rotated=false | sourceSize=34x34 | offset=-2,1</title>
+<rect x="145" y="276" width="22" height="22" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="145" y="262" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="147" y="272" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#3/3</text>
+</g>
+</svg>

@@ -1,0 +1,67 @@
+nodeId,path,parentId,depth,baseClass,displayName,sequenceId,sequenceName,property,keyframeType,keyframeCount,times,values,easingTypes,baseValue
+1,0.0,0,1,CCLayer,CCLayer,1,walkout,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[0, 0] | [0, 3] | [0, 0]",1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 0] | [0, 2] | [0, 0] | [0, 2] | [0, 0]",1 | 1 | 1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,3,order,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,4,like,position,3,1,0,"[0, 0]",1,"[0, 0]"
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[29, 34] | [8, 34] | [-13, 33] | [3, 33] | [29, 34]",1 | 1 | 1 | 1 | 1,"[21, 33]"
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-20 | 0 | 20 | 10 | -20,1 | 1 | 1 | 1 | 1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,2,walkin,visible,1,1,0,true,1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,3,order,visible,1,1,0,true,1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,4,like,visible,1,1,0,true,1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,5,angry,visible,1,1,0,true,1,0
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,6,eat,position,3,1,0,"[21, 33]",1,"[21, 33]"
+2,0.0.0,1,2,CCSprite,CCSpriteLegLeft,6,eat,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-16, 33] | [1, 33] | [26, 33] | [9, 32] | [-16, 33]",1 | 1 | 1 | 1 | 1,"[-13, 33]"
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,20 | 10 | -10 | 0 | 20,1 | 1 | 1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,2,walkin,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,3,order,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,4,like,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,5,angry,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteLegRight,6,eat,visible,1,1,0,true,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteBody,2,walkin,visible,1,1,0,true,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteBody,3,order,visible,1,1,0,true,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteBody,4,like,visible,1,1,0,true,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteBody,5,angry,visible,1,1,0,true,1,0
+4,0.0.2,1,2,CCSprite,CCSpriteBody,6,eat,position,3,1,0,"[0, 66]",1,"[0, 66]"
+4,0.0.2,1,2,CCSprite,CCSpriteBody,6,eat,visible,1,1,0,true,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,2,walkin,visible,1,1,0,true,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,3,order,visible,1,1,0,true,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,4,like,position,3,1,0,"[1, 91]",1,"[-1, 91]"
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,4,like,visible,1,1,0,true,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,5,angry,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-1, 91] | [-1, 96] | [-1, 91] | [-1, 96] | [-1, 91]",1 | 1 | 1 | 1 | 1,"[-1, 91]"
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,5,angry,visible,1,1,0,true,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,6,eat,position,3,1,0,"[1, 91]",1,"[-1, 91]"
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,6,eat,rotation,2,1,0,0,1,0
+5,0.0.3,1,2,CCSprite,CCSpriteShoulder,6,eat,visible,1,1,0,true,1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,2,walkin,visible,1,1,0,true,1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,3,order,visible,1,1,0,true,1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-41, 119] | [-40, 120] | [-41, 119] | [-40, 120] | [-41, 119]",1 | 1 | 1 | 1 | 1,"[-36, 113]"
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,30 | 40 | 30 | 40 | 30,1 | 1 | 1 | 1 | 1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,4,like,visible,1,1,0,true,1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,5,angry,visible,1,1,0,true,1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-36, 113] | [-35, 113] | [-36, 113] | [-35, 113] | [-36, 113]",1 | 1 | 1 | 1 | 1,"[-36, 113]"
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 10 | 0 | 10 | 0,1 | 1 | 1 | 1 | 1,0
+6,0.0.4,1,2,CCSprite,CCSpriteHeadTail,6,eat,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHeadNormal,2,walkin,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHeadNormal,3,order,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHeadNormal,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[4, 133] | [4, 129] | [4, 133] | [4, 129] | [4, 133]",1 | 1 | 1 | 1 | 1,"[-2, 141]"
+7,0.0.5,1,2,CCSprite,CCSpriteHeadNormal,6,eat,rotation,2,1,0,10,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteHeadNormal,6,eat,visible,1,1,0,true,1,0
+8,0.0.6,1,2,CCSprite,CCSpriteHeadLike,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 139] | [3, 137] | [0, 139] | [3, 137] | [0, 139]",1 | 1 | 1 | 1 | 1,"[0, 139]"
+8,0.0.6,1,2,CCSprite,CCSpriteHeadLike,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,5 | 10 | 5 | 10 | 5,1 | 1 | 1 | 1 | 1,5
+8,0.0.6,1,2,CCSprite,CCSpriteHeadLike,4,like,visible,1,1,0,true,1,0
+9,0.0.7,1,2,CCSprite,CCSpriteHeadAngry,5,angry,visible,1,1,0,true,1,0
+10,0.0.7.0,9,3,CCSprite,CCSpriteHeadAcc,5,angry,scale,4,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[1, 1] | [1.2999999523162842, 1.2999999523162842] | [1, 1] | [1.2999999523162842, 1.2999999523162842] | [1, 1]",1 | 1 | 1 | 1 | 1,"[1, 1]"
+10,0.0.7.0,9,3,CCSprite,CCSpriteHeadAcc,5,angry,visible,1,1,0,true,1,0
+11,0.0.8,1,2,CCSprite,CCSpriteArmNomral,2,walkin,visible,1,1,0,true,1,0
+11,0.0.8,1,2,CCSprite,CCSpriteArmNomral,3,order,visible,1,1,0,true,1,0
+11,0.0.8,1,2,CCSprite,CCSpriteArmNomral,5,angry,visible,1,1,0,true,1,0
+12,0.0.9,1,2,CCSprite,CCSpriteArmUpper,4,like,visible,1,1,0,true,1,0
+12,0.0.9,1,2,CCSprite,CCSpriteArmUpper,6,eat,position,3,1,0,"[1, 82]",1,"[1, 81]"
+12,0.0.9,1,2,CCSprite,CCSpriteArmUpper,6,eat,rotation,2,1,0,0,1,0
+12,0.0.9,1,2,CCSprite,CCSpriteArmUpper,6,eat,visible,1,1,0,true,1,0
+13,0.0.10,1,2,CCSprite,CCSpriteEat0,6,eat,visible,1,2,0 | 0.10000000149011612,true | true,1 | 1,0
+14,0.0.11,1,2,CCSprite,CCSpriteEat1,6,eat,visible,1,2,0.10000000149011612 | 0.20000000298023224,true | true,1 | 1,0
+15,0.0.12,1,2,CCSprite,CCSpriteEat2,6,eat,visible,1,2,0.20000000298023224 | 0.30000001192092896,true | true,1 | 1,0
+16,0.0.13,1,2,CCSprite,CCSpriteEat3,6,eat,visible,1,2,0.30000001192092896 | 0.46666666865348816,true | true,1 | 1,0
+17,0.0.14,1,2,CCSprite,CCSpriteEat4,6,eat,visible,1,1,0.46666666865348816,true,1,0

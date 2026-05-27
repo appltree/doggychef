@@ -1,0 +1,4 @@
+nodeId,path,parentId,depth,displayName,atlasPlist,frameName,position,positionBase,anchorPoint,scale,rotation,rotationBase,flipX,flipY,visible,visibleBase,visibleSequences,positionSequences,rotationSequences,displayFrameSequences
+1,0.0,0,1,CCSprite,staff/staff_candy.plist,staff_candy_body05.png,,,"[0.5, 0]","[1, 1, false, 0]",,,false,false,,,,,,6:work | 7:candy
+2,0.1,0,1,CCSprite,staff/staff_candy.plist,staff_candy_hand_wait.png,"[-2, 49, 0]",,"[0.5, 0.5]","[1, 1, false, 0]",,,false,false,false,0,6:work,,,
+3,0.2,0,1,CCSprite,staff/staff_candy.plist,staff_candy_heart04.png,"[-90, 103, 0]","[-61, 85]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,true,0,7:candy,7:candy,,7:candy

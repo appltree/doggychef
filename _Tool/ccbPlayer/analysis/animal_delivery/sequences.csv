@@ -1,0 +1,4 @@
+sequenceId,name,length,resolution,autoPlay,chainedSequenceId,offset,position,scale
+1,walkout,0.6666666865348816,30,true,1,0,0.6666666865348816,512
+2,walkin,0.666670024394989,30,false,2,0,0.666670024394989,512
+3,walkout_pizza,0.6666666865348816,30,false,1,0,0.6666666865348816,512

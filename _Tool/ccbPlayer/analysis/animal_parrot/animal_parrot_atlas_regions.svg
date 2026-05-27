@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" fill="#ff00ff"/>
+<image href="../../data/animal_parrot/animal_parrot.png" x="0" y="0" width="512" height="512"/>
+<rect x="0" y="0" width="512" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=31 plist=32 rotated=13 missing=0</text>
+<g>
+<title>animal_parrot_arm.png | nodes=2/4/27/28 | rect=271,417,43,69 | rotated=false | sourceSize=43x69 | offset=0,0</title>
+<rect x="271" y="417" width="43" height="69" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="271" y="403" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="273" y="413" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#2/4/27/28</text>
+</g>
+<g>
+<title>animal_parrot_arm_angry.png | nodes=3/11 | rect=107,186,47,63 | rotated=true | sourceSize=47x63 | offset=0,0</title>
+<rect x="107" y="186" width="63" height="47" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 157 190 l 8 0 l 0 8 M 165 190 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="107" y="172" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="109" y="182" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#3/11 ROT</text>
+</g>
+<g>
+<title>animal_parrot_body.png | nodes=7/8 | rect=2,240,102,87 | rotated=true | sourceSize=102x87 | offset=0,0</title>
+<rect x="2" y="240" width="87" height="102" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 76 244 l 8 0 l 0 8 M 84 244 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="2" y="226" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="236" fill="#50e678" font-family="Consolas, monospace" font-size="10">#7/8 ROT</text>
+</g>
+<g>
+<title>animal_parrot_effect_angry_01.png | nodes=43 | rect=120,436,57,69 | rotated=false | sourceSize=57x69 | offset=0,0</title>
+<rect x="120" y="436" width="57" height="69" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="120" y="422" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="122" y="432" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#43</text>
+</g>
+<g>
+<title>animal_parrot_effect_angry_02.png | nodes=44 | rect=61,436,57,69 | rotated=false | sourceSize=57x69 | offset=0,0</title>
+<rect x="61" y="436" width="57" height="69" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="61" y="422" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="63" y="432" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#44</text>
+</g>
+<g>
+<title>animal_parrot_effect_angry_03.png | nodes=45 | rect=2,436,57,69 | rotated=false | sourceSize=57x69 | offset=0,0</title>
+<rect x="2" y="436" width="57" height="69" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="2" y="422" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="432" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#45</text>
+</g>
+<g>
+<title>animal_parrot_effect_eat_01.png | nodes=29 | rect=323,488,21,24 | rotated=true | sourceSize=21x24 | offset=0,0</title>
+<rect x="323" y="488" width="24" height="21" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 334 492 l 8 0 l 0 8 M 342 492 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="323" y="474" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="325" y="484" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#29 ROT</text>
+</g>
+<g>
+<title>animal_parrot_effect_eat_02.png | nodes=30 | rect=316,462,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="316" y="462" width="21" height="24" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="316" y="448" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="318" y="458" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#30</text>
+</g>
+<g>
+<title>animal_parrot_effect_eat_03.png | nodes=31 | rect=297,488,21,24 | rotated=true | sourceSize=21x24 | offset=0,0</title>
+<rect x="297" y="488" width="24" height="21" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 308 492 l 8 0 l 0 8 M 316 492 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="297" y="474" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="299" y="484" fill="#50e678" font-family="Consolas, monospace" font-size="10">#31 ROT</text>
+</g>
+<g>
+<title>animal_parrot_effect_eat_04.png | nodes=32 | rect=316,462,21,24 | rotated=false | sourceSize=21x24 | offset=0,0</title>
+<rect x="316" y="462" width="21" height="24" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="316" y="448" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="318" y="458" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#32</text>
+</g>
+<g>
+<title>animal_parrot_effect_eat_05.png | nodes=33 | rect=271,488,21,24 | rotated=true | sourceSize=21x24 | offset=0,0</title>
+<rect x="271" y="488" width="24" height="21" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 282 492 l 8 0 l 0 8 M 290 492 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="271" y="474" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="273" y="484" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#33 ROT</text>
+</g>
+<g>
+<title>animal_parrot_eye_angry.png | nodes=16/20 | rect=296,27,27,23 | rotated=false | sourceSize=27x23 | offset=0,0</title>
+<rect x="296" y="27" width="27" height="23" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="296" y="13" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="298" y="23" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#16/20</text>
+</g>
+<g>
+<title>animal_parrot_eye_close.png | nodes=21 | rect=296,2,27,23 | rotated=false | sourceSize=27x23 | offset=0,0</title>
+<rect x="296" y="2" width="27" height="23" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="296" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="298" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#21</text>
+</g>
+<g>
+<title>animal_parrot_eye_normal.png | nodes=13/19 | rect=349,487,27,23 | rotated=false | sourceSize=27x23 | offset=0,0</title>
+<rect x="349" y="487" width="27" height="23" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="349" y="473" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="351" y="483" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#13/19</text>
+</g>
+<g>
+<title>animal_parrot_eye_smile.png | nodes=22 | rect=339,462,27,23 | rotated=false | sourceSize=27x23 | offset=0,0</title>
+<rect x="339" y="462" width="27" height="23" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="339" y="448" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="341" y="458" fill="#50e678" font-family="Consolas, monospace" font-size="10">#22</text>
+</g>
+<g>
+<title>animal_parrot_head_angry.png | nodes=15 | rect=2,121,103,117 | rotated=false | sourceSize=103x117 | offset=0,0</title>
+<rect x="2" y="121" width="103" height="117" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="2" y="107" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="117" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#15</text>
+</g>
+<g>
+<title>animal_parrot_head_normal.png | nodes=12/18 | rect=2,2,103,117 | rotated=false | sourceSize=103x117 | offset=0,0</title>
+<rect x="2" y="2" width="103" height="117" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="2" y="0" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#12/18</text>
+</g>
+<g>
+<title>animal_parrot_leg.png | nodes=5/6/9/10 | rect=172,186,37,45 | rotated=false | sourceSize=37x45 | offset=0,0</title>
+<rect x="172" y="186" width="37" height="45" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="172" y="172" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="174" y="182" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#5/6/9/10</text>
+</g>
+<g>
+<title>animal_parrot_mouth_eat01.png | nodes=25 | rect=211,2,39,36 | rotated=false | sourceSize=39x36 | offset=0,0</title>
+<rect x="211" y="2" width="39" height="36" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="211" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="213" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#25</text>
+</g>
+<g>
+<title>animal_parrot_mouth_eat02.png | nodes=26 | rect=255,2,39,36 | rotated=false | sourceSize=39x36 | offset=0,0</title>
+<rect x="255" y="2" width="39" height="36" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="255" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="257" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#26</text>
+</g>
+<g>
+<title>animal_parrot_mouth_normal.png | nodes=14/17/23 | rect=330,2,39,36 | rotated=false | sourceSize=39x36 | offset=0,0</title>
+<rect x="330" y="2" width="39" height="36" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="330" y="0" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="332" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#14/17/23</text>
+</g>
+<g>
+<title>animal_parrot_mouth_smile.png | nodes=24 | rect=378,2,39,36 | rotated=false | sourceSize=39x36 | offset=0,0</title>
+<rect x="378" y="2" width="39" height="36" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="378" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="380" y="10" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#24</text>
+</g>
+<g>
+<title>animal_parrot_music_0001.png | nodes=34 | rect=248,325,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="248" y="325" width="80" height="90" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 315 329 l 8 0 l 0 8 M 323 329 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="248" y="311" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="250" y="321" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#34 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0002.png | nodes=35 | rect=173,233,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="173" y="233" width="80" height="90" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 240 237 l 8 0 l 0 8 M 248 237 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="173" y="219" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="175" y="229" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#35 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0003.png | nodes=36 | rect=107,94,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="107" y="94" width="80" height="90" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 174 98 l 8 0 l 0 8 M 182 98 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="107" y="80" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="109" y="90" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#36 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0004.png | nodes=37 | rect=107,2,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="107" y="2" width="80" height="90" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 174 6 l 8 0 l 0 8 M 182 6 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="107" y="0" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="109" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#37 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0005.png | nodes=38 | rect=179,424,90,80 | rotated=false | sourceSize=90x80 | offset=0,0</title>
+<rect x="179" y="424" width="90" height="80" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="179" y="410" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="181" y="420" fill="#50e678" font-family="Consolas, monospace" font-size="10">#38</text>
+</g>
+<g>
+<title>animal_parrot_music_0006.png | nodes=39 | rect=166,332,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="166" y="332" width="80" height="90" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 233 336 l 8 0 l 0 8 M 241 336 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="166" y="318" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="168" y="328" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#39 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0007.png | nodes=40 | rect=91,240,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="91" y="240" width="80" height="90" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 158 244 l 8 0 l 0 8 M 166 244 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="91" y="226" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="93" y="236" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#40 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0008.png | nodes=41 | rect=84,344,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="84" y="344" width="80" height="90" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 151 348 l 8 0 l 0 8 M 159 348 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="84" y="330" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="86" y="340" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#41 ROT</text>
+</g>
+<g>
+<title>animal_parrot_music_0009.png | nodes=42 | rect=2,344,90,80 | rotated=true | sourceSize=90x80 | offset=0,0</title>
+<rect x="2" y="344" width="80" height="90" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 69 348 l 8 0 l 0 8 M 77 348 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="2" y="330" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="340" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#42 ROT</text>
+</g>
+</svg>

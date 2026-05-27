@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect x="0" y="0" width="1024" height="1024" fill="#ff00ff"/>
+<image href="../../data/doggy/doggy.png" x="0" y="0" width="1024" height="1024"/>
+<rect x="0" y="0" width="1024" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=66 plist=135 rotated=5 missing=53</text>
+<g>
+<title>doggy_apron_15.png | nodes=15 | rect=630,315,108,52 | rotated=false | sourceSize=130x90 | offset=1,-17</title>
+<rect x="630" y="315" width="108" height="52" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="630" y="301" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="632" y="311" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#15</text>
+</g>
+<g>
+<title>doggy_arm.png | nodes=16 | rect=228,843,36,68 | rotated=true | sourceSize=60x80 | offset=3,-4</title>
+<rect x="228" y="843" width="68" height="36" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 283 847 l 8 0 l 0 8 M 291 847 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="228" y="829" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="230" y="839" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#16 ROT</text>
+</g>
+<g>
+<title>doggy_arm_18.png | nodes=17 | rect=332,823,36,68 | rotated=true | sourceSize=60x80 | offset=2,-4</title>
+<rect x="332" y="823" width="68" height="36" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 387 827 l 8 0 l 0 8 M 395 827 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="332" y="809" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="334" y="819" fill="#50e678" font-family="Consolas, monospace" font-size="10">#17 ROT</text>
+</g>
+<g>
+<title>doggy_arm_left_18.png | nodes=11 | rect=82,919,34,68 | rotated=false | sourceSize=60x80 | offset=-2,-4</title>
+<rect x="82" y="919" width="34" height="68" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="82" y="905" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="84" y="915" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#11</text>
+</g>
+<g>
+<title>doggy_body_18.png | nodes=14 | rect=510,358,98,106 | rotated=true | sourceSize=110x120 | offset=0,4</title>
+<rect x="510" y="358" width="106" height="98" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 603 362 l 8 0 l 0 8 M 611 362 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="510" y="344" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="512" y="354" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#14 ROT</text>
+</g>
+<g>
+<title>doggy_body_18_1.png | nodes=13 | rect=120,485,81,91 | rotated=false | sourceSize=81x91 | offset=0,0</title>
+<rect x="120" y="485" width="81" height="91" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="120" y="471" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="122" y="481" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#13</text>
+</g>
+<g>
+<title>doggy_cafe_09.png | nodes=4 | rect=740,138,126,70 | rotated=false | sourceSize=210x160 | offset=-4,-42</title>
+<rect x="740" y="138" width="126" height="70" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="740" y="124" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="742" y="134" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#4</text>
+</g>
+<g>
+<title>doggy_cafe_10.png | nodes=5 | rect=2,2,202,124 | rotated=false | sourceSize=210x160 | offset=-1,16</title>
+<rect x="2" y="2" width="202" height="124" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="2" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#5</text>
+</g>
+<g>
+<title>doggy_cafe_19.png | nodes=3/72 | rect=206,151,150,109 | rotated=false | sourceSize=200x165 | offset=7,-8</title>
+<rect x="206" y="151" width="150" height="109" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="206" y="137" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="208" y="147" fill="#50e678" font-family="Consolas, monospace" font-size="10">#3/72</text>
+</g>
+<g>
+<title>doggy_hat_24.png | nodes=38/77 | rect=202,757,84,31 | rotated=false | sourceSize=200x165 | offset=-1,10</title>
+<rect x="202" y="757" width="84" height="31" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="202" y="743" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="204" y="753" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#38/77</text>
+</g>
+<g>
+<title>doggy_hat_24_1.png | nodes=2/71 | rect=740,210,106,124 | rotated=true | sourceSize=106x124 | offset=0,0</title>
+<rect x="740" y="210" width="124" height="106" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 851 214 l 8 0 l 0 8 M 859 214 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="740" y="196" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="742" y="206" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#2/71 ROT</text>
+</g>
+<g>
+<title>doggy_leg_01.png | nodes=8 | rect=260,881,50,54 | rotated=false | sourceSize=52x60 | offset=0,-1</title>
+<rect x="260" y="881" width="50" height="54" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="260" y="867" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="262" y="877" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#8</text>
+</g>
+<g>
+<title>doggy_leg_18.png | nodes=7/9 | rect=748,697,38,48 | rotated=true | sourceSize=52x60 | offset=-1,-4</title>
+<rect x="748" y="697" width="48" height="38" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 783 701 l 8 0 l 0 8 M 791 701 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="748" y="683" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="750" y="693" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#7/9 ROT</text>
+</g>
+</svg>

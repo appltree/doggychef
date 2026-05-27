@@ -1,0 +1,19 @@
+{
+  "name": "ccb-player",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analyze:ccb": "tsx tools/analyze-ccb.ts",
+    "analyze:atlas": "tsx tools/analyze-atlas.ts",
+    "build": "tsc -p tsconfig.app.json",
+    "dev": "tsx tools/serve-player.ts",
+    "export:spine": "tsx tools/export-spine.ts",
+    "serve": "tsx tools/serve-player.ts",
+    "watch": "tsc -p tsconfig.app.json --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}

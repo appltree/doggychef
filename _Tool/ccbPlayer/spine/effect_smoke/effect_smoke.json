@@ -1,0 +1,261 @@
+{
+  "skeleton": {
+    "hash": "ccb-player",
+    "spine": "4.3.00",
+    "x": -123.5,
+    "y": -11,
+    "width": 223,
+    "height": 179,
+    "fps": 30,
+    "images": "./images/",
+    "name": "effect_smoke"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "node",
+      "parent": "root",
+      "x": -49,
+      "y": 41
+    },
+    {
+      "name": "node_1",
+      "parent": "root",
+      "x": 29,
+      "y": 43,
+      "scaleX": 0.8,
+      "scaleY": 0.8
+    },
+    {
+      "name": "node_2",
+      "parent": "root",
+      "x": 15,
+      "y": 86,
+      "scaleX": 1.2,
+      "scaleY": 1.2
+    }
+  ],
+  "slots": [
+    {
+      "name": "node_slot",
+      "bone": "node",
+      "attachment": "game_ui_korean_smoke.png"
+    },
+    {
+      "name": "node_slot_1",
+      "bone": "node_1",
+      "attachment": "game_ui_korean_smoke.png"
+    },
+    {
+      "name": "node_slot_2",
+      "bone": "node_2",
+      "attachment": "game_ui_korean_smoke.png"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "node_slot": {
+          "game_ui_korean_smoke.png": {
+            "path": "game_ui_korean_smoke.png",
+            "width": 101,
+            "height": 104
+          }
+        },
+        "node_slot_1": {
+          "game_ui_korean_smoke.png": {
+            "path": "game_ui_korean_smoke.png",
+            "width": 101,
+            "height": 104
+          }
+        },
+        "node_slot_2": {
+          "game_ui_korean_smoke.png": {
+            "path": "game_ui_korean_smoke.png",
+            "width": 101,
+            "height": 104
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "decay": {
+      "bones": {
+        "root": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 1,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 1,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 1,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        },
+        "node": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 1,
+              "x": -24,
+              "y": 29
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 1,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 1,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        },
+        "node_1": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 1,
+              "x": 20,
+              "y": 11
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 1,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 1,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        },
+        "node_2": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 1,
+              "x": 23,
+              "y": 30
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 1,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 1,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        }
+      },
+      "slots": {
+        "node_slot": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "game_ui_korean_smoke.png"
+            }
+          ]
+        },
+        "node_slot_1": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "game_ui_korean_smoke.png"
+            }
+          ]
+        },
+        "node_slot_2": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "game_ui_korean_smoke.png"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

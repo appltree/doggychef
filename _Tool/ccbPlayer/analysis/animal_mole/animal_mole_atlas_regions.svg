@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" fill="#ff00ff"/>
+<image href="../../data/animal_mole/animal_mole.png" x="0" y="0" width="512" height="512"/>
+<rect x="0" y="0" width="512" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=15 plist=21 rotated=5 missing=0</text>
+<g>
+<title>animal_mole_arm_normal.png | nodes=11 | rect=404,51,97,46 | rotated=false | sourceSize=97x46 | offset=0,0</title>
+<rect x="404" y="51" width="97" height="46" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="404" y="37" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="406" y="47" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#11</text>
+</g>
+<g>
+<title>animal_mole_arm_upper.png | nodes=12 | rect=404,99,96,46 | rotated=false | sourceSize=96x46 | offset=0,0</title>
+<rect x="404" y="99" width="96" height="46" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="404" y="85" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="406" y="95" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#12</text>
+</g>
+<g>
+<title>animal_mole_body.png | nodes=4 | rect=404,147,90,91 | rotated=true | sourceSize=90x91 | offset=0,0</title>
+<rect x="404" y="147" width="91" height="90" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 482 151 l 8 0 l 0 8 M 490 151 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="404" y="133" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="406" y="143" fill="#50e678" font-family="Consolas, monospace" font-size="10">#4 ROT</text>
+</g>
+<g>
+<title>animal_mole_effect_eat01.png | nodes=13 | rect=2,396,103,15 | rotated=true | sourceSize=129x29 | offset=-3,3</title>
+<rect x="2" y="396" width="15" height="103" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 4 400 l 8 0 l 0 8 M 12 400 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="2" y="382" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="392" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#13 ROT</text>
+</g>
+<g>
+<title>animal_mole_effect_eat02.png | nodes=14 | rect=297,390,115,23 | rotated=true | sourceSize=129x29 | offset=-3,1</title>
+<rect x="297" y="390" width="23" height="115" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 307 394 l 8 0 l 0 8 M 315 394 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="297" y="376" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="299" y="386" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#14 ROT</text>
+</g>
+<g>
+<title>animal_mole_effect_eat03.png | nodes=15 | rect=386,239,129,29 | rotated=true | sourceSize=129x29 | offset=0,0</title>
+<rect x="386" y="239" width="29" height="129" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 402 243 l 8 0 l 0 8 M 410 243 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="386" y="225" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="388" y="235" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#15 ROT</text>
+</g>
+<g>
+<title>animal_mole_effect_eat04.png | nodes=16 | rect=297,390,115,23 | rotated=true | sourceSize=129x29 | offset=-3,1</title>
+<rect x="297" y="390" width="23" height="115" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 307 394 l 8 0 l 0 8 M 315 394 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="297" y="376" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="299" y="386" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#16 ROT</text>
+</g>
+<g>
+<title>animal_mole_effect_eat05.png | nodes=17 | rect=322,390,129,29 | rotated=false | sourceSize=129x29 | offset=0,0</title>
+<rect x="322" y="390" width="129" height="29" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="322" y="376" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="324" y="386" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#17</text>
+</g>
+<g>
+<title>animal_mole_head_acc.png | nodes=10 | rect=417,239,24,19 | rotated=false | sourceSize=24x19 | offset=0,0</title>
+<rect x="417" y="239" width="24" height="19" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="417" y="225" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="419" y="235" fill="#50e678" font-family="Consolas, monospace" font-size="10">#10</text>
+</g>
+<g>
+<title>animal_mole_head_angry.png | nodes=9 | rect=112,396,91,99 | rotated=false | sourceSize=91x99 | offset=0,0</title>
+<rect x="112" y="396" width="91" height="99" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="112" y="382" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="114" y="392" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#9</text>
+</g>
+<g>
+<title>animal_mole_head_like.png | nodes=8 | rect=205,396,90,98 | rotated=false | sourceSize=90x98 | offset=0,0</title>
+<rect x="205" y="396" width="90" height="98" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="205" y="382" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="207" y="392" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#8</text>
+</g>
+<g>
+<title>animal_mole_head_normal.png | nodes=7 | rect=19,396,91,99 | rotated=false | sourceSize=91x99 | offset=0,0</title>
+<rect x="19" y="396" width="91" height="99" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="19" y="382" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="21" y="392" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#7</text>
+</g>
+<g>
+<title>animal_mole_head_tail.png | nodes=6 | rect=453,239,42,21 | rotated=false | sourceSize=42x21 | offset=0,0</title>
+<rect x="453" y="239" width="42" height="21" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="453" y="225" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="455" y="235" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#6</text>
+</g>
+<g>
+<title>animal_mole_leg.png | nodes=2/3 | rect=453,262,40,34 | rotated=false | sourceSize=40x34 | offset=0,0</title>
+<rect x="453" y="262" width="40" height="34" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="453" y="248" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="455" y="258" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#2/3</text>
+</g>
+<g>
+<title>animal_mole_shoulder.png | nodes=5 | rect=404,2,97,47 | rotated=false | sourceSize=97x47 | offset=0,0</title>
+<rect x="404" y="2" width="97" height="47" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="404" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="406" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#5</text>
+</g>
+</svg>

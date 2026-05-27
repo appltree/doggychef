@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="256" viewBox="0 0 512 256">
+<rect x="0" y="0" width="512" height="256" fill="#ff00ff"/>
+<image href="../../data/animal_cat/animal_cat.png" x="0" y="0" width="512" height="256"/>
+<rect x="0" y="0" width="512" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=24 plist=25 rotated=0 missing=0</text>
+<g>
+<title>animal_cat_arm_angry.png | nodes=2/32 | rect=454,0,32,73 | rotated=false | sourceSize=32x73 | offset=0,0</title>
+<rect x="454" y="0" width="32" height="73" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="454" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="456" y="10" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#2/32</text>
+</g>
+<g>
+<title>animal_cat_arm_eat01.png | nodes=33 | rect=75,156,32,51 | rotated=false | sourceSize=32x51 | offset=0,0</title>
+<rect x="75" y="156" width="32" height="51" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="75" y="142" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="77" y="152" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#33</text>
+</g>
+<g>
+<title>animal_cat_arm_eat02.png | nodes=34 | rect=37,193,32,49 | rotated=false | sourceSize=32x49 | offset=0,0</title>
+<rect x="37" y="193" width="32" height="49" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="37" y="179" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="39" y="189" fill="#50e678" font-family="Consolas, monospace" font-size="10">#34</text>
+</g>
+<g>
+<title>animal_cat_arm_normal.png | nodes=5/13 | rect=118,98,32,64 | rotated=false | sourceSize=32x64 | offset=0,0</title>
+<rect x="118" y="98" width="32" height="64" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="118" y="84" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="120" y="94" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#5/13</text>
+</g>
+<g>
+<title>animal_cat_body.png | nodes=8/12 | rect=354,0,98,85 | rotated=false | sourceSize=98x85 | offset=0,0</title>
+<rect x="354" y="0" width="98" height="85" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="354" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="356" y="10" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#8/12</text>
+</g>
+<g>
+<title>animal_cat_eye_angry.png | nodes=16/18 | rect=428,87,71,29 | rotated=false | sourceSize=71x29 | offset=0,0</title>
+<rect x="428" y="87" width="71" height="29" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="428" y="73" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="430" y="83" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#16/18</text>
+</g>
+<g>
+<title>animal_cat_eye_close.png | nodes=22 | rect=354,87,72,17 | rotated=false | sourceSize=72x17 | offset=0,0</title>
+<rect x="354" y="87" width="72" height="17" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="354" y="73" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="356" y="83" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#22</text>
+</g>
+<g>
+<title>animal_cat_eye_normal.png | nodes=10/21 | rect=0,109,71,26 | rotated=false | sourceSize=71x26 | offset=0,0</title>
+<rect x="0" y="109" width="71" height="26" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="0" y="95" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="105" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#10/21</text>
+</g>
+<g>
+<title>animal_cat_face_angry01.png | nodes=14 | rect=236,0,116,96 | rotated=false | sourceSize=116x96 | offset=0,0</title>
+<rect x="236" y="0" width="116" height="96" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="236" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="238" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#14</text>
+</g>
+<g>
+<title>animal_cat_face_angry02.png | nodes=17 | rect=118,0,116,96 | rotated=false | sourceSize=116x96 | offset=0,0</title>
+<rect x="118" y="0" width="116" height="96" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="118" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="120" y="10" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#17</text>
+</g>
+<g>
+<title>animal_cat_face_normal.png | nodes=9/20 | rect=0,0,116,107 | rotated=false | sourceSize=116x107 | offset=0,0</title>
+<rect x="0" y="0" width="116" height="107" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="0" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="10" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#9/20</text>
+</g>
+<g>
+<title>animal_cat_leg.png | nodes=3/4/6/7 | rect=0,137,36,51 | rotated=false | sourceSize=36x51 | offset=0,0</title>
+<rect x="0" y="137" width="36" height="51" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="0" y="123" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="133" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#3/4/6/7</text>
+</g>
+<g>
+<title>animal_cat_mouth_angry_01.png | nodes=15/19 | rect=180,98,26,22 | rotated=false | sourceSize=26x22 | offset=0,0</title>
+<rect x="180" y="98" width="26" height="22" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="180" y="84" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="182" y="94" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#15/19</text>
+</g>
+<g>
+<title>animal_cat_mouth_eat01.png | nodes=30 | rect=73,109,43,17 | rotated=false | sourceSize=43x17 | offset=0,0</title>
+<rect x="73" y="109" width="43" height="17" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="73" y="95" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="75" y="105" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#30</text>
+</g>
+<g>
+<title>animal_cat_mouth_eat02.png | nodes=31 | rect=38,137,43,17 | rotated=false | sourceSize=43x17 | offset=0,0</title>
+<rect x="38" y="137" width="43" height="17" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="38" y="123" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="40" y="133" fill="#50e678" font-family="Consolas, monospace" font-size="10">#31</text>
+</g>
+<g>
+<title>animal_cat_mouth_normal.png | nodes=11/23 | rect=454,75,29,7 | rotated=false | sourceSize=29x7 | offset=0,0</title>
+<rect x="454" y="75" width="29" height="7" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="454" y="61" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="456" y="71" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#11/23</text>
+</g>
+<g>
+<title>animal_cat_mouth_smile.png | nodes=29 | rect=83,128,32,18 | rotated=false | sourceSize=32x18 | offset=0,0</title>
+<rect x="83" y="128" width="32" height="18" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="83" y="114" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="85" y="124" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#29</text>
+</g>
+<g>
+<title>animal_cat_tung01.png | nodes=24 | rect=0,227,29,11 | rotated=false | sourceSize=29x11 | offset=0,0</title>
+<rect x="0" y="227" width="29" height="11" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="0" y="213" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="223" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#24</text>
+</g>
+<g>
+<title>animal_cat_tung02.png | nodes=25 | rect=270,106,29,11 | rotated=false | sourceSize=29x11 | offset=0,0</title>
+<rect x="270" y="106" width="29" height="11" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="270" y="92" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="272" y="102" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#25</text>
+</g>
+<g>
+<title>animal_cat_tung03.png | nodes=26 | rect=208,98,29,11 | rotated=false | sourceSize=29x11 | offset=0,0</title>
+<rect x="208" y="98" width="29" height="11" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="208" y="84" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="210" y="94" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#26</text>
+</g>
+<g>
+<title>animal_cat_tung04.png | nodes=27 | rect=0,240,29,11 | rotated=false | sourceSize=29x11 | offset=0,0</title>
+<rect x="0" y="240" width="29" height="11" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="0" y="226" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="236" fill="#50e678" font-family="Consolas, monospace" font-size="10">#27</text>
+</g>
+<g>
+<title>animal_cat_tung05.png | nodes=28 | rect=239,98,29,11 | rotated=false | sourceSize=29x11 | offset=0,0</title>
+<rect x="239" y="98" width="29" height="11" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="239" y="84" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="241" y="94" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#28</text>
+</g>
+<g>
+<title>animal_effect_eat2_01.png | nodes=35/37 | rect=0,190,35,35 | rotated=false | sourceSize=35x35 | offset=0,0</title>
+<rect x="0" y="190" width="35" height="35" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="0" y="176" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="2" y="186" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#35/37</text>
+</g>
+<g>
+<title>animal_effect_eat2_02.png | nodes=36/38 | rect=38,156,35,35 | rotated=false | sourceSize=35x35 | offset=0,0</title>
+<rect x="38" y="156" width="35" height="35" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="38" y="142" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="40" y="152" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#36/38</text>
+</g>
+</svg>

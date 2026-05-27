@@ -1,0 +1,10 @@
+sequenceId,name,length,resolution,autoPlay,chainedSequenceId,offset,position,scale
+1,idle,0.6666669845581055,30,true,1,0,0,512
+2,start,2,30,false,-1,0,0,512
+3,goal,0.5,30,false,3,0,0,512
+4,fail,0.6666669845581055,30,false,4,0,0,512
+5,perfect,0.666670024394989,30,false,5,0,0,512
+6,title,4,30,false,6,0,0,512
+7,map_hello,1,30,false,7,0,0,256
+8,map_enter,0.6666666865348816,30,false,-1,0,0,128
+10,ready,0.03333333507180214,30,false,-1,0,0,512

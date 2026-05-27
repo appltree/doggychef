@@ -1,0 +1,80 @@
+nodeId,path,parentId,depth,baseClass,displayName,sequenceId,sequenceName,property,keyframeType,keyframeCount,times,values,easingTypes,baseValue
+1,0.0,0,1,CCLayer,CCLayer,1,walkout,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[0, 0] | [0, 3] | [0, 0]",1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 0] | [0, -2] | [0, 0] | [0, -2] | [0, 0]",1 | 1 | 1 | 1 | 1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,3,order,position,3,1,0,"[0, 0]",1,"[0, 0]"
+1,0.0,0,1,CCLayer,CCLayer,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[0, 0] | [0, 0] | [0, 23] | [0, 0] | [0, 0]",1 | 1 | 1 | 1 | 1,"[0, 0]"
+2,0.0.0,1,2,CCSprite,CCSpriteTail2,5,angry,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[19, 32] | [6, 42] | [19, 32]",1 | 1 | 1,"[5, 44]"
+2,0.0.0,1,2,CCSprite,CCSpriteTail2,5,angry,rotation,2,3,0 | 0.3333333432674408 | 0.6666666865348816,-100 | -70 | -100,1 | 1 | 1,-80
+2,0.0.0,1,2,CCSprite,CCSpriteTail2,5,angry,visible,1,1,0,true,1,0
+3,0.0.1,1,2,CCSprite,CCSpriteTail,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-7, 61] | [-3, 62] | [-7, 61] | [-3, 62] | [-7, 61]",1 | 1 | 1 | 1 | 1,"[-7, 61]"
+3,0.0.1,1,2,CCSprite,CCSpriteTail,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 20 | 0 | 20 | 0,1 | 1 | 1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteTail,3,order,position,3,3,0 | 0.5 | 1,"[-7, 61] | [-7, 61] | [-7, 61]",1 | 1 | 1,"[-7, 61]"
+3,0.0.1,1,2,CCSprite,CCSpriteTail,3,order,rotation,2,3,0 | 0.5 | 1,0 | 20 | 0,1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteTail,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-7, 61] | [-8, 45] | [-8, 45] | [-8, 45] | [-7, 61]",1 | 1 | 1 | 1 | 1,"[-7, 61]"
+3,0.0.1,1,2,CCSprite,CCSpriteTail,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,40 | 40 | 40 | 40 | 40,1 | 1 | 1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteTail,5,angry,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[-24, 28] | [-12, 43] | [-24, 28]",1 | 1 | 1,"[-7, 61]"
+3,0.0.1,1,2,CCSprite,CCSpriteTail,5,angry,rotation,2,3,0 | 0.3333333432674408 | 0.6666666865348816,100 | 70 | 100,1 | 1 | 1,0
+3,0.0.1,1,2,CCSprite,CCSpriteTail,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-7, 61] | [-7, 61] | [-7, 61] | [-7, 61] | [-7, 61]",1 | 1 | 1 | 1 | 1,"[-7, 61]"
+3,0.0.1,1,2,CCSprite,CCSpriteTail,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 20 | 0 | 20 | 0,1 | 1 | 1 | 1 | 1,0
+4,0.0.2,1,2,CCSprite,CCSpriteLegLeft,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[13, 48] | [12, 48] | [13, 48] | [-13, 44] | [13, 48]",1 | 1 | 1 | 1 | 1,"[13, 48]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegLeft,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | -25 | 0 | 30 | 0,1 | 1 | 1 | 1 | 1,0
+4,0.0.2,1,2,CCSprite,CCSpriteLegLeft,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[13, 48] | [13, 48] | [9, 45] | [13, 48] | [13, 48]",1 | 1 | 1 | 1 | 1,"[13, 48]"
+4,0.0.2,1,2,CCSprite,CCSpriteLegLeft,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | -20 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+5,0.0.3,1,2,CCSprite,CCSpriteLegRight,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-17, 47] | [-21, 46] | [-17, 47] | [8, 43] | [-17, 47]",1 | 1 | 1 | 1 | 1,"[-17, 47]"
+5,0.0.3,1,2,CCSprite,CCSpriteLegRight,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 30 | 0 | -30 | 0,1 | 1 | 1 | 1 | 1,0
+5,0.0.3,1,2,CCSprite,CCSpriteLegRight,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-17, 47] | [-17, 47] | [-19, 44] | [-17, 47] | [-17, 47]",1 | 1 | 1 | 1 | 1,"[-17, 47]"
+5,0.0.3,1,2,CCSprite,CCSpriteLegRight,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 20 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+6,0.0.4,1,2,CCSprite,CCSpriteArmLeft2,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[9, 100] | [16, 99] | [3, 86] | [16, 99] | [9, 100]",1 | 1 | 1 | 1 | 1,"[9, 100]"
+6,0.0.4,1,2,CCSprite,CCSpriteArmLeft2,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-100 | -80 | -140 | -80 | -100,1 | 1 | 1 | 1 | 1,-100
+6,0.0.4,1,2,CCSprite,CCSpriteArmLeft2,4,like,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-5, 80] | [1, 91] | [-5, 80] | [2, 72] | [-5, 80]",1 | 1 | 1 | 1 | 1,"[-5, 80]"
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-30 | 10 | -30 | -50 | -30,1 | 1 | 1 | 1 | 1,-30
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,2,walkin,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,3,order,visible,1,1,0,true,1,0
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,6,eat,position,3,1,0,"[13, 102]",1,"[-5, 80]"
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,6,eat,rotation,2,1,0,30,1,-30
+7,0.0.5,1,2,CCSprite,CCSpriteArmLeft,6,eat,visible,1,1,0,true,1,0
+8,0.0.6,1,2,CCSprite,CCSpriteBody,4,like,position,3,4,0 | 0.1666666716337204 | 0.5 | 0.6666666865348816,"[-4, 60] | [-4, 56] | [-4, 56] | [-4, 60]",1 | 1 | 1 | 1,"[-4, 60]"
+8,0.0.6,1,2,CCSprite,CCSpriteBody,4,like,rotation,2,4,0 | 0.1666666716337204 | 0.5 | 0.6666666865348816,0 | 0 | 0 | 0,1 | 1 | 1 | 1,0
+9,0.0.7,1,2,CCSprite,CCSpriteArmRight2,4,like,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-17, 101] | [-21, 100] | [-9, 84] | [-21, 100] | [-17, 101]",1 | 1 | 1 | 1 | 1,"[-17, 101]"
+9,0.0.7,1,2,CCSprite,CCSpriteArmRight2,4,like,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,100 | 80 | 140 | 80 | 100,1 | 1 | 1 | 1 | 1,100
+9,0.0.7,1,2,CCSprite,CCSpriteArmRight2,4,like,visible,1,1,0,true,1,0
+10,0.0.8,1,2,CCSprite,CCSpriteArmRight,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-8, 86] | [-7, 88] | [-8, 86] | [-9, 69] | [-8, 86]",1 | 1 | 1 | 1 | 1,"[-8, 86]"
+10,0.0.8,1,2,CCSprite,CCSpriteArmRight,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,20 | 0 | 20 | 50 | 20,1 | 1 | 1 | 1 | 1,20
+10,0.0.8,1,2,CCSprite,CCSpriteArmRight,2,walkin,visible,1,1,0,true,1,0
+10,0.0.8,1,2,CCSprite,CCSpriteArmRight,3,order,visible,1,1,0,true,1,0
+11,0.0.9,1,2,CCSprite,CCSpriteFace,2,walkin,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-3, 76] | [-3, 73] | [-3, 76] | [-3, 73] | [-3, 76]",1 | 1 | 1 | 1 | 1,"[-3, 76]"
+11,0.0.9,1,2,CCSprite,CCSpriteFace,2,walkin,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | 0 | 0 | 0 | 0,1 | 1 | 1 | 1 | 1,0
+11,0.0.9,1,2,CCSprite,CCSpriteFace,3,order,position,3,5,0 | 0.2666666805744171 | 0.5 | 0.7666666507720947 | 1,"[-3, 76] | [-3, 76] | [-3, 76] | [-3, 76] | [-3, 76]",1 | 1 | 1 | 1 | 1,"[-3, 76]"
+11,0.0.9,1,2,CCSprite,CCSpriteFace,3,order,rotation,2,5,0 | 0.2666666805744171 | 0.5 | 0.7666666507720947 | 1,0 | 5 | 0 | -5 | 0,1 | 1 | 1 | 1 | 1,0
+11,0.0.9,1,2,CCSprite,CCSpriteFace,4,like,position,3,4,0 | 0.1666666716337204 | 0.5 | 0.6666666865348816,"[-3, 76] | [-3, 68] | [-3, 68] | [-3, 76]",1 | 1 | 1 | 1,"[-3, 76]"
+11,0.0.9,1,2,CCSprite,CCSpriteFace,4,like,rotation,2,4,0 | 0.1666666716337204 | 0.5 | 0.6666666865348816,0 | 0 | 0 | 0,1 | 1 | 1 | 1,0
+11,0.0.9,1,2,CCSprite,CCSpriteFace,5,angry,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[-3, 73] | [-3, 78] | [-3, 73]",1 | 1 | 1,"[-3, 76]"
+11,0.0.9,1,2,CCSprite,CCSpriteFace,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-6, 74] | [-6, 72] | [-6, 74] | [-6, 72] | [-6, 74]",1 | 1 | 1 | 1 | 1,"[-3, 76]"
+11,0.0.9,1,2,CCSprite,CCSpriteFace,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,10 | 10 | 10 | 10 | 10,1 | 1 | 1 | 1 | 1,0
+12,0.0.9.0,11,3,CCSprite,CCSpriteEye,4,like,displayFrame,7,1,0,"[animal_fox_eye_02.png, animal/animal_fox.plist]",0,"[animal_fox_eye_01.png, animal/animal_fox.plist]"
+12,0.0.9.0,11,3,CCSprite,CCSpriteEye,5,angry,displayFrame,7,1,0,"[animal_fox_eye_05.png, animal/animal_fox.plist]",0,"[animal_fox_eye_01.png, animal/animal_fox.plist]"
+13,0.0.9.1,11,3,CCSprite,CCSpriteMouse,4,like,displayFrame,7,1,0,"[animal_fox_mouse_02.png, animal/animal_fox.plist]",0,"[animal_fox_mouse_01.png, animal/animal_fox.plist]"
+13,0.0.9.1,11,3,CCSprite,CCSpriteMouse,5,angry,displayFrame,7,1,0,"[animal_fox_mouse_03.png, animal/animal_fox.plist]",0,"[animal_fox_mouse_01.png, animal/animal_fox.plist]"
+13,0.0.9.1,11,3,CCSprite,CCSpriteMouse,6,eat,displayFrame,7,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[animal_fox_mouse_01.png, animal/animal_fox.plist] | [animal_fox_mouse_02.png, animal/animal_fox.plist] | [animal_fox_mouse_01.png, animal/animal_fox.plist] | [animal_fox_mouse_02.png, animal/animal_fox.plist] | [animal_fox_mouse_01.png, animal/animal_fox.plist]",0 | 0 | 0 | 0 | 0,"[animal_fox_mouse_01.png, animal/animal_fox.plist]"
+14,0.0.10,1,2,CCSprite,CCSpriteArm,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[-57, 95] | [-63, 90] | [-57, 95] | [-63, 90] | [-57, 95]",1 | 1 | 1 | 1 | 1,"[-57, 95]"
+14,0.0.10,1,2,CCSprite,CCSpriteArm,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,0 | -20 | 0 | -20 | 0,1 | 1 | 1 | 1 | 1,0
+14,0.0.10,1,2,CCSprite,CCSpriteArm,6,eat,visible,1,1,0,true,1,0
+15,0.0.11,1,2,CCSprite,CCSpriteArm,6,eat,position,3,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,"[41, 50] | [44, 58] | [41, 50] | [44, 58] | [41, 50]",1 | 1 | 1 | 1 | 1,"[82, 38]"
+15,0.0.11,1,2,CCSprite,CCSpriteArm,6,eat,rotation,2,5,0 | 0.1666666716337204 | 0.3333333432674408 | 0.5 | 0.6666666865348816,-45 | -80 | -45 | -80 | -45,1 | 1 | 1 | 1 | 1,-45
+15,0.0.11,1,2,CCSprite,CCSpriteArm,6,eat,visible,1,1,0,true,1,0
+16,0.0.12,1,2,CCSprite,CCSpriteArmAngry,5,angry,displayFrame,7,7,0 | 0.10000000149011612 | 0.20000000298023224 | 0.30000001192092896 | 0.4000000059604645 | 0.5 | 0.6000000238418579,"[animal_fox_arm_04.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist] | [animal_fox_arm_03.png, animal/animal_fox.plist] | [animal_fox_arm_04.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist] | [animal_fox_arm_03.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist]",0 | 0 | 0 | 0 | 0 | 0 | 0,"[animal_fox_arm_02.png, animal/animal_fox.plist]"
+16,0.0.12,1,2,CCSprite,CCSpriteArmAngry,5,angry,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[-24, 65] | [-23, 42] | [-24, 65]",1 | 1 | 1,"[-22, 64]"
+16,0.0.12,1,2,CCSprite,CCSpriteArmAngry,5,angry,rotation,2,3,0 | 0.3333333432674408 | 0.6666666865348816,0 | 10 | 0,1 | 1 | 1,10
+16,0.0.12,1,2,CCSprite,CCSpriteArmAngry,5,angry,visible,1,1,0,true,1,0
+17,0.0.13,1,2,CCSprite,CCSpriteArmAngry,5,angry,displayFrame,7,7,0 | 0.10000000149011612 | 0.20000000298023224 | 0.30000001192092896 | 0.4000000059604645 | 0.5 | 0.6000000238418579,"[animal_fox_arm_04.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist] | [animal_fox_arm_03.png, animal/animal_fox.plist] | [animal_fox_arm_04.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist] | [animal_fox_arm_03.png, animal/animal_fox.plist] | [animal_fox_arm_02.png, animal/animal_fox.plist]",0 | 0 | 0 | 0 | 0 | 0 | 0,"[animal_fox_arm_02.png, animal/animal_fox.plist]"
+17,0.0.13,1,2,CCSprite,CCSpriteArmAngry,5,angry,position,3,3,0 | 0.3333333432674408 | 0.6666666865348816,"[20, 49] | [24, 72] | [20, 49]",1 | 1 | 1,"[17, 49]"
+17,0.0.13,1,2,CCSprite,CCSpriteArmAngry,5,angry,rotation,2,3,0 | 0.3333333432674408 | 0.6666666865348816,-10 | 0 | -10,1 | 1 | 1,0
+17,0.0.13,1,2,CCSprite,CCSpriteArmAngry,5,angry,visible,1,1,0,true,1,0
+18,0.0.14,1,2,CCSprite,CCSpriteEffEat,6,eat,displayFrame,7,7,0 | 0.10000000149011612 | 0.20000000298023224 | 0.30000001192092896 | 0.4000000059604645 | 0.5 | 0.6000000238418579,"[animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist]",0 | 0 | 0 | 0 | 0 | 0 | 0,"[animal_fox_eat_effect0001.png, animal/animal_fox.plist]"
+18,0.0.14,1,2,CCSprite,CCSpriteEffEat,6,eat,position,3,1,0,"[-18, 93]",1,"[-19, 89]"
+18,0.0.14,1,2,CCSprite,CCSpriteEffEat,6,eat,visible,1,1,0,true,1,0
+19,0.0.15,1,2,CCSprite,CCSpriteEffEat,6,eat,displayFrame,7,7,0 | 0.10000000149011612 | 0.20000000298023224 | 0.30000001192092896 | 0.4000000059604645 | 0.5 | 0.6000000238418579,"[animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist] | [animal_fox_eat_effect0001.png, animal/animal_fox.plist] | [animal_fox_eat_effect0002.png, animal/animal_fox.plist]",0 | 0 | 0 | 0 | 0 | 0 | 0,"[animal_fox_eat_effect0002.png, animal/animal_fox.plist]"
+19,0.0.15,1,2,CCSprite,CCSpriteEffEat,6,eat,position,3,1,0,"[26, 91]",1,"[0, 0]"
+19,0.0.15,1,2,CCSprite,CCSpriteEffEat,6,eat,rotation,2,1,0,0,1,0
+19,0.0.15,1,2,CCSprite,CCSpriteEffEat,6,eat,visible,1,1,0,true,1,0

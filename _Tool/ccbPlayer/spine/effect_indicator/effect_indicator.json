@@ -1,0 +1,161 @@
+{
+  "skeleton": {
+    "hash": "ccb-player",
+    "spine": "4.3.00",
+    "x": -18,
+    "y": -20,
+    "width": 80,
+    "height": 75,
+    "fps": 30,
+    "images": "./images/",
+    "name": "effect_indicator"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "node",
+      "parent": "root"
+    }
+  ],
+  "slots": [
+    {
+      "name": "node_slot",
+      "bone": "node",
+      "attachment": "game_ui_hand.png"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "node_slot": {
+          "game_ui_hand.png": {
+            "path": "game_ui_hand.png",
+            "x": 31,
+            "y": 27.5,
+            "width": 62,
+            "height": 55
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "Default Timeline": {
+      "bones": {
+        "root": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.1666666716337204,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.2333333,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 0.1666666716337204,
+              "value": 0
+            },
+            {
+              "time": 0.2333333,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 0.1666666716337204,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 0.2333333,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        },
+        "node": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "time": 0.1666666716337204,
+              "x": -18,
+              "y": -20
+            },
+            {
+              "time": 0.2333333,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0,
+              "value": 0
+            },
+            {
+              "time": 0.1666666716337204,
+              "value": 0
+            },
+            {
+              "time": 0.2333333,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 0.1666666716337204,
+              "x": 1,
+              "y": 1
+            },
+            {
+              "time": 0.2333333,
+              "x": 1,
+              "y": 1
+            }
+          ]
+        }
+      },
+      "slots": {
+        "node_slot": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "game_ui_hand.png"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

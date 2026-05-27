@@ -1,0 +1,19 @@
+nodeId,path,parentId,depth,displayName,atlasPlist,frameName,position,positionBase,anchorPoint,scale,rotation,rotationBase,flipX,flipY,visible,visibleBase,visibleSequences,positionSequences,rotationSequences,displayFrameSequences
+2,0.0.0,1,2,CCSpriteTail2,animal/animal_fox.plist,animal_fox_tail.png,"[5, 44, 0]","[5, 44]","[0, 1]","[1, 1, false, 0]",-80,-80,true,false,false,0,5:angry,5:angry,5:angry,
+3,0.0.1,1,2,CCSpriteTail,animal/animal_fox.plist,animal_fox_tail.png,"[-7, 61, 0]","[-7, 61]","[1, 1]","[1, 1, false, 0]",0,0,false,false,,,,2:walkin | 3:order | 4:like | 5:angry | 6:eat,2:walkin | 3:order | 4:like | 5:angry | 6:eat,
+4,0.0.2,1,2,CCSpriteLegLeft,animal/animal_fox.plist,animal_fox_leg.png,"[13, 48, 0]","[13, 48]","[0.5, 1]","[1, 1, false, 0]",0,0,false,false,,,,2:walkin | 4:like,2:walkin | 4:like,
+5,0.0.3,1,2,CCSpriteLegRight,animal/animal_fox.plist,animal_fox_leg.png,"[-17, 47, 0]","[-17, 47]","[0.5, 1]","[1, 1, false, 0]",0,0,false,false,,,,2:walkin | 4:like,2:walkin | 4:like,
+6,0.0.4,1,2,CCSpriteArmLeft2,animal/animal_fox.plist,animal_fox_arm_01.png,"[9, 100, 0]","[9, 100]","[1, 1]","[1, 1, false, 0]",-100,-100,false,false,false,0,4:like,4:like,4:like,
+7,0.0.5,1,2,CCSpriteArmLeft,animal/animal_fox.plist,animal_fox_arm_01.png,"[13, 102, 0]","[-5, 80]","[0, 1]","[1, 1, false, 0]",30,-30,true,false,true,0,2:walkin | 3:order | 6:eat,2:walkin | 6:eat,2:walkin | 6:eat,
+8,0.0.6,1,2,CCSpriteBody,animal/animal_fox.plist,animal_fox_body.png,"[-4, 60, 0]","[-4, 60]","[0.5, 0.5]","[1, 1, false, 0]",0,0,false,false,,,,4:like,4:like,
+9,0.0.7,1,2,CCSpriteArmRight2,animal/animal_fox.plist,animal_fox_arm_01.png,"[-17, 101, 0]","[-17, 101]","[0, 1]","[1, 1, false, 0]",100,100,true,false,false,0,4:like,4:like,4:like,
+10,0.0.8,1,2,CCSpriteArmRight,animal/animal_fox.plist,animal_fox_arm_01.png,"[-8, 86, 0]","[-8, 86]","[1, 1]","[1, 1, false, 0]",20,20,false,false,false,0,2:walkin | 3:order,2:walkin,2:walkin,
+11,0.0.9,1,2,CCSpriteFace,animal/animal_fox.plist,animal_fox_face.png,"[-6, 74, 0]","[-3, 76]","[0.5, 0]","[1, 1, false, 0]",10,0,false,false,,,,2:walkin | 3:order | 4:like | 5:angry | 6:eat,2:walkin | 3:order | 4:like | 6:eat,
+12,0.0.9.0,11,3,CCSpriteEye,animal/animal_fox.plist,animal_fox_eye_05.png,"[50, 41, 0]",,"[0.5, 0.5]","[1, 1, false, 0]",,,false,false,,,,,,4:like | 5:angry
+13,0.0.9.1,11,3,CCSpriteMouse,animal/animal_fox.plist,animal_fox_mouse_03.png,"[52, 14, 0]",,"[0.5, 0.5]","[1, 1, false, 0]",,,false,false,,,,,,4:like | 5:angry | 6:eat
+14,0.0.10,1,2,CCSpriteArm,animal/animal_fox.plist,animal_fox_arm_05.png,"[-57, 95, 0]","[-57, 95]","[0, 1]","[1, 1, false, 0]",0,0,false,false,true,0,6:eat,6:eat,6:eat,
+15,0.0.11,1,2,CCSpriteArm,animal/animal_fox.plist,animal_fox_arm_06.png,"[41, 50, 0]","[82, 38]","[0.5, 0]","[1, 1, false, 0]",-45,-45,false,false,true,0,6:eat,6:eat,6:eat,
+16,0.0.12,1,2,CCSpriteArmAngry,animal/animal_fox.plist,animal_fox_arm_03.png,"[-22, 64, 0]","[-22, 64]","[1, 0]","[1, 1, false, 0]",10,10,false,false,false,0,5:angry,5:angry,5:angry,5:angry
+17,0.0.13,1,2,CCSpriteArmAngry,animal/animal_fox.plist,animal_fox_arm_02.png,"[17, 49, 0]","[17, 49]","[0, 0]","[1, 1, false, 0]",0,0,true,false,false,0,5:angry,5:angry,5:angry,5:angry
+18,0.0.14,1,2,CCSpriteEffEat,animal/animal_fox.plist,animal_fox_eat_effect0002.png,"[-18, 93, 0]","[-19, 89]","[0.5, 0.5]","[1, 1, false, 0]",,,false,false,true,0,6:eat,6:eat,,6:eat
+19,0.0.15,1,2,CCSpriteEffEat,animal/animal_fox.plist,animal_fox_eat_effect0002.png,"[26, 91, 0]","[0, 0]","[0.5, 0.5]","[1, 1, false, 0]",0,0,false,false,true,0,6:eat,6:eat,6:eat,6:eat

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="256" viewBox="0 0 340 256">
+<rect x="0" y="0" width="256" height="256" fill="#ff00ff"/>
+<image href="../../data/animal_sister/animal_sister.png" x="0" y="0" width="256" height="256"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=17 plist=17 rotated=6 missing=0</text>
+<g>
+<title>animal_sister_arm_bend01.png | nodes=14/15 | rect=2,226,25,24 | rotated=true | sourceSize=25x24 | offset=0,0</title>
+<rect x="2" y="226" width="24" height="25" fill="none" stroke="#ff3c3c" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 13 230 l 8 0 l 0 8 M 21 230 q -10 0 -10 10" fill="none" stroke="#ff3c3c" stroke-width="2"/>
+<rect x="2" y="212" width="70" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="222" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#14/15 ROT</text>
+</g>
+<g>
+<title>animal_sister_arm_bend02.png | nodes=13/16/17 | rect=213,2,23,40 | rotated=true | sourceSize=23x40 | offset=0,0</title>
+<rect x="213" y="2" width="40" height="23" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 240 6 l 8 0 l 0 8 M 248 6 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="165" y="0" width="91" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="167" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#13/16/17 ROT</text>
+</g>
+<g>
+<title>animal_sister_arm_normal.png | nodes=5/27/31 | rect=213,76,26,47 | rotated=false | sourceSize=26x47 | offset=0,0</title>
+<rect x="213" y="76" width="26" height="47" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="200" y="62" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="202" y="72" fill="#50e678" font-family="Consolas, monospace" font-size="10">#5/27/31</text>
+</g>
+<g>
+<title>animal_sister_body.png | nodes=6/28 | rect=2,94,84,69 | rotated=false | sourceSize=84x69 | offset=0,0</title>
+<rect x="2" y="94" width="84" height="69" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="2" y="80" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="90" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#6/28</text>
+</g>
+<g>
+<title>animal_sister_effect_eat01.png | nodes=18 | rect=111,74,100,22 | rotated=false | sourceSize=100x22 | offset=0,0</title>
+<rect x="111" y="74" width="100" height="22" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="111" y="60" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="113" y="70" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#18</text>
+</g>
+<g>
+<title>animal_sister_effect_eat02.png | nodes=19 | rect=111,50,100,22 | rotated=false | sourceSize=100x22 | offset=0,0</title>
+<rect x="111" y="50" width="100" height="22" fill="none" stroke="#ff8228" stroke-width="2" />
+
+<rect x="111" y="36" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="113" y="46" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#19</text>
+</g>
+<g>
+<title>animal_sister_effect_eat03.png | nodes=20 | rect=111,26,100,22 | rotated=false | sourceSize=100x22 | offset=0,0</title>
+<rect x="111" y="26" width="100" height="22" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="111" y="12" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="113" y="22" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#20</text>
+</g>
+<g>
+<title>animal_sister_effect_eat04.png | nodes=21 | rect=111,50,100,22 | rotated=false | sourceSize=100x22 | offset=0,0</title>
+<rect x="111" y="50" width="100" height="22" fill="none" stroke="#3cbeff" stroke-width="2" />
+
+<rect x="111" y="36" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="113" y="46" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#21</text>
+</g>
+<g>
+<title>animal_sister_effect_eat05.png | nodes=22/23 | rect=111,2,100,22 | rotated=false | sourceSize=100x22 | offset=0,0</title>
+<rect x="111" y="2" width="100" height="22" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="111" y="0" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="113" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#22/23</text>
+</g>
+<g>
+<title>animal_sister_face_close_eye.png | nodes=9 | rect=139,98,56,49 | rotated=false | sourceSize=56x49 | offset=0,0</title>
+<rect x="139" y="98" width="56" height="49" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="139" y="84" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="141" y="94" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#9</text>
+</g>
+<g>
+<title>animal_sister_face_eat01.png | nodes=10 | rect=60,165,59,56 | rotated=true | sourceSize=59x56 | offset=0,0</title>
+<rect x="60" y="165" width="56" height="59" fill="none" stroke="#dc64ff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 103 169 l 8 0 l 0 8 M 111 169 q -10 0 -10 10" fill="none" stroke="#dc64ff" stroke-width="2"/>
+<rect x="60" y="151" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="62" y="161" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#10 ROT</text>
+</g>
+<g>
+<title>animal_sister_face_eat02.png | nodes=11 | rect=2,165,59,56 | rotated=true | sourceSize=59x56 | offset=0,0</title>
+<rect x="2" y="165" width="56" height="59" fill="none" stroke="#ff8228" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 45 169 l 8 0 l 0 8 M 53 169 q -10 0 -10 10" fill="none" stroke="#ff8228" stroke-width="2"/>
+<rect x="2" y="151" width="49" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="161" fill="#ff8228" font-family="Consolas, monospace" font-size="10">#11 ROT</text>
+</g>
+<g>
+<title>animal_sister_face_like.png | nodes=12 | rect=197,125,55,52 | rotated=false | sourceSize=55x52 | offset=0,0</title>
+<rect x="197" y="125" width="55" height="52" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="197" y="111" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="199" y="121" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#12</text>
+</g>
+<g>
+<title>animal_sister_face_normal.png | nodes=8/30 | rect=88,98,56,49 | rotated=true | sourceSize=56x49 | offset=0,0</title>
+<rect x="88" y="98" width="49" height="56" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 124 102 l 8 0 l 0 8 M 132 102 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="88" y="84" width="63" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="90" y="94" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#8/30 ROT</text>
+</g>
+<g>
+<title>animal_sister_head.png | nodes=7/29 | rect=2,2,107,90 | rotated=false | sourceSize=107x90 | offset=0,0</title>
+<rect x="2" y="2" width="107" height="90" fill="none" stroke="#50e678" stroke-width="2" />
+
+<rect x="2" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#50e678" font-family="Consolas, monospace" font-size="10">#7/29</text>
+</g>
+<g>
+<title>animal_sister_leg.png | nodes=3/4/25/26 | rect=213,46,28,34 | rotated=true | sourceSize=28x34 | offset=0,0</title>
+<rect x="213" y="46" width="34" height="28" fill="none" stroke="#ffd246" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 234 50 l 8 0 l 0 8 M 242 50 q -10 0 -10 10" fill="none" stroke="#ffd246" stroke-width="2"/>
+<rect x="158" y="32" width="98" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="160" y="42" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#3/4/25/26 ROT</text>
+</g>
+<g>
+<title>animal_sister_tail.png | nodes=2/24 | rect=213,27,35,17 | rotated=false | sourceSize=35x17 | offset=0,0</title>
+<rect x="213" y="27" width="35" height="17" fill="none" stroke="#dc64ff" stroke-width="2" />
+
+<rect x="213" y="13" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="215" y="23" fill="#dc64ff" font-family="Consolas, monospace" font-size="10">#2/24</text>
+</g>
+</svg>

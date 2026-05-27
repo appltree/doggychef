@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="256" viewBox="0 0 340 256">
+<rect x="0" y="0" width="256" height="256" fill="#ff00ff"/>
+<image href="../../data/staff/cashier.png" x="0" y="0" width="256" height="256"/>
+<rect x="0" y="0" width="340" height="20" fill="rgba(0,0,0,0.82)"/>
+<text x="4" y="14" fill="#fff" font-family="Consolas, monospace" font-size="12">frames=4 plist=4 rotated=2 missing=0</text>
+<g>
+<title>cashier_close_eye_body.png | nodes=1 | rect=130,93,89,126 | rotated=false | sourceSize=101x126 | offset=5,0</title>
+<rect x="130" y="93" width="89" height="126" fill="none" stroke="#ff3c3c" stroke-width="2" />
+
+<rect x="130" y="79" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="132" y="89" fill="#ff3c3c" font-family="Consolas, monospace" font-size="10">#1</text>
+</g>
+<g>
+<title>cashier_normal_body.png | nodes=1/1 | rect=95,2,89,126 | rotated=true | sourceSize=101x126 | offset=5,0</title>
+<rect x="95" y="2" width="126" height="89" fill="none" stroke="#3cbeff" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 208 6 l 8 0 l 0 8 M 216 6 q -10 0 -10 10" fill="none" stroke="#3cbeff" stroke-width="2"/>
+<rect x="95" y="0" width="56" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="97" y="10" fill="#3cbeff" font-family="Consolas, monospace" font-size="10">#1/1 ROT</text>
+</g>
+<g>
+<title>cashier_work_body_casher01.png | nodes=1 | rect=2,130,91,126 | rotated=true | sourceSize=101x126 | offset=1,0</title>
+<rect x="2" y="130" width="126" height="91" fill="none" stroke="#50e678" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M 115 134 l 8 0 l 0 8 M 123 134 q -10 0 -10 10" fill="none" stroke="#50e678" stroke-width="2"/>
+<rect x="2" y="116" width="42" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="126" fill="#50e678" font-family="Consolas, monospace" font-size="10">#1 ROT</text>
+</g>
+<g>
+<title>cashier_work_body_casher02.png | nodes=1 | rect=2,2,91,126 | rotated=false | sourceSize=101x126 | offset=1,0</title>
+<rect x="2" y="2" width="91" height="126" fill="none" stroke="#ffd246" stroke-width="2" />
+
+<rect x="2" y="0" width="38" height="14" fill="rgba(0,0,0,0.78)"/>
+<text x="4" y="10" fill="#ffd246" font-family="Consolas, monospace" font-size="10">#1</text>
+</g>
+</svg>

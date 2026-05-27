@@ -89,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 0.62, y: 0.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1402117498467059479
 GameObject:
@@ -916,10 +916,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.85, y: 0.71}
+  m_Size: {x: 0.36, y: 0.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7222000000000000001
 GameObject:
@@ -1010,7 +1010,7 @@ SpriteRenderer:
   m_Size: {x: 0.57, y: 0.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7714474413430253843
 GameObject:

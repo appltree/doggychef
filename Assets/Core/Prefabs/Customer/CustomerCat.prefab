@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184859138288498140, guid: f44d1f829b263a74d8c999d9cdd5fb3f, type: 3}
       propertyPath: m_Name
-      value: Customer Variant
+      value: CustomerCat
       objectReference: {fileID: 0}
     - target: {fileID: 4276177955399432092, guid: f44d1f829b263a74d8c999d9cdd5fb3f, type: 3}
       propertyPath: m_Mesh

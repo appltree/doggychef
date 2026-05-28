@@ -447,6 +447,26 @@ function isOffstagePose(pose: NodePose): boolean {
   return Math.abs(pose.position.x) > 250 || Math.abs(pose.position.y) > 250;
 }
 
+// Returns the first pose where this sprite node is on-stage and visible,
+// to use as the Spine rest position regardless of which animation we're in.
+// This prevents the "parts fly in from off-screen" artifact during animation mixing:
+// invisible bones stay at their on-stage rest position instead of the CCB off-stage position.
+function findOnstagePose(
+  node: CcbNode,
+  document: CcbDocument,
+): NodePose | undefined {
+  for (const sequence of document.sequences) {
+    const seqTimes = collectSequenceTimes(document, sequence);
+    for (const time of seqTimes) {
+      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+      if (pose.visible && !isOffstagePose(pose)) {
+        return pose;
+      }
+    }
+  }
+  return undefined;
+}
+
 function multiply(left: Matrix, right: Matrix): Matrix {
   return {
     a: left.a * right.a + left.c * right.b,
@@ -682,9 +702,21 @@ function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedA
     }
   }
 
+  // For each slot node, find the pose where it is actually on-stage.
+  // This is used as the Spine rest/setup position so that invisible bones
+  // park at their on-stage position instead of their CCB off-stage position,
+  // preventing large position interpolations during animation transitions.
+  const onstagePoses = new Map<number, NodePose>();
+  for (const node of slotNodes) {
+    const pose = findOnstagePose(node, document);
+    if (pose) {
+      onstagePoses.set(node.id, pose);
+    }
+  }
+
   const bones: SpineBone[] = mirrorBoneName ? [{ name: mirrorBoneName }] : [];
   for (const node of document.nodes) {
-    const pose = sampleNodePose(node, setupSequence?.sequenceId ?? 0, 0);
+    const pose = onstagePoses.get(node.id) ?? sampleNodePose(node, setupSequence?.sequenceId ?? 0, 0);
     const parentBone = node.parentId === null
       ? mirrorBoneName
       : (contentBoneNames.get(node.parentId) ?? boneNames.get(node.parentId));
@@ -705,7 +737,7 @@ function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedA
   const setupTime = 0;
   for (const node of slotNodes) {
     const sequence = setupSequence ?? document.sequences[0];
-    const pose = sampleNodePose(node, sequence?.sequenceId ?? 0, setupTime);
+    const pose = onstagePoses.get(node.id) ?? sampleNodePose(node, sequence?.sequenceId ?? 0, setupTime);
     const slotName = slotNames.get(node.id) ?? `slot_${node.id}`;
     const initialAttachment = sequence ? attachmentName(document, node, sequence, setupTime, pose) : undefined;
     slots.push(compactObject({
@@ -729,6 +761,7 @@ function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedA
       slotNames,
       slotNodes,
       mirrorBoneName,
+      onstagePoses,
     );
   }
 
@@ -794,18 +827,44 @@ function buildAnimation(
   slotNames: Map<number, string>,
   slotNodes: CcbNode[],
   mirrorBoneName: string | undefined,
+  onstagePoses: Map<number, NodePose>,
 ): SpineAnimation {
   const times = collectSequenceTimes(document, sequence);
   const bones: Record<string, SpineBoneTimeline> = {};
   const slots: Record<string, SpineSlotTimeline> = {};
+  const slotNodeIds = new Set(slotNodes.map((n) => n.id));
 
   for (const node of document.nodes) {
     const boneName = boneNames.get(node.id);
     if (!boneName) {
       continue;
     }
-    const setupPose = sampleNodePose(node, document.sequences[0]?.sequenceId ?? 0, 0);
+
+    // Use on-stage pose as reference so animation deltas are relative to the
+    // visible position, not the CCB off-stage placeholder position.
+    const setupPose = onstagePoses.get(node.id) ?? sampleNodePose(node, document.sequences[0]?.sequenceId ?? 0, 0);
     const setupScale = poseScale(setupPose);
+
+    // If this is a slot node and its attachment is null for the entire animation,
+    // park it at the rest (on-stage) position with delta=0.
+    // This prevents Spine from interpolating bones across the large off-stage
+    // distance during animation transitions, eliminating the "parts fly from
+    // top-left to center" artifact.
+    const isSlotNode = slotNodeIds.has(node.id);
+    const isNullThroughout = isSlotNode && times.every((time) => {
+      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+      return attachmentName(document, node, sequence, time, pose) === undefined;
+    });
+
+    if (isNullThroughout) {
+      bones[boneName] = { translate: [{ time: 0, x: 0, y: 0 }] };
+      const contentBoneName = contentBoneNames.get(node.id);
+      if (contentBoneName) {
+        bones[contentBoneName] = { translate: [{ time: 0, x: 0, y: 0 }] };
+      }
+      continue;
+    }
+
     const frames = times.map((time) => ({
       time,
       pose: sampleNodePose(node, poseSequenceId(document, node, sequence), time),

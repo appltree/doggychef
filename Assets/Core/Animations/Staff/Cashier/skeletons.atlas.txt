@@ -1,0 +1,15 @@
+skeletons.png
+size:256,256
+filter:Linear,Linear
+cashier_close_eye_body
+bounds:2,165,89,126
+rotate:90
+cashier_normal_body
+bounds:2,74,89,126
+rotate:90
+cashier_work_body_casher01
+bounds:130,129,90,125
+offsets:1,0,91,126
+cashier_work_body_casher02
+bounds:130,2,90,125
+offsets:1,0,91,126

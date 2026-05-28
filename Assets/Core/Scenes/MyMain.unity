@@ -2066,6 +2066,7 @@ MonoBehaviour:
   Goals: []
   CustomerPrefabs:
   - {fileID: 3719028602584229075, guid: 3e722439b95c58e4685e992267697c9c, type: 3}
+  - {fileID: 3719028602584229075, guid: 47299f6751d2f6f4fb3616b2ff98636c, type: 3}
   IceSpawnChance: 0.05
   BorderMargin: 0.3
   Background: {fileID: 0}

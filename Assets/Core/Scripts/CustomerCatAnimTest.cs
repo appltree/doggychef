@@ -13,6 +13,10 @@ namespace MyMatch3
         [Tooltip("테스트할 SkeletonAnimation. 비워두면 씬에서 자동 검색합니다.")]
         [SerializeField] private SkeletonAnimation m_SkeletonAnimation;
 
+        [Header("Animation Mix")]
+        [Tooltip("When enabled, each button switches animations immediately without blending from the previous animation.")]
+        [SerializeField] private bool m_DisableMixOnSwitch = true;
+
         private static readonly (string key, string label)[] s_Anims =
         {
             ("walkin",  "① Walkin  (입장)"),
@@ -76,7 +80,16 @@ namespace MyMatch3
         {
             if (m_SkeletonAnimation == null) return;
             m_CurrentAnim = animName;
-            m_SkeletonAnimation.AnimationState.SetAnimation(0, animName, true);
+
+            if (m_DisableMixOnSwitch)
+            {
+                m_SkeletonAnimation.AnimationState.ClearTrack(0);
+                m_SkeletonAnimation.Skeleton.SetupPose();
+            }
+
+            var entry = m_SkeletonAnimation.AnimationState.SetAnimation(0, animName, true);
+            if (m_DisableMixOnSwitch)
+                entry.MixDuration = 0f;
         }
     }
 }

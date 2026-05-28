@@ -1679,11 +1679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000000002, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.82
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 1000000002, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.28
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 1000000002, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1733,13 +1733,34 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 867880795
       objectReference: {fileID: 0}
+    - target: {fileID: 1321061149963816926, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: initialFlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733883146081608570, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477104639020369475, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477104639020369475, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517593572317306018, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517593572317306018, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 867880795
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1000000004, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 822537092}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
 --- !u!1 &267519448
 GameObject:
@@ -2067,6 +2088,7 @@ MonoBehaviour:
   CustomerPrefabs:
   - {fileID: 3719028602584229075, guid: 3e722439b95c58e4685e992267697c9c, type: 3}
   - {fileID: 3719028602584229075, guid: 47299f6751d2f6f4fb3616b2ff98636c, type: 3}
+  - {fileID: 3719028602584229075, guid: fb37dd46fa55dfe499cb2dea7f4092bb, type: 3}
   IceSpawnChance: 0.05
   BorderMargin: 0.3
   Background: {fileID: 0}
@@ -3183,59 +3205,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792458696}
   m_CullTransparentMesh: 1
---- !u!1 &822537087 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000000004, guid: 70ed882963e0069439f20fe6d2f69539, type: 3}
-  m_PrefabInstance: {fileID: 197614412}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &822537092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822537087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: spine-unity::Spine.Unity.SkeletonRenderer
-  skeletonDataAsset: {fileID: 11400000, guid: f9937187332018349a9d0a93dda525ca, type: 2}
-  initialSkinName: 
-  initialFlipX: 0
-  initialFlipY: 0
-  meshSettings:
-    useClipping: 1
-    zSpacing: 0
-    tintBlack: 0
-    canvasGroupCompatible: 0
-    pmaVertexColors: 1
-    addNormals: 0
-    calculateTangents: 0
-    immutableTriangles: 0
-  updateWhenInvisible: 3
-  clearStateOnDisable: 0
-  separatorSlotNames: []
-  enableSeparatorSlots: 0
-  disableRenderingOnOverride: 1
-  physicsPositionInheritanceFactor: {x: 1, y: 1}
-  physicsRotationInheritanceFactor: 1
-  physicsPositionInheritanceLimit: {x: Infinity, y: Infinity}
-  physicsRotationInheritanceLimit: 3.4028235e+38
-  physicsMovementRelativeTo: {fileID: 0}
-  threadedMeshGeneration: 2
-  singleSubmesh: 0
-  fixDrawOrder: 0
-  maskInteraction: 0
-  fixPrefabOverrideViaMeshFilter: 2
-  wasDeprecatedTransferred: 1
-  zSpacingDeprecated: 0
-  useClippingDeprecated: 1
-  immutableTrianglesDeprecated: 0
-  pmaVertexColorsDeprecated: 1
-  tintBlackDeprecated: 0
-  addNormalsDeprecated: 0
-  calculateTangentsDeprecated: 0
 --- !u!1 &838814293
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,7 +57,7 @@
     "Temp/": true
   },
   "files.associations": {
-    "*.asset": "yaml",
+    "*.asset": "plaintext",
     "*.meta": "yaml",
     "*.prefab": "plaintext",
     "*.unity": "plaintext"

@@ -344,7 +344,7 @@ namespace MyMatch3
         private void PlayCashier()
         {
             if (m_Animator != null)
-                m_Animator.AnimationState.SetAnimation(0, "walk", false);
+                m_Animator.AnimationState.SetAnimation(0, "work", false);
         }
 
         private void PlaySide()

@@ -76,7 +76,7 @@ namespace MyMatch3
             PlayIdle();
 
             if (Tables == null || Tables.Length == 0)
-                Tables = FindObjectsByType<Table>(FindObjectsSortMode.None);
+                Tables = FindObjectsByType<Table>(FindObjectsInactive.Exclude);
         }
 
         private void OnEnable()
@@ -149,7 +149,7 @@ namespace MyMatch3
 
                 // 머신 상태 확인 (매 폴링마다 직접 찾기 — Origin 방식)
                 // 플레이어가 탭해서 Active 상태가 된 경우에도 배달을 진행해야 함.
-                var machine = FindFirstObjectByType<Machine>();
+                var machine = FindAnyObjectByType<Machine>();
                 if (machine == null || (!machine.IsCompleted() && !machine.IsActive())) continue;
 
                 Table target = ChooseSideTargetTable();
@@ -296,7 +296,7 @@ namespace MyMatch3
 
                 // Owner == table 인 CoinMoney를 찾아 Staff 위치로 날림
                 CoinMoney targetCoin = null;
-                foreach (var coin in FindObjectsByType<CoinMoney>(FindObjectsSortMode.None))
+                foreach (var coin in FindObjectsByType<CoinMoney>(FindObjectsInactive.Exclude))
                 {
                     if (coin != null && coin.Owner == table)
                     {
@@ -338,19 +338,19 @@ namespace MyMatch3
         private void PlayIdle()
         {
             if (m_Animator != null)
-                m_Animator.AnimationState.SetAnimation(0, "idle", true);
+                m_Animator.AnimationState.SetAnimation(0, "default", true);
         }
 
         private void PlayCashier()
         {
             if (m_Animator != null)
-                m_Animator.AnimationState.SetAnimation(0, "cashier", false);
+                m_Animator.AnimationState.SetAnimation(0, "walk", false);
         }
 
         private void PlaySide()
         {
             if (m_Animator != null)
-                m_Animator.AnimationState.SetAnimation(0, "side", false);
+                m_Animator.AnimationState.SetAnimation(0, "serve", false);
         }
     }
 }

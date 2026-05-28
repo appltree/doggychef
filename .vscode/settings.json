@@ -73,5 +73,9 @@
   "dotnet.codeLens.enableTestsCodeLens": false,
   "csharp.referencesCodeLens.enabled": false,
   "csharp.implementationsCodeLens.enabled": false,
-  "editor.codeLens": false
+  "editor.codeLens": false,
+  "search.exclude": {
+    "**/_Reference": true,
+    "**/_Tool": true
+  }
 }

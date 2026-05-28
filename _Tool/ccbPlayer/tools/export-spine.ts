@@ -1,7 +1,18 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { deflateSync, inflateSync } from "node:zlib";
-import { atlasFrameKey, parseAtlasPlist, type AtlasFrame } from "../src/ccb/atlas.js";
+import {
+  atlasFrameKey,
+  parseAtlasPlist,
+  type AtlasFrame,
+} from "../src/ccb/atlas.js";
 import {
   propertyValue,
   sampleNodePose,
@@ -113,7 +124,9 @@ const requestedKeys = process.argv.slice(2).map(normalizeKey);
 const identity: Matrix = { a: 1, b: 0, c: 0, d: 1, e: 0, f: 0 };
 
 function normalizeKey(value: string): string {
-  return basename(value).replace(/^animal_/, "").toLowerCase();
+  return basename(value)
+    .replace(/^animal_/, "")
+    .toLowerCase();
 }
 
 function discoverTargets(): AssetTarget[] {
@@ -176,9 +189,13 @@ function loadTargets(): AssetTarget[] {
   }
   const selected: AssetTarget[] = [];
   for (const key of requestedKeys) {
-    const matches = targets.filter((target) => target.key === key || normalizeKey(target.label) === key);
+    const matches = targets.filter(
+      (target) => target.key === key || normalizeKey(target.label) === key,
+    );
     if (matches.length === 0) {
-      throw new Error(`Unknown target '${key}'. Available: ${targets.map((target) => target.key).join(", ")}`);
+      throw new Error(
+        `Unknown target '${key}'. Available: ${targets.map((target) => target.key).join(", ")}`,
+      );
     }
     selected.push(...matches);
   }
@@ -189,7 +206,10 @@ function loadAtlases(target: AssetTarget): LoadedAtlas[] {
   return target.atlases.map((atlas) => {
     return {
       ...atlas,
-      frames: parseAtlasPlist(readFileSync(atlas.plistPath, "utf8"), atlas.plistRef),
+      frames: parseAtlasPlist(
+        readFileSync(atlas.plistPath, "utf8"),
+        atlas.plistRef,
+      ),
     };
   });
 }
@@ -205,7 +225,12 @@ function crc32(buffer: Uint8Array): number {
   return (crc ^ 0xffffffff) >>> 0;
 }
 
-function filterValue(filter: number, left: number, up: number, upLeft: number): number {
+function filterValue(
+  filter: number,
+  left: number,
+  up: number,
+  upLeft: number,
+): number {
   if (filter === 0) return 0;
   if (filter === 1) return left;
   if (filter === 2) return up;
@@ -232,7 +257,9 @@ function readPng(path: string): RgbaImage {
   const colorType = buffer[25];
   const interlace = buffer[28];
   if (bitDepth !== 8 || interlace !== 0 || ![2, 6].includes(colorType)) {
-    throw new Error(`${path}: only non-interlaced 8-bit RGB/RGBA PNG files are supported`);
+    throw new Error(
+      `${path}: only non-interlaced 8-bit RGB/RGBA PNG files are supported`,
+    );
   }
 
   const bytesPerPixel = colorType === 6 ? 4 : 3;
@@ -257,10 +284,15 @@ function readPng(path: string): RgbaImage {
     const rowStart = y * sourceStride;
     for (let x = 0; x < sourceStride; x++) {
       const value = raw[rawOffset++];
-      const left = x >= bytesPerPixel ? sourceData[rowStart + x - bytesPerPixel] : 0;
+      const left =
+        x >= bytesPerPixel ? sourceData[rowStart + x - bytesPerPixel] : 0;
       const up = y > 0 ? sourceData[rowStart + x - sourceStride] : 0;
-      const upLeft = y > 0 && x >= bytesPerPixel ? sourceData[rowStart + x - sourceStride - bytesPerPixel] : 0;
-      sourceData[rowStart + x] = (value + filterValue(filter, left, up, upLeft)) & 0xff;
+      const upLeft =
+        y > 0 && x >= bytesPerPixel
+          ? sourceData[rowStart + x - sourceStride - bytesPerPixel]
+          : 0;
+      sourceData[rowStart + x] =
+        (value + filterValue(filter, left, up, upLeft)) & 0xff;
     }
   }
 
@@ -291,7 +323,10 @@ function writePng(path: string, image: RgbaImage): void {
   const raw = Buffer.alloc((stride + 1) * image.height);
   for (let y = 0; y < image.height; y++) {
     raw[y * (stride + 1)] = 0;
-    raw.set(image.data.subarray(y * stride, y * stride + stride), y * (stride + 1) + 1);
+    raw.set(
+      image.data.subarray(y * stride, y * stride + stride),
+      y * (stride + 1) + 1,
+    );
   }
 
   const signature = Buffer.from("89504e470d0a1a0a", "hex");
@@ -301,15 +336,37 @@ function writePng(path: string, image: RgbaImage): void {
   ihdr[8] = 8;
   ihdr[9] = 6;
   mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, Buffer.concat([signature, pngChunk("IHDR", ihdr), pngChunk("IDAT", deflateSync(raw)), pngChunk("IEND", Buffer.alloc(0))]));
+  writeFileSync(
+    path,
+    Buffer.concat([
+      signature,
+      pngChunk("IHDR", ihdr),
+      pngChunk("IDAT", deflateSync(raw)),
+      pngChunk("IEND", Buffer.alloc(0)),
+    ]),
+  );
 }
 
-function getPixel(image: RgbaImage, x: number, y: number): [number, number, number, number] {
+function getPixel(
+  image: RgbaImage,
+  x: number,
+  y: number,
+): [number, number, number, number] {
   const index = (y * image.width + x) * 4;
-  return [image.data[index], image.data[index + 1], image.data[index + 2], image.data[index + 3]];
+  return [
+    image.data[index],
+    image.data[index + 1],
+    image.data[index + 2],
+    image.data[index + 3],
+  ];
 }
 
-function setPixel(image: RgbaImage, x: number, y: number, color: [number, number, number, number]): void {
+function setPixel(
+  image: RgbaImage,
+  x: number,
+  y: number,
+  color: [number, number, number, number],
+): void {
   if (x < 0 || y < 0 || x >= image.width || y >= image.height) {
     return;
   }
@@ -348,7 +405,10 @@ function cropFrame(atlas: RgbaImage, frame: AtlasFrame): RgbaImage {
   return cropped;
 }
 
-function findFrame(atlases: LoadedAtlas[], pose: NodePose): AtlasFrame | undefined {
+function findFrame(
+  atlases: LoadedAtlas[],
+  pose: NodePose,
+): AtlasFrame | undefined {
   const frameName = pose.displayFrame?.frameName;
   if (!frameName) {
     return undefined;
@@ -406,7 +466,8 @@ function friendlyPartName(value: string, target: AssetTarget): string {
     .split("_")
     .map((part) => {
       const tongueMatch = /^tung(\d*)$/.exec(part);
-      if (tongueMatch) return tongueMatch[1] ? `tongue_${tongueMatch[1]}` : "tongue";
+      if (tongueMatch)
+        return tongueMatch[1] ? `tongue_${tongueMatch[1]}` : "tongue";
       if (part === "anrgry") return "angry";
       if (part === "mouse") return "mouth";
       if (part === "tung") return "tongue";
@@ -423,7 +484,9 @@ function nodeBaseName(target: AssetTarget, node: CcbNode): string {
   }
 
   if (node.baseClass === "CCSprite") {
-    const frameName = spriteFrameRef(propertyValue(node, "displayFrame"))?.frameName;
+    const frameName = spriteFrameRef(
+      propertyValue(node, "displayFrame"),
+    )?.frameName;
     if (frameName) {
       return friendlyPartName(frameName, target);
     }
@@ -447,26 +510,6 @@ function isOffstagePose(pose: NodePose): boolean {
   return Math.abs(pose.position.x) > 250 || Math.abs(pose.position.y) > 250;
 }
 
-// Returns the first pose where this sprite node is on-stage and visible,
-// to use as the Spine rest position regardless of which animation we're in.
-// This prevents the "parts fly in from off-screen" artifact during animation mixing:
-// invisible bones stay at their on-stage rest position instead of the CCB off-stage position.
-function findOnstagePose(
-  node: CcbNode,
-  document: CcbDocument,
-): NodePose | undefined {
-  for (const sequence of document.sequences) {
-    const seqTimes = collectSequenceTimes(document, sequence);
-    for (const time of seqTimes) {
-      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
-      if (pose.visible && !isOffstagePose(pose)) {
-        return pose;
-      }
-    }
-  }
-  return undefined;
-}
-
 function multiply(left: Matrix, right: Matrix): Matrix {
   return {
     a: left.a * right.a + left.c * right.b,
@@ -480,12 +523,21 @@ function multiply(left: Matrix, right: Matrix): Matrix {
 
 function normalizedAnchor(pose: NodePose): { x: number; y: number } {
   return {
-    x: pose.anchorPoint.x >= 0 && pose.anchorPoint.x <= 1 ? pose.anchorPoint.x : 0.5,
-    y: pose.anchorPoint.y >= 0 && pose.anchorPoint.y <= 1 ? pose.anchorPoint.y : 0.5,
+    x:
+      pose.anchorPoint.x >= 0 && pose.anchorPoint.x <= 1
+        ? pose.anchorPoint.x
+        : 0.5,
+    y:
+      pose.anchorPoint.y >= 0 && pose.anchorPoint.y <= 1
+        ? pose.anchorPoint.y
+        : 0.5,
   };
 }
 
-function nodeMatrix(pose: NodePose, contentSize: { width: number; height: number }): Matrix {
+function nodeMatrix(
+  pose: NodePose,
+  contentSize: { width: number; height: number },
+): Matrix {
   const radians = (-pose.rotation * Math.PI) / 180;
   const cos = Math.cos(radians);
   const sin = Math.sin(radians);
@@ -500,7 +552,10 @@ function nodeMatrix(pose: NodePose, contentSize: { width: number; height: number
       f: 0,
     },
   );
-  if (pose.ignoreAnchorPointForPosition || (contentSize.width === 0 && contentSize.height === 0)) {
+  if (
+    pose.ignoreAnchorPointForPosition ||
+    (contentSize.width === 0 && contentSize.height === 0)
+  ) {
     return transformed;
   }
   const anchor = normalizedAnchor(pose);
@@ -514,14 +569,21 @@ function nodeMatrix(pose: NodePose, contentSize: { width: number; height: number
   });
 }
 
-function transformPoint(matrix: Matrix, x: number, y: number): { x: number; y: number } {
+function transformPoint(
+  matrix: Matrix,
+  x: number,
+  y: number,
+): { x: number; y: number } {
   return {
     x: matrix.a * x + matrix.c * y + matrix.e,
     y: matrix.b * x + matrix.d * y + matrix.f,
   };
 }
 
-function expandBounds(bounds: Bounds | undefined, points: Array<{ x: number; y: number }>): Bounds {
+function expandBounds(
+  bounds: Bounds | undefined,
+  points: Array<{ x: number; y: number }>,
+): Bounds {
   const result = bounds ?? {
     minX: Number.POSITIVE_INFINITY,
     minY: Number.POSITIVE_INFINITY,
@@ -537,7 +599,10 @@ function expandBounds(bounds: Bounds | undefined, points: Array<{ x: number; y: 
   return result;
 }
 
-function contentSizeForPose(atlases: LoadedAtlas[], pose: NodePose): { width: number; height: number } {
+function contentSizeForPose(
+  atlases: LoadedAtlas[],
+  pose: NodePose,
+): { width: number; height: number } {
   const frame = findFrame(atlases, pose);
   return frame
     ? {
@@ -547,7 +612,10 @@ function contentSizeForPose(atlases: LoadedAtlas[], pose: NodePose): { width: nu
     : { width: 0, height: 0 };
 }
 
-function drawnContentSizeForPose(atlases: LoadedAtlas[], pose: NodePose): { width: number; height: number } {
+function drawnContentSizeForPose(
+  atlases: LoadedAtlas[],
+  pose: NodePose,
+): { width: number; height: number } {
   const frame = findFrame(atlases, pose);
   return frame
     ? {
@@ -557,8 +625,14 @@ function drawnContentSizeForPose(atlases: LoadedAtlas[], pose: NodePose): { widt
     : { width: 0, height: 0 };
 }
 
-function contentOffsetForPose(pose: NodePose, contentSize: { width: number; height: number }): { x: number; y: number } {
-  if (pose.ignoreAnchorPointForPosition || (contentSize.width === 0 && contentSize.height === 0)) {
+function contentOffsetForPose(
+  pose: NodePose,
+  contentSize: { width: number; height: number },
+): { x: number; y: number } {
+  if (
+    pose.ignoreAnchorPointForPosition ||
+    (contentSize.width === 0 && contentSize.height === 0)
+  ) {
     return { x: 0, y: 0 };
   }
   return {
@@ -615,12 +689,19 @@ function compactObject<T extends Record<string, unknown>>(value: T): T {
   return value;
 }
 
-function poseSequenceId(document: CcbDocument, node: CcbNode, sequence: CcbSequence): number {
+function poseSequenceId(
+  document: CcbDocument,
+  node: CcbNode,
+  sequence: CcbSequence,
+): number {
   const walkin = walkinFallbackSequence(document, sequence);
   return walkin && node.depth >= 2 ? walkin.sequenceId : sequence.sequenceId;
 }
 
-function walkinFallbackSequence(document: CcbDocument, sequence: CcbSequence): CcbSequence | undefined {
+function walkinFallbackSequence(
+  document: CcbDocument,
+  sequence: CcbSequence,
+): CcbSequence | undefined {
   if (sequence.name !== "walkout") {
     return undefined;
   }
@@ -628,14 +709,22 @@ function walkinFallbackSequence(document: CcbDocument, sequence: CcbSequence): C
     const tracks = node.animatedProperties.get(sequence.sequenceId);
     return node.depth >= 2 && tracks && tracks.size > 0;
   });
-  return hasSpriteTracks ? undefined : document.sequences.find((entry) => entry.name === "walkin");
+  return hasSpriteTracks
+    ? undefined
+    : document.sequences.find((entry) => entry.name === "walkin");
 }
 
-function isSyntheticMirroredWalkout(document: CcbDocument, sequence: CcbSequence): boolean {
+function isSyntheticMirroredWalkout(
+  document: CcbDocument,
+  sequence: CcbSequence,
+): boolean {
   return Boolean(walkinFallbackSequence(document, sequence));
 }
 
-function collectSequenceTimes(document: CcbDocument, sequence: CcbSequence): number[] {
+function collectSequenceTimes(
+  document: CcbDocument,
+  sequence: CcbSequence,
+): number[] {
   const times = new Set<number>([0, sequence.length]);
   for (const node of document.nodes) {
     const sequenceId = poseSequenceId(document, node, sequence);
@@ -654,14 +743,24 @@ function collectSequenceTimes(document: CcbDocument, sequence: CcbSequence): num
   return [...times].sort((left, right) => left - right);
 }
 
-function isEffectivelyVisible(document: CcbDocument, node: CcbNode, sequence: CcbSequence, time: number): boolean {
+function isEffectivelyVisible(
+  document: CcbDocument,
+  node: CcbNode,
+  sequence: CcbSequence,
+  time: number,
+): boolean {
   let current: CcbNode | undefined = node;
   while (current) {
-    const pose = sampleNodePose(current, poseSequenceId(document, current, sequence), time);
+    const pose = sampleNodePose(
+      current,
+      poseSequenceId(document, current, sequence),
+      time,
+    );
     if (!pose.visible || isOffstagePose(pose)) {
       return false;
     }
-    current = current.parentId === null ? undefined : document.nodes[current.parentId];
+    current =
+      current.parentId === null ? undefined : document.nodes[current.parentId];
   }
   return true;
 }
@@ -673,18 +772,29 @@ function attachmentName(
   time: number,
   pose: NodePose,
 ): string | undefined {
-  return isEffectivelyVisible(document, node, sequence, time) ? pose.displayFrame?.frameName : undefined;
+  return isEffectivelyVisible(document, node, sequence, time)
+    ? pose.displayFrame?.frameName
+    : undefined;
 }
 
-function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedAtlas[]): SpineJson {
+function buildSpine(
+  target: AssetTarget,
+  document: CcbDocument,
+  atlases: LoadedAtlas[],
+): SpineJson {
   const usedNames = new Set<string>();
   const boneNames = new Map<number, string>();
   const contentBoneNames = new Map<number, string>();
   const baseNames = new Map<number, string>();
-  const slotNodes = document.nodes.filter((node) => node.baseClass === "CCSprite" || propertyValue(node, "displayFrame"));
+  const slotNodes = document.nodes.filter(
+    (node) =>
+      node.baseClass === "CCSprite" || propertyValue(node, "displayFrame"),
+  );
   const slotNames = new Map<number, string>();
   const setupSequence = document.sequences[0];
-  const mirrorBoneName = document.sequences.some((sequence) => isSyntheticMirroredWalkout(document, sequence))
+  const mirrorBoneName = document.sequences.some((sequence) =>
+    isSyntheticMirroredWalkout(document, sequence),
+  )
     ? uniqueName("__mirror", usedNames)
     : undefined;
 
@@ -695,40 +805,42 @@ function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedA
   }
 
   for (const node of slotNodes) {
-    const baseName = baseNames.get(node.id) ?? boneNames.get(node.id) ?? `node_${node.id}`;
+    const baseName =
+      baseNames.get(node.id) ?? boneNames.get(node.id) ?? `node_${node.id}`;
     slotNames.set(node.id, uniqueName(`${baseName}_slot`, usedNames));
     if (node.children.length > 0) {
-      contentBoneNames.set(node.id, uniqueName(`${baseName}_content`, usedNames));
-    }
-  }
-
-  // For each slot node, find the pose where it is actually on-stage.
-  // This is used as the Spine rest/setup position so that invisible bones
-  // park at their on-stage position instead of their CCB off-stage position,
-  // preventing large position interpolations during animation transitions.
-  const onstagePoses = new Map<number, NodePose>();
-  for (const node of slotNodes) {
-    const pose = findOnstagePose(node, document);
-    if (pose) {
-      onstagePoses.set(node.id, pose);
+      contentBoneNames.set(
+        node.id,
+        uniqueName(`${baseName}_content`, usedNames),
+      );
     }
   }
 
   const bones: SpineBone[] = mirrorBoneName ? [{ name: mirrorBoneName }] : [];
   for (const node of document.nodes) {
-    const pose = onstagePoses.get(node.id) ?? sampleNodePose(node, setupSequence?.sequenceId ?? 0, 0);
-    const parentBone = node.parentId === null
-      ? mirrorBoneName
-      : (contentBoneNames.get(node.parentId) ?? boneNames.get(node.parentId));
+    const pose = sampleNodePose(node, setupSequence?.sequenceId ?? 0, 0);
+    const parentBone =
+      node.parentId === null
+        ? mirrorBoneName
+        : (contentBoneNames.get(node.parentId) ?? boneNames.get(node.parentId));
     const boneName = boneNames.get(node.id) ?? `bone_${node.id}`;
-    bones.push(boneFromPose(
-      boneNames.get(node.id) ?? `bone_${node.id}`,
-      parentBone,
-      pose,
-    ));
+    bones.push(
+      boneFromPose(
+        boneNames.get(node.id) ?? `bone_${node.id}`,
+        parentBone,
+        pose,
+      ),
+    );
     const contentBoneName = contentBoneNames.get(node.id);
     if (contentBoneName) {
-      bones.push(contentBoneFromPose(contentBoneName, boneName, pose, contentSizeForPose(atlases, pose)));
+      bones.push(
+        contentBoneFromPose(
+          contentBoneName,
+          boneName,
+          pose,
+          contentSizeForPose(atlases, pose),
+        ),
+      );
     }
   }
 
@@ -737,32 +849,37 @@ function buildSpine(target: AssetTarget, document: CcbDocument, atlases: LoadedA
   const setupTime = 0;
   for (const node of slotNodes) {
     const sequence = setupSequence ?? document.sequences[0];
-    const pose = onstagePoses.get(node.id) ?? sampleNodePose(node, sequence?.sequenceId ?? 0, setupTime);
+    const pose = sampleNodePose(node, sequence?.sequenceId ?? 0, setupTime);
     const slotName = slotNames.get(node.id) ?? `slot_${node.id}`;
-    const initialAttachment = sequence ? attachmentName(document, node, sequence, setupTime, pose) : undefined;
-    slots.push(compactObject({
-      name: slotName,
-      bone: boneNames.get(node.id) ?? `bone_${node.id}`,
-      attachment: initialAttachment,
-    }));
+    const initialAttachment = sequence
+      ? attachmentName(document, node, sequence, setupTime, pose)
+      : undefined;
+    slots.push(
+      compactObject({
+        name: slotName,
+        bone: boneNames.get(node.id) ?? `bone_${node.id}`,
+        attachment: initialAttachment,
+      }),
+    );
 
-    const slotAttachments = (attachments[slotName] = attachments[slotName] ?? {});
+    const slotAttachments = (attachments[slotName] =
+      attachments[slotName] ?? {});
     collectNodeAttachments(document, node, atlases, slotAttachments);
   }
 
   const animations: Record<string, SpineAnimation> = {};
   for (const sequence of document.sequences) {
-    animations[sequence.name || `sequence_${sequence.sequenceId}`] = buildAnimation(
-      document,
-      sequence,
-      atlases,
-      boneNames,
-      contentBoneNames,
-      slotNames,
-      slotNodes,
-      mirrorBoneName,
-      onstagePoses,
-    );
+    animations[sequence.name || `sequence_${sequence.sequenceId}`] =
+      buildAnimation(
+        document,
+        sequence,
+        atlases,
+        boneNames,
+        contentBoneNames,
+        slotNames,
+        slotNodes,
+        mirrorBoneName,
+      );
   }
 
   const bounds = estimateBounds(document, atlases);
@@ -794,7 +911,11 @@ function collectNodeAttachments(
   for (const sequence of document.sequences) {
     const times = collectSequenceTimes(document, sequence);
     for (const time of times) {
-      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+      const pose = sampleNodePose(
+        node,
+        poseSequenceId(document, node, sequence),
+        time,
+      );
       const name = pose.displayFrame?.frameName;
       if (!name || output[name]) {
         continue;
@@ -827,47 +948,29 @@ function buildAnimation(
   slotNames: Map<number, string>,
   slotNodes: CcbNode[],
   mirrorBoneName: string | undefined,
-  onstagePoses: Map<number, NodePose>,
 ): SpineAnimation {
   const times = collectSequenceTimes(document, sequence);
   const bones: Record<string, SpineBoneTimeline> = {};
   const slots: Record<string, SpineSlotTimeline> = {};
-  const slotNodeIds = new Set(slotNodes.map((n) => n.id));
 
   for (const node of document.nodes) {
     const boneName = boneNames.get(node.id);
     if (!boneName) {
       continue;
     }
-
-    // Use on-stage pose as reference so animation deltas are relative to the
-    // visible position, not the CCB off-stage placeholder position.
-    const setupPose = onstagePoses.get(node.id) ?? sampleNodePose(node, document.sequences[0]?.sequenceId ?? 0, 0);
+    const setupPose = sampleNodePose(
+      node,
+      document.sequences[0]?.sequenceId ?? 0,
+      0,
+    );
     const setupScale = poseScale(setupPose);
-
-    // If this is a slot node and its attachment is null for the entire animation,
-    // park it at the rest (on-stage) position with delta=0.
-    // This prevents Spine from interpolating bones across the large off-stage
-    // distance during animation transitions, eliminating the "parts fly from
-    // top-left to center" artifact.
-    const isSlotNode = slotNodeIds.has(node.id);
-    const isNullThroughout = isSlotNode && times.every((time) => {
-      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
-      return attachmentName(document, node, sequence, time, pose) === undefined;
-    });
-
-    if (isNullThroughout) {
-      bones[boneName] = { translate: [{ time: 0, x: 0, y: 0 }] };
-      const contentBoneName = contentBoneNames.get(node.id);
-      if (contentBoneName) {
-        bones[contentBoneName] = { translate: [{ time: 0, x: 0, y: 0 }] };
-      }
-      continue;
-    }
-
     const frames = times.map((time) => ({
       time,
-      pose: sampleNodePose(node, poseSequenceId(document, node, sequence), time),
+      pose: sampleNodePose(
+        node,
+        poseSequenceId(document, node, sequence),
+        time,
+      ),
     }));
     bones[boneName] = {
       translate: frames.map((frame) => ({
@@ -891,10 +994,16 @@ function buildAnimation(
 
     const contentBoneName = contentBoneNames.get(node.id);
     if (contentBoneName) {
-      const setupOffset = contentOffsetForPose(setupPose, contentSizeForPose(atlases, setupPose));
+      const setupOffset = contentOffsetForPose(
+        setupPose,
+        contentSizeForPose(atlases, setupPose),
+      );
       bones[contentBoneName] = {
         translate: frames.map((frame) => {
-          const offset = contentOffsetForPose(frame.pose, contentSizeForPose(atlases, frame.pose));
+          const offset = contentOffsetForPose(
+            frame.pose,
+            contentSizeForPose(atlases, frame.pose),
+          );
           return {
             time: frame.time,
             x: round(offset.x - setupOffset.x),
@@ -911,13 +1020,19 @@ function buildAnimation(
       continue;
     }
     const attachmentFrames = times.map((time) => {
-      const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+      const pose = sampleNodePose(
+        node,
+        poseSequenceId(document, node, sequence),
+        time,
+      );
       return {
         time,
         name: attachmentName(document, node, sequence, time, pose) ?? null,
       };
     });
-    slots[slotName] = { attachment: collapseAttachmentFrames(attachmentFrames) };
+    slots[slotName] = {
+      attachment: collapseAttachmentFrames(attachmentFrames),
+    };
   }
 
   if (mirrorBoneName && isSyntheticMirroredWalkout(document, sequence)) {
@@ -940,10 +1055,15 @@ function buildAnimation(
   return compactObject({ bones, slots });
 }
 
-function collapseAttachmentFrames(frames: Array<{ time: number; name: string | null }>): Array<{ time: number; name: string | null }> {
+function collapseAttachmentFrames(
+  frames: Array<{ time: number; name: string | null }>,
+): Array<{ time: number; name: string | null }> {
   const collapsed: Array<{ time: number; name: string | null }> = [];
   for (const frame of frames) {
-    if (collapsed.length === 0 || collapsed[collapsed.length - 1].name !== frame.name) {
+    if (
+      collapsed.length === 0 ||
+      collapsed[collapsed.length - 1].name !== frame.name
+    ) {
       collapsed.push(frame);
     }
   }
@@ -960,7 +1080,11 @@ function walkSequenceBounds(
   parentVisible: boolean,
   bounds: Bounds | undefined,
 ): Bounds | undefined {
-  const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+  const pose = sampleNodePose(
+    node,
+    poseSequenceId(document, node, sequence),
+    time,
+  );
   const visible = parentVisible && pose.visible && !isOffstagePose(pose);
   const contentSize = drawnContentSizeForPose(atlases, pose);
   const matrix = multiply(parentMatrix, nodeMatrix(pose, contentSize));
@@ -976,17 +1100,39 @@ function walkSequenceBounds(
     }
   }
   for (const child of node.children) {
-    bounds = walkSequenceBounds(document, atlases, child, sequence, time, matrix, visible, bounds);
+    bounds = walkSequenceBounds(
+      document,
+      atlases,
+      child,
+      sequence,
+      time,
+      matrix,
+      visible,
+      bounds,
+    );
   }
   return bounds;
 }
 
-function estimateSequenceBounds(document: CcbDocument, atlases: LoadedAtlas[], sequence: CcbSequence): Bounds {
+function estimateSequenceBounds(
+  document: CcbDocument,
+  atlases: LoadedAtlas[],
+  sequence: CcbSequence,
+): Bounds {
   let bounds: Bounds | undefined;
   const steps = Math.max(2, Math.ceil(sequence.length * 12));
   for (let index = 0; index <= steps; index++) {
     const time = (sequence.length * index) / steps;
-    bounds = walkSequenceBounds(document, atlases, document.root, sequence, time, identity, true, bounds);
+    bounds = walkSequenceBounds(
+      document,
+      atlases,
+      document.root,
+      sequence,
+      time,
+      identity,
+      true,
+      bounds,
+    );
   }
   return bounds ?? { minX: -120, minY: -120, maxX: 120, maxY: 120 };
 }
@@ -999,15 +1145,31 @@ function estimateBounds(document: CcbDocument, atlases: LoadedAtlas[]): Bounds {
   for (const sequence of document.sequences) {
     for (const node of document.nodes) {
       for (const time of collectSequenceTimes(document, sequence)) {
-        const pose = sampleNodePose(node, poseSequenceId(document, node, sequence), time);
+        const pose = sampleNodePose(
+          node,
+          poseSequenceId(document, node, sequence),
+          time,
+        );
         const frame = findFrame(atlases, pose);
         if (!pose.visible || isOffstagePose(pose) || !frame) {
           continue;
         }
-        minX = Math.min(minX, pose.position.x - pose.anchorPoint.x * frame.sourceWidth);
-        minY = Math.min(minY, pose.position.y - pose.anchorPoint.y * frame.sourceHeight);
-        maxX = Math.max(maxX, pose.position.x + (1 - pose.anchorPoint.x) * frame.sourceWidth);
-        maxY = Math.max(maxY, pose.position.y + (1 - pose.anchorPoint.y) * frame.sourceHeight);
+        minX = Math.min(
+          minX,
+          pose.position.x - pose.anchorPoint.x * frame.sourceWidth,
+        );
+        minY = Math.min(
+          minY,
+          pose.position.y - pose.anchorPoint.y * frame.sourceHeight,
+        );
+        maxX = Math.max(
+          maxX,
+          pose.position.x + (1 - pose.anchorPoint.x) * frame.sourceWidth,
+        );
+        maxY = Math.max(
+          maxY,
+          pose.position.y + (1 - pose.anchorPoint.y) * frame.sourceHeight,
+        );
       }
     }
   }
@@ -1024,7 +1186,8 @@ function writeAttachmentImages(atlases: LoadedAtlas[], outDir: string): void {
   for (const atlas of atlases) {
     const page = readPng(atlas.imagePath);
     const frames = [...atlas.frames.values()].filter(
-      (frame, index, all) => all.findIndex((entry) => entry.name === frame.name) === index,
+      (frame, index, all) =>
+        all.findIndex((entry) => entry.name === frame.name) === index,
     );
     for (const frame of frames) {
       if (written.has(frame.name)) {
@@ -1053,10 +1216,16 @@ function exportTarget(target: AssetTarget): void {
   const document = parseCcb(readFileSync(target.ccbPath, "utf8"));
   const atlases = loadAtlases(target);
   const spine = buildSpine(target, document, atlases);
-  const outputName = target.label || relative(resolve("data"), dirname(target.ccbPath)).replace(/[\\/]/g, "_");
+  const outputName =
+    target.label ||
+    relative(resolve("data"), dirname(target.ccbPath)).replace(/[\\/]/g, "_");
   const outDir = join(outputRoot, outputName);
   cleanOutputDir(target, outDir);
-  writeFileSync(join(outDir, `${target.key}.json`), `${JSON.stringify(spine, null, 2)}\n`, "utf8");
+  writeFileSync(
+    join(outDir, `${target.key}.json`),
+    `${JSON.stringify(spine, null, 2)}\n`,
+    "utf8",
+  );
   writeAttachmentImages(atlases, outDir);
   console.log(`Exported ${target.label} -> ${relative(process.cwd(), outDir)}`);
 }

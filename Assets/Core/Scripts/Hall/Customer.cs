@@ -373,13 +373,8 @@ namespace MyMatch3
                 _ => null
             };
 
-            if (animName == null) return;
-
-            m_SpineAnimator.AnimationState.ClearTrack(0);
-            m_SpineAnimator.Skeleton.SetupPose();
-
-            var entry = m_SpineAnimator.AnimationState.SetAnimation(0, animName, true);
-            entry.MixDuration = 0f;
+            if (animName != null)
+                m_SpineAnimator.AnimationState.SetAnimation(0, animName, true);
         }
     }
 }

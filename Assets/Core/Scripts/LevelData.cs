@@ -111,8 +111,8 @@ namespace MyMatch3
             // LobbyPanel이 씬에 있으면 로비 화면이 표시되고
             // [start 버튼] 클릭 시 GameManager.StartLevel()이 호출됩니다.
             // LobbyPanel이 없으면 (LobbyPanel.Awake가 먼저 실행됨) 즉시 시작합니다.
-            if (LobbyPanel.Instance == null)
-                GameManager.Instance.StartLevel();
+            // if (LobbyPanel.Instance == null)
+            GameManager.Instance.StartLevel();
         }
 
         private void Start()

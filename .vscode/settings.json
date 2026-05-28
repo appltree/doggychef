@@ -59,8 +59,8 @@
   "files.associations": {
     "*.asset": "yaml",
     "*.meta": "yaml",
-    "*.prefab": "yaml",
-    "*.unity": "yaml"
+    "*.prefab": "plaintext",
+    "*.unity": "plaintext"
   },
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {

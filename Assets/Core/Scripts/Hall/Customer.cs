@@ -364,12 +364,12 @@ namespace MyMatch3
 
             string animName = State switch
             {
-                CustomerState.Walkin => "walk_in",
-                CustomerState.Ordering => "idle",
+                CustomerState.Walkin => "walkin",
+                CustomerState.Ordering => "order",
                 CustomerState.Angry => "angry",
                 CustomerState.Eating => "eat",
                 CustomerState.Happy => "like",
-                CustomerState.Walkout => "walk_out",
+                CustomerState.Walkout => "walkout",
                 _ => null
             };
 

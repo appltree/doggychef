@@ -184,7 +184,7 @@ namespace MyMatch3
 
         void GetReferences()
         {
-            Board = FindFirstObjectByType<Board>();
+            Board = FindAnyObjectByType<Board>();
         }
 
         public void StartLevel()

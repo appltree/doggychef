@@ -1552,9 +1552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.HallManager
   Tables:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3438872706669254536}
+  - {fileID: 1968847664}
+  - {fileID: 187811552}
   IngredientSlotPrefab: {fileID: 0}
   AllRecipes:
   - {fileID: 11400000, guid: fb1682971b3c2a64ea90ad54beefc074, type: 2}
@@ -1645,6 +1645,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+--- !u!114 &187811552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+  m_PrefabInstance: {fileID: 187811551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!224 &193364934 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1055377769106479064, guid: e0113d785f7822f489e989d76caaf5d6, type: 3}
@@ -5690,6 +5701,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+--- !u!114 &1968847664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+  m_PrefabInstance: {fileID: 1968847663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!1 &1982252827
 GameObject:
   m_ObjectHideFlags: 0
@@ -7172,6 +7194,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+--- !u!114 &3438872706669254536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4472663410745439143, guid: 2796f0049e29b924eaf7b313dc743ed5, type: 3}
+  m_PrefabInstance: {fileID: 3438872706669254535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed2401fcdd95b24b86b424031dfcfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.Table
 --- !u!1001 &9024869129566086245
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -206,6 +206,17 @@ namespace MyMatch3
 
         private void ShowWin()
         {
+            if (StageSelectionData.HasSelection && LevelData.Instance?.CurrentStage != null)
+            {
+                var stage = LevelData.Instance.CurrentStage;
+                SaveSystem.Instance.RecordStageResult(
+                    StageSelectionData.SelectedShop.Type,
+                    stage.Number,
+                    LevelData.Instance.EarnedMoney,
+                    stage.GoalGold,
+                    stage.GoalPerpect);
+            }
+
             m_EndTitleContent.style.display = DisplayStyle.Flex;
             m_LoseTitle.style.display = DisplayStyle.None;
             m_WinTitle.style.display = DisplayStyle.Flex;

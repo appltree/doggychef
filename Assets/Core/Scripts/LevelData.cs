@@ -98,6 +98,9 @@ namespace MyMatch3
         {
             Instance = this;
 
+            if (StageSelectionData.HasSelection)
+                CurrentStage = StageSelectionData.SelectedStage;
+
             // 스테이지 데이터가 있으면 거기서 시간 제한과 피버 기준치를 가져옵니다.
             if (CurrentStage != null)
             {

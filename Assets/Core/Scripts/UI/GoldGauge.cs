@@ -35,13 +35,13 @@ namespace MyMatch3
 
         void Awake()
         {
-            levelData = FindFirstObjectByType<LevelData>();
+            levelData = FindAnyObjectByType<LevelData>();
             rootCanvas = GetComponentInParent<Canvas>();
         }
 
         void OnEnable()
         {
-            if (levelData == null) levelData = FindFirstObjectByType<LevelData>();
+            if (levelData == null) levelData = FindAnyObjectByType<LevelData>();
             if (levelData != null)
                 levelData.OnMoneyChanged += HandleMoneyChanged;
 

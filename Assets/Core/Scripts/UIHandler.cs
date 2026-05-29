@@ -87,7 +87,7 @@ namespace MyMatch3
             m_CoverElement.style.opacity = 1.0f;
 
             // Canvas HUD 초기화: 씬의 Canvas에서 CanvasGroup을 자동으로 가져오거나 추가
-            var canvas = FindFirstObjectByType<Canvas>();
+            var canvas = FindAnyObjectByType<Canvas>();
             if (canvas != null)
             {
                 m_HUDCanvasGroup = canvas.GetComponent<CanvasGroup>();

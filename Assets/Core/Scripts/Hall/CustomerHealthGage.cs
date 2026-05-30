@@ -2,15 +2,13 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 손님 머리 위의 체력 게이지 UI.
-    /// Customer.OnHealthChanged 이벤트를 구독하여 슬롯 표시를 갱신합니다.
-    ///
-    /// ■ 슬롯 구조 (하트 1개 = 2포인트)
-    ///   slotValue == 2 → full    (꽉 찬 하트)
-    ///   slotValue == 1 → left    (반 찬 하트)
-    ///   slotValue == 0 → 모두 숨김 (빈 슬롯)
-    /// </summary>
+    // 손님 머리 위의 체력 게이지 UI.
+    // Customer.OnHealthChanged 이벤트를 구독하여 슬롯 표시를 갱신합니다.
+    // 
+    // ■ 슬롯 구조 (하트 1개 = 2포인트)
+    //   slotValue == 2 → full    (꽉 찬 하트)
+    //   slotValue == 1 → left    (반 찬 하트)
+    //   slotValue == 0 → 모두 숨김 (빈 슬롯)
     public class CustomerHealthGage : MonoBehaviour
     {
         // ──────────────────────────────────────────────────────────
@@ -72,7 +70,7 @@ namespace DoggyChef
         //  내부 렌더링
         // ================================================================
 
-        /// <summary>현재 체력을 슬롯 배열에 반영합니다.</summary>
+        // 현재 체력을 슬롯 배열에 반영합니다.
         private void Refresh()
         {
             for (int i = 0; i < slots.Length; i++)

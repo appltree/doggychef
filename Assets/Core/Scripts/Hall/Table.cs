@@ -12,12 +12,10 @@ namespace DoggyChef
 
         public enum TableState { Empty, Ordered, Cooked, Served, Paying }
 
-
         private const int MAX_COIN_PRICE = 3000;
         private const int MAX_COIN_COUNT = 30;
         // SortingLayer "VFX"의 GUID 기반 ID (Unity Editor에서 생성된 값)
         private const int VfxSortingLayerID = 666422525;
-
 
         [Header("Scene References")]
         [Tooltip("Customer seat position.")]
@@ -66,7 +64,6 @@ namespace DoggyChef
         [Tooltip("Played when a side menu is delivered.")]
         public AudioClip SfxSideServed;
 
-
         public Action<Table> OnOrderComplete;
 
         public Action<Table, int, Vector3> OnMoneyCollected;
@@ -80,10 +77,8 @@ namespace DoggyChef
         public static event Action<Table> OnPayingRemoved;
         public Action<string, int> OnIngredientRemainingChanged;
 
-
         public TableState State { get; private set; } = TableState.Empty;
         public RecipeData CurrentOrder { get; private set; }
-
 
         private Collider2D m_Collider;
 
@@ -105,16 +100,19 @@ namespace DoggyChef
         private bool m_HandAnimationActive;
         private Coroutine m_HandRoutine;
         private readonly float m_HandAnimSpeed = 12f;
-        private readonly Vector2 m_HandAnimOffset = new Vector2(0.5f, 0.5f);
+        private readonly Vector2 m_HandAnimOffset = new(0.5f, 0.5f);
 
         private int m_FlyingTokenCount = 0;
 
         private readonly HashSet<AudioClip> m_PlayedFoodSfx = new();
 
+        // [HallManager 호출] 이 테이블에 손님을 배정합니다.
         public void AssignCustomer(Customer customer)
         {
             m_AssignedCustomer = customer;
         }
+
+        // [HallManager 호출] 레시피를 배정하고 Ordered 상태로 전환합니다.
         public void SetOrder(RecipeData recipe)
         {
             if (recipe == null) return;
@@ -126,9 +124,7 @@ namespace DoggyChef
             OnOrderSet?.Invoke();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        // [HallManager 호출] 재료를 수령하고 토큰을 슬롯으로 날립니다.
         public bool AcceptGem(string gemTag, Vector3 fromWorldPos,
                               Sprite gemSprite = null, AudioClip foodSfx = null)
         {
@@ -147,6 +143,7 @@ namespace DoggyChef
             return true;
         }
 
+        // 플레이어 탭 시 상태에 따라 서빙·수금·사이드메뉴 중 하나를 수행합니다.
         public void OnTableClicked()
         {
             if (State == TableState.Ordered && !m_HasSideMenu && m_AssignedCustomer != null)
@@ -169,6 +166,7 @@ namespace DoggyChef
                 CollectMoney();
         }
 
+        // 코인을 수거하고 OnMoneyCollected를 발화합니다. fromPos는 GoldGauge 비행 출발점입니다.
         public void CollectMoney(Vector3 fromPos = default)
         {
             if (State != TableState.Paying) return;
@@ -221,7 +219,7 @@ namespace DoggyChef
                     : $"+{displayed:N0}";
             }
 
-            tmp.color = new Color(1f, 0.9f, 0.2f);
+            tmp.color = new(1f, 0.9f, 0.2f);
             go.transform.position = worldPos;
 
             float elapsed = 0f;
@@ -250,6 +248,7 @@ namespace DoggyChef
             m_AssignedCustomer = null;
             ResetTable();
         }
+
         public int CustomerCurrentHealth =>
             m_AssignedCustomer != null ? m_AssignedCustomer.CurrentHealth : int.MaxValue;
 
@@ -261,13 +260,13 @@ namespace DoggyChef
 
         public Vector3 GetSeatPosition() =>
             SeatPoint != null ? SeatPoint.position : transform.position;
+        // 지정 재료 태그의 남은 필요 수량을 반환합니다.
         public int GetRemainingNeed(string tag)
         {
             if (!m_Required.TryGetValue(tag, out int req)) return 0;
             if (!m_Collected.TryGetValue(tag, out int got)) return req;
             return Mathf.Max(0, req - got);
         }
-
 
         public Transform GetSidePoint() => SidePoint;
 
@@ -320,7 +319,7 @@ namespace DoggyChef
         private IEnumerator CoHandAnimation()
         {
             float time = 0f;
-            Vector3 offset = new Vector3(m_HandAnimOffset.x, m_HandAnimOffset.y, 0f);
+            Vector3 offset = new(m_HandAnimOffset.x, m_HandAnimOffset.y, 0f);
             while (m_HandAnimationActive && m_HandRenderer != null && isActiveAndEnabled)
             {
                 time += Time.deltaTime * m_HandAnimSpeed;
@@ -332,6 +331,7 @@ namespace DoggyChef
             m_HandRoutine = null;
         }
 
+        // 테이블 상태를 변경하고 비주얼·사운드·이벤트를 갱신합니다.
         private void SetState(TableState next)
         {
             if (State == next) return;
@@ -351,7 +351,7 @@ namespace DoggyChef
             }
         }
 
-
+        // Served 상태로 전환하고 손님 식사를 시작합니다.
         private void ServeToCustomer()
         {
             SetState(TableState.Served);
@@ -362,12 +362,14 @@ namespace DoggyChef
             m_EatRoutine = StartCoroutine(WaitForMealComplete());
         }
 
+        // EatingDuration 후 CompleteMeal()을 호출합니다.
         private IEnumerator WaitForMealComplete()
         {
             yield return new WaitForSeconds(EatingDuration);
             CompleteMeal();
         }
 
+        // delay 초 후 자동 서빙합니다 (주문 완성 즉시 자동 제공 시 사용).
         private IEnumerator AutoServeAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
@@ -375,6 +377,7 @@ namespace DoggyChef
                 ServeToCustomer();
         }
 
+        // 식사 완료 처리 — FinishEating, Paying 상태 전환, 코인 스폰을 순서대로 수행합니다.
         private void CompleteMeal()
         {
             m_AssignedCustomer?.FinishEating();
@@ -387,6 +390,8 @@ namespace DoggyChef
             EnableHandAnimation();
             OnPayingAdded?.Invoke(this);
         }
+
+        // Paying 상태 진입 시 CoinMoney 프리팹을 스폰합니다.
         private void SpawnCoin()
         {
             if (CoinMoneyPrefab == null)
@@ -457,6 +462,7 @@ namespace DoggyChef
             m_SpawnedCoins.Clear();
         }
 
+        // CoinMoneyPrefab 미설정 시 delay 초 후 자동 수금합니다.
         private IEnumerator AutoCollectAfterDelay(float delay)
         {
             yield return new WaitForSeconds(delay);
@@ -464,7 +470,7 @@ namespace DoggyChef
                 CollectMoney();
         }
 
-
+        // 테이블을 Empty 상태로 초기화합니다.
         private void ResetTable()
         {
             if (m_EatRoutine != null)
@@ -493,7 +499,7 @@ namespace DoggyChef
             SetState(TableState.Empty);
         }
 
-
+        // 주문 레시피 기반으로 Required/Collected 딕셔너리를 초기화합니다.
         private void ResetIngredientProgress(RecipeData recipe)
         {
             m_Required.Clear();
@@ -509,6 +515,7 @@ namespace DoggyChef
             }
         }
 
+        // 재료를 수집합니다. 이미 충족된 재료나 잘못된 태그면 false를 반환합니다.
         private bool TryCollectIngredient(string gemTag)
         {
             if (State != TableState.Ordered) return false;
@@ -521,6 +528,7 @@ namespace DoggyChef
             return true;
         }
 
+        // 모든 재료가 충족됐는지 확인합니다.
         private bool IsOrderSatisfied()
         {
             foreach (var kvp in m_Required)
@@ -531,6 +539,7 @@ namespace DoggyChef
             return true;
         }
 
+        // 현재 상태에 맞게 테이블 색상을 갱신합니다.
         private void UpdateVisual()
         {
             if (StatusRenderer == null) return;
@@ -595,7 +604,6 @@ namespace DoggyChef
 
             if (token != null) Destroy(token);
 
-
             OnIngredientRemainingChanged?.Invoke(gemTag, GetRemainingNeed(gemTag));
 
             m_FlyingTokenCount = Mathf.Max(0, m_FlyingTokenCount - 1);
@@ -611,7 +619,6 @@ namespace DoggyChef
                 StartCoroutine(AutoServeAfterDelay(0.5f));
             }
         }
-
 
         private void Awake()
         {

@@ -1,8 +1,6 @@
 using UnityEngine;
 
-/// <summary>
-/// 게임 프레임레이트와 VSync 설정을 관리하는 공통 유틸리티 클래스
-/// </summary>
+// 게임 프레임레이트와 VSync 설정을 관리하는 공통 유틸리티 클래스
 public static class FrameRateController
 {
   // 기본 설정값
@@ -10,20 +8,16 @@ public static class FrameRateController
   private static readonly bool DefaultAndroidOnly = true;
   private static readonly bool DefaultDisableVSync = true;
 
-  /// <summary>
-  /// 기본 설정으로 프레임레이트를 적용합니다.
-  /// </summary>
+  // 기본 설정으로 프레임레이트를 적용합니다.
   public static void ApplyFrameRate()
   {
     ApplyFrameRate(DefaultTargetFrameRate, DefaultAndroidOnly, DefaultDisableVSync);
   }
 
-  /// <summary>
-  /// 지정된 설정으로 프레임레이트를 적용합니다.
-  /// </summary>
-  /// <param name="targetFrameRate">목표 프레임레이트 (0 이하면 무제한)</param>
-  /// <param name="androidOnly">true면 안드로이드에서만 적용</param>
-  /// <param name="disableVSync">true면 VSync 비활성화</param>
+  // 지정된 설정으로 프레임레이트를 적용합니다.
+  // targetFrameRate: 목표 프레임레이트 (0 이하면 무제한)
+  // androidOnly: true면 안드로이드에서만 적용
+  // disableVSync: true면 VSync 비활성화
   public static void ApplyFrameRate(int targetFrameRate, bool androidOnly = true, bool disableVSync = true)
   {
     // VSync 설정
@@ -44,7 +38,7 @@ public static class FrameRateController
 #if UNITY_ANDROID
       Application.targetFrameRate = targetFrameRate;
 #else
-            // 비안드로이드는 변경하지 않음
+      // 비안드로이드는 변경하지 않음
 #endif
     }
     else

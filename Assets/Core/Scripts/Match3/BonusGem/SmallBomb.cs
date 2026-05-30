@@ -6,28 +6,26 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 스몰봄(SmallBomb) 보너스 젬.
-    ///
-    /// ■ 2×2 머지 모드 (생성 조건)
-    ///   → 2×2 정사각형 매치 시 Board가 생성합니다.
-    ///   → Board.MatchTicking 이 InitMergeEffect() 를 호출해 소스 데이터를 주입합니다.
-    ///   → Start() 에서 Use() 를 자동 호출해 연출을 시작합니다.
-    ///
-    ///   연출 순서:
-    ///     [1] 보드 이동 Lock
-    ///     [2] 고스트 4개가 중앙으로 합쳐짐 (0.2s SmoothStep)
-    ///     [3] 스케일 1→2배 확대 (0.15s SmoothStep)
-    ///     [4] 고스트 제거 + SmallBomb 자신을 보드에서 파괴
-    ///     [5] "x8" 금색 팝업 상승 + 페이드아웃 (0.8s)
-    ///     [6] 지연 폭발 이벤트 발화 → 재료 토큰 날아가기
-    ///     [7] 보드 이동 Unlock
-    ///
-    ///   소스 젬 4개는 ExplodeCount=2 → 재료 배달 8회(=x8)
-    ///
-    /// ■ 일반 모드 (보드 위 스왑 / 더블클릭)
-    ///   → 자신을 포함한 상·하·좌·우 4개 보석을 즉시 파괴합니다.
-    /// </summary>
+    // 스몰봄(SmallBomb) 보너스 젬.
+    // 
+    // ■ 2×2 머지 모드 (생성 조건)
+    //   → 2×2 정사각형 매치 시 Board가 생성합니다.
+    //   → Board.MatchTicking 이 InitMergeEffect() 를 호출해 소스 데이터를 주입합니다.
+    //   → Start() 에서 Use() 를 자동 호출해 연출을 시작합니다.
+    // 
+    //   연출 순서:
+    //     [1] 보드 이동 Lock
+    //     [2] 고스트 4개가 중앙으로 합쳐짐 (0.2s SmoothStep)
+    //     [3] 스케일 1→2배 확대 (0.15s SmoothStep)
+    //     [4] 고스트 제거 + SmallBomb 자신을 보드에서 파괴
+    //     [5] "x8" 금색 팝업 상승 + 페이드아웃 (0.8s)
+    //     [6] 지연 폭발 이벤트 발화 → 재료 토큰 날아가기
+    //     [7] 보드 이동 Unlock
+    // 
+    //   소스 젬 4개는 ExplodeCount=2 → 재료 배달 8회(=x8)
+    // 
+    // ■ 일반 모드 (보드 위 스왑 / 더블클릭)
+    //   → 자신을 포함한 상·하·좌·우 4개 보석을 즉시 파괴합니다.
     public class SmallBomb : BonusGem
     {
         // ──────────────────────────────────────────────────────────
@@ -54,10 +52,8 @@ namespace DoggyChef
             m_Usable = true;
         }
 
-        /// <summary>
-        /// 머지 모드일 때 Start()에서 자동 발동합니다.
-        /// Board.MatchTicking 이 InitMergeEffect()를 주입한 뒤 1프레임 후 호출됩니다.
-        /// </summary>
+        // 머지 모드일 때 Start()에서 자동 발동합니다.
+        // Board.MatchTicking 이 InitMergeEffect()를 주입한 뒤 1프레임 후 호출됩니다.
         private void Start()
         {
             if (m_IsMergeType)
@@ -68,10 +64,8 @@ namespace DoggyChef
         //  공개 API
         // ================================================================
 
-        /// <summary>
-        /// Board.MatchTicking 이 SpawnedBonus 생성 직후 호출합니다.
-        /// 소스 젬 시각 데이터와 지연 폭발 데이터를 주입합니다.
-        /// </summary>
+        // Board.MatchTicking 이 SpawnedBonus 생성 직후 호출합니다.
+        // 소스 젬 시각 데이터와 지연 폭발 데이터를 주입합니다.
         public void InitMergeEffect(
             List<(Vector3 pos, Sprite sprite)> sourceGems,
             List<(string tag, Vector3 pos, Sprite sprite, AudioClip foodSfx, int count)> pendingExplosions)
@@ -86,10 +80,8 @@ namespace DoggyChef
                 sr.enabled = false;
         }
 
-        /// <summary>
-        /// 보너스 젬 발동 진입점.
-        /// m_IsMergeType 여부에 따라 머지 모드 또는 일반 십자형 폭발 중 하나를 실행합니다.
-        /// </summary>
+        // 보너스 젬 발동 진입점.
+        // m_IsMergeType 여부에 따라 머지 모드 또는 일반 십자형 폭발 중 하나를 실행합니다.
         public override void Use(Gem swappedGem, bool isBonus = true)
         {
             // 보드 위 젬의 재귀 폭발 방지
@@ -106,7 +98,7 @@ namespace DoggyChef
         //  내부 — 모드별 발동 로직
         // ================================================================
 
-        /// <summary>2×2 머지 모드: 고스트 애니메이션 후 보드 파괴 + 지연 이벤트.</summary>
+        // 2×2 머지 모드: 고스트 애니메이션 후 보드 파괴 + 지연 이벤트.
         private void UseMergeMode()
         {
             GameManager.Instance.PlaySFX(TriggerSound);
@@ -125,7 +117,7 @@ namespace DoggyChef
                 MergeAndPopupRoutine(m_SourceGems, center, m_CurrentIndex, m_PendingExplosions));
         }
 
-        /// <summary>일반 모드: 자신 + 상·하·좌·우 4방향 보석을 즉시 파괴합니다.</summary>
+        // 일반 모드: 자신 + 상·하·좌·우 4방향 보석을 즉시 파괴합니다.
         private void UseExplosionMode()
         {
             var board = GameManager.Instance.Board;
@@ -160,16 +152,14 @@ namespace DoggyChef
         //  2×2 머지 연출 코루틴
         // ================================================================
 
-        /// <summary>
-        /// 고스트 이동·확대, SmallBomb 파괴, x8 팝업, 지연 폭발 이벤트 발화를 순서대로 실행합니다.
-        ///
-        ///   [1] 고스트 4개 생성 → 중앙으로 합쳐짐 (0.2s SmoothStep)
-        ///   [2] 스케일 1→2배 확대 (0.15s SmoothStep)
-        ///   [3] 고스트 제거 + SmallBomb 보드에서 제거
-        ///   [4] "x8" 금색 팝업 0.8s 상승 + 페이드아웃
-        ///   [5] 지연 폭발 이벤트 발화
-        ///   [6] 보드 Unlock
-        /// </summary>
+        // 고스트 이동·확대, SmallBomb 파괴, x8 팝업, 지연 폭발 이벤트 발화를 순서대로 실행합니다.
+        // 
+        //   [1] 고스트 4개 생성 → 중앙으로 합쳐짐 (0.2s SmoothStep)
+        //   [2] 스케일 1→2배 확대 (0.15s SmoothStep)
+        //   [3] 고스트 제거 + SmallBomb 보드에서 제거
+        //   [4] "x8" 금색 팝업 0.8s 상승 + 페이드아웃
+        //   [5] 지연 폭발 이벤트 발화
+        //   [6] 보드 Unlock
         private static IEnumerator MergeAndPopupRoutine(
             List<(Vector3 pos, Sprite sprite)> sources,
             Vector3 center,
@@ -226,7 +216,7 @@ namespace DoggyChef
         //  코루틴 헬퍼
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>고스트들을 <paramref name="center"/>로(또는 중앙에서 제자리로) 이동시킵니다.</summary>
+        // 고스트들을 <paramref name="center"/>로(또는 중앙에서 제자리로) 이동시킵니다.
         private static IEnumerator AnimateGhosts(
             List<(GameObject go, Vector3 start)> ghosts, Vector3 center,
             float duration, bool flyToCenter)
@@ -248,7 +238,7 @@ namespace DoggyChef
                 go.transform.position = flyToCenter ? center : start;
         }
 
-        /// <summary>고스트들의 스케일을 <paramref name="from"/> → <paramref name="to"/>로 변환합니다.</summary>
+        // 고스트들의 스케일을 <paramref name="from"/> → <paramref name="to"/>로 변환합니다.
         private static IEnumerator ScaleGhosts(
             List<(GameObject go, Vector3 start)> ghosts,
             float from, float to, float duration)
@@ -266,7 +256,7 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>"x8" 같은 배율 텍스트를 생성하고 상승 + 페이드아웃한 뒤 파괴합니다.</summary>
+        // "x8" 같은 배율 텍스트를 생성하고 상승 + 페이드아웃한 뒤 파괴합니다.
         private static IEnumerator ShowMultiplierPopup(
             Vector3 origin, string text, float duration, float rise)
         {

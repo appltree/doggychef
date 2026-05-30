@@ -58,7 +58,7 @@ namespace DoggyChef
         //  이벤트
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>모든 테이블이 비워졌을 때 발화됩니다. GameManager가 구독하여 Result 씬으로 전환합니다.</summary>
+        // 모든 테이블이 비워졌을 때 발화됩니다. GameManager가 구독하여 Result 씬으로 전환합니다.
         public static event Action OnAllTablesCleared;
 
         // ──────────────────────────────────────────────────────────
@@ -149,7 +149,7 @@ namespace DoggyChef
         //  Tick 1) 손님 스폰
         // ================================================================
 
-        /// <summary>비어 있고 언락된 테이블에 순서대로 손님을 스폰합니다.</summary>
+        // 비어 있고 언락된 테이블에 순서대로 손님을 스폰합니다.
         private void TickCustomerSpawn()
         {
             for (int i = 0; i < Tables.Length; i++)
@@ -167,7 +167,7 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>지정 인덱스 테이블에 손님을 생성하고 초기화합니다.</summary>
+        // 지정 인덱스 테이블에 손님을 생성하고 초기화합니다.
         private void SpawnCustomerForTable(int tableIndex)
         {
             if (m_AvailableRecipes.Count == 0) return;  // 레시피 없으면 스폰 불가
@@ -209,7 +209,7 @@ namespace DoggyChef
             StartCoroutine(WaitAndAssignRecipe(customer, table));
         }
 
-        /// <summary>손님이 Ordering 상태가 될 때까지 기다린 후 레시피를 배정합니다.</summary>
+        // 손님이 Ordering 상태가 될 때까지 기다린 후 레시피를 배정합니다.
         private IEnumerator WaitAndAssignRecipe(Customer customer, Table table)
         {
             while (customer != null && customer.State != Customer.CustomerState.Ordering)
@@ -226,10 +226,8 @@ namespace DoggyChef
         //  Board 이벤트 처리 — 재료 라우팅
         // ================================================================
 
-        /// <summary>
-        /// Board.OnGemExploded 핸들러.
-        /// 파괴된 보석의 BlockTag를 확인하고, 해당 재료가 필요한 최우선 테이블에 전달합니다.
-        /// </summary>
+        // Board.OnGemExploded 핸들러.
+        // 파괴된 보석의 BlockTag를 확인하고, 해당 재료가 필요한 최우선 테이블에 전달합니다.
         private void OnGemExploded(Gem gem, Vector3 worldPos)
         {
             if (gem?.Data == null) return;
@@ -241,25 +239,21 @@ namespace DoggyChef
             FindBestTableForIngredient(tag)?.AcceptGem(tag, worldPos, sr?.sprite, gem.Data.FoodSfx);
         }
 
-        /// <summary>
-        /// Board.OnGemExplodedDelayed 핸들러.
-        /// SmallBomb 머지 연출 완료 후 지연 발화됩니다.
-        /// Gem 오브젝트가 이미 파괴된 상태이므로 데이터를 직접 받아 처리합니다.
-        /// </summary>
+        // Board.OnGemExplodedDelayed 핸들러.
+        // SmallBomb 머지 연출 완료 후 지연 발화됩니다.
+        // Gem 오브젝트가 이미 파괴된 상태이므로 데이터를 직접 받아 처리합니다.
         private void OnGemExplodedDelayed(string tag, Vector3 worldPos, Sprite sprite, AudioClip foodSfx)
         {
             if (string.IsNullOrEmpty(tag)) return;
             FindBestTableForIngredient(tag)?.AcceptGem(tag, worldPos, sprite, foodSfx);
         }
 
-        /// <summary>
-        /// 지정 재료(gemTag)가 필요한 테이블 중 손님 체력이 가장 낮은 테이블을 반환합니다.
-        ///
-        /// ■ 우선순위 전략
-        ///   체력이 낮은 손님(= 더 급한 손님)을 먼저 채워줍니다.
-        ///   GetRemainingNeed()는 AcceptGem() 내에서 즉시 갱신되므로,
-        ///   SmallBomb x8처럼 같은 프레임 내 다중 호출에도 정확히 분산됩니다.
-        /// </summary>
+        // 지정 재료(gemTag)가 필요한 테이블 중 손님 체력이 가장 낮은 테이블을 반환합니다.
+        // 
+        // ■ 우선순위 전략
+        //   체력이 낮은 손님(= 더 급한 손님)을 먼저 채워줍니다.
+        //   GetRemainingNeed()는 AcceptGem() 내에서 즉시 갱신되므로,
+        //   SmallBomb x8처럼 같은 프레임 내 다중 호출에도 정확히 분산됩니다.
         private Table FindBestTableForIngredient(string gemTag)
         {
             Table best = null;
@@ -288,7 +282,7 @@ namespace DoggyChef
         //  이벤트 핸들러
         // ================================================================
 
-        /// <summary>손님 만족 퇴장 시 호출됩니다. → LevelData.AddHeart(1)</summary>
+        // 손님 만족 퇴장 시 호출됩니다. → LevelData.AddHeart(1)
         private void OnCustomerSatisfied(Customer customer)
         {
             if (LevelData.Instance == null) return;
@@ -296,10 +290,8 @@ namespace DoggyChef
             LevelData.Instance.AddHeart(1, pos);
         }
 
-        /// <summary>
-        /// 손님 퇴장 완료 시 호출됩니다. (Destroy 직전)
-        /// 예약 슬롯을 해제하고 이벤트 구독을 정리합니다.
-        /// </summary>
+        // 손님 퇴장 완료 시 호출됩니다. (Destroy 직전)
+        // 예약 슬롯을 해제하고 이벤트 구독을 정리합니다.
         private void OnCustomerWalkoutComplete(Customer customer)
         {
             if (m_CustomerTableMap.TryGetValue(customer, out int idx))
@@ -312,8 +304,8 @@ namespace DoggyChef
             customer.OnWalkoutComplete -= OnCustomerWalkoutComplete;
         }
 
-        /// <summary>테이블 수금 완료 시 호출됩니다. → LevelData.AddMoney(amount)
-        /// fromPos: GoldGauge 코인 비행 출발 위치 (코인 탭 시 코인 위치, Staff 수금 시 Staff 위치)</summary>
+        // <summary>테이블 수금 완료 시 호출됩니다. → LevelData.AddMoney(amount)
+        // fromPos: GoldGauge 코인 비행 출발 위치 (코인 탭 시 코인 위치, Staff 수금 시 Staff 위치)</summary>
         private void OnTableMoneyCollected(Table table, int amount, Vector3 fromPos)
         {
             if (LevelData.Instance == null) return;
@@ -324,12 +316,10 @@ namespace DoggyChef
         //  Tick 2) 종료 판정 (Closing 상태에서 매 프레임 폴링)
         // ================================================================
 
-        /// <summary>
-        /// 모든 테이블이 Empty이고 스폰 진행 중인 테이블이 없으면 OnAllTablesCleared를 발화합니다.
-        ///
-        /// 이벤트 기반 단발 체크 대신 폴링을 사용하는 이유:
-        /// 테이블이 Closing 진입 이후 나중에 Empty가 되는 경우도 놓치지 않기 위함입니다.
-        /// </summary>
+        // 모든 테이블이 Empty이고 스폰 진행 중인 테이블이 없으면 OnAllTablesCleared를 발화합니다.
+        // 
+        // 이벤트 기반 단발 체크 대신 폴링을 사용하는 이유:
+        // 테이블이 Closing 진입 이후 나중에 Empty가 되는 경우도 놓치지 않기 위함입니다.
         private void TickClosingCheck()
         {
             bool allEmpty = Tables.All(t => t == null || t.State == Table.TableState.Empty);
@@ -341,10 +331,8 @@ namespace DoggyChef
         //  외부 API — 부스터 등에서 호출
         // ================================================================
 
-        /// <summary>
-        /// 주문 중(Ordering/Angry) 상태인 모든 손님의 체력을 amount만큼 회복합니다.
-        /// CandyBooster.UseInstant()에서 호출합니다.
-        /// </summary>
+        // 주문 중(Ordering/Angry) 상태인 모든 손님의 체력을 amount만큼 회복합니다.
+        // CandyBooster.UseInstant()에서 호출합니다.
         public void HealAllOrderingCustomers(int amount)
         {
             foreach (var table in Tables)
@@ -354,10 +342,8 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>
-        /// 주문 중(Ordering/Angry) 상태인 모든 손님의 체력을 꽉 채웁니다.
-        /// CandyBooster.UseInstant()에서 호출합니다.
-        /// </summary>
+        // 주문 중(Ordering/Angry) 상태인 모든 손님의 체력을 꽉 채웁니다.
+        // CandyBooster.UseInstant()에서 호출합니다.
         public void FullHealAllOrderingCustomers()
         {
             foreach (var table in Tables)
@@ -371,10 +357,8 @@ namespace DoggyChef
         //  레시피 관리
         // ================================================================
 
-        /// <summary>
-        /// 현재 스테이지 번호를 기준으로 사용 가능한 레시피를 필터링합니다.
-        /// 필터링 결과가 없으면 모든 레시피를 사용합니다 (빈 레시피 방지).
-        /// </summary>
+        // 현재 스테이지 번호를 기준으로 사용 가능한 레시피를 필터링합니다.
+        // 필터링 결과가 없으면 모든 레시피를 사용합니다 (빈 레시피 방지).
         private void RefreshAvailableRecipes()
         {
             m_AvailableRecipes.Clear();
@@ -393,7 +377,7 @@ namespace DoggyChef
                 m_AvailableRecipes.AddRange(AllRecipes.Where(r => r != null));
         }
 
-        /// <summary>필터링된 레시피 중 랜덤으로 하나를 반환합니다.</summary>
+        // 필터링된 레시피 중 랜덤으로 하나를 반환합니다.
         private RecipeData GetRandomAvailableRecipe()
         {
             if (m_AvailableRecipes.Count == 0) return null;

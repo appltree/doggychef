@@ -3,10 +3,8 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// MatchShape는 보석 매칭 시 비교할 '모양'을 정의하는 클래스입니다.
-    /// 예를 들어 (0,0), (1,0), (2,0), (3,0) 좌표 리스트를 가지면 '가로 4칸' 모양이 됩니다.
-    /// </summary>
+    // MatchShape는 보석 매칭 시 비교할 '모양'을 정의하는 클래스입니다.
+    // 예를 들어 (0,0), (1,0), (2,0), (3,0) 좌표 리스트를 가지면 '가로 4칸' 모양이 됩니다.
     [System.Serializable]
     public class MatchShape : ISerializationCallbackReceiver
     {
@@ -37,7 +35,7 @@ namespace DoggyChef
             // 최소한 1개의 셀(0,0)은 있어야 함
             if (Cells.Count == 0)
             {
-                Cells.Add(new Vector3Int(0, 0));
+                Cells.Add(new(0, 0));
             }
 
             // 모양의 전체 크기(Bounds) 계산
@@ -63,21 +61,19 @@ namespace DoggyChef
 
                 // 가로 대칭 (좌우 반전)
                 var x = Bounds.xMax - (cell.x - Bounds.xMin);
-                CellHMirror.Add(new Vector3Int(x, cell.y, 0));
+                CellHMirror.Add(new(x, cell.y, 0));
 
                 // 세로 대칭 (상하 반전)
                 var y = Bounds.yMax - (cell.y - Bounds.yMin);
-                CellVMirror.Add(new Vector3Int(cell.x, y, 0));
+                CellVMirror.Add(new(cell.x, y, 0));
             }
         }
 
-        /// <summary>
-        /// Board에서 매치가 발생했을 때 호출됩니다.
-        /// "지금 매치된 보석들(cellList)이 이 모양(Shape)에 딱 들어맞는가?"를 검사합니다.
-        /// </summary>
-        /// <param name="cellList">현재 매치된 보석들의 좌표 리스트</param>
-        /// <param name="matchedCells">모양이 일치한다면, 그 모양을 구성하는 핵심 셀들을 여기에 담아 리턴합니다.</param>
-        /// <returns>모양이 일치하면 true, 아니면 false</returns>
+        // Board에서 매치가 발생했을 때 호출됩니다.
+        // "지금 매치된 보석들(cellList)이 이 모양(Shape)에 딱 들어맞는가?"를 검사합니다.
+        // cellList: 현재 매치된 보석들의 좌표 리스트
+        // matchedCells: 모양이 일치한다면, 그 모양을 구성하는 핵심 셀들을 여기에 담아 리턴합니다.
+        // Returns: 모양이 일치하면 true, 아니면 false
         public bool FitIn(List<Vector3Int> cellList, ref List<Vector3Int> matchedCells)
         {
             // 매치된 보석들의 전체 영역 계산
@@ -161,9 +157,7 @@ namespace DoggyChef
             rot270 = new Vector3Int(-toPoint.y, toPoint.x, 0) + pivot;
         }
 
-        /// <summary>
-        /// 주어진 셀 리스트를 모두 포함하는 최소 사각형(Rect)을 구합니다.
-        /// </summary>
+        // 주어진 셀 리스트를 모두 포함하는 최소 사각형(Rect)을 구합니다.
         public static RectInt GetBoundOf(List<Vector3Int> cellList)
         {
             if (cellList.Count == 0)

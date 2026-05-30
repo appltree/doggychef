@@ -8,38 +8,46 @@ namespace DoggyChef
 {
     public class GoldGauge : MonoBehaviour
     {
+        // ════════════════════════════════════════════════════════════════
+        //  Inspector 연결 필드
+        // ════════════════════════════════════════════════════════════════
+
         [SerializeField] private TMP_Text goldText;
         [SerializeField] private Image progress;
         [SerializeField] private Image goldIcon;
-
-        [SerializeField] private List<Image> stars; // 별 이미지들 (3개 고정)
-
+        [SerializeField] private List<Image> stars;
         [SerializeField] private Animator goalEffectPrefab;
-
-        private readonly float flyDuration = 0.5f;
-        private readonly AnimationCurve flyEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
-
-        private readonly int coinUnit = 600;           // 3000원 기준 5개 정도 날아가도록 조정
-        private readonly int maxCoinsPerBurst = 5;     // 한 번에 최대 날아가는 코인 수
-        private readonly float coinSpawnInterval = 0.06f; // 코인 간 간격(초)
-
-        private LevelData levelData;
-        private Canvas rootCanvas;
-
-        private Coroutine fillRoutine;
-
         [SerializeField] private AudioClip goalSfx;
 
-        private int lastStarCount = -1;
-        private int m_LastEarned = 0; // OnMoneyChanged delta 계산용
+        // ════════════════════════════════════════════════════════════════
+        //  private 런타임 상태
+        // ════════════════════════════════════════════════════════════════
 
-        void Awake()
+        // readonly "상수" — 비행 연출 설정
+        private readonly float flyDuration = 0.5f;
+        private readonly AnimationCurve flyEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        private readonly int coinUnit = 600;           // 이 금액마다 코인 1개 생성
+        private readonly int maxCoinsPerBurst = 5;     // 한 번에 최대 코인 수
+        private readonly float coinSpawnInterval = 0.06f;
+
+        // 인스턴스 상태
+        private LevelData levelData;
+        private Canvas rootCanvas;
+        private Coroutine fillRoutine;
+        private int lastStarCount = -1;
+        private int m_LastEarned = 0;
+
+        // ════════════════════════════════════════════════════════════════
+        //  Unity 생명 주기
+        // ════════════════════════════════════════════════════════════════
+
+        private void Awake()
         {
             levelData = FindAnyObjectByType<LevelData>();
             rootCanvas = GetComponentInParent<Canvas>();
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (levelData == null) levelData = FindAnyObjectByType<LevelData>();
             if (levelData != null)
@@ -50,12 +58,11 @@ namespace DoggyChef
             progress.fillAmount = CalcTargetFill();
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             if (levelData != null)
                 levelData.OnMoneyChanged -= HandleMoneyChanged;
         }
-
 
         private void HandleMoneyChanged(int totalEarned, Vector3 worldPos)
         {
@@ -72,7 +79,6 @@ namespace DoggyChef
                 AnimateProgressTo(CalcTargetFill());
             }
         }
-
 
         private IEnumerator CoFlyAndUpdate(Vector3 worldPos, int amount)
         {
@@ -147,7 +153,7 @@ namespace DoggyChef
 
             // 랜덤한 곡선 경로를 위한 제어점들 생성
             Vector2 direction = (endLocal - startLocal).normalized;
-            Vector2 perpendicular = new Vector2(-direction.y, direction.x); // 수직 벡터
+            Vector2 perpendicular = new(-direction.y, direction.x); // 수직 벡터
 
             // 랜덤한 곡선 강도와 방향
             float curveStrength = Random.Range(50f, 150f); // 곡선의 강도
@@ -301,12 +307,12 @@ namespace DoggyChef
             var instGO = Instantiate(goalEffectPrefab.gameObject, transform);
             var instRect = instGO.transform as RectTransform;
 
-            instRect.anchorMin = new Vector2(0.5f, 0.5f);
-            instRect.anchorMax = new Vector2(0.5f, 0.5f);
+            instRect.anchorMin = new(0.5f, 0.5f);
+            instRect.anchorMax = new(0.5f, 0.5f);
             instRect.anchoredPosition = Vector2.zero;
             instRect.localScale = Vector3.one;
             instRect.localRotation = Quaternion.identity;
-            instRect.localPosition = new Vector3(55, 0, 0f);
+            instRect.localPosition = new(55, 0, 0f);
 
             // Animator 파라미터 세팅
             var anim = instGO.GetComponent<Animator>();
@@ -347,7 +353,6 @@ namespace DoggyChef
 
             return p;
         }
-
 
         private void AnimateProgressTo(float target)
         {

@@ -6,29 +6,29 @@ using TMPro;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// Canvas 기반 부스터 패널.
-    ///
-    /// ■ 씬 구조 (Canvas 자식으로 직접 배치)
-    ///   BoosterPanel  ← 이 스크립트 부착
-    ///   └─ Slot0      ← Button 컴포넌트 부착
-    ///        ├─ Icon           ← Image (BoosterSlot.Icon)
-    ///        ├─ CountLabel     ← TMP_Text (BoosterSlot.CountLabel)
-    ///        └─ CooldownMask   ← Image, Type=Filled, Radial360, Clockwise, Origin=Top
-    ///                             (BoosterSlot.CooldownOverlay)
-    ///   └─ Slot1 / Slot2 ...
-    ///
-    /// ■ 날아가는 연출 (FlyTarget 설정 시)
-    ///   버튼 클릭 → 아이콘이 포물선을 그리며 회전해 FlyTarget 으로 날아감
-    ///   → 도착 즉시 UseInstant() 발동 → 쿨타임 시작
-    ///
-    /// ■ 쿨타임 오버레이
-    ///   CooldownOverlay 이미지의 fillAmount 가 0→1 로 채워지는 동안 버튼 비활성화
-    ///   채워지면(= 쿨타임 종료) 버튼 재활성화
-    /// </summary>
+    // Canvas 기반 부스터 패널.
+    // 
+    // ■ 씬 구조 (Canvas 자식으로 직접 배치)
+    //   BoosterPanel  ← 이 스크립트 부착
+    //   └─ Slot0      ← Button 컴포넌트 부착
+    //        ├─ Icon           ← Image (BoosterSlot.Icon)
+    //        ├─ CountLabel     ← TMP_Text (BoosterSlot.CountLabel)
+    //        └─ CooldownMask   ← Image, Type=Filled, Radial360, Clockwise, Origin=Top
+    //                             (BoosterSlot.CooldownOverlay)
+    //   └─ Slot1 / Slot2 ...
+    // 
+    // ■ 날아가는 연출 (FlyTarget 설정 시)
+    //   버튼 클릭 → 아이콘이 포물선을 그리며 회전해 FlyTarget 으로 날아감
+    //   → 도착 즉시 UseInstant() 발동 → 쿨타임 시작
+    // 
+    // ■ 쿨타임 오버레이
+    //   CooldownOverlay 이미지의 fillAmount 가 0→1 로 채워지는 동안 버튼 비활성화
+    //   채워지면(= 쿨타임 종료) 버튼 재활성화
     public class BoosterPanel : MonoBehaviour
     {
-        public static BoosterPanel Instance { get; private set; }
+        // ════════════════════════════════════════════════════════════════
+        //  중첩 타입
+        // ════════════════════════════════════════════════════════════════
 
         [System.Serializable]
         public class BoosterSlot
@@ -51,14 +51,28 @@ namespace DoggyChef
             [Tooltip("쿨타임 초. 0 이면 쿨타임 없음.")]
             public float CooldownDuration = 0f;
 
-            // 런타임 상태
+            // 런타임 상태 (BoosterPanel만 접근)
             [HideInInspector] public bool IsOnCooldown;
             [HideInInspector] public Coroutine CooldownRoutine;
         }
 
+        // ════════════════════════════════════════════════════════════════
+        //  Inspector 연결 필드
+        // ════════════════════════════════════════════════════════════════
+
         [SerializeField] private List<BoosterSlot> m_Slots = new();
-        [Tooltip("날아가는 연출(UseFlyAnimation=true)의 도착 목표 Transform (예: TimeGauge).")]
+        [Tooltip("날아가는 연출의 도착 목표 Transform (예: TimeGauge).")]
         [SerializeField] private RectTransform m_FlyTarget;
+
+        // ════════════════════════════════════════════════════════════════
+        //  싱글턴
+        // ════════════════════════════════════════════════════════════════
+
+        public static BoosterPanel Instance { get; private set; }
+
+        // ════════════════════════════════════════════════════════════════
+        //  private 런타임 상태
+        // ════════════════════════════════════════════════════════════════
 
         private BoosterSlot m_SelectedSlot;
         private Canvas m_Canvas;
@@ -89,6 +103,7 @@ namespace DoggyChef
         //  초기화
         // ─────────────────────────────────────────────────────────────
 
+        // [Start 호출] 부스터 슬롯을 초기화하고 버튼 이벤트를 연결합니다.
         public void InitSlots()
         {
             if (GameManager.Instance == null) return;
@@ -117,8 +132,7 @@ namespace DoggyChef
                         string boosterName = slot.BonusGemPrefab.name;
                         int savedAmount = GameManager.Instance.UserData.GetBoosterAmount(boosterName, slot.InitialAmount);
 
-                        entry = new GameManager.BonusItemEntry
-                        { Item = slot.BonusGemPrefab, Amount = savedAmount };
+                        entry = new() { Item = slot.BonusGemPrefab, Amount = savedAmount };
                         GameManager.Instance.BonusItems.Add(entry);
 
                         // UserData에도 즉시 등록하여 상태를 일치시킵니다.
@@ -241,7 +255,7 @@ namespace DoggyChef
             flyGO.transform.SetAsLastSibling();
 
             var flyRT = flyGO.AddComponent<RectTransform>();
-            flyRT.sizeDelta = new Vector2(80f, 80f);
+            flyRT.sizeDelta = new(80f, 80f);
             flyRT.position = slot.Icon != null
                 ? slot.Icon.transform.position
                 : slot.Button.transform.position;
@@ -346,13 +360,12 @@ namespace DoggyChef
                 var go = new GameObject("CellBlink");
                 var sr = go.AddComponent<SpriteRenderer>();
                 sr.sprite = sprite;
-                sr.color = new Color(1f, 0.9f, 0.2f, 0f);
+                sr.color = new(1f, 0.9f, 0.2f, 0f);
                 sr.sortingLayerName = "Default";
                 sr.sortingOrder = 20;
 
                 go.transform.position = board.Grid.GetCellCenterWorld(kvp.Key);
-                go.transform.localScale = new Vector3(cellSize.x * 0.9f,
-                                                      cellSize.y * 0.9f, 1f);
+                go.transform.localScale = new(cellSize.x * 0.9f, cellSize.y * 0.9f, 1f);
                 m_BlinkOverlays.Add(go);
             }
 
@@ -368,7 +381,7 @@ namespace DoggyChef
                 {
                     if (go == null) continue;
                     var sr = go.GetComponent<SpriteRenderer>();
-                    if (sr != null) sr.color = new Color(1f, 0.9f, 0.2f, alpha);
+                    if (sr != null) sr.color = new(1f, 0.9f, 0.2f, alpha);
                 }
                 yield return null;
             }
@@ -390,10 +403,8 @@ namespace DoggyChef
         //  던지기 연출 (Board-target 부스터)
         // ─────────────────────────────────────────────────────────────
 
-        /// <summary>
-        /// 보드 클릭형 부스터에 ThrowSprite가 설정된 경우 던지기 애니메이션을 재생합니다.
-        /// 코루틴을 시작하고 true를 반환. 연출 없으면 false 반환.
-        /// </summary>
+        // 보드 클릭형 부스터에 ThrowSprite가 설정된 경우 던지기 애니메이션을 재생합니다.
+        // 코루틴을 시작하고 true를 반환. 연출 없으면 false 반환.
         public bool TryThrowAnim(Booster item, Vector3 worldTarget, System.Action onLanded)
         {
             if (GameManager.Instance == null) return false;
@@ -429,7 +440,7 @@ namespace DoggyChef
             flyGO.transform.SetAsLastSibling();
 
             var flyRT = flyGO.AddComponent<RectTransform>();
-            flyRT.sizeDelta = new Vector2(80f, 80f);
+            flyRT.sizeDelta = new(80f, 80f);
             flyRT.position = startPos;
 
             var flyImg = flyGO.AddComponent<Image>();
@@ -529,10 +540,8 @@ namespace DoggyChef
             StopCellBlink();
         }
 
-        /// <summary>
-        /// 보드 클릭형 부스터를 애니메이션 없이 즉시 사용한 뒤 쿨타임을 시작합니다.
-        /// GameManager.UseBonusItem의 non-animated 경로에서 호출합니다.
-        /// </summary>
+        // 보드 클릭형 부스터를 애니메이션 없이 즉시 사용한 뒤 쿨타임을 시작합니다.
+        // GameManager.UseBonusItem의 non-animated 경로에서 호출합니다.
         public void BeginCooldownForItem(Booster item)
         {
             var slot = m_Slots.Find(s => s.BonusGemPrefab == item);

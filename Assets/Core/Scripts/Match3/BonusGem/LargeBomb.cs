@@ -2,17 +2,15 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 라지봄(LargeBomb) 보너스 젬.
-    /// 자신을 중심으로 5×5 범위(반경 2칸) 안의 모든 보석을 한 번에 제거합니다.
-    ///
-    /// ■ 생성 조건 (GameSettings 인스펙터에서 Shapes로 설정)
-    ///   → 5개 이상의 T자/L자 복합 매치 시 생성됩니다.
-    ///
-    /// ■ 발동 방법
-    ///   → 보드 위 보석과 스왑하거나 더블클릭으로 발동합니다.
-    ///   → UI 인벤토리에서 꺼내 사용할 수도 있습니다(isBonus=true).
-    /// </summary>
+    // 라지봄(LargeBomb) 보너스 젬.
+    // 자신을 중심으로 5×5 범위(반경 2칸) 안의 모든 보석을 한 번에 제거합니다.
+    // 
+    // ■ 생성 조건 (GameSettings 인스펙터에서 Shapes로 설정)
+    //   → 5개 이상의 T자/L자 복합 매치 시 생성됩니다.
+    // 
+    // ■ 발동 방법
+    //   → 보드 위 보석과 스왑하거나 더블클릭으로 발동합니다.
+    //   → UI 인벤토리에서 꺼내 사용할 수도 있습니다(isBonus=true).
     public class LargeBomb : BonusGem
     {
         [Tooltip("발동 시 재생할 효과음")]
@@ -28,12 +26,10 @@ namespace DoggyChef
             m_Usable = true;
         }
 
-        /// <summary>
-        /// 라지봄 발동 메서드.
-        /// 자기 자신 처리 → 효과음/이펙트 재생 → 5×5 범위 보석 처리 순으로 실행합니다.
-        /// </summary>
-        /// <param name="swappedGem">스왑 상대 젬 (없으면 null)</param>
-        /// <param name="isBonus">인벤토리 아이템 사용 여부 (true = 재귀 방지 불필요)</param>
+        // 라지봄 발동 메서드.
+        // 자기 자신 처리 → 효과음/이펙트 재생 → 5×5 범위 보석 처리 순으로 실행합니다.
+        // swappedGem: 스왑 상대 젬 (없으면 null)
+        // isBonus: 인벤토리 아이템 사용 여부 (true = 재귀 방지 불필요)
         public override void Use(Gem swappedGem, bool isBonus = true)
         {
             // 5×5 범위 내 다른 LargeBomb의 연쇄 발동으로 인한 재귀 폭발 방지
@@ -71,12 +67,12 @@ namespace DoggyChef
 
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>폭발 위치에 ExplosionEffectPrefab을 생성하고 2초 후 파괴합니다.</summary>
+        // 폭발 위치에 ExplosionEffectPrefab을 생성하고 2초 후 파괴합니다.
         private void SpawnExplosionEffect()
         {
             if (ExplosionEffectPrefab == null) return;
 
-            var pos = GameManager.Instance.Board.GetCellCenter(m_CurrentIndex);
+            var pos = GameManager.Instance.Board.Grid.GetCellCenterWorld(m_CurrentIndex);
             var effect = Instantiate(ExplosionEffectPrefab, pos, Quaternion.identity);
             Destroy(effect, 2f);
         }

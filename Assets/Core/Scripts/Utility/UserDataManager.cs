@@ -3,18 +3,14 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-  /// <summary>
-  /// 데이터를 로컬 파일로 저장하고 불러오는 범용 시스템 클래스입니다.
-  /// JsonUtility를 사용하여 데이터를 직렬화합니다.
-  /// </summary>
+  // 데이터를 로컬 파일로 저장하고 불러오는 범용 시스템 클래스입니다.
+  // JsonUtility를 사용하여 데이터를 직렬화합니다.
   public static class UserDataManager
   {
-    /// <summary>
-    /// 지정한 데이터를 JSON 형식으로 저장합니다.
-    /// </summary>
-    /// <typeparam name="T">저장할 데이터의 타입 (Serializable 이어야 함)</typeparam>
-    /// <param name="fileName">저장할 파일 이름 (예: user_data.json)</param>
-    /// <param name="data">저장할 데이터 객체</param>
+    // 지정한 데이터를 JSON 형식으로 저장합니다.
+    // <typeparam name="T">저장할 데이터의 타입 (Serializable 이어야 함)</typeparam>
+    // fileName: 저장할 파일 이름 (예: user_data.json)
+    // data: 저장할 데이터 객체
     public static void Save<T>(string fileName, T data)
     {
       try
@@ -30,12 +26,10 @@ namespace DoggyChef
       }
     }
 
-    /// <summary>
-    /// 지정한 파일로부터 데이터를 불러옵니다. 파일이 없으면 새 객체를 생성하여 반환합니다.
-    /// </summary>
-    /// <typeparam name="T">불러올 데이터의 타입</typeparam>
-    /// <param name="fileName">불러올 파일 이름</param>
-    /// <returns>불러온 데이터 객체 또는 새 인스턴스</returns>
+    // 지정한 파일로부터 데이터를 불러옵니다. 파일이 없으면 새 객체를 생성하여 반환합니다.
+    // <typeparam name="T">불러올 데이터의 타입</typeparam>
+    // fileName: 불러올 파일 이름
+    // Returns: 불러온 데이터 객체 또는 새 인스턴스
     public static T Load<T>(string fileName) where T : new()
     {
       try

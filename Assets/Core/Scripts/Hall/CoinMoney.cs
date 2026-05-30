@@ -122,17 +122,15 @@ namespace DoggyChef
         //  공개 API
         // ================================================================
 
-        /// <summary>
-        /// [Table 호출]
-        /// 코인을 초기화하고 생명주기 루틴을 시작합니다.
-        /// Table.SpawnCoin()에서 Instantiate 직후 호출합니다.
-        ///
-        /// 파라미터:
-        ///   amount → 수거 시 지급할 골드 (RecipeData.SellPrice).
-        ///            현재 Table이 CurrentOrder.SellPrice를 직접 읽으므로
-        ///            CoinMoney 내부에서는 저장하지 않습니다.
-        ///            향후 금액 표시 VFX 등이 필요하면 필드로 승격하세요.
-        /// </summary>
+        // [Table 호출]
+        // 코인을 초기화하고 생명주기 루틴을 시작합니다.
+        // Table.SpawnCoin()에서 Instantiate 직후 호출합니다.
+        // 
+        // 파라미터:
+        //   amount → 수거 시 지급할 골드 (RecipeData.SellPrice).
+        //            현재 Table이 CurrentOrder.SellPrice를 직접 읽으므로
+        //            CoinMoney 내부에서는 저장하지 않습니다.
+        //            향후 금액 표시 VFX 등이 필요하면 필드로 승격하세요.
         public void Setup(int amount, Table owner = null)
         {
             Owner = owner;
@@ -148,11 +146,9 @@ namespace DoggyChef
             m_LifeRoutine = StartCoroutine(LifeCycleRoutine());
         }
 
-        /// <summary>
-        /// [플레이어 탭 또는 OnMouseDown에서 호출]
-        /// 코인을 수거합니다. OnDone(현재 State)을 발사하고 GameObject를 파괴합니다.
-        /// 이미 수거된 경우에는 아무 동작도 하지 않습니다.
-        /// </summary>
+        // [플레이어 탭 또는 OnMouseDown에서 호출]
+        // 코인을 수거합니다. OnDone(현재 State)을 발사하고 GameObject를 파괴합니다.
+        // 이미 수거된 경우에는 아무 동작도 하지 않습니다.
         public void Collect()
         {
             if (m_Collected) return;
@@ -170,10 +166,8 @@ namespace DoggyChef
             Destroy(gameObject);
         }
 
-        /// <summary>
-        /// [StaffMember Cashier 호출] 코인을 Staff 위치로 이동 후 수거합니다.
-        /// Origin PaiedMoney.CollectViaStaff()와 동일한 방식입니다.
-        /// </summary>
+        // [StaffMember Cashier 호출] 코인을 Staff 위치로 이동 후 수거합니다.
+        // Origin PaiedMoney.CollectViaStaff()와 동일한 방식입니다.
         public void CollectViaStaff(Vector3 destPos, float travelDuration = 0.35f)
         {
             if (m_Collected) return;
@@ -210,6 +204,7 @@ namespace DoggyChef
                 transform.position = Vector3.Lerp(startPos, targetPos, k);
                 yield return null;
             }
+
             transform.position = targetPos;
 
             // 수거 이벤트 발화 → Table.CollectMoney() 호출됨

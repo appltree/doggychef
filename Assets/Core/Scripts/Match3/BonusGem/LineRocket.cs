@@ -2,17 +2,15 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 라인로켓(LineRocket) 보너스 젬.
-    /// 발동 시 빔 이펙트 2개가 반대 방향으로 날아가며 경로의 모든 보석을 파괴합니다.
-    ///
-    /// ■ 생성 조건 (GameSettings 인스펙터에서 Shapes로 설정)
-    ///   → 4개 직선 매치 시 생성됩니다.
-    ///   → Vertical=false(가로형) 또는 Vertical=true(세로형) 두 종류의 프리팹이 필요합니다.
-    ///
-    /// ■ 발동 방법
-    ///   → 보드 위 보석과 스왑하거나 더블클릭으로 발동합니다.
-    /// </summary>
+    // 라인로켓(LineRocket) 보너스 젬.
+    // 발동 시 빔 이펙트 2개가 반대 방향으로 날아가며 경로의 모든 보석을 파괴합니다.
+    // 
+    // ■ 생성 조건 (GameSettings 인스펙터에서 Shapes로 설정)
+    //   → 4개 직선 매치 시 생성됩니다.
+    //   → Vertical=false(가로형) 또는 Vertical=true(세로형) 두 종류의 프리팹이 필요합니다.
+    // 
+    // ■ 발동 방법
+    //   → 보드 위 보석과 스왑하거나 더블클릭으로 발동합니다.
     public class LineRocket : BonusGem
     {
         [Tooltip("로켓 경로에 표시할 빔 이펙트 프리팹 (Origin BeamEffect 참고)")]
@@ -31,12 +29,10 @@ namespace DoggyChef
             m_Usable = true;
         }
 
-        /// <summary>
-        /// 라인로켓 발동 메서드.
-        /// 자기 자신을 즉시 삭제하고, 양쪽 방향으로 RocketAction을 생성합니다.
-        /// </summary>
-        /// <param name="swappedGem">스왑 상대 젬 (없으면 null)</param>
-        /// <param name="isBonus">인벤토리 아이템 사용 여부</param>
+        // 라인로켓 발동 메서드.
+        // 자기 자신을 즉시 삭제하고, 양쪽 방향으로 RocketAction을 생성합니다.
+        // swappedGem: 스왑 상대 젬 (없으면 null)
+        // isBonus: 인벤토리 아이템 사용 여부
         public override void Use(Gem swappedGem, bool isBonus = true)
         {
             if (!isBonus && m_Used) return;
@@ -79,32 +75,30 @@ namespace DoggyChef
         //  상태
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>현재 로켓이 처리한 마지막 그리드 셀.</summary>
+        // 현재 로켓이 처리한 마지막 그리드 셀.
         protected Vector3Int m_CurrentCell;
 
-        /// <summary>이동 방향 (Vector3Int.right / up 또는 그 반전).</summary>
+        // 이동 방향 (Vector3Int.right / up 또는 그 반전).
         protected readonly Vector3Int m_Direction;
 
-        /// <summary>현재 월드 좌표.</summary>
+        // 현재 월드 좌표.
         protected Vector3 m_Position;
 
-        /// <summary>빔 이펙트 인스턴스.</summary>
+        // 빔 이펙트 인스턴스.
         private readonly GameObject m_Beam;
 
-        /// <summary>이동 속도 (초당 5칸).</summary>
+        // 이동 속도 (초당 5칸).
         private const float MoveSpeed = 5f;
 
         // ──────────────────────────────────────────────────────────
         //  생성자
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>
-        /// RocketAction 생성자.
-        /// 빔 이펙트를 생성하고 보드 이동 잠금을 겁니다.
-        /// </summary>
-        /// <param name="startCell">로켓 시작 셀</param>
-        /// <param name="direction">이동 방향</param>
-        /// <param name="beamEffectPrefab">빔 이펙트 프리팹 (null 이면 생략)</param>
+        // RocketAction 생성자.
+        // 빔 이펙트를 생성하고 보드 이동 잠금을 겁니다.
+        // startCell: 로켓 시작 셀
+        // direction: 이동 방향
+        // beamEffectPrefab: 빔 이펙트 프리팹 (null 이면 생략)
         public RocketAction(Vector3Int startCell, Vector3Int direction, GameObject beamEffectPrefab = null)
         {
             m_CurrentCell = startCell;
@@ -112,7 +106,7 @@ namespace DoggyChef
 
             // 로켓이 날아가는 동안 보드 낙하·스왑을 잠급니다.
             GameManager.Instance.Board.LockMovement();
-            m_Position = GameManager.Instance.Board.GetCellCenter(m_CurrentCell);
+            m_Position = GameManager.Instance.Board.Grid.GetCellCenterWorld(m_CurrentCell);
 
             if (beamEffectPrefab != null)
                 m_Beam = SpawnBeam(beamEffectPrefab, m_Position, direction);
@@ -122,10 +116,8 @@ namespace DoggyChef
         //  IBoardAction
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>
-        /// Board.Update()에서 매 프레임 호출됩니다.
-        /// </summary>
-        /// <returns>true = 계속 진행 / false = 종료 (Board가 제거합니다)</returns>
+        // Board.Update()에서 매 프레임 호출됩니다.
+        // Returns: true = 계속 진행 / false = 종료 (Board가 제거합니다)
         public bool Tick()
         {
             // 위치 이동 및 빔 동기화
@@ -134,7 +126,7 @@ namespace DoggyChef
                 m_Beam.transform.position = m_Position;
 
             // 현재 좌표를 그리드 셀로 변환
-            var cell = GameManager.Instance.Board.WorldToCell(m_Position);
+            var cell = GameManager.Instance.Board.Grid.WorldToCell(m_Position);
 
             // 새 셀로 진입할 때마다 처리 (한 프레임에 여러 칸을 건너뛸 수 있으므로 while)
             while (m_CurrentCell != cell)
@@ -162,7 +154,7 @@ namespace DoggyChef
         //  내부 헬퍼
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>셀 내용에 따라 장애물 데미지, 보너스 연쇄, 일반 젬 파괴 중 하나를 실행합니다.</summary>
+        // 셀 내용에 따라 장애물 데미지, 보너스 연쇄, 일반 젬 파괴 중 하나를 실행합니다.
         private void ProcessCell(BoardCell content)
         {
             if (content.Obstacle != null)
@@ -182,21 +174,19 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>빔 오브젝트를 파괴하고 보드 잠금을 해제합니다.</summary>
+        // 빔 오브젝트를 파괴하고 보드 잠금을 해제합니다.
         private void Cleanup()
         {
             if (m_Beam != null) GameObject.Destroy(m_Beam);
             GameManager.Instance.Board.UnlockMovement();
         }
 
-        /// <summary>
-        /// 방향에 맞게 회전·반전된 빔 이펙트 인스턴스를 생성합니다.
-        ///
-        ///   right  →  0°
-        ///   left   →  0° + flipX
-        ///   up     →  90°
-        ///   down   → -90°
-        /// </summary>
+        // 방향에 맞게 회전·반전된 빔 이펙트 인스턴스를 생성합니다.
+        // 
+        //   right  →  0°
+        //   left   →  0° + flipX
+        //   up     →  90°
+        //   down   → -90°
         private static GameObject SpawnBeam(GameObject prefab, Vector3 pos, Vector3Int direction)
         {
             float rotZ = 0f;

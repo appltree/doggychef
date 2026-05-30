@@ -49,19 +49,20 @@ namespace DoggyChef
         public SpriteRenderer PlateRecipeRenderer;
 
         // ──────────────────────────────────────────────────────────
+        //  상수
+        // ──────────────────────────────────────────────────────────
+
+        private const float FeverBlinkFrequency = 2.0f;
+        private const float FeverBlinkMinAlpha = 0.35f;
+
+        // ──────────────────────────────────────────────────────────
         //  런타임 상태
         // ──────────────────────────────────────────────────────────
 
         private Table m_Table;
-
-        // ──────────────────────────────────────────────────────────
-        //  피버 UI 관련 런타임 상태 (Origin TableUI.cs 방식)
-        // ──────────────────────────────────────────────────────────
         private Coroutine m_FeverBlinkRoutine;
         private Color m_BasePriceColor = Color.white;
         private bool m_BaseColorCaptured;
-        private const float FeverBlinkFrequency = 2.0f;
-        private const float FeverBlinkMinAlpha = 0.35f;
 
         // ================================================================
         //  유니티 생명주기
@@ -146,9 +147,7 @@ namespace DoggyChef
             UpdateVisibility();
         }
 
-        /// <summary>
-        /// 가격 뱃지의 크기와 아이콘/텍스트 위치를 가격에 맞춰 조정합니다.
-        /// </summary>
+        // 가격 뱃지의 크기와 아이콘/텍스트 위치를 가격에 맞춰 조정합니다.
         private void UpdatePriceLayout(bool hasOrder)
         {
             if (!hasOrder)
@@ -190,9 +189,9 @@ namespace DoggyChef
                     var mr = PriceBadge.GetComponent<MeshRenderer>(); if (mr) Destroy(mr);
 
                     lr = PriceBadge.gameObject.AddComponent<LineRenderer>();
-                    lr.sharedMaterial = new Material(Shader.Find("Sprites/Default"));
-                    lr.startColor = new Color(0f, 0f, 0f, 0.65f);
-                    lr.endColor = new Color(0f, 0f, 0f, 0.65f);
+                    lr.sharedMaterial = new(Shader.Find("Sprites/Default"));
+                    lr.startColor = new(0f, 0f, 0f, 0.65f);
+                    lr.endColor = new(0f, 0f, 0f, 0.65f);
                     lr.numCapVertices = 16;
                     lr.useWorldSpace = false;
                     lr.sortingOrder = 11;

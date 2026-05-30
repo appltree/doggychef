@@ -6,40 +6,48 @@ namespace DoggyChef
 {
     public class HeartGauge : MonoBehaviour
     {
+        // ════════════════════════════════════════════════════════════════
+        //  Inspector 연결 필드
+        // ════════════════════════════════════════════════════════════════
+
         [SerializeField] private Image progress;
         [SerializeField] private Image heartIcon;
 
-        // 게이지 최대치는 스테이지의 feverHeartCount를 사용한다.
-        private readonly float animateDuration = 0.35f; // 채움 애니메이션 시간
+        // ════════════════════════════════════════════════════════════════
+        //  private 런타임 상태
+        // ════════════════════════════════════════════════════════════════
 
+        // readonly 설정값 (전체 그룹)
+        private readonly float animateDuration = 0.35f;
         private readonly float flyDuration = 0.5f;
         private readonly AnimationCurve flyEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
-
-        private LevelData levelData;
-        private Canvas rootCanvas;
-
-        private Coroutine fillRoutine;
-        private Coroutine bounceRoutine;
-        private Coroutine heartbeatRoutine; // 심장박동 루틴
-
-        private int displayedHeart = 0; // UI가 반영한 하트 누적치
         private readonly float beatScaleAmplitude = 0.12f;
         private readonly float beatFrequency = 1.6f;
 
+        // 인스턴스 상태
+        private LevelData levelData;
+        private Canvas rootCanvas;
+        private Coroutine fillRoutine;
+        private Coroutine bounceRoutine;
+        private Coroutine heartbeatRoutine;
+        private int displayedHeart = 0;
         private Vector3 baseHeartScale;
-        private Material shinyMaterial; // heartIcon의 shiny material 참조
+        private Material shinyMaterial;
 
+        // ════════════════════════════════════════════════════════════════
+        //  Unity 생명 주기
+        // ════════════════════════════════════════════════════════════════
 
-        void Awake()
+        private void Awake()
         {
             levelData = FindAnyObjectByType<LevelData>();
             rootCanvas = GetComponentInParent<Canvas>();
             // material을 복제하여 다른 곳에 영향을 주지 않도록 함
-            shinyMaterial = new Material(heartIcon.material);
+            shinyMaterial = new(heartIcon.material);
             heartIcon.material = shinyMaterial;
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (levelData == null) levelData = FindAnyObjectByType<LevelData>();
             if (levelData != null)
@@ -60,18 +68,19 @@ namespace DoggyChef
                 progress.fillAmount = CalcFillFor(displayedHeart);
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             if (levelData != null)
             {
                 levelData.OnHeartChanged -= HandleHeartChanged;
                 levelData.OnFeverChanged -= HandleFeverChanged;
             }
+
             // 심장박동 정지 및 원복
             StopHeartbeat();
         }
 
-        void OnDestroy()
+        private void OnDestroy()
         {
             // 복제된 material 정리로 메모리 누수 방지
             if (shinyMaterial != null)
@@ -224,7 +233,7 @@ namespace DoggyChef
             // 둥둥 뜨는 느낌: 진행 방향 법선으로 사인 파동을 더한다
             Vector2 dir = (endLocal - startLocal);
             Vector2 tangent = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right;
-            Vector2 normal = new Vector2(-tangent.y, tangent.x); // 시계방향 90도
+            Vector2 normal = new(-tangent.y, tangent.x); // 시계방향 90도
 
             float t = 0f;
             float dur = Mathf.Max(0.01f, flyDuration);

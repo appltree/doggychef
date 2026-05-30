@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-  /// <summary>
-  /// 게임 내 모든 사용자의 휘발성 데이터를 담는 컨테이너 클래스입니다.
-  /// 사운드 설정, 재화, 부스터 인벤토리 등을 한꺼번에 관리합니다.
-  /// </summary>
+  // 게임 내 모든 사용자의 휘발성 데이터를 담는 컨테이너 클래스입니다.
+  // 사운드 설정, 재화, 부스터 인벤토리 등을 한꺼번에 관리합니다.
   [Serializable]
   public class UserPersistentData
   {
@@ -24,9 +22,7 @@ namespace DoggyChef
     [Header("부스터 인벤토리 (이름-수량 매핑)")]
     public List<BoosterSaveData> Boosters = new();
 
-    /// <summary>
-    /// 특정 부스터의 보유량을 설정하고 저장 준비를 합니다.
-    /// </summary>
+    // 특정 부스터의 보유량을 설정하고 저장 준비를 합니다.
     public void SetBoosterAmount(string name, int amount)
     {
       var data = Boosters.Find(b => b.Name == name);
@@ -36,13 +32,11 @@ namespace DoggyChef
       }
       else
       {
-        Boosters.Add(new BoosterSaveData { Name = name, Amount = amount });
+        Boosters.Add(new() { Name = name, Amount = amount });
       }
     }
 
-    /// <summary>
-    /// 특정 부스터의 보유량을 가져옵니다. 저장된 정보가 없으면 기본값을 반환합니다.
-    /// </summary>
+    // 특정 부스터의 보유량을 가져옵니다. 저장된 정보가 없으면 기본값을 반환합니다.
     public int GetBoosterAmount(string name, int defaultAmount)
     {
       var data = Boosters.Find(b => b.Name == name);

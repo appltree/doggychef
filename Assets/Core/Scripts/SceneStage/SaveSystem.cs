@@ -17,6 +17,7 @@ namespace DoggyChef
 
                 return instance;
             }
+
             private set => instance = value;
         }
 

@@ -6,36 +6,44 @@ using UnityEngine.UIElements;
 
 namespace DoggyChef
 {
-    // 원본 GemHunterMatch의 UIHandler를 MyMatch3 구조에 맞게 그대로 복제한 버전입니다.
-    // - Win/Lose:  EndTitleContent(타이틀) + EndScreen(결과창) 분리 구조
-    // - UpdateTopBarData: CoinLabel / LiveLabel / StarLabel 갱신
     public class UIHandler : MonoBehaviour
     {
-        public static UIHandler Instance { get; private set; }
+        // ════════════════════════════════════════════════════════════════
+        //  Inspector 연결 필드
+        // ════════════════════════════════════════════════════════════════
 
         public UIDocument Document;
 
-        // ── Cover (페이드) ──
+        // ════════════════════════════════════════════════════════════════
+        //  싱글턴
+        // ════════════════════════════════════════════════════════════════
+
+        public static UIHandler Instance { get; private set; }
+
+        // ════════════════════════════════════════════════════════════════
+        //  private 런타임 상태
+        // ════════════════════════════════════════════════════════════════
+
+        // Cover(페이드) + HUD
         private VisualElement m_CoverElement;
         private Action m_FadeCallback;
-
-        // ── Canvas HUD 페이드인 ──
         private CanvasGroup m_HUDCanvasGroup;
 
-        // ── 종료 화면 (원본: EndTitleContent + EndScreen 분리) ──
+        // 종료 화면 (EndTitleContent + EndScreen 분리)
         private VisualElement m_EndTitleContent;
         private VisualElement m_WinTitle;
         private VisualElement m_LoseTitle;
         private VisualElement m_EndScreen;
 
-        // 원본 EndScreen 내의 통계 레이블
+        // EndScreen 통계 레이블
         private Label m_CoinLabel;
         private Label m_LiveLabel;
         private Label m_StarLabel;
 
-        // ─────────────────────────────────────────────────────────────
-        //  Awake: UI 요소 캐싱 (원본 Start와 통합 단순화)
-        // ─────────────────────────────────────────────────────────────
+        // ════════════════════════════════════════════════════════════════
+        //  Unity 생명 주기
+        // ════════════════════════════════════════════════════════════════
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -46,9 +54,6 @@ namespace DoggyChef
             Instance = this;
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  Start: 원본 UIHandler.Start와 동일한 흐름
-        // ─────────────────────────────────────────────────────────────
         private void Start()
         {
             var root = Document.rootVisualElement;
@@ -103,8 +108,7 @@ namespace DoggyChef
                 m_FadeCallback = null;
             });
 
-            // ── GameState 이벤트 구독 ──
-            // Closing → 보드 입력 차단 / Result → ShowEnd() 호출
+            // Closing → 보드 입력 차단, Result → ShowEnd()
             GameManager.OnStateChanged += OnGameStateChanged;
 
             // 상단바 초기값
@@ -129,10 +133,11 @@ namespace DoggyChef
                 StartCoroutine(FadeCanvasGroup(m_HUDCanvasGroup, 0f, 1f, 2f));
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  Init: 원본 UIHandler.Init() — 레벨 시작 시 호출
-        //  (레벨 재시작 시 목표 표시 등을 초기화)
-        // ─────────────────────────────────────────────────────────────
+        // ════════════════════════════════════════════════════════════════
+        //  public API
+        // ════════════════════════════════════════════════════════════════
+
+        // 레벨 시작 시 종료 화면을 초기화합니다.
         public void Init()
         {
             if (m_EndTitleContent != null)
@@ -141,6 +146,7 @@ namespace DoggyChef
                 m_EndScreen.style.display = DisplayStyle.None;
         }
 
+        // 상단 바 (획득 골드/라이프/별) 표시값을 갱신합니다.
         public void UpdateTopBarData()
         {
             int earned = LevelData.Instance != null ? LevelData.Instance.EarnedMoney : GameManager.Instance.Coins;
@@ -149,14 +155,10 @@ namespace DoggyChef
             if (m_StarLabel != null) m_StarLabel.text = GameManager.Instance.Stars.ToString();
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  [타이쿤 추가] GameState 이벤트 핸들러
-        // ─────────────────────────────────────────────────────────────
-        //  GameManager.OnStateChanged를 구독하여 상태별 UI 처리를 합니다.
-        //
-        //  Closing → 보드 입력 차단 (플레이어가 더 이상 보석을 움직일 수 없음)
-        //  Result  → 승/패 결과 화면 표시
-        // ─────────────────────────────────────────────────────────────
+        // ════════════════════════════════════════════════════════════════
+        //  private 구현
+        // ════════════════════════════════════════════════════════════════
+
         private void OnGameStateChanged(GameManager.GameState state)
         {
             if (state == GameManager.GameState.Result)
@@ -176,16 +178,7 @@ namespace DoggyChef
             GameManager.OnStateChanged -= OnGameStateChanged;
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  [타이쿤 수정] 게임 종료 — ShowEnd / ShowWin / ShowLose
-        // ─────────────────────────────────────────────────────────────
-        //  기존: GoalLeft == 0 이면 승리
-        //  타이쿤: EarnedMoney >= GoalGold 이면 승리
-        //
-        //  두 조건이 공존할 수 있도록:
-        //  1. CurrentStage 있음 → 타이쿤 승리 조건 사용
-        //  2. CurrentStage 없음 → 기존 Match-3 승리 조건 사용
-        // ─────────────────────────────────────────────────────────────
+        // EarnedMoney >= GoalGold 이면 타이쿤 승리. CurrentStage 없으면 GoalLeft == 0 조건으로 폴백.
         public void ShowEnd()
         {
             UpdateTopBarData();
@@ -204,6 +197,7 @@ namespace DoggyChef
                 ShowLose();
         }
 
+        // 승리 화면을 표시하고 스테이지 결과를 저장합니다.
         private void ShowWin()
         {
             if (StageSelectionData.HasSelection && LevelData.Instance?.CurrentStage != null)
@@ -224,6 +218,7 @@ namespace DoggyChef
             StartCoroutine(ShowEndScreen());
         }
 
+        // 패배 화면을 표시합니다.
         private void ShowLose()
         {
             m_EndTitleContent.style.display = DisplayStyle.Flex;
@@ -233,7 +228,7 @@ namespace DoggyChef
             StartCoroutine(ShowEndScreen());
         }
 
-        // 원본: IEnumerator ShowEndControl — 3초 후 EndScreen 표시
+        // 3초 후 최종 결과 패널을 표시합니다.
         private IEnumerator ShowEndScreen()
         {
             yield return new WaitForSeconds(3.0f);
@@ -241,21 +236,21 @@ namespace DoggyChef
             m_EndScreen.style.display = DisplayStyle.Flex;
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  페이드인/아웃 — 원본 FadeIn / FadeOut
-        // ─────────────────────────────────────────────────────────────
+        // Cover를 투명하게 만들어 페이드인을 시작합니다.
         public void FadeIn(Action onFadeFinished)
         {
             m_CoverElement.style.opacity = 0.0f;
             m_FadeCallback += onFadeFinished;
         }
 
+        // Cover를 불투명하게 만들어 페이드아웃을 시작합니다.
         public void FadeOut(Action onFadeFinished)
         {
             m_CoverElement.style.opacity = 1.0f;
             m_FadeCallback += onFadeFinished;
         }
 
+        // CanvasGroup 알파값을 from → to로 duration 초 동안 보간합니다.
         private IEnumerator FadeCanvasGroup(CanvasGroup group, float from, float to, float duration)
         {
             group.alpha = from;
@@ -269,9 +264,7 @@ namespace DoggyChef
             group.alpha = to;
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  전체 표시 토글
-        // ─────────────────────────────────────────────────────────────
+        // UIDocument 전체를 표시하거나 숨깁니다.
         public void Display(bool displayed)
         {
             Document.rootVisualElement.style.display =

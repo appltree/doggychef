@@ -3,10 +3,8 @@ using UnityEngine.Tilemaps;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 에디터에서 장애물을 배치하기 위한 타일입니다. 
-    /// GemPlacer와 달리 Board에 등록하는 대신, StartUp에서 즉시 Obstacle 프리팹을 인스턴스화합니다.
-    /// </summary>
+    // 에디터에서 장애물을 배치하기 위한 타일입니다. 
+    // GemPlacer와 달리 Board에 등록하는 대신, StartUp에서 즉시 Obstacle 프리팹을 인스턴스화합니다.
     [CreateAssetMenu(fileName = "New Obstacle Placer", menuName = "Match3/Obstacle Placer")]
     public class ObstaclePlacer : TileBase
     {
@@ -25,7 +23,6 @@ namespace DoggyChef
             if (!Application.isPlaying)
                 return false;
 #endif
-
 
             // 플레이 모드 시작 시 해당 위치에 장애물 생성
             var newObstacle = Instantiate(ObstaclePrefab);

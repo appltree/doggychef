@@ -41,10 +41,10 @@ namespace DoggyChef
     //  상수
     // ──────────────────────────────────────────────────────────
 
-    /// <summary>Break 애니메이션이 끝나고 오브젝트가 사라질 때까지의 지연 시간(초). Origin 동일.</summary>
+    // Break 애니메이션이 끝나고 오브젝트가 사라질 때까지의 지연 시간(초). Origin 동일.
     private const float VanishDelay = 0.3f;
 
-    /// <summary>Animator break 트리거 파라미터 이름 (Ice.controller 기준).</summary>
+    // Animator break 트리거 파라미터 이름 (Ice.controller 기준).
     private const string BreakTrigger = "break";
 
     // ──────────────────────────────────────────────────────────
@@ -68,12 +68,10 @@ namespace DoggyChef
     //  공개 API
     // ================================================================
 
-    /// <summary>
-    /// 지정 보석에 얼음을 부착합니다. Board.TrySpawnIceBlock() 에서 호출합니다.
-    ///
-    /// - 보석의 자식 Transform 으로 설정 → 낙하 시 함께 이동합니다.
-    /// - Gem.SetFrozen() 을 호출하여 보석이 얼음 상태임을 알립니다.
-    /// </summary>
+    // 지정 보석에 얼음을 부착합니다. Board.TrySpawnIceBlock() 에서 호출합니다.
+    // 
+    // - 보석의 자식 Transform 으로 설정 → 낙하 시 함께 이동합니다.
+    // - Gem.SetFrozen() 을 호출하여 보석이 얼음 상태임을 알립니다.
     public void Attach(Gem gem)
     {
       m_Gem = gem;
@@ -94,13 +92,11 @@ namespace DoggyChef
       }
     }
 
-    /// <summary>
-    /// 얼음을 깨고 오브젝트를 제거합니다. Board.MatchTicking 에서 호출합니다.
-    ///
-    /// 1. Gem.ClearFrozen() → 보석이 더 이상 얼음 상태가 아님
-    /// 2. 효과음 재생
-    /// 3. Break 애니메이션 트리거 → VanishDelay 후 Destroy
-    /// </summary>
+    // 얼음을 깨고 오브젝트를 제거합니다. Board.MatchTicking 에서 호출합니다.
+    // 
+    // 1. Gem.ClearFrozen() → 보석이 더 이상 얼음 상태가 아님
+    // 2. 효과음 재생
+    // 3. Break 애니메이션 트리거 → VanishDelay 후 Destroy
     public void BreakAndVanish()
     {
       if (m_Breaking) return;  // 이미 Breaking 중이면 무시

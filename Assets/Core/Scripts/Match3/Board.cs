@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 namespace DoggyChef
 {
     [DefaultExecutionOrder(-9999)]
+    [RequireComponent(typeof(Grid))]
     public partial class Board : MonoBehaviour
     {
         private static Board s_Instance;
@@ -88,6 +89,8 @@ namespace DoggyChef
 
         public static void FireGemExplodedDelayed(string tag, Vector3 pos, Sprite sprite, AudioClip foodSfx)
             => OnGemExplodedDelayed?.Invoke(tag, pos, sprite, foodSfx);
+
+        // delay 초 후 OnGemExplodedDelayed 이벤트를 count번 발생시킵니다.
         private IEnumerator FireExplodeAfterDelay(
             string tag, Vector3 pos, Sprite sprite, AudioClip foodSfx, int count, float delay)
         {
@@ -98,14 +101,16 @@ namespace DoggyChef
 
         public Grid Grid => m_Grid;
         public BoundsInt Bounds => m_BoundsInt;
+
         //  Awake / Start
         void Awake()
         {
             s_Instance = this;
-            GetReference();
+            TryGetComponent(out m_Grid);
         }
 
 #if UNITY_EDITOR
+        // 에디터 플레이 중이 아닐 때 보드 테두리 갱신을 예약합니다.
         void OnEnable()
         {
             if (Application.isPlaying) return;
@@ -113,6 +118,7 @@ namespace DoggyChef
         }
 #endif
 
+        // 스테이지 보석 데이터를 로드하고, 보드를 생성·초기화합니다.
         void Start()
         {
             if (LevelData.Instance != null && LevelData.Instance.CurrentStage != null)
@@ -135,13 +141,19 @@ namespace DoggyChef
             }
 
             GenerateBoard();
-            SetupBorder();
+            // 테두리 캐시를 초기화해 ApplyBorderLayout이 강제 갱신하도록 합니다.
+            m_LastBorderSize = Vector3Int.zero;
+            m_LastBorderMin = Vector2Int.zero;
+            m_LastBorderPadding = float.MinValue;
+            ApplyBorderLayout(m_Grid, m_BoundsInt.xMin, m_BoundsInt.yMin,
+                                      m_BoundsInt.xMax, m_BoundsInt.yMax);
             FindAllPossibleMatch();
 
             m_HintIndicator = Instantiate(GameManager.Instance.Settings.VisualSettings.HintPrefab);
             m_HintIndicator.SetActive(false);
         }
-        //
+
+        // 6단계 보드 루프를 매 프레임 실행합니다 (입력→스왑→이동→매치→삭제→빈칸 채우기).
         void Update()
         {
             for (int i = 0; i < m_BoardActions.Count; ++i)
@@ -177,7 +189,9 @@ namespace DoggyChef
 
             if (m_CellToMatchCheck.Count > 0)
             {
-                DoMatchCheck();
+                foreach (var cell in m_CellToMatchCheck)
+                    DoCheck(cell);
+                m_CellToMatchCheck.Clear();
                 incrementHintTimer = false;
                 m_BoardChanged = true;
             }
@@ -273,11 +287,9 @@ namespace DoggyChef
                 m_SinceLastHint = 0.0f;
             }
 
-
-
         }
-        //
-        //
+
+        // 보드 전체를 순회하여 가능한 스왑을 수집하고, 힌트 후보를 선정합니다.
         void FindAllPossibleMatch()
         {
             m_PossibleSwaps.Clear();
@@ -299,9 +311,9 @@ namespace DoggyChef
                                 (CellContent[topIdx].ContainingGem, CellContent[idx].ContainingGem);
 
                             if (DoCheck(topIdx, false))
-                                m_PossibleSwaps.Add(new PossibleSwap() { StartPosition = idx, Direction = Vector3Int.up, BonusPriority = EvalBonusPriority(topIdx) });
+                                m_PossibleSwaps.Add(new() { StartPosition = idx, Direction = Vector3Int.up, BonusPriority = EvalBonusPriority(topIdx) });
                             if (DoCheck(idx, false))
-                                m_PossibleSwaps.Add(new PossibleSwap() { StartPosition = topIdx, Direction = Vector3Int.down, BonusPriority = EvalBonusPriority(idx) });
+                                m_PossibleSwaps.Add(new() { StartPosition = topIdx, Direction = Vector3Int.down, BonusPriority = EvalBonusPriority(idx) });
 
                             (CellContent[idx].ContainingGem, CellContent[topIdx].ContainingGem) =
                                 (CellContent[topIdx].ContainingGem, CellContent[idx].ContainingGem);
@@ -313,9 +325,9 @@ namespace DoggyChef
                                 (CellContent[rightIdx].ContainingGem, CellContent[idx].ContainingGem);
 
                             if (DoCheck(rightIdx, false))
-                                m_PossibleSwaps.Add(new PossibleSwap() { StartPosition = idx, Direction = Vector3Int.right, BonusPriority = EvalBonusPriority(rightIdx) });
+                                m_PossibleSwaps.Add(new() { StartPosition = idx, Direction = Vector3Int.right, BonusPriority = EvalBonusPriority(rightIdx) });
                             if (DoCheck(idx, false))
-                                m_PossibleSwaps.Add(new PossibleSwap() { StartPosition = rightIdx, Direction = Vector3Int.left, BonusPriority = EvalBonusPriority(idx) });
+                                m_PossibleSwaps.Add(new() { StartPosition = rightIdx, Direction = Vector3Int.left, BonusPriority = EvalBonusPriority(idx) });
 
                             (CellContent[idx].ContainingGem, CellContent[rightIdx].ContainingGem) =
                                 (CellContent[rightIdx].ContainingGem, CellContent[idx].ContainingGem);
@@ -326,7 +338,9 @@ namespace DoggyChef
 
             m_PickedSwap = PickSwapWithOrderPriority();
         }
-        //          ColorClean(4) > LargeBomb(3) > LineRocket(2) > SmallBomb(1) > default match(0)
+
+        // 주문 중인 손님의 재료 우선순위와 보너스 우선순위를 고려해 최적 스왑 인덱스를 반환합니다.
+        // 우선순위: ColorClean(4) > LargeBomb(3) > LineRocket(2) > SmallBomb(1) > 일반(0)
         private int PickSwapWithOrderPriority()
         {
             if (m_PossibleSwaps.Count == 0) return 0;
@@ -384,16 +398,13 @@ namespace DoggyChef
             return best[Random.Range(0, best.Count)];
         }
 
-
-
-
-
-
+        // 보드 이동을 잠급니다. 중첩 호출 가능 — UnlockMovement()와 쌍으로 사용합니다.
         public void LockMovement()
         {
             m_FreezeMoveLock += 1;
         }
 
+        // 보드 이동 잠금을 해제합니다.
         public void UnlockMovement()
         {
             m_FreezeMoveLock -= 1;
@@ -401,11 +412,13 @@ namespace DoggyChef
                 m_FreezeMoveLock = 0;
         }
 
+        // seconds 동안 보드 이동을 잠급니다.
         public void LockMovementFor(float seconds)
         {
             StartCoroutine(CoLockMovement(seconds));
         }
 
+        // seconds 동안 이동을 잠근 뒤 자동으로 해제하는 코루틴입니다.
         private IEnumerator CoLockMovement(float seconds)
         {
             LockMovement();
@@ -413,6 +426,7 @@ namespace DoggyChef
             UnlockMovement();
         }
 
+        // 지정 칸의 보석을 강제 파괴합니다.
         public void DestroyGem(Vector3Int cell, bool isBonusEffect = false)
         {
             if (CellContent.TryGetValue(cell, out var content) && content.ContainingGem != null)
@@ -425,16 +439,7 @@ namespace DoggyChef
             }
         }
 
-        public Vector3 GetCellCenter(Vector3Int cell)
-        {
-            return m_Grid.GetCellCenterWorld(cell);
-        }
-        public Vector3Int WorldToCell(Vector3 pos)
-        {
-            return m_Grid.WorldToCell(pos);
-        }
-        //
-        //
+        // 낙하·바운스 중인 보석을 이동시키고, 착지 후 연쇄 낙하 또는 바운스 매치 체크를 트리거합니다.
         void MoveGems()
         {
             m_TickingCells.Sort((a, b) =>
@@ -459,7 +464,6 @@ namespace DoggyChef
 
                     gem.transform.position = Vector3.MoveTowards(gem.transform.position, targetPos,
                         maxDistance);
-
 
                     if (gem.transform.position == targetPos)
                     {
@@ -575,9 +579,8 @@ namespace DoggyChef
                 }
             }
         }
-        //
-        //
-        //
+
+        // 빈 칸 목록을 순회하며 위·대각선 방향 보석을 낙하시키거나 스포너를 활성화합니다.
         void EmptyCheck()
         {
             if (m_FreezeMoveLock > 0)
@@ -653,10 +656,8 @@ namespace DoggyChef
                 }
             }
         }
-        //
-        //
-        //
-        //
+
+        // 스왑 애니메이션을 틱 단위로 처리하고, 매치 실패 시 역방향 복귀 애니메이션을 실행합니다.
         void TickSwap()
         {
             var gemToStart = CellContent[m_SwappingCells.Item1].IncomingGem;
@@ -752,19 +753,8 @@ namespace DoggyChef
                 }
             }
         }
-        void DoMatchCheck()
-        {
-            foreach (var cell in m_CellToMatchCheck)
-            {
-                DoCheck(cell);
-            }
-            m_CellToMatchCheck.Clear();
-        }
-        //
-        //
-        //
-        //
-        //
+
+        // startCell 기준 BFS로 동일 타입 보석을 탐색해 3매치 이상이면 Match를 생성합니다. Returns: true=매치 성공.
         bool DoCheck(Vector3Int startCell, bool createMatch = true)
         {
             if (!CellContent.TryGetValue(startCell, out var centerGem) || centerGem.ContainingGem == null)
@@ -839,8 +829,7 @@ namespace DoggyChef
                 }
             }
 
-            //
-            //
+            // 군집에서 방향별 최장 연속 라인(3개 이상)을 추출합니다.
             List<Vector3Int> lineList = new();
 
             foreach (var idx in gemList)
@@ -918,9 +907,8 @@ namespace DoggyChef
 
             return true;
         }
-        //
-        //
-        //
+
+        // 매치 타이머를 갱신하고, 조건 충족 보석을 파괴한 뒤 빈 칸 등록·보너스 젬 생성·폭발 이벤트를 처리합니다.
         void MatchTicking()
         {
             bool playedPangSound = false;
@@ -1027,10 +1015,7 @@ namespace DoggyChef
 
                         match.DeletedCount += 1;
 
-                        //
-                        // 1. match.DeletedCount >= 4
-                        //
-                        // 2. !match.ForcedDeletion
+                        // 4개 이상 매치 삭제 시 코인 보너스를 지급합니다.
                         if (match.DeletedCount >= 4 && !match.ForcedDeletion)
                         {
                             GameManager.Instance.ChangeCoins(1);
@@ -1055,7 +1040,7 @@ namespace DoggyChef
                                 m_EmptyCells.Add(gemIdx);
                         }
 
-                        //
+                        // SmallBomb 머지 이펙트가 없는 경우에만 일반 폭발 이벤트를 발생시킵니다.
                         if (squarePendingExplosions == null)
                         {
                             if (match.ExplodeDelay > 0f)
@@ -1087,6 +1072,8 @@ namespace DoggyChef
                 }
             }
         }
+
+        // 새 Match 객체를 생성하고 TickingMatch 큐에 등록합니다.
         public Match CreateCustomMatch(Vector3Int newCell)
         {
             var newMatch = new Match()
@@ -1100,14 +1087,14 @@ namespace DoggyChef
 
             return newMatch;
         }
-        //
-        //
-        //
+
+        // 보드 입력을 활성화하거나 비활성화합니다.
         public void ToggleInput(bool enable)
         {
             m_InputEnabled = enable;
         }
 
+        // 스와이프·더블탭 입력을 감지하고 큐에 등록합니다.
         void CheckInput()
         {
             if (!m_InputEnabled)
@@ -1148,7 +1135,6 @@ namespace DoggyChef
                 var worldStart = mainCam.ScreenToWorldPoint(m_StartClickPosition);
                 var startCell = m_Grid.WorldToCell(worldStart);
                 startCell.z = 0;
-
 
                 if (clickDelta < 0.3f)
                 {
@@ -1197,11 +1183,8 @@ namespace DoggyChef
                 }
             }
         }
-        private void GetReference()
-        {
-            m_Grid = GetComponent<Grid>();
-        }
 
+        // Board 싱글턴 인스턴스가 없으면 씬에서 탐색합니다.
         private static Board EnsureInstance()
         {
             if (s_Instance != null)
@@ -1214,20 +1197,11 @@ namespace DoggyChef
                 return null;
             }
 
-            s_Instance.GetReference();
+            s_Instance.TryGetComponent(out s_Instance.m_Grid);
             return s_Instance;
         }
-        //
-        private void SetupBorder()
-        {
-            m_LastBorderSize = Vector3Int.zero;
-            m_LastBorderMin = Vector2Int.zero;
-            m_LastBorderPadding = float.MinValue;
 
-            ApplyBorderLayout(m_Grid, m_BoundsInt.xMin, m_BoundsInt.yMin,
-                                      m_BoundsInt.xMax, m_BoundsInt.yMax);
-        }
-
+        // 그리드 경계에 맞춰 테두리와 빛 이펙트를 배치합니다.
         private void ApplyBorderLayout(Grid grid, int xMin, int yMin, int xMax, int yMax)
         {
             if (grid == null) return;
@@ -1264,6 +1238,7 @@ namespace DoggyChef
             ApplyShine(m_ShineRight, center.x + boardW * 0.5f, center.y, totalH);
         }
 
+        // 테두리 좌우 빛 스프라이트를 보드 높이에 맞게 스케일·배치합니다.
         private void ApplyShine(SpriteRenderer shine, float x, float centerY, float targetH)
         {
             if (shine == null || shine.sprite == null) return;
@@ -1278,18 +1253,18 @@ namespace DoggyChef
         }
 
 #if UNITY_EDITOR
+        // Inspector 값 변경 시 에디터 테두리 갱신을 예약합니다.
         private void OnValidate()
         {
             UnityEditor.EditorApplication.delayCall += RefreshBorderInEditor;
         }
 
+        // 에디터에서 타일맵 경계를 읽어 보드 테두리 레이아웃을 갱신합니다.
         private void RefreshBorderInEditor()
         {
             if (this == null) return;
 
-            var grid = GetComponent<Grid>();
-            if (grid == null) return;
-
+            if (!TryGetComponent<Grid>(out var grid)) return;
 
             m_LastBorderSize = Vector3Int.zero;
             m_LastBorderMin = Vector2Int.zero;
@@ -1319,7 +1294,7 @@ namespace DoggyChef
         }
 #endif
 
-
+        // 지정 칸에 보석 프리팹을 인스턴스화하고 GemData를 적용합니다.
         public Gem NewGemAt(Vector3Int cell, Gem gemPrefab, int overrideType = -1)
         {
             if (gemPrefab == null && overrideType == -1 && m_AvailableGemTypes.Count > 0)
@@ -1347,9 +1322,8 @@ namespace DoggyChef
 
             return gem;
         }
-        //
-        //
-        //
+
+        // 초기 보드를 생성합니다. 인접 3매치가 발생하지 않도록 타입을 필터링합니다.
         public void GenerateBoard()
         {
             CalculateBounds();
@@ -1364,7 +1338,6 @@ namespace DoggyChef
                         continue;
 
                     var availableGems = new List<int>(m_AvailableGemTypes);
-
 
                     for (int i = availableGems.Count - 1; i >= 0; i--)
                     {
@@ -1406,6 +1379,8 @@ namespace DoggyChef
                 }
             }
         }
+
+        // 스왑 시 생성될 보너스 젬 우선순위를 평가합니다 (ColorClean=4, LargeBomb=3, ...).
         private int EvalBonusPriority(Vector3Int startCell)
         {
             if (!CellContent.TryGetValue(startCell, out var center) || center.ContainingGem == null)
@@ -1476,6 +1451,7 @@ namespace DoggyChef
             return 1;
         }
 
+        // 후보 보너스 젬 중 우선순위가 가장 높은 것을 반환합니다.
         private BonusGem SelectBonusByPriority(List<BonusGem> candidates)
         {
             foreach (var b in candidates) if (b is ColorClean) return b;
@@ -1485,6 +1461,7 @@ namespace DoggyChef
             return candidates[0];
         }
 
+        // 지정 칸에 특정 타입 보석이 있는지 확인합니다.
         private bool HasGemType(Vector3Int pos, int type)
         {
             if (CellContent.TryGetValue(pos, out var cell) && cell.ContainingGem != null)
@@ -1493,6 +1470,8 @@ namespace DoggyChef
             }
             return false;
         }
+
+        // [GemPlaceTile 호출] 셀을 CellContent에 등록하고, 초기 보석 데이터가 있으면 보석을 생성합니다.
         public static void RegisterCell(Vector3Int cellPosition, GemData startingGemData = null)
         {
             // Not super happy with that, but Startup is called before all Awake....
@@ -1518,7 +1497,7 @@ namespace DoggyChef
             }
         }
 
-
+        // [GemSpawner 호출] 스포너 위치를 SpawnerPosition 목록에 등록합니다.
         public static void RegisterSpawner(Vector3Int position)
         {
             if (s_Instance == null)
@@ -1530,6 +1509,8 @@ namespace DoggyChef
                 s_Instance.SpawnerPosition.Add(position);
             }
         }
+
+        // [ObstaclePlacer 호출] 지정 칸에 특정 보석 프리팹을 직접 생성·배치합니다.
         public static void RegisterGemPrefab(Vector3Int cellPosition, Gem gemPrefab)
         {
             if (s_Instance == null)
@@ -1547,6 +1528,8 @@ namespace DoggyChef
             gem.Init(cellPosition);
             s_Instance.CellContent[cellPosition].ContainingGem = gem;
         }
+
+        // CellContent 기반으로 보드의 최소·최대 좌표를 계산합니다.
         public void CalculateBounds()
         {
             m_BoundsInt = new BoundsInt();
@@ -1568,6 +1551,8 @@ namespace DoggyChef
                 else if (content.y < m_BoundsInt.yMin) m_BoundsInt.yMin = content.y;
             }
         }
+
+        // 스포너 위치에서 새 보석을 생성합니다. 주문 재료를 70% 확률로 우선 선택합니다.
         void ActivateSpawnerAt(Vector3Int cellIdx)
         {
             if (m_AvailableGemTypes.Count == 0) return;
@@ -1623,7 +1608,7 @@ namespace DoggyChef
             Vector3 spawnPos = m_Grid.GetCellCenterWorld(cellIdx + Vector3Int.up);
             var newObj = Instantiate(prefab, spawnPos, Quaternion.identity, transform);
 
-            Gem newGem = newObj.GetComponent<Gem>();
+            newObj.TryGetComponent<Gem>(out var newGem);
 
             if (m_GemDataLookup != null && m_GemDataLookup.TryGetValue(chosenType, out var data))
             {
@@ -1642,6 +1627,8 @@ namespace DoggyChef
 
             TrySpawnIceBlock(cellIdx);
         }
+
+        // IceSpawnChance 확률로 새로 생성된 보석에 얼음을 부착합니다.
         private void TrySpawnIceBlock(Vector3Int cellIdx)
         {
             if (IceBlockPrefab == null) return;
@@ -1656,9 +1643,7 @@ namespace DoggyChef
             if (gem == null || gem.IsFrozen) return;
 
             var iceGo = Instantiate(IceBlockPrefab);
-            var ice = iceGo.GetComponent<IceBlock>();
-
-            if (ice == null)
+            if (!iceGo.TryGetComponent<IceBlock>(out var ice))
             {
                 Debug.LogWarning("[Board] IceBlockPrefab is missing the MyMatch3.IceBlock component.");
                 Destroy(iceGo);
@@ -1668,6 +1653,7 @@ namespace DoggyChef
             ice.Attach(gem);
         }
 
+        // [ObstaclePlacer 호출] 셀에 장애물을 등록하고 그리드 위치에 배치합니다.
         public static void AddObstacle(Vector3Int cell, Obstacle obstacle)
         {
             if (s_Instance == null) return;
@@ -1682,7 +1668,7 @@ namespace DoggyChef
             obstacle.transform.position = s_Instance.m_Grid.GetCellCenterWorld(cell);
         }
 
-
+        // 지정 칸의 이동 잠금 상태를 변경합니다.
         public static void ChangeLock(Vector3Int cell, bool locked)
         {
             if (s_Instance != null && s_Instance.CellContent.ContainsKey(cell))
@@ -1691,12 +1677,14 @@ namespace DoggyChef
             }
         }
 
+        // 지정 칸의 보석이 삭제될 때 호출될 콜백을 등록합니다.
         public static void RegisterDeletedCallback(Vector3Int cell, System.Action callback)
         {
             if (s_Instance == null) return;
             AddCallback(s_Instance.m_CellsCallbacks, cell, callback);
         }
 
+        // 지정 칸의 삭제 콜백을 해제합니다.
         public static void UnregisterDeletedCallback(Vector3Int cell, System.Action callback)
         {
             if (s_Instance == null || !s_Instance.m_CellsCallbacks.ContainsKey(cell))
@@ -1704,12 +1692,14 @@ namespace DoggyChef
             RemoveCallback(s_Instance.m_CellsCallbacks, cell, callback);
         }
 
+        // 지정 칸의 보석이 매치될 때 호출될 콜백을 등록합니다.
         public static void RegisterMatchedCallback(Vector3Int cell, System.Action callback)
         {
             if (s_Instance == null) return;
             AddCallback(s_Instance.m_MatchedCallback, cell, callback);
         }
 
+        // 지정 칸의 매치 콜백을 해제합니다.
         public static void UnregisterMatchedCallback(Vector3Int cell, System.Action callback)
         {
             if (s_Instance == null || !s_Instance.m_MatchedCallback.ContainsKey(cell))
@@ -1717,6 +1707,7 @@ namespace DoggyChef
             RemoveCallback(s_Instance.m_MatchedCallback, cell, callback);
         }
 
+        // 딕셔너리에 콜백을 누적 등록합니다.
         private static void AddCallback(Dictionary<Vector3Int, System.Action> callbacks, Vector3Int cell, System.Action callback)
         {
             if (callbacks.ContainsKey(cell))
@@ -1725,6 +1716,7 @@ namespace DoggyChef
                 callbacks[cell] = callback;
         }
 
+        // 딕셔너리에서 콜백을 제거하고, 남은 콜백이 없으면 키도 삭제합니다.
         private static void RemoveCallback(Dictionary<Vector3Int, System.Action> callbacks, Vector3Int cell, System.Action callback)
         {
             callbacks[cell] -= callback;
@@ -1732,16 +1724,17 @@ namespace DoggyChef
                 callbacks.Remove(cell);
         }
 
-
-
+        // 보드 액션을 등록합니다. Update마다 Tick()이 호출되고 false 반환 시 제거됩니다.
         public void AddNewBoardAction(IBoardAction action)
         {
             m_BoardActions.Add(action);
         }
+
         public interface IBoardAction
         {
             bool Tick();
         }
+
         // #if UNITY_EDITOR
         //         private void OnDrawGizmos()
         //         {
@@ -1789,15 +1782,19 @@ namespace DoggyChef
         //             }
         //         }
         // #endif
+        // [BoosterPanel 호출] 활성화할 부스터 아이템을 설정합니다.
         public void ActivateBonusItem(Booster item)
         {
             m_ActivatedBonusItem = item;
         }
+
+        // [RefreshBooster 호출] 보드 위 일반 보석을 무작위로 섞습니다.
         public void ShuffleGems()
         {
             StartCoroutine(ShuffleRoutine());
         }
 
+        // 보석을 페이드 아웃 후 파괴하고 새로 낙하시켜 셔플 효과를 연출합니다.
         private IEnumerator ShuffleRoutine()
         {
             var positions = new List<Vector3Int>();

@@ -1,14 +1,11 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-
 namespace DoggyChef
 {
-    /// <summary>
-    /// 편집/로드 시에만 사용되는 타일로, 보석이 들어갈 셀을 정의합니다. 
-    /// PlacedGem이 null이면 랜덤 보석으로 간주되어, 사용 가능한 목록에서 무작위로 하나가 선택됩니다.
-    /// 이 타일은 편집 중에만 유용하며, 플레이 모드나 빌드에서는 시각적인 컴포넌트를 갖지 않습니다.
-    /// </summary>
+    // 편집/로드 시에만 사용되는 타일로, 보석이 들어갈 셀을 정의합니다. 
+    // PlacedGem이 null이면 랜덤 보석으로 간주되어, 사용 가능한 목록에서 무작위로 하나가 선택됩니다.
+    // 이 타일은 편집 중에만 유용하며, 플레이 모드나 빌드에서는 시각적인 컴포넌트를 갖지 않습니다.
     [CreateAssetMenu(fileName = "New Gem Place Tile", menuName = "Match3/Gem Placer Tile")]
     public class GemPlacerTile : TileBase
     {

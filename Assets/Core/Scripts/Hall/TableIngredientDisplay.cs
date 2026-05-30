@@ -65,9 +65,9 @@ namespace DoggyChef
         {
             if (m_Table == null) return;
 
-            m_Table.OnOrderSet                   += OnOrderSet;
-            m_Table.OnIngredientRemainingChanged  += OnIngredientChanged;
-            m_Table.OnStateChanged               += OnStateChanged;
+            m_Table.OnOrderSet += OnOrderSet;
+            m_Table.OnIngredientRemainingChanged += OnIngredientChanged;
+            m_Table.OnStateChanged += OnStateChanged;
 
             RebuildAndRefresh();
         }
@@ -75,16 +75,16 @@ namespace DoggyChef
         private void OnDestroy()
         {
             if (m_Table == null) return;
-            m_Table.OnOrderSet                  -= OnOrderSet;
+            m_Table.OnOrderSet -= OnOrderSet;
             m_Table.OnIngredientRemainingChanged -= OnIngredientChanged;
-            m_Table.OnStateChanged              -= OnStateChanged;
+            m_Table.OnStateChanged -= OnStateChanged;
         }
 
         // ================================================================
         //  이벤트 핸들러
         // ================================================================
 
-        private void OnOrderSet()                             => RebuildAndRefresh();
+        private void OnOrderSet() => RebuildAndRefresh();
 
         private void OnStateChanged(Table.TableState state)
         {
@@ -114,6 +114,7 @@ namespace DoggyChef
         //  슬롯 빌드
         // ================================================================
 
+        // 슬롯을 재구성하고 가시성을 갱신합니다.
         private void RebuildAndRefresh()
         {
             Rebuild();
@@ -140,16 +141,16 @@ namespace DoggyChef
 
             // ── 그리드 파라미터 ──
             // 4개 이하: 2×2 (최소 4 슬롯)   5개 이상: 3×3 (최대 9 슬롯)
-            int   grid   = count <= 4 ? 2 : 3;
-            float cell   = grid == 2  ? CellSize : CellSize * LargeGridScale;
+            int grid = count <= 4 ? 2 : 3;
+            float cell = grid == 2 ? CellSize : CellSize * LargeGridScale;
             float extent = (grid - 1) * cell;
             Vector3 origin = transform.position - new Vector3(extent * 0.5f, extent * 0.5f, 0f);
 
             // ── 슬롯 생성 (왼쪽 위 → 오른쪽 아래) ──
             for (int i = 0; i < count; i++)
             {
-                int r   = i / grid;
-                int c   = i % grid;
+                int r = i / grid;
+                int c = i % grid;
                 var gem = valid[i].MaterialGem;
                 var slot = Instantiate(SlotPrefab, transform);
 
@@ -164,11 +165,9 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>
-        /// 지정된 tag 를 가진 IngredientSlot 의 월드 좌표를 반환합니다.
-        /// 슬롯이 없거나 비활성화 상태면 null 을 반환합니다.
-        /// Table.FlyIngredient 가 정확한 착탄 위치로 사용합니다.
-        /// </summary>
+        // 지정된 tag 를 가진 IngredientSlot 의 월드 좌표를 반환합니다.
+        // 슬롯이 없거나 비활성화 상태면 null 을 반환합니다.
+        // Table.FlyIngredient 가 정확한 착탄 위치로 사용합니다.
         public Vector3? GetSlotPosition(string tag)
         {
             foreach (var slot in m_Slots)
@@ -179,6 +178,7 @@ namespace DoggyChef
             return null;
         }
 
+        // 기존 슬롯을 모두 파괴하고 목록을 비웁니다.
         private void ClearSlots()
         {
             foreach (var slot in m_Slots)
@@ -199,6 +199,7 @@ namespace DoggyChef
             gameObject.SetActive(show);
         }
 
+        // 아직 필요한 재료가 하나라도 남아 있는지 확인합니다.
         private bool HasAnyRemaining()
         {
             foreach (var slot in m_Slots)

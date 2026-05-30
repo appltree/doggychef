@@ -44,13 +44,13 @@ namespace DoggyChef
         [Header("색상 설정")]
 
         [Tooltip("피버 플래시 색상. 기본값: 황금색")]
-        public Color FeverFlashColor = new Color(1f, 0.85f, 0f, 0.7f);
+        public Color FeverFlashColor = new(1f, 0.85f, 0f, 0.7f);
 
         [Tooltip("피버 중 Pulse 색상 (테두리 맥박).")]
-        public Color FeverPulseColor = new Color(1f, 0.6f, 0f, 0.4f);
+        public Color FeverPulseColor = new(1f, 0.6f, 0f, 0.4f);
 
         [Tooltip("피버 중 보드 배경색.")]
-        public Color FeverBoardColor = new Color(1f, 0.9f, 0.2f, 1f);
+        public Color FeverBoardColor = new(1f, 0.9f, 0.2f, 1f);
 
         [Tooltip("기본 보드 배경색 (피버 해제 시 복원).")]
         public Color DefaultBoardColor = Color.white;

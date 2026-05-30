@@ -1,0 +1,13 @@
+effect_tie.png
+size:64,64
+filter:Linear,Linear
+game_ui_effect_tie_cut
+bounds:2,29,13,50
+rotate:90
+game_ui_effect_tie_knot
+bounds:2,9,19,18
+offsets:1,0,20,18
+game_ui_effect_tie_normal
+bounds:2,44,8,50
+offsets:1,0,9,50
+rotate:90

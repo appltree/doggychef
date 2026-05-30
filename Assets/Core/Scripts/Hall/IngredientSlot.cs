@@ -43,10 +43,10 @@ namespace DoggyChef
         private static readonly Color ActiveColor = Color.yellow;
 
         // 수량이 0이 됐을 때의 텍스트 색상 — 회색 (완료 표시)
-        private static readonly Color CompletedColor = new Color(0.5f, 0.5f, 0.5f, 1f);
+        private static readonly Color CompletedColor = new(0.5f, 0.5f, 0.5f, 1f);
 
         // 수량이 0이 됐을 때의 아이콘 색상 — 40% 반투명 흰색 (완료 표시)
-        private static readonly Color FadedWhite = new Color(1f, 1f, 1f, 0.4f);
+        private static readonly Color FadedWhite = new(1f, 1f, 1f, 0.4f);
 
         // ──────────────────────────────────────────────────────────
         //  런타임 상태
@@ -62,15 +62,13 @@ namespace DoggyChef
         //  공개 API
         // ================================================================
 
-        /// <summary>
-        /// [TableOrderDisplay 호출]
-        /// 슬롯 초기화. 스프라이트·태그·초기 수량을 설정하고 시각을 갱신합니다.
-        ///
-        /// 파라미터:
-        ///   sprite       → GemData.Sprite (재료 아이콘)
-        ///   tag          → GemData.BlockTag (재료 식별 태그)
-        ///   remainingNeed → 현재 필요한 수량
-        /// </summary>
+        // [TableOrderDisplay 호출]
+        // 슬롯 초기화. 스프라이트·태그·초기 수량을 설정하고 시각을 갱신합니다.
+        // 
+        // 파라미터:
+        //   sprite       → GemData.Sprite (재료 아이콘)
+        //   tag          → GemData.BlockTag (재료 식별 태그)
+        //   remainingNeed → 현재 필요한 수량
         public void Setup(Sprite sprite, string tag, int remainingNeed)
         {
             IngredientTag = tag;
@@ -78,10 +76,8 @@ namespace DoggyChef
             SetRemaining(remainingNeed);  // 수량 저장 + 시각 초기화
         }
 
-        /// <summary>
-        /// [TableOrderDisplay 호출]
-        /// 남은 수량을 갱신합니다. gem 파괴 시 OnIngredientChanged에서 호출됩니다.
-        /// </summary>
+        // [TableOrderDisplay 호출]
+        // 남은 수량을 갱신합니다. gem 파괴 시 OnIngredientChanged에서 호출됩니다.
         public void UpdateRemaining(int remainingNeed) => SetRemaining(remainingNeed);
 
         // ================================================================

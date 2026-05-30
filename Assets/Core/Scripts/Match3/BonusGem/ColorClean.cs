@@ -4,24 +4,22 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 컬러클린(ColorClean) 보너스 젬. (레인보우 젬)
-    /// 발동 시 보드 위의 특정 색상(GemType)에 해당하는 보석을 전부 삭제합니다.
-    ///
-    /// ■ 삭제 색상 결정 규칙
-    ///   1순위: 스왑한 상대 젬의 GemType
-    ///   2순위: 스왑 없이 더블클릭한 경우 → 보드에서 가장 많이 분포한 GemType 자동 선택
-    ///
-    /// ■ 생성 조건
-    ///   → 5개 이상 직선 매치 시 생성됩니다.
-    ///
-    /// ■ 폭발 VFX
-    ///   → 삭제되는 각 보석 위치에 LightBallExplosion 프리팹을 생성합니다.
-    ///   → 발동 후 EffectLifetime 동안 보드 이동을 잠급니다.
-    ///
-    /// ■ 외형 (Origin 참고)
-    ///   → rainbowTransform이 천천히 회전하면서 사인파로 펄스합니다.
-    /// </summary>
+    // 컬러클린(ColorClean) 보너스 젬. (레인보우 젬)
+    // 발동 시 보드 위의 특정 색상(GemType)에 해당하는 보석을 전부 삭제합니다.
+    // 
+    // ■ 삭제 색상 결정 규칙
+    //   1순위: 스왑한 상대 젬의 GemType
+    //   2순위: 스왑 없이 더블클릭한 경우 → 보드에서 가장 많이 분포한 GemType 자동 선택
+    // 
+    // ■ 생성 조건
+    //   → 5개 이상 직선 매치 시 생성됩니다.
+    // 
+    // ■ 폭발 VFX
+    //   → 삭제되는 각 보석 위치에 LightBallExplosion 프리팹을 생성합니다.
+    //   → 발동 후 EffectLifetime 동안 보드 이동을 잠급니다.
+    // 
+    // ■ 외형 (Origin 참고)
+    //   → rainbowTransform이 천천히 회전하면서 사인파로 펄스합니다.
     public class ColorClean : BonusGem
     {
         // ──────────────────────────────────────────────────────────
@@ -75,7 +73,7 @@ namespace DoggyChef
         //  유휴 VFX — rainbow 회전 + 사인파 펄스
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>컬러클린이 보드 위에 놓여 있는 동안 rainbow를 지속 회전·펄스합니다.</summary>
+        // 컬러클린이 보드 위에 놓여 있는 동안 rainbow를 지속 회전·펄스합니다.
         private IEnumerator RunIdleVFX()
         {
             float t = 0f;
@@ -98,11 +96,9 @@ namespace DoggyChef
         //  발동 로직
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>
-        /// 컬러클린 발동 메서드.
-        /// </summary>
-        /// <param name="swappedGem">스왑 상대 젬 → 이 GemType을 삭제 대상으로 사용.</param>
-        /// <param name="isBonus">인벤토리 아이템 사용 여부.</param>
+        // 컬러클린 발동 메서드.
+        // swappedGem: 스왑 상대 젬 → 이 GemType을 삭제 대상으로 사용.
+        // isBonus: 인벤토리 아이템 사용 여부.
         public override void Use(Gem swappedGem, bool isBonus = true)
         {
             if (!isBonus && m_Used) return;
@@ -161,7 +157,7 @@ namespace DoggyChef
         //  내부 헬퍼
         // ──────────────────────────────────────────────────────────
 
-        /// <summary>주문에 포함된 레시피 젬 중 가장 체력이 낮은 손님의 타겟을 반환합니다. 보드에 없다면 가장 많은 색상을 반환합니다.</summary>
+        // 주문에 포함된 레시피 젬 중 가장 체력이 낮은 손님의 타겟을 반환합니다. 보드에 없다면 가장 많은 색상을 반환합니다.
         private int FindMostFrequentGemType()
         {
             var board = GameManager.Instance.Board;
@@ -208,10 +204,8 @@ namespace DoggyChef
                 .FirstOrDefault();
         }
 
-        /// <summary>
-        /// 보석 위치에 LightBallExplosion 이펙트를 생성합니다.
-        /// 보석의 스프라이트를 이펙트 Ingredient 자식에 복사합니다.
-        /// </summary>
+        // 보석 위치에 LightBallExplosion 이펙트를 생성합니다.
+        // 보석의 스프라이트를 이펙트 Ingredient 자식에 복사합니다.
         private void SpawnExplosionEffect(Gem gem)
         {
             if (LightBallExplosionPrefab == null || gem == null) return;

@@ -7,40 +7,51 @@ using TMPro;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 게임 시작 전 로비 화면.
-    ///
-    /// ■ 동작 흐름
-    ///   씬 로드 → GameState.Intro → LobbyPanel 표시
-    ///   [start 버튼] → GameManager.StartLevel() → GameState.Running → LobbyPanel 숨김
-    ///
-    /// ■ 씬 구조 예시 (Canvas 자식으로 배치)
-    ///   LobbyPanel  ← 이 스크립트 부착 (m_Root = 자기 자신 or 자식 패널)
-    ///   ├─ TopBar
-    ///   │   ├─ GoalGoldText     "45,000G"
-    ///   │   ├─ TimeLimitText    "10:00"
-    ///   │   └─ ObjectiveText    "얼음 블록 30개 깨기"
-    ///   ├─ LivesText            뼈 개수
-    ///   ├─ CenterGroup
-    ///   │   ├─ OpenSign         (Image)
-    ///   │   ├─ StartButton      → OnStartClicked()
-    ///   │   └─ BoosterSection
-    ///   │       ├─ TapToEditLabel
-    ///   │       ├─ BoosterSlot0  (Icon + CountLabel)
-    ///   │       ├─ BoosterSlot1
-    ///   │       └─ BoosterSlot2
-    ///   ├─ InviteButton
-    ///   ├─ UpgradeButton
-    ///   ├─ EmployButton
-    ///   └─ ChangeButton
-    /// </summary>
+    // 게임 시작 전 로비 화면.
+    // 
+    // ■ 동작 흐름
+    //   씬 로드 → GameState.Intro → LobbyPanel 표시
+    //   [start 버튼] → GameManager.StartLevel() → GameState.Running → LobbyPanel 숨김
+    // 
+    // ■ 씬 구조 예시 (Canvas 자식으로 배치)
+    //   LobbyPanel  ← 이 스크립트 부착 (m_Root = 자기 자신 or 자식 패널)
+    //   ├─ TopBar
+    //   │   ├─ GoalGoldText     "45,000G"
+    //   │   ├─ TimeLimitText    "10:00"
+    //   │   └─ ObjectiveText    "얼음 블록 30개 깨기"
+    //   ├─ LivesText            뼈 개수
+    //   ├─ CenterGroup
+    //   │   ├─ OpenSign         (Image)
+    //   │   ├─ StartButton      → OnStartClicked()
+    //   │   └─ BoosterSection
+    //   │       ├─ TapToEditLabel
+    //   │       ├─ BoosterSlot0  (Icon + CountLabel)
+    //   │       ├─ BoosterSlot1
+    //   │       └─ BoosterSlot2
+    //   ├─ InviteButton
+    //   ├─ UpgradeButton
+    //   ├─ EmployButton
+    //   └─ ChangeButton
     public class LobbyPanel : MonoBehaviour
     {
-        public static LobbyPanel Instance { get; private set; }
+        // ════════════════════════════════════════════════════════════════
+        //  중첩 타입
+        // ════════════════════════════════════════════════════════════════
 
-        // ─────────────────────────────────────────────────────────────
-        //  Inspector 필드
-        // ─────────────────────────────────────────────────────────────
+        [Serializable]
+        public class LobbyBoosterSlot
+        {
+            [Tooltip("부스터 아이콘 Image")]
+            public Image Icon;
+            [Tooltip("수량 레이블 (우하단 숫자)")]
+            public TMP_Text CountLabel;
+            [Tooltip("빈 슬롯 표시 ('+' 아이콘 등). null이면 무시.")]
+            public GameObject EmptyObject;
+        }
+
+        // ════════════════════════════════════════════════════════════════
+        //  Inspector 연결 필드
+        // ════════════════════════════════════════════════════════════════
 
         [Header("패널 루트 (Intro 상태에서만 표시)")]
         [SerializeField] private GameObject m_Root;
@@ -70,20 +81,15 @@ namespace DoggyChef
         [Header("부스터 슬롯 (Tap to edit — 최대 3개)")]
         [SerializeField] private List<LobbyBoosterSlot> m_BoosterSlots = new();
 
-        [Serializable]
-        public class LobbyBoosterSlot
-        {
-            [Tooltip("부스터 아이콘 Image")]
-            public Image Icon;
-            [Tooltip("수량 레이블 (우하단 숫자)")]
-            public TMP_Text CountLabel;
-            [Tooltip("빈 슬롯 표시 ('+' 아이콘 등). null이면 무시.")]
-            public GameObject EmptyObject;
-        }
+        // ════════════════════════════════════════════════════════════════
+        //  싱글턴
+        // ════════════════════════════════════════════════════════════════
 
-        // ─────────────────────────────────────────────────────────────
-        //  Unity 생명주기
-        // ─────────────────────────────────────────────────────────────
+        public static LobbyPanel Instance { get; private set; }
+
+        // ════════════════════════════════════════════════════════════════
+        //  Unity 생명 주기
+        // ════════════════════════════════════════════════════════════════
 
         private void Awake()
         {

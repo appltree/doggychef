@@ -58,7 +58,7 @@ namespace DoggyChef
 
     [Header("Ingredients")]
     [Tooltip("요리에 필요한 보석 재료 목록")]
-    public List<Ingredient> Ingredients = new List<Ingredient>();
+    public List<Ingredient> Ingredients = new();
 
     // 총 필요 수량 합계
     public int TotalRequiredCount => Ingredients != null ? Ingredients.Sum(i => Mathf.Max(0, i.Count)) : 0;
@@ -91,9 +91,7 @@ namespace DoggyChef
       return 0;
     }
 
-    /// <summary>
-    /// 특정 스테이지에서 이 레시피가 사용 가능한지 확인
-    /// </summary>
+    // 특정 스테이지에서 이 레시피가 사용 가능한지 확인
     public bool IsAvailableInStage(int stageNumber)
     {
       switch (Type)

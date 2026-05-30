@@ -19,16 +19,20 @@ namespace DoggyChef
         [SerializeField] private float shakeDuration = 1f; // 흔들림 지속 시간
         [SerializeField] private float shakeSpeed = 20f; // 흔들림 속도
 
-        private AudioSource audioSource;
+        // ──────────────────────────────────────────────────────────
+        //  상수
+        // ──────────────────────────────────────────────────────────
 
-        private Coroutine shakeRoutine;
-
-        // Settings
         private const float NeedleStartAngle = 0f;
         private const float NeedleSweepDegrees = 360f;
         private const float RunningOutThreshold = 10f;
 
-        // State
+        // ──────────────────────────────────────────────────────────
+        //  인스턴스 상태
+        // ──────────────────────────────────────────────────────────
+
+        private AudioSource audioSource;
+        private Coroutine shakeRoutine;
         private bool isRunningOutLooping;
         private bool timeOutPlayed;
 
@@ -40,9 +44,7 @@ namespace DoggyChef
             audioSource.loop = true;
         }
 
-        /// <summary>
-        /// 초기 설정. LevelData의 이벤트에 구독하고, 초기 상태를 한 번 갱신합니다.
-        /// </summary>
+        // 초기 설정. LevelData의 이벤트에 구독하고, 초기 상태를 한 번 갱신합니다.
         private void Start()
         {
             ResetSfxState();
@@ -66,9 +68,7 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>
-        /// 컴포넌트 파괴 시 메모리 누수를 방지하기 위해 이벤트를 해제합니다.
-        /// </summary>
+        // 컴포넌트 파괴 시 메모리 누수를 방지하기 위해 이벤트를 해제합니다.
         private void OnDestroy()
         {
             if (LevelData.Instance != null)
@@ -80,11 +80,9 @@ namespace DoggyChef
             ResetSfxState();
         }
 
-        /// <summary>
-        /// LevelData에서 매 프레임 발생하는 시간 갱신 이벤트를 수신하여 UI와 소리를 업데이트합니다.
-        /// </summary>
-        /// <param name="remainingTime">남은 시간 (초)</param>
-        /// <param name="normalizedTime">0.0 ~ 1.0 (0=종료, 1=가득참)</param>
+        // LevelData에서 매 프레임 발생하는 시간 갱신 이벤트를 수신하여 UI와 소리를 업데이트합니다.
+        // remainingTime: 남은 시간 (초)
+        // normalizedTime: 0.0 ~ 1.0 (0=종료, 1=가득참)
         private void HandleTimeUpdated(float remainingTime, float normalizedTime)
         {
             if (imgRadialFill != null)

@@ -3,11 +3,9 @@ using UnityEngine.Tilemaps;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 이것은 편집 시간용 타일로, 그 아래쪽으로 셀(보석)을 스폰(생성)하게 될 위치를 정의하는 데 사용됩니다.
-    /// 편집 시간과 플레이 모드 밖에서는 미리보기 스프라이트가 타일맵에 표시되지만,
-    /// 런타임에는 게임 로직상의 배치일 뿐이므로 타일이 비어 있게 됩니다.
-    /// </summary>
+    // 이것은 편집 시간용 타일로, 그 아래쪽으로 셀(보석)을 스폰(생성)하게 될 위치를 정의하는 데 사용됩니다.
+    // 편집 시간과 플레이 모드 밖에서는 미리보기 스프라이트가 타일맵에 표시되지만,
+    // 런타임에는 게임 로직상의 배치일 뿐이므로 타일이 비어 있게 됩니다.
     [CreateAssetMenu(fileName = "New Gem Spawner Tile", menuName = "Match3/Gem Spawner Placer")]
     public class GemSpawner : TileBase
     {

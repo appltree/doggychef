@@ -3,22 +3,20 @@ using UnityEngine;
 
 namespace DoggyChef
 {
-    /// <summary>
-    /// 캔디 부스터 도착 시 재생되는 하트 폭발 이펙트.
-    ///
-    /// ■ Legacy 재현 (effect_explodingheart.ccb)
-    ///   8방향(상/하/좌/우 + 대각선 4방향) 하트 스프라이트가
-    ///   중심에서 바깥으로 터지며 서서히 사라지는 0.5초 연출입니다.
-    ///
-    ///   각 하트:
-    ///     - 위치: 중심 근처 → 바깥쪽으로 이동 (cardinal: 0.3→1.0u / diagonal: 0.2→0.7u)
-    ///     - 스케일: 1.0 → 1.5 (고정)
-    ///     - 투명도: 1.0 → 0.0
-    ///
-    /// ■ 사용법
-    ///   CandyBooster.HeartEffectPrefab 에 이 스크립트가 붙은 프리팹을 연결합니다.
-    ///   연출 완료 후 자동으로 Destroy됩니다.
-    /// </summary>
+    // 캔디 부스터 도착 시 재생되는 하트 폭발 이펙트.
+    // 
+    // ■ Legacy 재현 (effect_explodingheart.ccb)
+    //   8방향(상/하/좌/우 + 대각선 4방향) 하트 스프라이트가
+    //   중심에서 바깥으로 터지며 서서히 사라지는 0.5초 연출입니다.
+    // 
+    //   각 하트:
+    //     - 위치: 중심 근처 → 바깥쪽으로 이동 (cardinal: 0.3→1.0u / diagonal: 0.2→0.7u)
+    //     - 스케일: 1.0 → 1.5 (고정)
+    //     - 투명도: 1.0 → 0.0
+    // 
+    // ■ 사용법
+    //   CandyBooster.HeartEffectPrefab 에 이 스크립트가 붙은 프리팹을 연결합니다.
+    //   연출 완료 후 자동으로 Destroy됩니다.
     public class ExplodingHeartEffect : MonoBehaviour
     {
         [Tooltip("하트 스프라이트. heart.png 또는 game_ui_effect_heart 스프라이트를 연결하세요.")]
@@ -75,8 +73,8 @@ namespace DoggyChef
                 go.transform.localRotation = Quaternion.Euler(0f, 0f, cfg.rot);
                 go.transform.localScale = Vector3.one;
 
-                startPositions[i] = new Vector3(cfg.sx, cfg.sy, 0f);
-                endPositions[i] = new Vector3(cfg.ex, cfg.ey, 0f);
+                startPositions[i] = new(cfg.sx, cfg.sy, 0f);
+                endPositions[i] = new(cfg.ex, cfg.ey, 0f);
                 go.transform.localPosition = startPositions[i];
 
                 renderers[i] = sr;
@@ -97,7 +95,7 @@ namespace DoggyChef
                     renderers[i].transform.localPosition =
                         Vector3.Lerp(startPositions[i], endPositions[i], t);
                     renderers[i].transform.localScale = Vector3.one;
-                    renderers[i].color = new Color(1f, 1f, 1f, alpha);
+                    renderers[i].color = new(1f, 1f, 1f, alpha);
                 }
 
                 yield return null;

@@ -7,13 +7,21 @@ namespace DoggyChef
 {
     public class CandyBooster : Booster
     {
-        public int HealAmount = 3;
-        public AudioClip TriggerSound;
-        public GameObject HeartEffectPrefab;
-        public Vector3 TargetOffset = new Vector3(0, 1.2f, 0);
+        // ──────────────────────────────────────────────────────────
+        //  상수
+        // ──────────────────────────────────────────────────────────
 
         private const float FlyDuration = 0.45f;
         private const int CandySortingOrder = 30000;
+
+        // ──────────────────────────────────────────────────────────
+        //  Inspector 연결 필드
+        // ──────────────────────────────────────────────────────────
+
+        public int HealAmount = 3;
+        public AudioClip TriggerSound;
+        public GameObject HeartEffectPrefab;
+        public Vector3 TargetOffset = new(0, 1.2f, 0);
 
         public override bool IsInstant => true;
 

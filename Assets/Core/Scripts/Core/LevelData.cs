@@ -38,60 +38,44 @@ namespace DoggyChef
         [Tooltip("로비 화면에 표시할 퀘스트/목표 텍스트. 예: '얼음 블록 30개 깨기'")]
         public string ObjectiveText = "";
 
-        // ── 기존 이벤트 ──
-        public delegate void GoalChangeDelegate(int gemType, int newAmount);
+        // ──────────────────────────────────────────────────────────
+        //  이벤트
+        // ──────────────────────────────────────────────────────────
 
+        public delegate void GoalChangeDelegate(int gemType, int newAmount);
         public Action OnAllGoalFinished;
         public GoalChangeDelegate OnGoalChanged;
-        public Action<float, float> OnTimeUpdated; // remainingTime, normalizedTime
+        public Action<float, float> OnTimeUpdated;        // (remainingTime, normalizedTime)
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 타이쿤 전용 이벤트
-        // ══════════════════════════════════════════════════════════
-        //  UIHandler가 이 이벤트들을 Start()에서 구독합니다.
-        //  이벤트가 발사되면 UI를 즉시 갱신합니다.
-        //
-        //  OnMoneyChanged  : 수금 완료 시 → ScoreText 갱신
-        //  OnHeartChanged  : 하트 증가/감소 시 → MoveText 갱신 (♥ current/max)
-        //  OnFeverChanged  : 피버 발동/해제 시 → ScoreText 색상 변경
-        // ══════════════════════════════════════════════════════════
-        public Action<int, Vector3> OnMoneyChanged;           // 파라미터: (현재 EarnedMoney, worldPos)
-        public Action<int, int, Vector3> OnHeartChanged;      // 파라미터: (현재 하트, 최대 하트, worldPos)
-        public Action<bool> OnFeverChanged;          // 파라미터: 피버 발동 여부
+        // 수금 완료 시 발화. UIHandler가 ScoreText를 갱신합니다.
+        public Action<int, Vector3> OnMoneyChanged;       // (earnedMoney, worldPos)
+        // 하트 증가/감소 시 발화. UIHandler가 하트 게이지를 갱신합니다.
+        public Action<int, int, Vector3> OnHeartChanged;  // (current, max, worldPos)
+        // 피버 발동/해제 시 발화. UIHandler가 ScoreText 색상을 변경합니다.
+        public Action<bool> OnFeverChanged;
 
-        // 타이머가 0이 됐을 때 발사되는 이벤트.
-        // GameManager가 구독하여 SetState(Closing)을 내부에서 호출합니다.
+        // 타이머가 0이 되면 발화. GameManager가 구독하여 Closing으로 전환합니다.
         public static event Action OnTimerEnded;
 
-        // ── 기존 런타임 데이터 ──
+        // ──────────────────────────────────────────────────────────
+        //  런타임 상태
+        // ──────────────────────────────────────────────────────────
+
         public int GoalLeft { get; private set; }
         public float RemainingTime { get; private set; }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 타이쿤 런타임 상태
-        // ══════════════════════════════════════════════════════════
-        //  EarnedMoney : 이번 판에 획득한 총 골드.
-        //                AddMoney() 를 통해서만 증가합니다.
-        //                IsFever가 true이면 AddMoney() 내부에서 자동으로 2배 적용.
-        //
-        //  CurrentHeart : 손님이 만족 퇴장할 때 +1, 5초마다 -1 감소.
-        //                 피버 발동 기준 = FeverHeartCount * 0.7 초과.
-        //
-        //  IsFever : CurrentHeart가 임계값을 넘으면 true.
-        //            true 동안 AddMoney()에서 골드가 2배 지급됩니다.
-        // ══════════════════════════════════════════════════════════
+        // 이번 판 획득 골드. IsFever 중에는 AddMoney()에서 자동 2배 적용.
         public int EarnedMoney { get; private set; }
+        // 현재 하트 수. 손님 만족 퇴장 시 +1, 5초마다 -1 감소.
         public int CurrentHeart { get; private set; }
+        // CurrentHeart > FeverHeartCount*0.7 이면 true. AddMoney()에서 골드 2배.
         public bool IsFever { get; private set; }
 
-        // 피버 발동에 필요한 최대 하트 수 (CurrentStage.FeverHeartCount에서 읽음)
+        // 피버 임계치 (CurrentStage.FeverHeartCount에서 초기화)
         private int m_FeverHeartCount = 10;
-
-        // 하트 5초마다 -1 감소 Coroutine 참조 (Running 동안만 실행)
+        // Running 동안만 동작하는 하트 감소 코루틴
         private Coroutine m_HeartDecayCoroutine;
 
-        private int m_StartingWidth;
-        private int m_StartingHeight;
         private bool m_IsTimerEnded = false;
 
         private void Awake()
@@ -116,15 +100,9 @@ namespace DoggyChef
 
         private void Start()
         {
-            m_StartingWidth = Screen.width;
-            m_StartingHeight = Screen.height;
-
             if (Background != null)
                 Background.gameObject.SetActive(false);
 
-            // [타이쿤 추가] GameState가 바뀔 때마다 알림을 받아 Coroutine을 관리합니다.
-            // Running → HeartDecayLoop 시작
-            // Closing/Result → HeartDecayLoop 중단
             GameManager.OnStateChanged += OnGameStateChanged;
         }
 
@@ -133,24 +111,16 @@ namespace DoggyChef
             GameManager.OnStateChanged -= OnGameStateChanged;
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] GameState 변경에 따른 HeartDecay 관리
-        // ══════════════════════════════════════════════════════════
-        //  하트 감소 루틴은 Running 상태에서만 동작합니다.
-        //  게임이 끝나면(Closing/Result) 루틴을 멈춰야
-        //  불필요한 연산과 이벤트 발사를 막을 수 있습니다.
-        // ══════════════════════════════════════════════════════════
+        // Running 진입 시 HeartDecay 시작, Closing/Result 시 중단
         private void OnGameStateChanged(GameManager.GameState state)
         {
             if (state == GameManager.GameState.Running)
             {
-                // Running 진입 시 하트 감소 루틴 시작
                 if (m_HeartDecayCoroutine != null) StopCoroutine(m_HeartDecayCoroutine);
                 m_HeartDecayCoroutine = StartCoroutine(HeartDecayLoop());
             }
             else if (state == GameManager.GameState.Closing || state == GameManager.GameState.Result)
             {
-                // 게임 종료 단계 진입 시 루틴 중단
                 if (m_HeartDecayCoroutine != null)
                 {
                     StopCoroutine(m_HeartDecayCoroutine);
@@ -159,16 +129,7 @@ namespace DoggyChef
             }
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 하트 감소 루틴
-        // ══════════════════════════════════════════════════════════
-        //  Origin 참고: CoHeartDecay() — 5초 간격으로 하트 -1 감소
-        //
-        //  이 루틴의 목적:
-        //  손님이 계속 만족해서 하트가 쌓이면 피버가 영구히 유지되지 않도록
-        //  시간이 지날수록 하트가 자연 감소합니다.
-        //  → 플레이어가 꾸준히 손님을 만족시켜야 피버를 유지할 수 있습니다.
-        // ══════════════════════════════════════════════════════════
+        // 5초 간격으로 하트 -1 감소. 피버를 자연 소진시켜 플레이어가 계속 만족도를 유지하도록 유도합니다.
         private IEnumerator HeartDecayLoop()
         {
             while (true)
@@ -185,8 +146,7 @@ namespace DoggyChef
 
         private void Update()
         {
-            // [타이쿤 추가] Running 상태에서만 타이머를 작동합니다.
-            // Closing/Result 상태에서 타이머가 계속 깎이는 것을 방지합니다.
+            // Running 상태에서만 타이머 작동 (Closing/Result 중 타이머 정지)
             if (GameManager.Instance != null &&
                 GameManager.Instance.CurrentState != GameManager.GameState.Running)
                 return;
@@ -201,10 +161,6 @@ namespace DoggyChef
                     {
                         m_IsTimerEnded = true;
                         OnTimeUpdated?.Invoke(0f, 0f);
-
-                        // [타이쿤 수정] 기존에는 OnNoMoveLeft를 호출했지만,
-                        // 타이쿤에서는 "시간 종료 = 게임 종료 준비(Closing)" 입니다.
-                        // GameManager가 OnTimerEnded를 구독하여 SetState(Closing)을 호출합니다.
                         OnTimerEnded?.Invoke();
                     }
                 }
@@ -217,46 +173,29 @@ namespace DoggyChef
 
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [부스터 추가] 시간 추가
-        // ══════════════════════════════════════════════════════════
-        /// <summary>
-        /// TimeBooster에서 호출합니다. 타이머가 아직 종료되지 않은 경우에만 시간을 추가합니다.
-        /// </summary>
+        // ================================================================
+        //  공개 API
+        // ================================================================
+
+        // [TimeBooster 호출] 타이머 종료 전에만 시간을 추가합니다.
         public void AddTime(float seconds)
         {
             if (m_IsTimerEnded) return;
-            // 경과 시간을 되돌리는 개념: 초기 시간(TimeLimit) 초과 금지
             RemainingTime = Mathf.Min(RemainingTime + seconds, TimeLimit);
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 골드 추가
-        // ══════════════════════════════════════════════════════════
-        //  Table.CollectMoney() → HallManager.OnTableMoneyCollected()
-        //  → 이 메서드를 호출하는 흐름입니다.
-        //
-        //  IsFever가 true면 amount를 2배로 적용합니다. (피버 보너스)
-        //  최종 금액을 EarnedMoney에 누적하고 OnMoneyChanged 이벤트를 발사합니다.
-        // ══════════════════════════════════════════════════════════
+        // [HallManager 호출] 골드를 추가합니다. IsFever 중이면 자동 2배.
         public void AddMoney(int amount, Vector3 worldPos = default)
         {
             if (amount <= 0) return;
-            int actual = IsFever ? amount * 2 : amount;  // 피버 중이면 2배
+            int actual = IsFever ? amount * 2 : amount;
             EarnedMoney += actual;
-            OnMoneyChanged?.Invoke(EarnedMoney, worldPos);  // UIHandler에서 ScoreText 갱신
+            OnMoneyChanged?.Invoke(EarnedMoney, worldPos);
 
-            if (UIHandler.Instance != null)
-                UIHandler.Instance.UpdateTopBarData();
+            UIHandler.Instance?.UpdateTopBarData();
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 하트 추가
-        // ══════════════════════════════════════════════════════════
-        //  손님이 만족 퇴장할 때 HallManager가 이 메서드를 호출합니다.
-        //  하트가 최대치(m_FeverHeartCount)를 초과하지 않도록 Clamp합니다.
-        //  추가 후 EvaluateFever()로 피버 발동 여부를 즉시 체크합니다.
-        // ══════════════════════════════════════════════════════════
+        // [HallManager 호출] 하트를 추가하고 피버 상태를 재평가합니다.
         public void AddHeart(int amount, Vector3 worldPos = default)
         {
             if (amount <= 0) return;
@@ -265,31 +204,22 @@ namespace DoggyChef
             OnHeartChanged?.Invoke(CurrentHeart, m_FeverHeartCount, worldPos);
         }
 
-        // ══════════════════════════════════════════════════════════
-        //  [타이쿤 추가] 피버 상태 평가
-        // ══════════════════════════════════════════════════════════
-        //  Origin 참고: EvaluateAndBroadcastFever()
-        //
-        //  피버 발동 조건: CurrentHeart > FeverHeartCount * 0.7
-        //    예) FeverHeartCount = 10 → 하트가 8개 이상이면 피버 발동
-        //
-        //  IsFever가 바뀔 때만 OnFeverChanged를 발사합니다.
-        //  (바뀌지 않으면 이벤트를 중복 발사하지 않음)
-        // ══════════════════════════════════════════════════════════
+        // 피버 조건: CurrentHeart > FeverHeartCount * 0.7. 변경 시에만 OnFeverChanged 발화.
         private void EvaluateFever()
         {
             bool newFever = CurrentHeart > Mathf.FloorToInt(m_FeverHeartCount * 0.7f);
             if (newFever != IsFever)
             {
                 IsFever = newFever;
-                OnFeverChanged?.Invoke(IsFever);  // UIHandler에서 ScoreText 색상 변경
+                OnFeverChanged?.Invoke(IsFever);
             }
         }
 
         // ================================================================
-        //  기존 Match-3 목표 처리 (타이쿤에서는 주로 사용하지 않음)
+        //  Match-3 목표 처리 (타이쿤 모드에서는 보조적으로 사용)
         // ================================================================
 
+        // [Board 호출] 보석이 매칭될 때 목표 진행도를 업데이트합니다.
         public bool Matched(Gem gem)
         {
             if (Goals == null) return false;
@@ -326,6 +256,7 @@ namespace DoggyChef
             return false;
         }
 
+        // [Booster 호출] 부스터 선택 시 배경을 어둡게/복구합니다.
         public void DarkenBackground(bool darken)
         {
             if (Background == null) return;

@@ -162,11 +162,9 @@ namespace DoggyChef
             }
         }
 
-        /// <summary>
-        /// 사이드메뉴 배달 대상 테이블을 선택합니다.
-        /// 우선순위 1: 손 애니메이션 활성 Ordered 테이블 (플레이어가 선택 중인 테이블)
-        /// 우선순위 2: 사이드 미수령 Ordered 테이블
-        /// </summary>
+        // 사이드메뉴 배달 대상 테이블을 선택합니다.
+        // 우선순위 1: 손 애니메이션 활성 Ordered 테이블 (플레이어가 선택 중인 테이블)
+        // 우선순위 2: 사이드 미수령 Ordered 테이블
         private Table ChooseSideTargetTable()
         {
             foreach (var t in Tables)

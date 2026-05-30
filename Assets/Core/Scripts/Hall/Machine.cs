@@ -3,11 +3,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using SpriteGlow;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     [DefaultExecutionOrder(-1)] // Table(0)보다 먼저 Update 실행
     public class Machine : MonoBehaviour
     {
+        public static Machine Instance { get; private set; }
+
         // 같은 프레임에서 Machine이 포인터를 먼저 처리했으면 Table은 무시
         private static int s_ConsumedFrame = -1;
         public static bool IsPointerConsumedThisFrame() => s_ConsumedFrame == Time.frameCount;
@@ -45,8 +47,9 @@ namespace MyMatch3
 
         public GameObject GetSidePrefab() => sidePrefab; // Manager 자동 전달용 공개 Getter
 
-        void Awake()
+        private void Awake()
         {
+            Instance = this;
             glow = GetComponentInChildren<SpriteGlowEffect>(true);
             m_Collider = GetComponent<Collider2D>();
             InitializeLEDs();
@@ -57,7 +60,7 @@ namespace MyMatch3
                 sr.sortingLayerID = characterLayer;
         }
 
-        void Start()
+        private void Start()
         {
             StartProduction();
             SubscribeToTableEvents();
@@ -65,15 +68,16 @@ namespace MyMatch3
         }
 
 
-        void OnDisable()
+        private void OnDisable()
         {
+            if (Instance == this) Instance = null;
             StopAllCoroutines();
             StopGlowPulse();
             UnsubscribeFromTableEvents();
             UnsubscribeFromGemEvents();
         }
 
-        void Update()
+        private void Update()
         {
 
             var pointer = Pointer.current;
@@ -274,7 +278,7 @@ namespace MyMatch3
 
         private void DisableHandAnimationOnAllTables()
         {
-            Table[] tables = FindObjectsByType<Table>(FindObjectsSortMode.None);
+            Table[] tables = FindObjectsByType<Table>();
             foreach (var table in tables)
             {
                 // Cooked/Paying 상태의 손 애니메이션은 Table.cs가 관리 → 건드리지 않음
@@ -287,7 +291,7 @@ namespace MyMatch3
         // 테이블 이벤트 구독
         private void SubscribeToTableEvents()
         {
-            Table[] tables = FindObjectsByType<Table>(FindObjectsSortMode.None);
+            Table[] tables = FindObjectsByType<Table>();
             foreach (var table in tables)
             {
                 table.OnOrderSet += OnAnyTableOrderChanged;
@@ -297,7 +301,7 @@ namespace MyMatch3
         // 테이블 이벤트 구독 해제
         private void UnsubscribeFromTableEvents()
         {
-            Table[] tables = FindObjectsByType<Table>(FindObjectsSortMode.None);
+            Table[] tables = FindObjectsByType<Table>();
             foreach (var table in tables)
             {
                 table.OnOrderSet -= OnAnyTableOrderChanged;
@@ -318,11 +322,11 @@ namespace MyMatch3
         // Active 상태에서 모든 테이블의 손 애니메이션 상태 업데이트
         private void UpdateHandAnimationsForActiveTables()
         {
-            Table[] tables = FindObjectsByType<Table>(FindObjectsSortMode.None);
+            Table[] tables = FindObjectsByType<Table>();
             foreach (var table in tables)
             {
                 // Ordered + 사이드 미수령 → 손 애니메이션 활성화 (사이드 배달 유도)
-                if (table.State == Table.TableState.Ordered && !table.GetHasSideMenu())
+                if (table.State == Table.TableState.Ordered && !table.HasSideMenu)
                 {
                     table.EnableHandAnimation(true);
                 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
   [CreateAssetMenu(fileName = "NewGemData", menuName = "Tycoon/GemData")]
   public class GemData : ScriptableObject

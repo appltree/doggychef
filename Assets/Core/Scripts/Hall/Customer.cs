@@ -3,7 +3,7 @@ using System.Collections;
 using Spine.Unity;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     // ════════════════════════════════════════════════════════════════
     //  Customer — 식당 손님의 상태 머신

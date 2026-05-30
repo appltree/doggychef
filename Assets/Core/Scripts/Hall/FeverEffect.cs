@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     // ════════════════════════════════════════════════════════════════
     //  FeverEffect — 피버 모드 시각 효과

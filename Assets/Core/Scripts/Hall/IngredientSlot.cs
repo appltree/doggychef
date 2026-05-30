@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     // ════════════════════════════════════════════════════════════════
     //  IngredientSlot — 주문 재료 한 칸을 담당하는 컴포넌트

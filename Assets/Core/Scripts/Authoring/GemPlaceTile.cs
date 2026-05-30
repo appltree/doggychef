@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 편집/로드 시에만 사용되는 타일로, 보석이 들어갈 셀을 정의합니다. 

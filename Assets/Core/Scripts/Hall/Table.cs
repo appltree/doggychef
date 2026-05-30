@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     public class Table : MonoBehaviour
     {
@@ -15,6 +15,8 @@ namespace MyMatch3
 
         private const int MAX_COIN_PRICE = 3000;
         private const int MAX_COIN_COUNT = 30;
+        // SortingLayer "VFX"의 GUID 기반 ID (Unity Editor에서 생성된 값)
+        private const int VfxSortingLayerID = 666422525;
 
 
         [Header("Scene References")]
@@ -149,7 +151,7 @@ namespace MyMatch3
         {
             if (State == TableState.Ordered && !m_HasSideMenu && m_AssignedCustomer != null)
             {
-                Machine machine = FindAnyObjectByType<Machine>();
+                var machine = Machine.Instance;
                 if (machine != null && machine.IsActive())
                 {
                     machine.OnTableTouchedForSide(this);
@@ -200,7 +202,7 @@ namespace MyMatch3
             var renderer = go.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.sortingLayerID = 666422525; // VFX
+                renderer.sortingLayerID = VfxSortingLayerID; // VFX
                 renderer.sortingOrder = 10;
             }
 
@@ -269,7 +271,7 @@ namespace MyMatch3
 
         public Transform GetSidePoint() => SidePoint;
 
-        public bool GetHasSideMenu() => m_HasSideMenu;
+        public bool HasSideMenu => m_HasSideMenu;
 
         public void OnSideMenuDelivered(GameObject sideInstance)
         {
@@ -298,7 +300,7 @@ namespace MyMatch3
 
         public void DisableHandAnimation() => EnableHandAnimation(false);
 
-        public bool IsHandAnimationActive() => m_HandAnimationActive;
+        public bool IsHandAnimationActive => m_HandAnimationActive;
 
         private void StopHandAnimation()
         {
@@ -332,6 +334,7 @@ namespace MyMatch3
 
         private void SetState(TableState next)
         {
+            if (State == next) return;
             State = next;
             UpdateVisual();
             OnStateChanged?.Invoke(next);
@@ -551,7 +554,7 @@ namespace MyMatch3
                 token = new GameObject("IngredientFlyToken");
                 var sr = token.AddComponent<SpriteRenderer>();
                 sr.sprite = sprite;
-                sr.sortingLayerID = 666422525;
+                sr.sortingLayerID = VfxSortingLayerID;
                 sr.sortingOrder = 0;
                 token.transform.position = from;
             }
@@ -610,7 +613,7 @@ namespace MyMatch3
         }
 
 
-        void Awake()
+        private void Awake()
         {
             m_Collider = GetComponent<Collider2D>();
 
@@ -623,7 +626,7 @@ namespace MyMatch3
             }
         }
 
-        void Update()
+        private void Update()
         {
             var pointer = Pointer.current;
             if (pointer == null || !pointer.press.wasPressedThisFrame) return;

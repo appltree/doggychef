@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 캔디 부스터 도착 시 재생되는 하트 폭발 이펙트.

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     public class CandyBooster : Booster
     {

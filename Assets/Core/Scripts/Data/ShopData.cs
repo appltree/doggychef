@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
   public enum ShopType
   {

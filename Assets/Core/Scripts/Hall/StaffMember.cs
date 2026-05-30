@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Spine.Unity;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     // ════════════════════════════════════════════════════════════════
     //  StaffMember — 식당 스태프 (역할별: Cashier / Manager)
@@ -172,12 +172,12 @@ namespace MyMatch3
             foreach (var t in Tables)
             {
                 if (t != null && t.State == Table.TableState.Ordered
-                    && !t.GetHasSideMenu() && t.IsHandAnimationActive())
+                    && !t.HasSideMenu && t.IsHandAnimationActive)
                     return t;
             }
             foreach (var t in Tables)
             {
-                if (t != null && t.State == Table.TableState.Ordered && !t.GetHasSideMenu())
+                if (t != null && t.State == Table.TableState.Ordered && !t.HasSideMenu)
                     return t;
             }
             return null;

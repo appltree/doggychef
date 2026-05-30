@@ -4,7 +4,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     [CustomPropertyDrawer(typeof(MatchShape))]
     public class MatchShapePropertyDrawer : PropertyDrawer

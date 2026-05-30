@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     // ════════════════════════════════════════════════════════════════
     //  HallManager — 식당 홀 전체를 관리하는 매니저
@@ -99,8 +99,6 @@ namespace MyMatch3
             Board.OnGemExploded += OnGemExploded;
             Board.OnGemExplodedDelayed += OnGemExplodedDelayed;
 
-            GameManager.OnStateChanged += OnGameStateChanged;
-
             // 테이블 수금 이벤트 연결
             foreach (var table in Tables)
             {
@@ -116,8 +114,6 @@ namespace MyMatch3
             if (Instance == this) Instance = null;
             Board.OnGemExploded -= OnGemExploded;
             Board.OnGemExplodedDelayed -= OnGemExplodedDelayed;
-            GameManager.OnStateChanged -= OnGameStateChanged;
-
             if (Tables != null)
             {
                 foreach (var table in Tables)
@@ -322,12 +318,6 @@ namespace MyMatch3
         {
             if (LevelData.Instance == null) return;
             LevelData.Instance.AddMoney(amount, fromPos);
-        }
-
-        /// <summary>GameState 변경 알림. 스폰 중단은 Update의 Running 조건 체크로 자동 처리됩니다.</summary>
-        private void OnGameStateChanged(GameManager.GameState state)
-        {
-            // Update 루프가 상태별 로직을 자동으로 처리하므로 별도 처리 없음.
         }
 
         // ================================================================

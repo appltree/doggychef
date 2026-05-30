@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 손님 머리 위의 체력 게이지 UI.

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 이것은 편집 시간용 타일로, 그 아래쪽으로 셀(보석)을 스폰(생성)하게 될 위치를 정의하는 데 사용됩니다.

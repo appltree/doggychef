@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 새로고침 부스터 (game_ui_btn_refresh).

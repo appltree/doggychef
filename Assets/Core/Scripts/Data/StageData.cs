@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MyMatch3
+namespace DoggyChef
 {
   [CreateAssetMenu(fileName = "NewStageData", menuName = "Tycoon/StageData")]
   public class StageData : ScriptableObject

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace MyMatch3
+namespace DoggyChef
 {
     /// <summary>
     /// 에디터에서 장애물을 배치하기 위한 타일입니다. 

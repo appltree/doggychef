@@ -88,15 +88,15 @@ namespace DoggyChef
         private Collider2D m_Collider;
 
         private bool m_HasSideMenu = false;
-        private List<GameObject> m_SideInstances = new();
+        private readonly List<GameObject> m_SideInstances = new();
 
-        private Dictionary<string, int> m_Required = new();
+        private readonly Dictionary<string, int> m_Required = new();
 
-        private Dictionary<string, int> m_Collected = new();
+        private readonly Dictionary<string, int> m_Collected = new();
 
         private Customer m_AssignedCustomer;
         private Coroutine m_EatRoutine;
-        private List<CoinMoney> m_SpawnedCoins = new();
+        private readonly List<CoinMoney> m_SpawnedCoins = new();
 
         private int m_CachedSellPrice;
 

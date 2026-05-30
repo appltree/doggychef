@@ -40,13 +40,13 @@ namespace DoggyChef
         // ──────────────────────────────────────────────────────────
 
         // 남은 수량이 1 이상일 때의 텍스트 색상 — 노란색
-        private static readonly Color ActiveColor    = Color.yellow;
+        private static readonly Color ActiveColor = Color.yellow;
 
         // 수량이 0이 됐을 때의 텍스트 색상 — 회색 (완료 표시)
         private static readonly Color CompletedColor = new Color(0.5f, 0.5f, 0.5f, 1f);
 
         // 수량이 0이 됐을 때의 아이콘 색상 — 40% 반투명 흰색 (완료 표시)
-        private static readonly Color FadedWhite     = new Color(1f, 1f, 1f, 0.4f);
+        private static readonly Color FadedWhite = new Color(1f, 1f, 1f, 0.4f);
 
         // ──────────────────────────────────────────────────────────
         //  런타임 상태
@@ -104,7 +104,7 @@ namespace DoggyChef
             // 완료 여부에 따라 텍스트 색상 전환: 미완료 → 노란색, 완료 → 회색
             if (CountText != null)
             {
-                CountText.text  = m_Remaining.ToString();
+                CountText.text = m_Remaining.ToString();
                 CountText.color = done ? CompletedColor : ActiveColor;
             }
 

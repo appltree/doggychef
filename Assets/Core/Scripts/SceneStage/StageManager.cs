@@ -7,7 +7,7 @@ namespace DoggyChef
     public class StageManager : MonoBehaviour
     {
         [SerializeField] private ShopData[] shops;
-        [SerializeField] private string mainSceneName = "MainScene";
+        [SerializeField] private string mainSceneName = "Main";
         [SerializeField] private string gameSceneName = "Game";
 
         private int currentShopIndex;

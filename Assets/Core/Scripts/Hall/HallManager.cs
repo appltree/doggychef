@@ -75,13 +75,13 @@ namespace DoggyChef
         private float m_ElapsedTime;
 
         // 스폰 진행 중인 테이블 인덱스 집합 (중복 스폰 방지)
-        private HashSet<int> m_ReservedTables = new();
+        private readonly HashSet<int> m_ReservedTables = new();
 
         // Customer → 테이블 인덱스 매핑 (람다 캡처 없이 명시적 구독 해제를 위해 사용)
-        private Dictionary<Customer, int> m_CustomerTableMap = new();
+        private readonly Dictionary<Customer, int> m_CustomerTableMap = new();
 
         // 현재 스테이지에서 사용 가능한 레시피 캐시 (Start에서 초기화)
-        private List<RecipeData> m_AvailableRecipes = new();
+        private readonly List<RecipeData> m_AvailableRecipes = new();
 
         // ================================================================
         //  Unity 생명 주기

@@ -83,13 +83,13 @@ namespace DoggyChef
         protected Vector3Int m_CurrentCell;
 
         /// <summary>이동 방향 (Vector3Int.right / up 또는 그 반전).</summary>
-        protected Vector3Int m_Direction;
+        protected readonly Vector3Int m_Direction;
 
         /// <summary>현재 월드 좌표.</summary>
         protected Vector3 m_Position;
 
         /// <summary>빔 이펙트 인스턴스.</summary>
-        private GameObject m_Beam;
+        private readonly GameObject m_Beam;
 
         /// <summary>이동 속도 (초당 5칸).</summary>
         private const float MoveSpeed = 5f;

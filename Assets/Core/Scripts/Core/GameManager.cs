@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -91,7 +90,7 @@ namespace DoggyChef
 
         // ──── 오디오 ────
         // 효과음이 끊기지 않도록 16개를 돌려쓰는 풀(대기열)
-        private Queue<AudioSource> m_SFXSourceQueue = new();
+        private readonly Queue<AudioSource> m_SFXSourceQueue = new();
         // Hall/UI의 "반드시 재생" 효과음용 — PlayOneShot으로 절대 끊기지 않음
         private AudioSource m_OneShotSource;
 

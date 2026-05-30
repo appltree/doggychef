@@ -80,7 +80,7 @@ namespace DoggyChef
         private Coroutine m_FlashRoutine;
         private Coroutine m_PulseRoutine;
         private Coroutine m_ShakeRoutine;
-        private Vector3   m_CameraOrigin;
+        private Vector3 m_CameraOrigin;
 
         // ================================================================
         //  유니티 생명주기

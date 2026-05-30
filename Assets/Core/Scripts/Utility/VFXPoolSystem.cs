@@ -12,8 +12,8 @@ namespace DoggyChef
       public int FrameCount;
     }
 
-    private Dictionary<VisualEffect, Queue<VFXInstance>> m_Lookup = new();
-    private List<VFXInstance> m_AllVFX = new();
+    private readonly Dictionary<VisualEffect, Queue<VFXInstance>> m_Lookup = new();
+    private readonly List<VFXInstance> m_AllVFX = new();
     private int m_StartIndex;
 
     public void Clean()

@@ -23,7 +23,7 @@ namespace DoggyChef
         [SerializeField, Min(0f)] private float m_BorderPadding = 0.3f;
 
         [Header("Board Runtime Data")]
-        public Dictionary<Vector3Int, BoardCell> CellContent = new();
+        public readonly Dictionary<Vector3Int, BoardCell> CellContent = new();
         private BoundsInt m_BoundsInt;
         private Dictionary<int, GemData> m_GemDataLookup;
         private List<int> m_AvailableGemTypes = new();
@@ -38,12 +38,12 @@ namespace DoggyChef
         private float m_LastBorderPadding = float.MinValue;
 
         [Header("Runtime Queues")]
-        private List<Vector3Int> m_TickingCells = new();
-        private List<Vector3Int> m_NewTickingCells = new();
-        private List<Vector3Int> m_EmptyCells = new();
-        private List<Vector3Int> m_CellToMatchCheck = new();
-        private List<Match> m_TickingMatch = new();
-        private List<IBoardAction> m_BoardActions = new();
+        private readonly List<Vector3Int> m_TickingCells = new();
+        private readonly List<Vector3Int> m_NewTickingCells = new();
+        private readonly List<Vector3Int> m_EmptyCells = new();
+        private readonly List<Vector3Int> m_CellToMatchCheck = new();
+        private readonly List<Match> m_TickingMatch = new();
+        private readonly List<IBoardAction> m_BoardActions = new();
         private float m_PostMatchDelayTimer = 0.0f;
 
         [Header("State")]
@@ -66,7 +66,7 @@ namespace DoggyChef
         private float m_SinceLastHint = 0.0f;
         private bool m_BoardChanged = true;
         private GameObject m_HintIndicator;
-        private List<PossibleSwap> m_PossibleSwaps = new();
+        private readonly List<PossibleSwap> m_PossibleSwaps = new();
         private int m_PickedSwap = 0;
 
         public class PossibleSwap
@@ -78,8 +78,8 @@ namespace DoggyChef
 
         [Header("Bonus and Callbacks")]
         private Booster m_ActivatedBonusItem = null;
-        private Dictionary<Vector3Int, System.Action> m_MatchedCallback = new();
-        private Dictionary<Vector3Int, System.Action> m_CellsCallbacks = new();
+        private readonly Dictionary<Vector3Int, System.Action> m_MatchedCallback = new();
+        private readonly Dictionary<Vector3Int, System.Action> m_CellsCallbacks = new();
 
         public static event Action<Gem, Vector3> OnGemExploded;
         public static event Action<Gem, Vector3Int> OnGemDragged;

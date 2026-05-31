@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 09_kimchi_bok
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: korean_kimchi_bok
+  Type: 1
+  Name: "\uAE40\uCE58\uBCF6\uC74C\uBC25"
+  Description: "\uC0C8\uCF64 \uB9E4\uCF64 \uC544\uC0AD\uC544\uC0AD \uAE40\uCE58\uBCF6\uC74C\uBC25"
+  ResultSprite: {fileID: 21300000, guid: eed464f0cd584d4e9886254021581697, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 27
+  PurchasePrice: 18000
+  SpecialPrice: 0
+  SellPrice: 600
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 57eb54e53b5b46839ad6f1a6288d033d, type: 2}
+    Count: 7
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 0352d7e268d949909de4894a46998659, type: 2}
+    Count: 6
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: ca99b8c446154340ac47724d6193efe7, type: 2}
+    Count: 7
+    IsMainIngredient: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 00_cheese
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: pizza_cheese
+  Type: 0
+  Name: "\uCE58\uC988\uD53C\uC790"
+  Description: "\uCE58\uC988\uAC00 \uB4EC\uBFCD! \uCE58\uC988\uB9CC! \uB4EC\uBFCD"
+  ResultSprite: {fileID: 21300000, guid: af7d0de4f8904f018b07a5db6145e262, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
+  PurchasePrice: 0
+  SpecialPrice: 0
+  SellPrice: 160
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: a2f19d88f38f474f88283d49814cedb0, type: 2}
+    Count: 3
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 016428945435428cb2183421e1d1061a, type: 2}
+    Count: 3
+    IsMainIngredient: 0

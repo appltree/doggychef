@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 02_hot_latte
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: coffee_hot_latte
+  Type: 0
+  Name: "\uAE4C\uD398\uB77C\uB5BC"
+  Description: "\uBAB8\uB3C4 \uB9C8\uC74C\uB3C4 \uCD94\uC6B4\uB0A0 \uB530\uB73B\uD55C
+    \uB77C\uB5BC \uD55C \uC794."
+  ResultSprite: {fileID: 21300000, guid: 9fd950fb0762496a9b4e53d0e83b1a66, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
+  PurchasePrice: 0
+  SpecialPrice: 0
+  SellPrice: 250
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 27fe5c1ad06f471ea795a98de4fef562, type: 2}
+    Count: 4
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 756466600d924e20a8ff5f6e61dd0b6f, type: 2}
+    Count: 3
+    IsMainIngredient: 0

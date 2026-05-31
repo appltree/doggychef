@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 11_hot_mocha
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: coffee_hot_mocha
+  Type: 1
+  Name: "\uAE4C\uD398 \uBAA8\uCE74"
+  Description: "\uCEE4\uD53C\uB9CC\uC73C\uB85C \uBD80\uC871\uD55C \uB0A0\uC5D4 \uCD08\uCF5C\uB81B\uC774
+    \uB4EC\uBFCD\uB4E4\uC5B4\uAC04 \uAE4C\uD398\uBAA8\uCE74."
+  ResultSprite: {fileID: 21300000, guid: e73293dbca924588b1871a8cd84b622c, type: 3}
+  DisplayScale: 0.8
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 17
+  PurchasePrice: 12000
+  SpecialPrice: 0
+  SellPrice: 500
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 27fe5c1ad06f471ea795a98de4fef562, type: 2}
+    Count: 5
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 82e7741f996044e7abe2fcfb9776b472, type: 2}
+    Count: 5
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: d33553985eab4cde8e4270ae8b9fb6bc, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 756466600d924e20a8ff5f6e61dd0b6f, type: 2}
+    Count: 4
+    IsMainIngredient: 0

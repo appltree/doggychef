@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 05_sam_vegetable
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: korean_sam_vegetable
+  Type: 1
+  Name: "\uC57C\uCC44\uC308"
+  Description: "\uC0C1\uCD94 \uAE7B\uC78E\uC5D0 \uACE0\uAE30\uC5B9\uACE0 \uC785\uC548\uC5D0
+    \uC3D9!"
+  ResultSprite: {fileID: 21300000, guid: 15c076586e5640b0a1dd885b021a2cb1, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 12
+  PurchasePrice: 18000
+  SpecialPrice: 0
+  SellPrice: 650
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 2ae73ce459e94a80a9213f3990e988ff, type: 2}
+    Count: 5
+    IsMainIngredient: 1

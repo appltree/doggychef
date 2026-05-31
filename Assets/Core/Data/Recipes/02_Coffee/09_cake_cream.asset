@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 09_cake_cream
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: coffee_cake_cream
+  Type: 1
+  Name: "\uC0DD\uD06C\uB9BC\uCF00\uC775"
+  Description: "\uCF00\uC775 \uC704\uC5D0 \uC0DD\uD06C\uB9BC\uC744 \uC5B9\uC73C\uBA74?
+    \uC0DD\uD06C\uB9BC\uCF00\uC775\uC774\uC9C0 \uBB50."
+  ResultSprite: {fileID: 21300000, guid: 4cf0afc5e4e24975a15d9a8cff3b89df, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 2
+  ExclusiveStageNumber: 13
+  PurchasePrice: 10000
+  SpecialPrice: 0
+  SellPrice: 400
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 00cd844a798a49e78c0345a196b4329e, type: 2}
+    Count: 5
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 82e7741f996044e7abe2fcfb9776b472, type: 2}
+    Count: 5
+    IsMainIngredient: 0

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 04_zzazang_rice
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: china_zzazang_rice
+  Type: 1
+  Name: "\uC9DC\uC7A5\uBC25"
+  Description: "\uC9DC\uC7A5\uC758 \uB610\uB2E4\uB978 \uC120\uD0DD! "
+  ResultSprite: {fileID: 21300000, guid: 7ce3dc528be940009d98d5f61e929af3, type: 3}
+  DisplayScale: 0.8
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 5
+  PurchasePrice: 6000
+  SpecialPrice: 0
+  SellPrice: 300
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 2eab90bb52e145c8bb26d8243ba12235, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 4639efef675b445fbb26ae68863721fb, type: 2}
+    Count: 5
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: b3daf056426e4223845a25b470976efc, type: 2}
+    Count: 4
+    IsMainIngredient: 0

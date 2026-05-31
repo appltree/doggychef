@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 06_hawaian_delight
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: pizza_hawaian_delight
+  Type: 1
+  Name: "\uD558\uC640\uC774\uC548 \uB51C\uB77C\uC774\uD2B8"
+  Description: "\uD558\uC640\uC774\uC548\uBCF4\uB2E4 \uC870\uAE08 \uB354 \uD478\uC9D0\uD55C
+    \uD53C\uC790"
+  ResultSprite: {fileID: 21300000, guid: 22863a0501b64093bd89718ef113c40a, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 2
+  ExclusiveStageNumber: 7
+  PurchasePrice: 12000
+  SpecialPrice: 0
+  SellPrice: 500
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 9225c04718894e63b87212f2ea4843b1, type: 2}
+    Count: 5
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: a2f19d88f38f474f88283d49814cedb0, type: 2}
+    Count: 3
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 0675208123424a7d99e749785f81f132, type: 2}
+    Count: 5
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: c6cc1d7ed6984d50b7d505f40d333343, type: 2}
+    Count: 3
+    IsMainIngredient: 0

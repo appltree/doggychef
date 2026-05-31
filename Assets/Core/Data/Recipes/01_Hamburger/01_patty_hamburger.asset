@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 01_patty_hamburger
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: hamburger_patty_hamburger
+  Type: 0
+  Name: "\uD328\uD2F0 \uD584\uBC84\uAC70"
+  Description: "\uACE0\uAE30\uB9DB\uC744 \uADF9\uB300\uD654 \uC2DC\uD0A8\uC774\uB77C
+    \uC4F0\uACE0 \uD1A0\uD551\uC774 \uBD80\uC2E4\uD55C \uC774\uB77C \uC77D\uB294\uB2E4."
+  ResultSprite: {fileID: 21300000, guid: fc15c6d26a4a4c94a8369378ae3807e3, type: 3}
+  DisplayScale: 1
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
+  PurchasePrice: 0
+  SpecialPrice: 0
+  SellPrice: 250
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 00ae93516dac453bb4726e68095e446b, type: 2}
+    Count: 3
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 014faeed77a547df8a8e12ca1955a7e7, type: 2}
+    Count: 3
+    IsMainIngredient: 0

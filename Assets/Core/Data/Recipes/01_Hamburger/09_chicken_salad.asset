@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 09_chicken_salad
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: hamburger_chicken_salad
+  Type: 1
+  Name: "\uCE58\uD0A8 \uC0D0\uB7EC\uB4DC"
+  Description: "\uC0D0\uB7EC\uB4DC\uC5D0 \uCE58\uD0A8\uD720\uB808 \uCD94\uAC00\uD558\uBA74
+    \uB354 \uB9DB\uC788\uB294\uAC70 \uB2E4 \uC54C\uC790\uB098\uC5EC."
+  ResultSprite: {fileID: 21300000, guid: cde7b7b07c464474b51fdd01f449be5d, type: 3}
+  DisplayScale: 1
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 2
+  ExclusiveStageNumber: 26
+  PurchasePrice: 30000
+  SpecialPrice: 0
+  SellPrice: 1200
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: d6f53ada725c4665bf0c93c82b64493e, type: 2}
+    Count: 6
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: b33234b8d95c40cc826af5bb0dac02e8, type: 2}
+    Count: 6
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: f9a54f4a91a94d4ab383f559c320f1bf, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 0fdc7b3877864284930a6fc34e6c5953, type: 2}
+    Count: 4
+    IsMainIngredient: 0

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 17_cake_tira_choco
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: coffee_cake_tira_choco
+  Type: 2
+  Name: "\uD2F0\uB77C\uBBF8\uC218"
+  Description: "\uBD80\uB4DC\uB7FD\uAC8C \uC785\uC548\uC5D0\uC11C \uB179\uB294 \uCEE4\uD53C\uD5A5\uC758
+    \uBB34\uC2A4\uCF00\uC775."
+  ResultSprite: {fileID: 21300000, guid: 72bba791858c49a79bcbf8951c4f813e, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 4
+  ExclusiveStageNumber: 20
+  PurchasePrice: 0
+  SpecialPrice: 10
+  SellPrice: 1500
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 27fe5c1ad06f471ea795a98de4fef562, type: 2}
+    Count: 7
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 82e7741f996044e7abe2fcfb9776b472, type: 2}
+    Count: 8
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 00cd844a798a49e78c0345a196b4329e, type: 2}
+    Count: 7
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: d33553985eab4cde8e4270ae8b9fb6bc, type: 2}
+    Count: 8
+    IsMainIngredient: 0

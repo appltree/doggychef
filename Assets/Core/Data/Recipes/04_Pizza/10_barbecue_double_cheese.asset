@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 10_barbecue_double_cheese
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: pizza_barbecue_double_cheese
+  Type: 1
+  Name: "\uBD88\uACE0\uAE30 \uB354\uBE14\uCE58\uC988"
+  Description: "\uBD88\uACE0\uAE30\uC640 \uCE58\uC988\uAC00 \uB4EC\uBFCD. \uD558\uD504\uC564
+    \uD558\uD504 \uD53C\uC790"
+  ResultSprite: {fileID: 21300000, guid: 7be8c60cc440489cb6315d966115c3d7, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 19
+  PurchasePrice: 18000
+  SpecialPrice: 0
+  SellPrice: 700
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 8d091796038d4361b0bb07db048ddd48, type: 2}
+    Count: 5
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 6580fee2ee0449aba06e18ab5c3ebe1c, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: c6cc1d7ed6984d50b7d505f40d333343, type: 2}
+    Count: 3
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: a2f19d88f38f474f88283d49814cedb0, type: 2}
+    Count: 5
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 016428945435428cb2183421e1d1061a, type: 2}
+    Count: 3
+    IsMainIngredient: 0

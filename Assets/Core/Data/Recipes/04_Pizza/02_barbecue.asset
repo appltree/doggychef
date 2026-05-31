@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 02_barbecue
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: pizza_barbecue
+  Type: 0
+  Name: "\uBD88\uACE0\uAE30\uD53C\uC790"
+  Description: "\uBD88\uACE0\uAE30\uAC00 \uAC00\uBBF8\uB41C \uD55C\uAD6D\uC2DD \uD4E8\uC804\uD53C\uC790"
+  ResultSprite: {fileID: 21300000, guid: 9e0f03e533d143418266d85ec8fddd5c, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
+  PurchasePrice: 0
+  SpecialPrice: 0
+  SellPrice: 250
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 8d091796038d4361b0bb07db048ddd48, type: 2}
+    Count: 3
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 6580fee2ee0449aba06e18ab5c3ebe1c, type: 2}
+    Count: 3
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: c6cc1d7ed6984d50b7d505f40d333343, type: 2}
+    Count: 3
+    IsMainIngredient: 0

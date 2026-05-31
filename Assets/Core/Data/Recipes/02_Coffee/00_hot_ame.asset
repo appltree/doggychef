@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 00_hot_ame
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: coffee_hot_ame
+  Type: 0
+  Name: "\uC544\uBA54\uB9AC\uCE74\uB178"
+  Description: "\uC544\uBA54\uC544\uBA54\uC544\uBA54\uC544\uBA54~ \uCABC\uC544! \uCABC\uC544!"
+  ResultSprite: {fileID: 21300000, guid: 11fd2d4055d04c38bc3b34dd5ac77900, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
+  PurchasePrice: 0
+  SpecialPrice: 0
+  SellPrice: 200
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 27fe5c1ad06f471ea795a98de4fef562, type: 2}
+    Count: 4
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: ba0cbfe5d8514ded8d5047446fbbc1af, type: 2}
+    Count: 3
+    IsMainIngredient: 0

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 08_sa_zzazang_myun
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: china_sa_zzazang_myun
+  Type: 1
+  Name: "\uC0AC\uCC9C\uC9DC\uC7A5\uBA74"
+  Description: "\uC9DC\uC7A5\uBA74\uC774 \uB290\uB07C\uD558\uB2E4\uB294 \uACE0\uC815\uAD00\uB150\uC744
+    \uBC84\uB824~"
+  ResultSprite: {fileID: 21300000, guid: 98ee8533814c4e28ab6e869308d16093, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 19
+  PurchasePrice: 11000
+  SpecialPrice: 0
+  SellPrice: 550
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: 2eab90bb52e145c8bb26d8243ba12235, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: b3daf056426e4223845a25b470976efc, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 8d93070e2a0148f1baa6d387829e642e, type: 2}
+    Count: 5
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 162fe78e52f14534a74688711b2c91b6, type: 2}
+    Count: 5
+    IsMainIngredient: 1

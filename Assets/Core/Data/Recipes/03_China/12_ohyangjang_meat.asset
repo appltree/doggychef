@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 12_ohyangjang_meat
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: china_ohyangjang_meat
+  Type: 2
+  Name: "\uC624\uD5A5\uC7A5\uC721"
+  Description: "\uB2E4\uC12F\uAC00\uC9C0 \uD5A5\uC758 \uB3FC\uC9C0\uACE0\uAE30! \uACE0\uAE09\uC9C0\uB2E4~\uB204\uB824~"
+  ResultSprite: {fileID: 21300000, guid: 572c5b673edd428e9d319b84e85e2477, type: 3}
+  DisplayScale: 0.8
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 4
+  ExclusiveStageNumber: 20
+  PurchasePrice: 0
+  SpecialPrice: 12
+  SellPrice: 1300
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: b3daf056426e4223845a25b470976efc, type: 2}
+    Count: 10
+    IsMainIngredient: 1
+  - MaterialGem: {fileID: 11400000, guid: 270696f6de0a4a42970c0f955b0fb293, type: 2}
+    Count: 8
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 8d93070e2a0148f1baa6d387829e642e, type: 2}
+    Count: 8
+    IsMainIngredient: 0

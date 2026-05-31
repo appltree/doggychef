@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 10_zzambong_zzazang_myun_complex
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: china_zzambong_zzazang_myun_complex
+  Type: 1
+  Name: "\uC9EC\uC9DC\uBA74"
+  Description: "\uC778\uC0DD \uCD5C\uB300\uC758 \uB09C\uC81C\uB97C \uD574\uACB0\uD558\uB2E4."
+  ResultSprite: {fileID: 21300000, guid: 2231ca62032543f59b152f2bace5f1dc, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 24
+  PurchasePrice: 10000
+  SpecialPrice: 0
+  SellPrice: 700
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: b3daf056426e4223845a25b470976efc, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: c28f4f11ee2f4931b08555e563e2a941, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 2eab90bb52e145c8bb26d8243ba12235, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 8d93070e2a0148f1baa6d387829e642e, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 162fe78e52f14534a74688711b2c91b6, type: 2}
+    Count: 6
+    IsMainIngredient: 1

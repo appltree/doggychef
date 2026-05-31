@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2896bc89cca00b64ea851cb605175bc6, type: 3}
+  m_Name: 05_mix_rice
+  m_EditorClassIdentifier: Assembly-CSharp::DoggyChef.RecipeData
+  RecipeTag: china_mix_rice
+  Type: 1
+  Name: "\uBCF6\uC74C\uBC25"
+  Description: "\uBD88\uB9DB\uC774 \uC0B4\uC544\uC788\uB294 \uC911\uD654\uBCF6\uC74C\uBC25!"
+  ResultSprite: {fileID: 21300000, guid: 75be8f60cac04b2d937ba09ad902dfaa, type: 3}
+  DisplayScale: 0.9
+  RequiresTray: 0
+  AdditionalHeartIncreaseAfterEat: 1
+  ExclusiveStageNumber: 9
+  PurchasePrice: 8000
+  SpecialPrice: 0
+  SellPrice: 400
+  Ingredients:
+  - MaterialGem: {fileID: 11400000, guid: c28f4f11ee2f4931b08555e563e2a941, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 9b680af387704f23b60e5f70a4165cdd, type: 2}
+    Count: 4
+    IsMainIngredient: 0
+  - MaterialGem: {fileID: 11400000, guid: 4639efef675b445fbb26ae68863721fb, type: 2}
+    Count: 5
+    IsMainIngredient: 1

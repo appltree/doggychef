@@ -65,7 +65,6 @@ namespace DoggyChef
         // [ShopButton] 상점 팝업을 엽니다.
         public void OnShopPressed()
         {
-            Debug.Log("OnShopPressed");
             UIManager.Instance?.ShowShopPopup();
         }
 

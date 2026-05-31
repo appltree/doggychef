@@ -90,6 +90,8 @@ namespace DoggyChef
             {
                 TimeLimit = CurrentStage.TimeLimit;
                 m_FeverHeartCount = CurrentStage.FeverHeartCount;
+                if (CurrentStage.AvailableCustomerPrefabs != null && CurrentStage.AvailableCustomerPrefabs.Count > 0)
+                    CustomerPrefabs = CurrentStage.AvailableCustomerPrefabs.ToArray();
             }
 
             GoalLeft = Goals != null ? Goals.Length : 0;

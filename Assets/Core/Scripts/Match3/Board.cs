@@ -118,27 +118,10 @@ namespace DoggyChef
         }
 #endif
 
-        // 스테이지 보석 데이터를 로드하고, 보드를 생성·초기화합니다.
+        // Build board gem candidates from recipes unlocked by RecipeData.ExclusiveStageNumber.
         void Start()
         {
-            if (LevelData.Instance != null && LevelData.Instance.CurrentStage != null)
-            {
-                var stageGems = LevelData.Instance.CurrentStage.AvailableGems;
-                if (stageGems != null && stageGems.Count > 0)
-                {
-                    m_GemDataLookup = new Dictionary<int, GemData>();
-                    m_AvailableGemTypes = new List<int>();
-
-                    foreach (var data in stageGems)
-                    {
-                        if (data != null && !m_GemDataLookup.ContainsKey(data.GemType))
-                        {
-                            m_GemDataLookup.Add(data.GemType, data);
-                            m_AvailableGemTypes.Add(data.GemType);
-                        }
-                    }
-                }
-            }
+            LoadAvailableGemsFromRecipes();
 
             GenerateBoard();
             // 테두리 캐시를 초기화해 ApplyBorderLayout이 강제 갱신하도록 합니다.
@@ -151,6 +134,44 @@ namespace DoggyChef
 
             m_HintIndicator = Instantiate(GameManager.Instance.Settings.VisualSettings.HintPrefab);
             m_HintIndicator.SetActive(false);
+        }
+
+        // Falls back to all recipe ingredients if no recipe is available for the current stage.
+        private void LoadAvailableGemsFromRecipes()
+        {
+            var recipes = HallManager.Instance != null ? HallManager.Instance.AllRecipes : null;
+            if (recipes == null || recipes.Length == 0) return;
+
+            int stageNumber = LevelData.Instance?.CurrentStage?.Number ?? 1;
+            m_GemDataLookup = new Dictionary<int, GemData>();
+            m_AvailableGemTypes = new List<int>();
+
+            foreach (var recipe in recipes)
+            {
+                if (recipe == null || !recipe.IsAvailableInStage(stageNumber) || recipe.Ingredients == null)
+                    continue;
+
+                foreach (var ingredient in recipe.Ingredients)
+                    AddAvailableGemData(ingredient.MaterialGem);
+            }
+
+            if (m_AvailableGemTypes.Count > 0) return;
+
+            foreach (var recipe in recipes)
+            {
+                if (recipe?.Ingredients == null) continue;
+
+                foreach (var ingredient in recipe.Ingredients)
+                    AddAvailableGemData(ingredient.MaterialGem);
+            }
+        }
+
+        private void AddAvailableGemData(GemData data)
+        {
+            if (data == null || m_GemDataLookup.ContainsKey(data.GemType)) return;
+
+            m_GemDataLookup.Add(data.GemType, data);
+            m_AvailableGemTypes.Add(data.GemType);
         }
 
         // 6단계 보드 루프를 매 프레임 실행합니다 (입력→스왑→이동→매치→삭제→빈칸 채우기).

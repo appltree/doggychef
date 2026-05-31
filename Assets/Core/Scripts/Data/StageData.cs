@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DoggyChef
@@ -20,8 +21,11 @@ namespace DoggyChef
     [Tooltip("피버 발동에 필요한 하트 수")]
     public int FeverHeartCount = 10;
 
-    [Header("Board Config")]
-    [Tooltip("이 스테이지의 보드에 출현할 보석 데이터 목록")]
-    public System.Collections.Generic.List<GemData> AvailableGems = new();
+    [Tooltip("스테이지 선택/시작 화면에 표시할 메시지")]
+    public string StageMessage;
+
+    [Header("Customer Config")]
+    [Tooltip("이 스테이지에서 출현 가능한 손님/동물 프리팹 목록")]
+    public List<GameObject> AvailableCustomerPrefabs = new();
   }
 }

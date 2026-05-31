@@ -182,7 +182,7 @@ namespace DoggyChef
                     {
                         if (ingredient.MaterialGem != null)
                         {
-                            string tag = ingredient.MaterialGem.BlockTag;
+                            string tag = ingredient.MaterialGem.GemTag;
                             int type = ingredient.MaterialGem.GemType;
 
                             // 해당 재료가 아직 필요하고, 보드에 존재한다면 그 색상을 삭제 대상으로 지정

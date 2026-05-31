@@ -361,7 +361,7 @@ namespace DoggyChef
                 foreach (var ing in order.Ingredients)
                 {
                     if (ing.MaterialGem == null) continue;
-                    string tag = ing.MaterialGem.BlockTag;
+                    string tag = ing.MaterialGem.GemTag;
                     if (!string.IsNullOrEmpty(tag) && table.GetRemainingNeed(tag) > 0)
                         tableTags.Add(tag);
                 }
@@ -372,8 +372,8 @@ namespace DoggyChef
                     var swap = m_PossibleSwaps[i];
                     if (CellContent.TryGetValue(swap.StartPosition, out var cell)
                         && cell.ContainingGem?.Data != null
-                        && !string.IsNullOrEmpty(cell.ContainingGem.Data.BlockTag)
-                        && tableTags.Contains(cell.ContainingGem.Data.BlockTag))
+                        && !string.IsNullOrEmpty(cell.ContainingGem.Data.GemTag)
+                        && tableTags.Contains(cell.ContainingGem.Data.GemTag))
                     {
                         candidates.Add(i);
                     }
@@ -937,7 +937,7 @@ namespace DoggyChef
                             squareSourceData.Add((g.transform.position, sr?.sprite));
                             g.ExplodeCount = 2;
                             squarePendingExplosions.Add((
-                                g.Data?.BlockTag,
+                                g.Data?.GemTag,
                                 g.transform.position,
                                 sr?.sprite,
                                 g.Data?.FoodSfx,
@@ -1045,7 +1045,7 @@ namespace DoggyChef
                         {
                             if (match.ExplodeDelay > 0f)
                             {
-                                string capturedTag = gem.Data?.BlockTag;
+                                string capturedTag = gem.Data?.GemTag;
                                 Vector3 capturedPos = gem.transform.position;
                                 Sprite capturedSprite = gem.GetComponentInChildren<SpriteRenderer>()?.sprite;
                                 AudioClip capturedSfx = gem.Data?.FoodSfx;
@@ -1584,7 +1584,7 @@ namespace DoggyChef
                     {
                         if (m_GemDataLookup.TryGetValue(gemType, out var gd))
                         {
-                            if (table.GetRemainingNeed(gd.BlockTag) > 0)
+                            if (table.GetRemainingNeed(gd.GemTag) > 0)
                                 priorityTypes.Add(gemType);
                         }
                     }

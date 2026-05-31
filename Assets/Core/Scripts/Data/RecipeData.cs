@@ -83,7 +83,7 @@ namespace DoggyChef
       if (string.IsNullOrEmpty(tag) || Ingredients == null) return 0;
       foreach (var ing in Ingredients)
       {
-        if (ing.MaterialGem != null && string.Equals(ing.MaterialGem.BlockTag, tag, StringComparison.Ordinal))
+        if (ing.MaterialGem != null && string.Equals(ing.MaterialGem.GemTag, tag, StringComparison.Ordinal))
         {
           return Mathf.Max(0, ing.Count);
         }

@@ -52,7 +52,7 @@ namespace DoggyChef
         //  런타임 상태
         // ──────────────────────────────────────────────────────────
 
-        // 이 슬롯이 담당하는 재료 BlockTag (TableOrderDisplay에서 gem과 매칭할 때 사용)
+        // 이 슬롯이 담당하는 재료 GemTag (TableOrderDisplay에서 gem과 매칭할 때 사용)
         public string IngredientTag { get; private set; }
 
         // 현재 남은 필요 수량
@@ -67,7 +67,7 @@ namespace DoggyChef
         // 
         // 파라미터:
         //   sprite       → GemData.Sprite (재료 아이콘)
-        //   tag          → GemData.BlockTag (재료 식별 태그)
+        //   tag          → GemData.GemTag (재료 식별 태그)
         //   remainingNeed → 현재 필요한 수량
         public void Setup(Sprite sprite, string tag, int remainingNeed)
         {

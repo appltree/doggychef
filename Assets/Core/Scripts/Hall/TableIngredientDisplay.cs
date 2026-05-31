@@ -160,7 +160,7 @@ namespace DoggyChef
                     0f);
                 slot.transform.localScale = Vector3.one * (cell / CellSize);
 
-                slot.Setup(gem.Sprite, gem.BlockTag, m_Table.GetRemainingNeed(gem.BlockTag));
+                slot.Setup(gem.Sprite, gem.GemTag, m_Table.GetRemainingNeed(gem.GemTag));
                 m_Slots.Add(slot);
             }
         }

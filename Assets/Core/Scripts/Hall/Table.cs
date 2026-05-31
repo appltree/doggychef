@@ -509,7 +509,7 @@ namespace DoggyChef
             {
                 if (ingredient.MaterialGem == null) continue;
 
-                string tag = ingredient.MaterialGem.BlockTag;
+                string tag = ingredient.MaterialGem.GemTag;
                 m_Required[tag] = ingredient.Count;
                 m_Collected[tag] = 0;
             }

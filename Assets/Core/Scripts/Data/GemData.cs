@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DoggyChef
 {
@@ -7,7 +8,8 @@ namespace DoggyChef
   {
     [Header("Gem Data")]
     [Tooltip("보석을 식별할 문자열 태그 (예: RedGem)")]
-    public string BlockTag;
+    [FormerlySerializedAs("BlockTag")]
+    public string GemTag;
 
     [Header("Visual Data")]
     [Tooltip("기존 3-Match의 Gem.GemType과 매핑하기 위한 정수 (보석 생성/판별 시 매칭)")]

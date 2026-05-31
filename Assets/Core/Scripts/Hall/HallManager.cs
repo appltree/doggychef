@@ -227,12 +227,12 @@ namespace DoggyChef
         // ================================================================
 
         // Board.OnGemExploded 핸들러.
-        // 파괴된 보석의 BlockTag를 확인하고, 해당 재료가 필요한 최우선 테이블에 전달합니다.
+        // 파괴된 보석의 GemTag를 확인하고, 해당 재료가 필요한 최우선 테이블에 전달합니다.
         private void OnGemExploded(Gem gem, Vector3 worldPos)
         {
             if (gem?.Data == null) return;
 
-            string tag = gem.Data.BlockTag;
+            string tag = gem.Data.GemTag;
             if (string.IsNullOrEmpty(tag)) return;
 
             var sr = gem.GetComponentInChildren<SpriteRenderer>();

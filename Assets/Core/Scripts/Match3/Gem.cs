@@ -51,8 +51,8 @@ namespace DoggyChef
         // 기본값 1(일반 보석). SmallBomb 소스 젬은 2로 설정되어 배달 횟수를 2배로 만듭니다.
         public int ExplodeCount = 1;
 
-        // 재료 태그(BlockTag), 음식 효과음(FoodSfx) 등 타이쿤 시스템에 필요한 데이터를 담습니다.
-        // HallManager가 OnGemExploded 이벤트를 받을 때 gem.Data.BlockTag 로 재료를 식별합니다.
+        // 재료 태그(GemTag), 음식 효과음(FoodSfx) 등 타이쿤 시스템에 필요한 데이터를 담습니다.
+        // HallManager가 OnGemExploded 이벤트를 받을 때 gem.Data.GemTag 로 재료를 식별합니다.
         // Setup()에서 설정되며 외부에서는 읽기만 가능합니다.
         public GemData Data { get; private set; }
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29f496b3c156834d811a1d7060d4736, type: 3}
+  m_Name: pizza008
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.StageData
+  Number: 8
+  TimeLimit: 120
+  GoalGold: 5800
+  GoalPerpect: 9800
+  FeverHeartCount: 10
+  StageMessage: "하와이안 딜라이트 피자 등장~!"
+  AvailableCustomerPrefabs:
+  - {fileID: 3719028602584229075, guid: 2a89b44ca6a726047b3bffe3459651d7, type: 3}
+  - {fileID: 3719028602584229075, guid: a998e646c4c097b4aaccbf14ee0bf797, type: 3}
+  - {fileID: 3719028602584229075, guid: 07327a06e581b7140a36915cadc1ddee, type: 3}
+  - {fileID: 3719028602584229075, guid: fb37dd46fa55dfe499cb2dea7f4092bb, type: 3}

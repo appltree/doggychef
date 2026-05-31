@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29f496b3c156834d811a1d7060d4736, type: 3}
+  m_Name: pizza002
+  m_EditorClassIdentifier: Assembly-CSharp::MyMatch3.StageData
+  Number: 2
+  TimeLimit: 80
+  GoalGold: 3000
+  GoalPerpect: 5800
+  FeverHeartCount: 10
+  StageMessage: "추워요! 재료가 얼어버렸어요~"
+  AvailableCustomerPrefabs:
+  - {fileID: 3719028602584229075, guid: a998e646c4c097b4aaccbf14ee0bf797, type: 3}
+  - {fileID: 3719028602584229075, guid: 47299f6751d2f6f4fb3616b2ff98636c, type: 3}
+  - {fileID: 3719028602584229075, guid: 5beec51f62eef4a4d9d14e0757d471c6, type: 3}

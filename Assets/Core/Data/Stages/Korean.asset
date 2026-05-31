@@ -16,5 +16,36 @@ MonoBehaviour:
   Symbol: {fileID: 21300000, guid: e15017bebba25e04289dd27d00903c18, type: 3}
   MainColor: {r: 0.345, g: 0.482, b: 0.757, a: 1}
   ShopName: "\uD55C\uC2DD\uC9D1"
-  Stages: []
+  Stages:
+  - {fileID: 11400000, guid: 8b902cc83ebd4d8987cd25860628945f, type: 2}
+  - {fileID: 11400000, guid: ef8ea7cb756742b0ab32274dfdfe2b0a, type: 2}
+  - {fileID: 11400000, guid: 3bb664c8ec9e49f2949a7723e6b4d6df, type: 2}
+  - {fileID: 11400000, guid: d98d0d4fe0b04b6ba83cb7a56e86228d, type: 2}
+  - {fileID: 11400000, guid: 7427a745959b433b9dd48b36a32a0ad0, type: 2}
+  - {fileID: 11400000, guid: ee90a941c0834650897f1ce0f4acf026, type: 2}
+  - {fileID: 11400000, guid: 402aa573bd8f4477b5b54a0f55374ace, type: 2}
+  - {fileID: 11400000, guid: ac89512551134dc5adeb6de449b392ff, type: 2}
+  - {fileID: 11400000, guid: eecb18f78c1643978daf1038757afc52, type: 2}
+  - {fileID: 11400000, guid: a334ad58bf044e2098fd73e14122a16b, type: 2}
+  - {fileID: 11400000, guid: bb7ca42ffc6c400783c82658489c40fa, type: 2}
+  - {fileID: 11400000, guid: f36ef55083bf4d3394a19757c6879455, type: 2}
+  - {fileID: 11400000, guid: a092d1853eb64e1798614bb84347625f, type: 2}
+  - {fileID: 11400000, guid: 221c561dd8ed4d2591a35b5e14ef0f03, type: 2}
+  - {fileID: 11400000, guid: 84abc7248b9247e09c2a0f364fcf8d84, type: 2}
+  - {fileID: 11400000, guid: 2323bdf13e3640b08c7826b2ea5c66ea, type: 2}
+  - {fileID: 11400000, guid: a396726090824270a70c451ab2ce953d, type: 2}
+  - {fileID: 11400000, guid: 9aa24688ebbb4c5382e3eeda1a247bac, type: 2}
+  - {fileID: 11400000, guid: 6575e9775b2049e98885ef3b2021f499, type: 2}
+  - {fileID: 11400000, guid: 80f65b438454461e9cebbd9c0103dbf1, type: 2}
+  - {fileID: 11400000, guid: f2c076fc96154b5b9174bcb7bc5b043f, type: 2}
+  - {fileID: 11400000, guid: 5ff44e15cd7040d1b162607e237ba950, type: 2}
+  - {fileID: 11400000, guid: b824dd383fd14fe7a72ed9029f5f668a, type: 2}
+  - {fileID: 11400000, guid: d53ef18e53d140c0a1532ff3c71d5ee9, type: 2}
+  - {fileID: 11400000, guid: f6905553191e4c0089bfe618659ce52d, type: 2}
+  - {fileID: 11400000, guid: bcd9e6c339d34a5abeb003e81900be1a, type: 2}
+  - {fileID: 11400000, guid: d57ba81f7fcf4bf88ee6a0a242bcf6b0, type: 2}
+  - {fileID: 11400000, guid: 83bc3de1159240eaa0b77e678c136d30, type: 2}
+  - {fileID: 11400000, guid: 413f60122c074f3cb46cee835ab91411, type: 2}
+  - {fileID: 11400000, guid: a9625cc934a4482688d1b51047f266e5, type: 2}
+
   Recipes: []

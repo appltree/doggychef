@@ -1,0 +1,13 @@
+fileformat,1,,,,
+resource_type,block,,,,
+resource_ver,1,,,,
+resource_id,block_boonsik,,,,
+순번,블럭아이디,태그,사운드아이디,블록기본이미지,글로우이미지
+no,id,tag,sound_id,image,image_glow
+0,0,cheese,7,block_cheese.png,block_cheese_glow.png
+1,1,ddukbokki,2,block_ddukbokki.png,block_ddukbokki_glow.png
+2,2,kimbob,9,block_kimbob.png,block_kimbob_glow.png
+3,3,mandu,3,block_mandu.png,block_mandu_glow.png
+4,4,pepper,9,block_pepper.png,block_pepper_glow.png
+5,5,ramen,2,block_ramen.png,block_ramen_glow.png
+6,6,hotdog,3,block_hotdog.png,block_hotdog_glow.png

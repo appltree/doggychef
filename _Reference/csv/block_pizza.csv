@@ -1,0 +1,16 @@
+fileformat,1,,,,
+resource_type,block,,,,
+resource_ver,1,,,,
+resource_id,block_china,,,,
+순번,블럭아이디,태그,사운드아이디,블록기본이미지,글로우이미지
+no,id,tag,sound_id,image,image_glow
+0,0,cheese,7,block_pizza_cheese.png,block_pizza_cheese_glow.png
+1,1,corn,14,block_pizza_corn.png,block_pizza_corn_glow.png
+2,2,pineapple,15,block_pizza_fineapple.png,block_pizza_fineapple_glow.png
+3,3,meat,0,block_pizza_meat.png,block_pizza_meat_glow.png
+4,4,mushroom,9,block_pizza_mushroom.png,block_pizza_mushroom_glow.png
+5,5,olive,15,block_pizza_olive.png,block_pizza_olive_glow.png
+6,6,pepper,9,block_pizza_pepper.png,block_pizza_pepper_glow.png
+7,7,salami,7,block_pizza_salami.png,block_pizza_salami_glow.png
+8,8,shrimp,14,block_pizza_shrimp.png,block_pizza_shrimp_glow.png
+9,9,tomato,9,block_pizza_tomato.png,block_pizza_tomato_glow.png

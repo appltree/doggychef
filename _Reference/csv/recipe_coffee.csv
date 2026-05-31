@@ -1,0 +1,24 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,,
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_coffee,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수,메인재료,재료갯수,재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,23,hot_ame,default,0,2,coffee,2,"coffeebean,4,syrup,3,",recipe_coffee_hot_ame.png,"0.5,0.4,",200,0,0,100,0,no,0.9,아메리카노,cheesekimbob,아메아메아메아메~ 쪼아! 쪼아!,NULL
+1,24,hot_esso,default,0,2,coffee,1,"coffeebean,4,",recipe_coffee_hot_esso.png,"0.5,0.25,",150,0,0,100,0,no,0.9,에스프레소,cheesekimbob,이탈리안 훈남이 될 것 같지만 현실은 사약 먹은 오징어.,NULL
+2,25,hot_latte,default,0,3,coffee,2,"coffeebean,4,milk,3,",recipe_coffee_hot_latte.png,"0.5,0.4,",250,0,0,100,0,no,0.9,까페라떼,cheesekimbob,몸도 마음도 추운날 따뜻한 라떼 한 잔.,NULL
+3,26,ice_ame,default,0,4,coffee,3,"coffeebean,3,ice,5,syrup,3,",recipe_coffee_ice_ame.png,"0.5,0.5,",300,0,0,100,0,no,0.8,아이스 아메리카노,cheesekimbob,목탈때 원샷하고 얼음 깨물어 먹는 그런 싸나에!,NULL
+4,27,ice_latte,default,0,4,coffee,3,"coffeebean,3,ice,4,milk,3,",recipe_coffee_ice_latte.png,"0.5,0.5,",300,0,0,100,0,no,0.8,아이스 라떼,cheesekimbob,뭐랄까….아메리카노 보단 고소하고 모카보단 담백한?,NULL
+5,28,muff,default,0,5,cake,1,"muffine,5,",recipe_coffee_muff.png,"0.5,0.25,",300,0,0,100,0,yes,0.9,머핀,cheesekimbob,폭신하고 고소한 플레인 머핀.,NULL
+6,29,cake,default,0,6,cake,1,"cake,5,",recipe_coffee_cake.png,"0.5,0.25,",300,0,0,100,0,yes,0.9,케잌,cheesekimbob,입안에서 부드럽게 녹는 플레인 케익.,NULL
+7,30,hot_latte_char,9,9,6,coffee,3,"coffeebean,4,milk,3,syrup,4,",recipe_coffee_hot_latte_char.png,"0.5,0.4,",350,9500,0,130,1,no,0.9,카라멜 마끼아또,cheesekimbob,진하고 뜨거운 커피와 캬라멜향의 달콤한 조화.,NULL
+8,31,hot_con,11,11,7,coffee,2,"coffeebean,4,cream,4,",recipe_coffee_hot_con.png,"0.5,0.4,",300,9000,0,110,1,no,0.9,콘파냐,cheesekimbob,먹을만한 사약.,NULL
+9,32,cake_cream,13,13,7,cake,2,"cake,5,cream,5,",recipe_coffee_cake_cream.png,"0.5,0.25,",400,10000,0,120,2,yes,0.9,생크림케익,cheesekimbob,케익 위에 생크림을 얹으면? 생크림케익이지 뭐.,NULL
+10,33,hot_choco,15,15,8,coffee,2,"choco,6,milk,5,",recipe_coffee_hot_choco.png,"0.5,0.4,",400,10000,0,120,1,no,0.9,핫초코,cheesekimbob,찬바람이 불땐…혼자 먹니?,NULL
+11,34,hot_mocha,17,17,8,coffee,4,"coffeebean,5,cream,5,choco,4,milk,4,",recipe_coffee_hot_mocha.png,"0.5,0.5,",500,12000,0,130,1,no,0.8,까페 모카,cheesekimbob,커피만으로 부족한 날엔 초콜렛이 듬뿍들어간 까페모카.,NULL
+12,35,prap_mocha,19,19,8,coffee,5,"coffeebean,5,cream,4,choco,5,milk,4,ice,5,",recipe_coffee_prap_mocha.png,"0.5,0.5,",700,16000,0,140,2,no,0.8,모카 프라푸치노,cheesekimbob,달콤한 까페모카를 시원하게!,NULL
+13,36,muff_choco,21,21,8,cake,2,"muffine,7,choco,7,",recipe_coffee_muff_choco.png,"0.5,0.25,",500,13000,0,130,1,yes,0.9,초코머핀,cheesekimbob,진한 초콜렛을 듬뿍 넣고 구운 머핀.,NULL
+14,37,muff_choco_straw_cream,23,23,9,cake,4,"muffine,7,cream,5,choco,5,straw,5,",recipe_coffee_muff_choco_cream_straw.png,"0.5,0.25,",800,18000,0,150,1,yes,0.8,딸기 생크림 초코머핀 ,cheesekimbob,초코 머핀에 생크림을 얹어 상큼한 딸기로 마무리한 회심작.,NULL
+15,38,cake_choco_straw_cream,25,25,9,cake,4,"cake,7,choco,5,cream,5,straw,7,",recipe_coffee_cake_choco_straw.png,"0.5,0.25,",1000,20000,0,160,1,yes,0.9,딸기 생크림 초코케잌,cheesekimbob,초코 케익에 크림과 딸기를 얹었는데 맛이 없을수가 있겠니?,NULL
+16,39,prap_straw,27,27,9,coffee,3,"straw,7,milk,6,ice,8,",recipe_coffee_prap_straw.png,"0.5,0.5,",1100,22000,0,180,2,no,0.8,딸기스무디,cheesekimbob,상큼한 딸기를 시원한 스무디로!,NULL
+17,40,cake_tira_choco,secret,20,9,cake,4,"coffeebean,7,cream,8,cake,7,choco,8,",recipe_coffee_cake_tira.png,"0.5,0.3,",1500,0,10,200,4,yes,0.9,티라미수,cheesekimbob,부드럽게 입안에서 녹는 커피향의 무스케익.,NULL

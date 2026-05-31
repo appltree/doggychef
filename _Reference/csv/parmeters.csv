@@ -1,0 +1,21 @@
+fileformat,1,,,
+resource_type,parameters,,,
+resource_ver,1,,,
+resource_id,parameters_00,,,
+순번,태그,값(문자열),값(정수형),설명
+no,tag,value_string,value_integer,explain
+0,present_check_1day,gold,200,출석1일째 선물
+1,present_check_2day,gold,500,출석2일째 선물
+2,present_check_3day,random,1,출석3일째 선물
+3,present_check_4day,gold,1000,출석4일째 선물
+4,present_check_5day,gum,5,출석5일째 선물
+5,present_check_6day,gold,2000,출석6일째 선물
+6,present_check_7day,gold,5000,출석7일째 선물
+7,present_check_8day,roullette,3,출석8일째 선물
+8,present_check_9day,gold,9000,출석9일째 선물
+9,present_check_10day,delly,10,출석10일째 선물
+10,crazy_mode_star_cnt,NULL,40,크레이지모드 오픈 별 갯수
+11,crazy_bgm_id,NULL,3,크레이지모드 BGM
+12,crazy_heart_vel,NULL,120,크레이지모드 10단계부터 하트 떨어지는 가중치
+13,crazy_time_interval,NULL,20,크레이지모드 10단계부터 단계별 설정간격
+14,stage_pass_delly,NULL,3,스테이지모드 다음판으로 강제 이동 소모 델리

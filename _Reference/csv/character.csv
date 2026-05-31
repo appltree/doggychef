@@ -1,0 +1,20 @@
+fileformat,1,,,,,,,,,,,,,,,,
+resource_type,character,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,
+resource_id,character_0000,,,,,,,,,,,,,,,,
+순번,아이디,태그,이름,타입,리소스,영역크기,난이도,최대하트수,초기하트수,화난상태최대값,화난 상태 하트수,웃는 상태 하트수,웃는상태최대값,팁가중치(%),화난상태 팁 가중치(%),웃는상태 팁 가중치(%),설명
+no,id,tag,name,type,resource,size,difficulty,heart_max,heart_start,status_angry_max,status_angry,status_smile,status_smile_max,tip_percent,angry_tip,smile_tip,explain_kor
+0,0,duck,오리,single,node_animal_duck.ccbi,"127,176,",1,10,10,-65,-30,20,65,100,80,130,해맑은 오리 어린이
+1,1,rabbit,토끼,single,node_animal_rabbit.ccbi,"99,184,",1,10,10,-60,-25,30,70,105,70,140,소심한 토끼 어린이 
+2,2,poodle,푸들,single,node_animal_poodle.ccbi,"140,179,",2,8,8,-55,-20,40,65,115,70,150,꼼꼼한 푸들캐셔
+3,3,cat,고양이,double,node_animal_cat.ccbi,"123,192,",5,6,6,-40,-15,40,30,150,60,150,까칠한 고양이 아가씨
+4,4,parrot,앵무새,double,node_animal_parrot.ccbi,"133,202,",3,10,8,-35,-25,40,65,140,70,150,락스피릿 앵무새
+5,5,squirrel,다람쥐,double,node_animal_squirrel.ccbi,"143,171,",4,8,8,-35,-20,30,55,160,60,140,사춘기 다람쥐 소녀
+6,6,hippo,하마,single,node_animal_hippo.ccbi,"147,205,",4,8,6,-35,-20,30,50,200,50,160,우아한 하마부인
+7,7,horse,말,single,node_animal_horse.ccbi,"141,200,",1,10,10,-45,-25,35,55,180,50,150,강남 말총각
+8,8,panda,팬더,double,node_animal_panda.ccbi,"147,205,",1,8,8,-45,-20,40,50,200,55,130,섬세한 팬더 언니
+9,9,mole,두더지,single,node_animal_mole.ccbi,"123,192,",1,6,6,-40,-20,30,60,160,45,120,속을알수없는 두더지씨
+10,10,lion,사자,single,node_animal_lion.ccbi,"123,192,",1,6,6,-35,-20,35,65,170,35,150,유러피안 옴므 사자
+11,11,deer,사슴,single,node_animal_dear.ccbi,"123,192,",1,8,8,-45,-25,40,55,150,55,130,모델지망생 사슴아가씨
+12,12,tiger,호랑이,single,node_animal_tiger.ccbi,"123,192,",1,6,6,-50,-25,30,50,130,35,120,도포맵시 갑 호랑이총각
+13,13,fox,구미호,single,node_animal_fox.ccbi,"123,192,",1,6,6,-45,-16,20,30,140,25,120,무섭고 쎈 구미호언니

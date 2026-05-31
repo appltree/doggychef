@@ -1,0 +1,17 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,,
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_pizza,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수(쓰지않음),메인재료,재료갯수(쓰지않음),재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,68,bob,default,0,1,bob,0,"rice,5,",recipe_korean_bob.png,"0.5,0.5,",50,0,0,100,0,no,0.9,공기밥,cheesekimbob,밥을 먹으면 든든해요!,NULL
+1,69,boolgogi,default,0,2,boolgogi,0,"beef,5,sauce,3,garlic,3,",recipe_korean_boolgogi.png,"0.5,0.5,",120,0,0,100,0,no,0.9,불고기,cheesekimbob,달콤한 양념의 소불고기,NULL
+2,70,boolgogi_bok,default,0,4,bok,0,"pork,5,pepper,3,pa,3,",recipe_korean_jeyook_bok.png,"0.5,0.5,",170,0,0,100,0,no,0.9,제육볶음,cheesekimbob,매콤하고 칼칼한 제육볶음,NULL
+3,71,kalbee,4,4,4,kalbee,0,"beef,5,sauce,5,garlic,5,",recipe_korean_kalbee.png,"0.5,0.5,",250,12000,0,150,0,no,0.9,갈비,cheesekimbob,양념에 푹 재운 갈비를 숯불에 지글지글~,NULL
+4,72,kalbee_tang,8,8,6,gook,0,"beef,5,pa,5,garlic,5,",recipe_korean_kalbee_gook.png,"0.5,0.5,",380,14000,0,180,0,no,0.9,갈비탕,cheesekimbob,부드러운 국물에 푹익은 갈비 당면도 별미,NULL
+5,73,sam_vegetable,12,12,8,sam,0,"vegetable,5,",recipe_korean_sam_vetetable.png,"0.5,0.5,",650,18000,0,200,0,no,0.9,야채쌈,cheesekimbob,상추 깻잎에 고기얹고 입안에 쏙!,NULL
+6,74,kong_gook,16,16,9,gook,0,"bean,5,garlic,5,pepper,6,",recipe_korean_kong_gook.png,"0.5,0.5,",500,17000,0,210,0,no,0.9,콩나물국밥,cheesekimbob,깔끔하고 칼칼한 국물~ 해장엔 딱!,NULL
+7,75,sam_kimchi,20,20,10,kimchi,0,"kimchi,5,",recipe_korean_sam_kimchi.png,"0.5,0.5,",650,20000,0,220,0,no,0.9,김치쌈,cheesekimbob,김치에 고기를 얹어 깔끔하게 한입!,NULL
+8,76,dooroo,24,24,10,dooroo,0,"pork,7,kimchi,7,pepper,5,",recipe_korean_dooroo.png,"0.5,0.5,",800,22000,0,240,0,no,0.9,두루치기,cheesekimbob,김치와 돼지고기의 환상적 궁합,NULL
+9,77,kimchi_bok,27,27,10,bob,0,"kimchi,7,pepper,6,rice,7,",recipe_korean_kimchi_bok.png,"0.5,0.5,",600,18000,0,230,0,no,0.9,김치볶음밥,cheesekimbob,새콤 매콤 아삭아삭 김치볶음밥,NULL
+10,78,kong_bookgogi,secret,19,10,boolgogi,0,"pork,7,sauce,5,bean,7,vegetable,5,",recipe_korean_kong_bookgogi.png,"0.5,0.5,",1100,0,14,260,0,no,0.8,콩나물 불고기,cheesekimbob,콩나물이 들어간 색다른 불고기,NULL

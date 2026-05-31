@@ -1,0 +1,17 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,,
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_hamburger,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수,메인재료,재료갯수,재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,12,french_fried,default,0,1,french_fried,1,"potato,4,",recipe_hamburger_french_fried.png,"0.5,0.3,",150,0,0,100,0,yes,1.0,후렌치 후라이,cheeseramen,고소하고 짭짤한 감자튀김! ,NULL
+1,13,patty_hamburger,default,0,3,hamburger,2,"bread,3,ham,3,",recipe_hamburger_patty_hamburger.png,"0.5,0.3,",250,0,0,100,0,yes,1.0,패티 햄버거,hotddukbokki,고기맛을 극대화 시킨이라 쓰고 토핑이 부실한 이라 읽는다.,NULL
+2,14,cheese_hamburger,default,0,4,hamburger,3,"bread,3,ham,3,cheese,3,",recipe_hamburger_cheese_hamburger.png,"0.5,0.3,",300,0,0,100,0,yes,1.0,치즈 버거,ddukbokki,고소한 치즈가 들어있어 맛도 두배 칼로리도 두배~,NULL
+3,15,vegetable_hamburger,default,0,6,hamburger,3,"bread,3,vegetables,4,tomato,3,",recipe_hamburger_vegetable_hamburger.png,"0.5,0.3,",400,0,0,100,0,yes,1.0,야채 버거,hotcheeseddukbokki,느끼한 햄버거는 가라! 상큼한 햄버거가왔다. Oh! Oh! ,NULL
+4,16,salad,6,6,7,salad,2,"vegetables,5,catsup,3,",recipe_hamburger_salad.png,"0.5,0.3,",500,16000,0,120,1,yes,1.0,샐러드,hotramen,다이어트 중이라 샐러드 사러왔는데 옆에서 햄버거먹네.,NULL
+5,17,deluxe_hamburger,10,10,8,hamburger,4,"bread,4,ham,5,tomato,5,onion,4,",recipe_hamburger_deluxe_hamburger.png,"0.5,0.3,",600,20000,0,150,2,yes,1.0,디럭스 버거,cheeseddukbokki,디럭스버거를 먹어보지 않고 햄버거의 맛을 논하지 마라!,NULL
+6,18,dobble_cheese_hamrbuger,14,14,8,hamburger,4,"bread,4,ham,5,cheese,5,onion,5,",recipe_hamburger_dobble_cheese_hamburger.png,"0.5,0.3,",700,18000,0,160,1,yes,1.0,더블 치즈 버거,cheesekimbob,꽉찬 고기! 두배의 치즈! 칼로리는 우리 둘만 알기로 해요.,NULL
+7,19,chicken,18,18,9,chicken,1,"chicken,8,",recipe_hamburger_chicken.png,"0.5,0.3,",800,14000,0,160,1,yes,1.0,치킨,mandu,반반 무 많이는 없 ㅋ 엉 ㅋ 그냥 후라이드 머겅. ,NULL
+8,20,chicken_hamburger,22,22,9,hamburger,3,"bread,5,chicken,6,vegetables,6,",recipe_hamburger_cheese_hamburger.png,"0.5,0.3,",1000,27000,0,170,1,yes,1.0,치킨 버거,ramen,닭가슴살과 야채로 만든 색다른 버거를 맛보세요!,NULL
+9,21,chicken_salad,26,26,9,salad,4,"vegetables,6,chicken,6,onion,4,catsup,4,",recipe_hamburger_chicken_salad.png,"0.5,0.3,",1200,30000,0,180,2,yes,1.0,치킨 샐러드,hotdog,샐러드에 치킨휠레 추가하면 더 맛있는거 다 알자나여.,NULL
+10,22,chicken_deluxe_hamburger,secret,20,9,hamburger,5,"bread,5,chicken,6,vegetables,5,tomato,4,onion,4,",recipe_hamburger_chicken_deluxe_hamburger.png,"0.5,0.3,",1400,0,10,200,4,yes,1.0,치킨디럭스 버거,kimbob,치킨에 빵에 치즈도 들었는데 안 맛있고 배김?,NULL

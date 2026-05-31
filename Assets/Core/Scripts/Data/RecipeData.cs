@@ -32,6 +32,17 @@ namespace DoggyChef
     [Tooltip("레시피 아이콘 (결과물 완성이미지)")]
     public Sprite ResultSprite;
 
+    [Min(0f)]
+    [Tooltip("화면에 표시할 때 적용할 스케일")]
+    public float DisplayScale = 1f;
+
+    [Tooltip("이 레시피가 제공될 때 쟁반이 필요한지 여부")]
+    public bool RequiresTray;
+
+    [Min(0)]
+    [Tooltip("손님이 이 레시피를 먹은 뒤 추가로 증가하는 하트 개수")]
+    public int AdditionalHeartIncreaseAfterEat;
+
     [Tooltip("이 레시피가 나오는 스테이지 번호 (Type이 StageExclusive일 때 참조)")]
     public int ExclusiveStageNumber;
 
@@ -54,6 +65,9 @@ namespace DoggyChef
       [Min(1)]
       [Tooltip("해당 타입의 보석 요구 수량")]
       public int Count;
+
+      [Tooltip("이 재료가 레시피의 대표 재료인지 여부")]
+      public bool IsMainIngredient;
     }
 
     [Header("Ingredients")]

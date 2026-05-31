@@ -1,0 +1,19 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,,
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_coffee,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수,메인재료,재료갯수,재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,41,zzazang_myun,default,0,3,myun,3,"jang,3,meat,3,myun,5,",recipe_china_zzazang_myun.png,"0.5,0.5,",180,0,0,100,0,no,0.9,짜장면,cheesekimbob,건더기가 큼직한 달큰달큰 짜장면.,NULL
+1,42,zzambong_myun,default,0,5,myun,3,"shrimp,3,pepper,3,myun,5,",recipe_china_zzambong_myun.png,"0.5,0.5,",220,0,0,100,0,no,0.9,짬뽕면,cheesekimbob,쌀쌀한날 얼큰한 국물을 후루루루루룰루~캬,NULL
+2,43,wool_myun,default,0,6,myun,3,"mushroom,3,shrimp,3,myun,5,",recipe_china_wool_myun.png,"0.5,0.5,",250,0,0,100,0,no,0.9,울면,cheesekimbob,산타할아버지 앞에선 이거 안돼~,NULL
+3,44,tang_meat,3,3,7,meat,3,"meat,6,mushroom,4,source,4,",recipe_china_tang_meat.png,"0.5,0.5,",500,9000,0,130,1,no,0.8,탕수육,cheesekimbob,부어먹을래? 찍어먹을래? 싸우지말고 반만부어~,NULL
+4,45,zzazang_rice,5,5,8,rice,3,"jang,4,rice,5,meat,4,",recipe_china_zzazang_rice.png,"0.5,0.5,",300,6000,0,140,1,no,0.8,짜장밥,cheesekimbob,짜장의 또다른 선택! ,NULL
+5,46,mix_rice,9,9,8,rice,3,"shrimp,4,mushroom,4,rice,5,",recipe_china_mix_rice.png,"0.5,0.5,",400,8000,0,150,1,no,0.9,볶음밥,cheesekimbob,불맛이 살아있는 중화볶음밥!,NULL
+6,47,shrimp_chae,13,13,8,chae,2,"shrimp,8,source,8,",recipe_china_shrimp_chae.png,"0.5,0.5,",600,12000,0,170,1,no,0.9,칠리새우,cheesekimbob,새우는 늘 옳으니까...맛있으니까...,NULL
+7,48,pepper_chae,17,17,8,chae,3,"source,6,pepper,6,meat,7,",recipe_china_pepper_chae.png,"0.5,0.5,",700,13000,0,180,2,no,0.9,고추잡채,cheesekimbob,꽃빵은 서비스!,NULL
+8,49,sa_zzazang_myun,19,19,8,myun,4,"jang,4,meat,4,pepper,5,myun,5,",recipe_china_sa_zzazang_myun.png,"0.5,0.5,",550,11000,0,170,1,no,0.9,사천짜장면,cheesekimbob,짜장면이 느끼하다는 고정관념을 버려~,NULL
+9,50,palbo_chae,22,22,8,chae,4,"meat,6,shrimp,6,source,6,mushroom,6,",recipe_china_palbo_chae.png,"0.5,0.5,",850,17000,0,200,2,no,0.9,팔보채,cheesekimbob,귀한 해산물이 8가지라서 팔보채!,NULL
+10,51,zzambong_zzazang_myun_complex,24,24,8,myun,5,"meat,4,shrimp,4,jang,4,pepper,4,myun,6,",recipe_china_zzambong_zzazang_myun.png,"0.5,0.5,",700,10000,0,210,1,no,0.9,짬짜면,cheesekimbob,인생 최대의 난제를 해결하다.,NULL
+11,52,tang_meat_mix_rice_complex,24,24,8,rice,5,"meat,6,source,4,shrimp,4,mushroom,4,rice,6,",recipe_china_tang_meat_mix_rice.png,"0.5,0.5,",900,10000,0,220,1,no,0.8,탕볶밥,cheesekimbob,인생 두번째 난제도 해결하다.,NULL
+12,53,ohyangjang_meat,secret,20,8,meat,3,"meat,10,source,8,pepper,8,",recipe_china_ohyangjang_meat.png,"0.5,0.5,",1300,0,12,240,4,no,0.8,오향장육,cheesekimbob,다섯가지 향의 돼지고기! 고급지다~누려~,NULL

@@ -1,0 +1,11 @@
+fileformat,1,,,,,,,,
+resource_type,item,,,,,,,,
+resource_ver,1,,,,,,,,
+resource_id,item_0000,,,,,,,,
+순번,아이디,태그,이름,설명,아이콘,속성,최초갯수,쿨링타임(초),가격
+no,id,tag,name,explain_kor,icon_tag,stage,default_count,cooltime,price
+0,0,hint,힌트,블록매치의 힌트를 줍니다,hint,0,10,5,"gold,100,"
+1,1,refresh,새로고침,블록전체를 바꿉니다.,refresh,0,10,20,"gold,400,"
+2,2,timeincrease,시계,제한시간을 10초 늘려줍니다.,time,0,10,30,"gold,1000,"
+3,3,candy,캔디,모든 손님의 하트게이지를 채워줍니다,candy,16,10,30,"gold,1200,"
+4,4,bomb,폭탄,선택블록 주변의 블록을 없애줍니다.,bomb,20,10,15,"gold,800,"

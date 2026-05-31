@@ -1,0 +1,15 @@
+fileformat,1,,,,
+resource_type,block,,,,
+resource_ver,1,,,,
+resource_id,block_china,,,,
+순번,블럭아이디,태그,사운드아이디,블록기본이미지,글로우이미지
+no,id,tag,sound_id,image,image_glow
+0,0,jang,13,block_china_jang.png,block_china_jang_glow.png
+1,1,meat,13,block_china_meat.png,block_china_meat_glow.png
+2,2,mushroom,9,block_china_mushroom.png,block_china_mushroom_glow.png
+3,3,myun,12,block_china_myun.png,block_china_myun_glow.png
+4,4,pepper,9,block_china_pepper.png,block_china_pepper_glow.png
+5,5,rice,11,block_china_rice.png,block_china_rice_glow.png
+6,6,shrimp,13,block_china_shrimp.png,block_china_shrimp_glow.png
+7,7,source,6,block_china_source.png,block_china_source_glow.png
+8,8,danmooji,0,block_china_danmooji.png,block_china_danmooji_glow.png

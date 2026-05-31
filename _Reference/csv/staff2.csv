@@ -1,0 +1,9 @@
+fileformat,1,,,,,,,,,,,
+resource_type,staff,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,
+resource_id,staff_00,,,,,,,,,,,
+순번,태그,명칭,설명,조건,고용비(골드),수익셰어(%)카운트만적용됨,손님이 돈 놓았을경우 가져가는 시간(ms),사이드 음식이 완성되었을경우 가져가는 시간(ms),울기전에 사탕주는 확률(%),연속동작사이의 시간(ms),조건설명,기능 설명
+no,tag,name,explain,conditon,hire_pay,profit_share,term_count,term_serve,candy_percent,term_work,condition_explain,fuction_explain
+0,candy_0,캔디캐셔,초보 카운터,0,400,10,3000,0,30,2500,피자집을 오픈해야 고용할 수 있어요.,가끔씩 내키면 손님을 달래줘요.
+1,candy_1,캔디캐셔,능숙한 케어,25,500,15,1500,0,40,1500,%d번 더 고용하거나 %d델리를 사용하면 승진 할 수 있어요.,조금은 운영에 도움이 되려나?
+2,candy_2,캔디캐셔,신들린 서비스,40,600,15,600,0,60,700,%d번 더 고용하거나 %d델리를 사용하면 승진 할 수 있어요.,우리가게의 마스코트!

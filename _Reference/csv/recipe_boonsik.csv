@@ -1,0 +1,18 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,가격 순 (김밥->라면->떡복기),
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_boonsik,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수,메인재료,재료갯수,재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,0,ddukbokki,default,0,1,ddukbokki,1,"ddukbokki,4,",recipe_boonsik_ddukbokki.png,"0.5,0.5,",100,0,0,100,0,yes,1.0,떡볶이,ddukbokki,며느리도 딸도 누구나 만들 줄 아는 떡볶이.,NULL
+1,1,mandu,default,0,2,mandu,1,"mandu,3,",recipe_boonsik_mandu.png,"0.5,0.5,",80,0,0,100,0,yes,1.0,만두,mandu,고향의 바로 그 맛 살짝 튀겨만 주세요.,NULL
+2,2,kimbob,default,0,3,kimbob,1,"kimbob,3,",recipe_boonsik_kimbob.png,"0.5,0.5,",80,0,0,100,0,yes,1.0,김밥,kimbob,천국에서 왔어요. 쉽고 간단하게 말아만 주세요.,NULL
+3,3,ramen,default,0,4,ramen,1,"ramen,4,",recipe_boonsik_ramen.png,"0.5,0.3,",100,0,0,100,0,yes,1.0,라면,ramen,파송송 계란탁 올리면 완성되는 기본라면.,NULL
+4,4,hotdog,default,0,5,hotdog,1,"hotdog,3,",recipe_boonsik_hotdog.png,"0.5,0.5,",80,0,0,100,0,yes,1.0,핫도그,hotdog,아으거 아으거 뜨거우니 입천정 조심하세요.,NULL
+5,5,cheesekimbob,additional,4 ,6,kimbob,2,"kimbob,3,cheese,4,",recipe_boonsik_cheesekimbob.png,"0.5,0.5,",150,3000,0,120,1,yes,1.0,치즈 김밥,cheesekimbob,치즈를 넣어 만든 고소한 김밥.,NULL
+6,6,cheeseramen,additional,8 ,6,ramen,2,"ramen,4,cheese,4,",recipe_boonsik_cheeseramen.png,"0.5,0.3,",200,5000,0,120,1,yes,1.0,치즈 라면,cheeseramen,내일 아침 부은 얼굴이 걱정된다면?,NULL
+7,7,cheeseddukbokki,additional,12 ,6,ddukbokki,2,"ddukbokki,4,cheese,4,",recipe_boonsik_cheeseddukbokki.png,"0.5,0.5,",200,6000,0,150,2,yes,1.0,치즈 떡볶이,cheeseddukbokki,떡볶이에 치즈를 얹어 맛도 두 배 가격도 두 배.,NULL
+8,8,hotramen,additional,17 ,7,ramen,2,"ramen,4,pepper,4,",recipe_boonsik_hotramen.png,"0.5,0.3,",250,10000,0,150,1,yes,1.0,매운 라면,hotramen,청양고추를 송송 썰어 넣어 국물이 얼큰해요~,NULL
+9,9,hotddukbokki,additional,21 ,7,ddukbokki,2,"ddukbokki,4,pepper,4,",recipe_boonsik_hotddukbokki.png,"0.5,0.5,",350,13000,0,160,1,yes,1.0,매운 떡볶이,hotddukbokki,청양고추를 송송 썰어 넣어 만든 맛있게 매운 떡볶이.,NULL
+10,10,hotcheeseramen,additional,25 ,7,ramen,3,"ramen,4,cheese,4,pepper,4,",recipe_boonsik_hotcheeseramen.png,"0.5,0.3,",450,16000,0,180,2,yes,1.0,매운 치즈 라면,hotcheeseramen,맵지만 부드러운 국물이 끝내줘요!,NULL
+11,11,hotcheeseddukbokki,secret,20 ,7,ddukbokk,3,"ddukbokki,4,cheese,4,pepper,4,",recipe_boonsik_hotcheeseddukbokki.png,"0.5,0.5,",600,0,10,190,4,yes,1.0,매운 치즈 떡볶이,hotcheeseddukbokki,땀나게 매운 맛을 고소한 치즈로 감싸 풍부한 맛!,NULL

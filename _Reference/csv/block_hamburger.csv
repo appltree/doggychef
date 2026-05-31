@@ -1,0 +1,15 @@
+fileformat,1,,,,
+resource_type,block,,,,
+resource_ver,1,,,,
+resource_id,block_hamburger,,,,
+순번,블럭아이디,태그,사운드아이디,블록기본이미지,글로우이미지
+no,id,tag,sound_id,image,image_glow
+0,0,bread,7,block_hamburger_bread.png,block_hamburger_bread_glow.png
+1,1,catsup,6,block_hamburger_catsup.png,block_hamburger_catsup_glow.png
+2,2,cheese,7,block_hamburger_cheese.png,block_hamburger_cheese_glow.png
+3,3,chicken,3,block_hamburger_chicken.png,block_hamburger_chicken_glow.png
+4,4,ham,0,block_hamburger_ham.png,block_hamburger_ham_glow.png
+5,5,onion,9,block_hamburger_onion.png,block_hamburger_onion_glow.png
+6,6,potato,3,block_hamburger_potato.png,block_hamburger_potato_glow.png
+7,7,tomato,9,block_hamburger_tomato.png,block_hamburger_tomato_glow.png
+8,8,vegetables,1,block_hamburger_vegetables.png,block_hamburger_vegetables_glow.png

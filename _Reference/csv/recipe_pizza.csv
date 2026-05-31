@@ -1,0 +1,20 @@
+fileformat,1,,,,,,,,,,,,,,,,,,,,
+resource_type,recipe,,,,,,,,,,,,,,,,,,,,
+resource_ver,1,,,,,,,,,,,,,,,,,,,,
+resource_id,recipe_pizza,,,,,,,,,,,,,,,,,,,,
+순번,아이디,태그,속성,출현스테이지,누적블럭수,메인재료,재료갯수,재료,결과이미지,위치 포인터,판매가격,구입가격,구입가격,크레이지가중치,먹고나서하트증가(1=반개),쟁반유무,크기,한글이름,영어이름,한글설명,영어설명
+no,id,tag,attribute,show_stage,block_count,main_material,material_count,material,resultimage,anchorpoint,selling_price,purchase_gold,purchase_delly,crazy_mux,heart_plus,dish,scale,name_kor,name_eng,explain_kor,explain_eng
+0,54,cheese,default,0,2,cheese,2,"cheese,3,tomato,3,",recipe_pizza_chesse.png,"0.5,0.5,",160,0,0,100,0,no,0.9,치즈피자,cheesekimbob,치즈가 듬뿍! 치즈만! 듬뿍,NULL
+1,55,pepperoni,default,0,3,pepperoni,3,"cheese,3,tomato,3,salami,3,",recipe_pizza_pepperoni.png,"0.5,0.5,",200,0,0,100,0,no,0.9,페퍼로니피자,cheesekimbob,페퍼로니를 넣은 짭짤한 피자,NULL
+2,56,barbecue,default,0,6,barbecue,3,"meat,3,pepper,3,mushroom,3,",recipe_pizza_barbecue.png,"0.5,0.5,",250,0,0,100,0,no,0.9,불고기피자,cheesekimbob,불고기가 가미된 한국식 퓨전피자,NULL
+3,57,hawaian,default,0,7,hawaian,2,"pineapple,6,cheese,5,",recipe_pizza_hawaian.png,"0.5,0.5,",280,0,0,100,0,no,0.8,하와이안피자,cheesekimbob,파인애플이 들어간 이국적인 피자,NULL
+4,58,vagetable,default,0,8,vagetable,4,"tomato,4,mushroom,4,olive,4,",recipe_pizza_vagetable.png,"0.5,0.5,",330,0,0,100,0,no,0.9,야채피자,cheesekimbob,야채와 치즈의 깔끔한 조화,NULL
+5,59,shrimp,4,4,9,shrimp,4,"shrimp,3,olive,3,pepper,3,mushroom,3,",recipe_pizza_shrimp.png,"0.5,0.5,",430,9000,0,150,1,no,0.9,쉬림프피자,cheesekimbob,씹으면 새우살이 탱글탱글~,NULL
+6,60,hawaian_delight,7,7,9,hawaian,4,"pineapple,5,cheese,3,salami,5,mushroom,3,",recipe_pizza_hawaian_delight.png,"0.5,0.5,",500,12000,0,180,2,no,0.9,하와이안 딜라이트,cheesekimbob,하와이안보다 조금 더 푸짐한 피자,NULL
+7,61,super_supreme,10,10,9,super supreme,4,"meat,5,mushroom,5,pineapple,3,pepper,3,",recipe_pizza_super supreme.png,"0.5,0.5,",550,14000,0,200,1,no,0.9,슈퍼슈프림 피자,cheesekimbob,갖은재료가 들어간 영양만점 피자,NULL
+8,62,combination,13,13,9,combination,5,"pepper,3,mushroom,3,olive,3,salami,5,tomato,5,",recipe_pizza_combination.png,"0.5,0.5,",600,15000,0,210,1,no,0.9,콤비네이션 피자,cheesekimbob,강렬한 맛의 토핑이 듬뿍 들어간 풍미만점 피자,NULL
+9,63,deluxe,16,16,9,deluxe,5,"meat,5,salami,5,olive,3,mushroom,3,pepper,3,",recipe_pizza_deluxe.png,"0.5,0.5,",650,16000,0,220,1,no,0.9,디럭스 피자,cheesekimbob,고기가 듬뿍 든 고단백 피자,NULL
+10,64,barbecue_double_cheese,19,19,9,barbecue,5,"meat,5,pepper,4,mushroom,3,cheese,5,tomato,3,",recipe_pizza_barbecue_doble_cheese.png,"0.5,0.5,",700,18000,0,230,1,no,0.9,불고기 더블치즈,cheesekimbob,불고기와 치즈가 듬뿍. 하프앤 하프 피자,NULL
+11,65,shrimp_combination,22,22,9,shrimp,6,"shrimp,5,olive,3,pepper,3,mushroom,3,salami,3,tomato,5,",recipe_pizza_shrimp_combination.png,"0.5,0.5,",800,19000,0,240,1,no,0.9,쉬림프 콤비네이션,cheesekimbob,쉬림프와 콤비네이션. 하프앤하프 피자,NULL
+12,66,hawaian_deluxe,26,26,9,hawaian,7,"meat,3,salami,5,olive,3,mushroom,3,pepper,3,pineapple,5,cheese,3,",recipe_pizza_hawaian_deluxe.png,"0.5,0.5,",900,20000,0,250,2,no,0.9,하와이안 디럭스 피자,cheesekimbob,하와이안과 디럭스. 하프앤하프 피자,NULL
+13,67,shrimp_deluxe,secret,20,9,shrimp,6,"shrimp,5,meat,4,pepper,3,mushroom,3,cheese,4,olive,3,",recipe_pizza_shrimp_deluxe.png,"0.5,0.5,",1100,0,13,260,4,no,0.9,쉬림프 디럭스 피자,cheesekimbob,쉬림프 피자의 끝판왕! 새우가 탱글탱글!,NULL

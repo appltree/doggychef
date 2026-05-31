@@ -1,0 +1,8 @@
+fileformat,1,,,,,,,,,
+resource_type,staff,,,,,,,,,
+resource_ver,1,,,,,,,,,
+resource_id,staff_00,,,,,,,,,
+순번,태그,명칭,설명,이미지,글로우,구입비(델리),구입비(골드),링크,조건,조건설명
+no,tag,name,explain,image,image_glow,buy_delly,buy_gold,link,conditon,condition_explain
+0,staff1,꼼꼼한 푸들 캐셔,계산과 서빙을 도와줘요.,staff_ui_cashier.png,staff_ui_cashier_lock.png,0,0,staff1.txt,boonsik_6,분식점 6스테이지의 퀘스트를 완료해야 고용할 수 있어요.
+1,staff2,푸들 동생 말티푸,계산과 손님 달래기를 도와줘요.,staff_ui_candy.png,staff_ui_candy_lock.png,0,25000,staff2.txt,pizza,피자집을 오픈해야 고용할 수 있어요.

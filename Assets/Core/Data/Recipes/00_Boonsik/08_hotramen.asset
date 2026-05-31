@@ -18,12 +18,17 @@ MonoBehaviour:
   Description: "\uCCAD\uC591\uACE0\uCD94\uB97C \uC1A1\uC1A1 \uC370\uC5B4 \uB123\uC5B4
     \uAD6D\uBB3C\uC774 \uC5BC\uD070\uD574\uC694~"
   ResultSprite: {fileID: 21300000, guid: 09b21c086ef1ac94aab4f27514018f58, type: 3}
+  DisplayScale: 1
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 1
   ExclusiveStageNumber: 17
   PurchasePrice: 10000
   SpecialPrice: 0
   SellPrice: 250
   Ingredients:
   - MaterialGem: {fileID: 11400000, guid: 8cfec0c1f58a1594da10eb1fdba1438d, type: 2}
-    Count: 3
+    Count: 4
+    IsMainIngredient: 1
   - MaterialGem: {fileID: 11400000, guid: a1bc411978f1fd5489b09567346cb830, type: 2}
     Count: 4
+    IsMainIngredient: 0

@@ -1,0 +1,105 @@
+fileformat,1,,,절대순서 바뀌면 안된다.,,,,,,,,,,,
+resource_type,costume,,,no는 단순 순번이 아니라 코스튬 메인 ID이다.,,,,,,,,,,,
+resource_ver,1,,,id는 서브 아이디 이다.,,,,,,,,,,,
+resource_id,costume_00,,,,,,,,,,,,,,
+순번,아이디,그룹태그,태그,정보,결과이미지,썩는것방지(%),하트속도(%),팁증가(%),어는것방지(%),쿨링타임감속(%),능력,잠김,구입가격(골드),구입가격(델리),한글이름
+no,id,group_tag,tag,info,resultimage,function_decay,function_heart,function_tip,function_ice,function_cooling,function_shop,lock_condition,purchase_price_gold,purchase_price_delly,name_kor
+0,1,set,set_01,"hat_05,scarf_01,cloth_01,apron_01,",costume_set_01.png,0,0,30,0,0,boonsik,"NULL,",20000,0,부자되세요 세트
+1,2,set,set_02,"hat_06,scarf_03,cloth_03,apron_02,",costume_set_02.png,0,5,0,0,0,NULL,"NULL,",6000,0,동정팔이 세트
+2,3,set,set_03,"hat_07,scarf_04,cloth_04,apron_03,",costume_set_03.png,20,0,0,0,0,NULL,"NULL,",40000,0,요리왕 세트
+3,4,set,set_04,"hat_08,scarf_05,cloth_05,",costume_set_04.png,0,15,0,0,0,NULL,"NULL,",30000,0,삐리삐롱 나잇 세트
+4,5,set,set_05,"hat_09,scarf_06,cloth_06,apron_04,",costume_set_05.png,0,0,30,0,0,hamburger,"hamburger,",0,30,개시켜 알바 세트
+5,6,set,set_06,"hat_10,cloth_07,apron_05,",costume_set_06.png,0,0,30,0,0,coffee,"coffee,",0,40,개드리퍼 세트
+6,7,set,set_07,"hat_12,scarf_08,apron_10,cloth_09,",costume_set_07.png,30,0,0,30,0,NULL,"NULL,",0,60,개리포터 세트
+7,8,set,set_08,"hat_13,apron_06,cloth_10,scarf_09,",costume_set_08.png,0,0,0,40,0,NULL,"NULL,",0,40,쌈바쌈바 핫!챠! 세트
+8,9,set,set_09,"hat_14,apron_07,cloth_11,",costume_set_09.png,0,30,0,0,0,NULL,"NULL,",0,60,영의정개 삼년 세트
+9,10,set,set_10,"hat_11,cloth_08,scarf_07,",costume_set_10.png,0,10,30,0,0,NULL,"gold,100000,",60000,0,미국졸부 세트
+10,11,set,set_11,"hat_15,apron_08,cloth_12,scarf_10,",costume_set_11.png,0,0,30,0,15,NULL,"crazy,",0,50,핫서머 셋트
+11,12,set,set_12,"hat_16,apron_09,cloth_13,scarf_11,",costume_set_12.png,0,30,60,0,30,NULL,"roulette,hat_16,",0,80,히어로 세트
+62,13,set,set_13,"hat_17,apron_11,cloth_14,scarf_12,",costume_set_13.png,0,20,0,30,0,NULL,"limit_santa,",70000,0,산타할아버지 세트
+67,14,set,set_14,"hat_18,apron_12,cloth_15,scarf_13,",costume_set_14.png,10,0,30,0,0,china,"china,",0,35,강시 세트
+72,15,set,set_15,"hat_19,apron_13,cloth_16,",costume_set_15.png,0,20,0,0,20,NULL,"NULL,",100000,0,강도령 세트
+76,16,set,set_16,"hat_20,apron_14,cloth_17,scarf_14,",costume_set_16.png,20,0,20,0,0,NULL,"limit_invite,",0,0,이모 여기요 세트
+81,17,set,set_17,"hat_21,apron_15,cloth_18,scarf_15,",costume_set_17.png,10,30,0,10,0,NULL,"limit_cupid,",0,70,큐피드 세트
+86,18,set,set_18,"hat_22,cloth_19,scarf_16,",costume_set_18.png,15,0,0,15,0,NULL,"NULL,",80000,0,범생이 세트
+90,19,set,set_19,"hat_23,apron_16,cloth_20,scarf_17,",costume_set_19.png,0,15,30,0,0,pizza,"pizza,",0,40,유러피안 세트
+95,20,set,set_20,"hat_24,apron_17,cloth_21,",costume_set_20.png,0,15,30,0,0,korean,"korean,",0,40,장금이 세트
+12,1,apron,apron_01,"01,",costume_apron_01.png,0,0,7,0,0,boonsik,"NULL,",5500,0,평범한 앞치마
+13,2,apron,apron_02,"02,",costume_apron_02.png,0,1,0,0,0,NULL,"NULL,",1800,0,급한대로 앞치마
+14,3,apron,apron_03,"03,",costume_apron_03.png,4,0,0,0,0,NULL,"NULL,",10500,0,파티쉐 앞치마
+15,4,apron,apron_04,"04,",costume_apron_04.png,0,0,7,0,0,hamburger,"hamburger,",0,8,버거왕 앞치마
+16,5,apron,apron_05,"05,",costume_apron_05.png,0,0,9,0,0,coffee,"coffee,",0,14,바리스타 앞치마
+17,10,apron,apron_10,"10,",costume_apron_10.png,7,0,0,7,0,NULL,"NULL,",0,29,개리포터 밸트
+18,6,apron,apron_06,"06,",costume_apron_06.png,0,0,0,9,0,NULL,"NULL,",0,11,정열의 벨트
+19,7,apron,apron_07,"07,",costume_apron_07.png,0,9,0,0,0,NULL,"NULL,",0,21,영의정 벨트
+20,8,apron,apron_08,"08,",costume_apron_08.png,0,0,9,0,0,NULL,"crazy,",35000,0,오리튜브
+21,9,apron,apron_09,"09,",costume_apron_09.png,0,9,18,0,0,NULL,"roulette,hat_16,",0,29,히어로 벨트
+63,11,apron,apron_11,"11,",costume_apron_11.png,0,4,0,7,0,NULL,"limit_santa,",20000,0,터질듯한 벨트
+68,12,apron,apron_12,"12,",costume_apron_12.png,2,0,7,0,0,china,"china,",0,10,앉아 쉬지 못하는 벨트
+73,13,apron,apron_13,"13,",costume_apron_13.png,0,6,0,0,6,NULL,"NULL,",35000,0,소중한 세뱃돈 주머니
+77,14,apron,apron_14,"14,",costume_apron_14.png,4,0,4,0,0,NULL,"limit_invite,",0,0,이모의 전재산
+82,15,apron,apron_15,"15,",costume_apron_15.png,2,4,0,2,0,NULL,"limit_cupid,",0,19,고급 실크 거적데기
+91,16,apron,apron_16,"16,",costume_apron_16.png,0,3,7,0,0,pizza,"pizza,",0,8,하이패션 앞치마
+96,17,apron,apron_17,"17,",costume_apron_17.png,0,3,7,0,0,korean,"korean,",0,8,장금이 앞치마
+22,1,cloth,cloth_01,"01,not_neck,",costume_cloth_01.png,0,0,7,0,0,boonsik,"NULL,",5500,0,아쉬운대로 옷
+23,2,cloth,cloth_02,"02,not_neck,",costume_cloth_02.png,0,2,0,0,0,NULL,"NULL,",8000,0,세보이는 옷
+24,3,cloth,cloth_03,"03,not_neck,",costume_cloth_03.png,0,1,0,0,0,NULL,"NULL,",1800,0,어제 입고 잔 옷
+25,4,cloth,cloth_04,"04,not_neck,",costume_cloth_04.png,4,0,0,0,0,NULL,"NULL,",10500,0,요리잘해보이는 옷
+26,5,cloth,cloth_05,"05,not_neck,",costume_cloth_05.png,0,4,0,0,0,NULL,"NULL,",11000,0,피버투나잇 추리닝
+27,6,cloth,cloth_06,"06,neck,",costume_cloth_06.png,0,0,7,0,0,hamburger,"hamburger,",0,8,버거알바 옷
+28,7,cloth,cloth_07,"07,neck,",costume_cloth_07.png,0,0,9,0,0,coffee,"coffee,",0,14,바리스타 옷
+29,8,cloth,cloth_08,"08,neck,",costume_cloth_08.png,0,3,9,0,0,NULL,"gold,100000,",21000,0,미국졸부 옷
+30,9,cloth,cloth_09,"09,not_neck,",costume_cloth_09.png,7,0,0,7,0,NULL,"NULL,",0,16,마법사 옷
+31,10,cloth,cloth_10,"10,not_neck,doggy_cafe_10.png,",costume_cloth_10.png,0,0,0,9,0,NULL,"NULL,",0,11,앗더워 옷
+32,11,cloth,cloth_11,"11,not_neck,",costume_cloth_11.png,0,9,0,0,0,NULL,"NULL,",0,21,영의정 옷
+33,12,cloth,cloth_12,"12,not_neck,",costume_cloth_12.png,0,0,9,0,0,NULL,"crazy,",35000,0,핫서머 옷
+34,13,cloth,cloth_13,"13,not_neck,",costume_cloth_13.png,0,9,18,0,0,NULL,"roulette,hat_16,",0,29,히어로 쫄쫄이
+64,14,cloth,cloth_14,"14,not_neck,",costume_cloth_14.png,0,4,0,7,0,NULL,"limit_santa,",20000,0,전신 빨강 옷
+69,15,cloth,cloth_15,"15,not_neck,",costume_cloth_15.png,2,0,7,0,0,china,"china,",0,10,속세를 떠도는 옷
+74,16,cloth,cloth_16,"16,not_neck,",costume_cloth_16.png,0,6,0,0,6,NULL,"NULL,",35000,0,강도령 설빔
+78,17,cloth,cloth_17,"17,not_neck,",costume_cloth_17.png,4,0,4,0,0,NULL,"limit_invite,",0,0,이모만의 스타일
+83,18,cloth,cloth_18,"18,not_neck,",costume_cloth_18.png,2,4,0,2,0,NULL,"limit_cupid,",0,19,변태아냐 신이야
+87,19,cloth,cloth_19,"19,neck,",costume_cloth_19.png,4,0,0,4,0,NULL,"NULL,",28000,0,졸업때까지 큰 교복
+92,20,cloth,cloth_20,"20,not_neck,",costume_cloth_20.png,0,3,7,0,0,pizza,"pizza,",0,10,나풀거리는 옷
+97,21,cloth,cloth_21,"21,not_neck,",costume_cloth_21.png,0,3,7,0,0,korean,"korean,",0,10,장금이 옷
+35,1,hat,hat_01,"01,",costume_hat_01.png,0,2,0,0,0,NULL,"NULL,",4000,0,두통에는 머리띠
+36,2,hat,hat_02,"02,",costume_hat_02.png,0,2,0,0,0,NULL,"NULL,",8000,0,해골 귀걸이
+37,3,hat,hat_03,"03,",costume_hat_03.png,0,0,0,2,0,NULL,"NULL,",6000,0,빨간안경을써요
+38,4,hat,hat_04,"04,",costume_hat_04.png,2,0,0,0,0,NULL,"NULL,",8000,0,블X클럽
+39,5,hat,hat_05,"05,",costume_hat_05.png,0,0,7,0,0,boonsik,"NULL,",5500,0,실용적인 두건
+40,6,hat,hat_06,"06,",costume_hat_06.png,0,1,0,0,0,NULL,"NULL,",1800,0,불쌍해 보이는 냄비
+41,7,hat,hat_07,"07,",costume_hat_07.png,4,0,0,0,0,NULL,"NULL,",10500,0,요리사의 자존심
+42,8,hat,hat_08,"08,",costume_hat_08.png,0,4,0,0,0,NULL,"NULL,",11000,0,히릿 가발 세트
+43,9,hat,hat_09,"09,",costume_hat_09.png,0,0,7,0,0,hamburger,"hamburger,",0,8,버거알바모자
+44,10,hat,hat_10,"10,",costume_hat_10.png,0,0,9,0,0,coffee,"coffee,",0,14,바리스타 모자
+45,11,hat,hat_11,"11,",costume_hat_11.png,0,3,9,0,0,NULL,"gold,100000,",21000,0,카우보이 모자
+46,12,hat,hat_12,"12,",costume_hat_12.png,7,0,0,7,0,NULL,"NULL,",0,16,마법사 모자
+47,13,hat,hat_13,"13,",costume_hat_13.png,0,0,0,9,0,NULL,"NULL,",0,11,앗더워 왕관
+48,14,hat,hat_14,"14,",costume_hat_14.png,0,9,0,0,0,NULL,"NULL,",0,21,영의정 모자
+49,15,hat,hat_15,"15,",costume_hat_15.png,0,0,0,0,15,NULL,"crazy,",0,25,핫서머 물안경
+50,16,hat,hat_16,"16,",costume_hat_16.png,0,0,0,0,30,NULL,"roulette,hat_16,",0,29,히어로 복면
+65,17,hat,hat_17,"17,",costume_hat_17.png,0,4,0,7,0,NULL,"limit_santa,",20000,0,깜찍 산타 모자
+70,18,hat,hat_18,"18,",costume_hat_18.png,2,0,7,0,0,china,"china,",0,10,고양이 부적 모자
+75,19,hat,hat_19,"19,",costume_hat_19.png,0,6,0,0,6,NULL,"NULL,",35000,0,도령모자
+79,20,hat,hat_20,"20,",costume_hat_20.png,4,0,4,0,0,NULL,"limit_invite,",0,0,안풀리는 파마머리
+84,21,hat,hat_21,"21,",costume_hat_21.png,2,4,0,2,0,NULL,"limit_cupid,",0,19,곱슬곱슬 천연파마
+88,22,hat,hat_22,"22,",costume_hat_22.png,4,0,0,4,0,NULL,"NULL,",28000,0,교문 프리패스 머리
+93,23,hat,hat_23,"23,",costume_hat_23.png,0,3,7,0,0,pizza,"pizza,",0,14,삘 충만한 빠리지앵
+98,24,hat,hat_24,"24,",costume_hat_24.png,0,3,7,0,0,korean,"korean,",0,14,장금이 모자
+51,1,scarf,scarf_01,"01,",costume_scarf_01.png,0,0,7,0,0,boonsik,"NULL,",5500,0,바둑무늬 스카프
+52,2,scarf,scarf_02,"02,",costume_scarf_02.png,0,2,0,0,0,NULL,"NULL,",12000,0,세보이는 목걸이
+53,3,scarf,scarf_03,"03,",costume_scarf_03.png,0,1,0,0,0,NULL,"NULL,",1800,0,흰둥이네 돌잔치 수건
+54,4,scarf,scarf_04,"04,",costume_scarf_04.png,4,0,0,0,0,NULL,"NULL,",10500,0,파티쉐 스카프
+55,5,scarf,scarf_05,"05,",costume_scarf_05.png,0,4,0,0,0,NULL,"NULL,",11000,0,현란한 스카프
+56,6,scarf,scarf_06,"06,",costume_scarf_06.png,0,0,7,0,0,hamburger,"hamburger,",0,8,수수한 넥타이
+57,7,scarf,scarf_07,"07,",costume_scarf_07.png,0,3,9,0,0,NULL,"gold,100000,",21000,0,멋부린 넥타이
+58,8,scarf,scarf_08,"08,doggy_cafe_09.png,",costume_scarf_08.png,7,0,0,7,0,NULL,"NULL,",0,16,마법사 망토
+59,9,scarf,scarf_09,"09,",costume_scarf_09.png,0,0,0,9,0,NULL,"NULL,",0,11,앗더워 목걸이
+60,10,scarf,scarf_10,"10,",costume_scarf_10.png,0,0,9,0,0,NULL,"crazy,",35000,0,핫서머 쿨스카프
+61,11,scarf,scarf_11,"11,doggy_cafe_13.png,",costume_scarf_11.png,0,9,18,0,0,NULL,"roulette,hat_16,",0,29,히어로 망토
+66,12,scarf,scarf_12,"12,",costume_scarf_12.png,0,4,0,7,0,NULL,"limit_santa,",20000,0,변장 수염 세트
+71,13,scarf,scarf_13,"13,",costume_scarf_13.png,2,0,7,0,0,china,"china,",0,10,강시 봉인 목걸이
+80,14,scarf,scarf_14,"14,",costume_scarf_14.png,4,0,4,0,0,NULL,"limit_invite,",0,0,이모의 자존심
+85,15,scarf,scarf_15,"15,",costume_scarf_15.png,2,4,0,0,0,NULL,"limit_cupid,",0,19,큐피드 날개
+89,16,scarf,scarf_16,"16,",costume_scarf_16.png,4,0,0,4,0,NULL,"NULL,",28000,0,꼭 죄는 넥타이
+94,17,scarf,scarf_17,"17,",costume_scarf_17.png,0,3,7,0,0,pizza,"pizza,",0,8,광렬한 생크림 카라

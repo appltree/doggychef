@@ -1,0 +1,104 @@
+fileformat,1,,,,,
+resource_type,sound,,,,,
+resource_ver,1,,,,,
+resource_id,sound_00,,,,,"이펙트34개 계약했는데, 30개 밖에 없음"
+순번,아이디,타입(effect/bgm),,파일명,설명 및 의견,외주 사운드 파일명
+no,id,type,tag,filename,explain,
+0,0,bgm,"YtLibSndBGM_Game_0,","""snd_bgm_game_0.mp3"",",,
+1,1,bgm,"YtLibSndBGM_Game_1,","""snd_bgm_game_1.mp3"",",,
+2,2,bgm,"YtLibSndBGM_Game_2,","""snd_bgm_game_2.mp3"",",,
+3,3,bgm,"YtLibSndBGM_Title,","""snd_bgm_title.mp3"",",너무 짧은 것 같음,
+4,4,bgm,"YtLibSndBGM_Menu,","""snd_bgm_menu.mp3"",",,
+5,5,bgm,"YtLibSndBGM_Story,","""snd_bgm_story.mp3"",",,
+,0,,"YtLibSndEff_BLOCK_00,","""snd_eff_01.mp3"",",,고기굽기1
+,1,,"YtLibSndEff_BLOCK_01,","""snd_eff_02.mp3"",",,야채1
+,2,,"YtLibSndEff_BLOCK_02,","""snd_eff_03.mp3"",",,물끓는소리 2
+,3,,"YtLibSndEff_BLOCK_03,","""snd_eff_04.mp3"",",,튀기는소리
+,4,,"YtLibSndEff_BLOCK_04,","""snd_eff_05.mp3"",",,얼음1
+,5,,"YtLibSndEff_BLOCK_05,","""snd_eff_06.mp3"",",,커피원두 소리 1
+,6,,"YtLibSndEff_BLOCK_06,","""snd_eff_07.mp3"",",,소스소리 3
+,7,,"YtLibSndEff_BLOCK_07,","""snd_eff_08.mp3"",",,봉지소리 2
+,8,,"YtLibSndEff_BLOCK_08,","""snd_eff_95.mp3"",",물따르는 소리,
+,9,,"YtLibSndEff_BLOCK_09,","""snd_eff_96.mp3"",",도마소리(통통통써는),
+,10,,"YtLibSndEff_BLOCK_10,","""snd_eff_97.mp3"",",바삭 혹은 콰작 하고 깨지는소리,
+,,,"YtLibSndEff_BLOCK_11,","""snd_eff_106.mp3"",",밥,
+,,,"YtLibSndEff_BLOCK_12,","""snd_eff_107.mp3"",",수타,
+,,,"YtLibSndEff_BLOCK_13,","""snd_eff_108.mp3"",","고기, 춘장,새우",
+,,,"YtLibSndEff_BLOCK_14,","""snd_eff_113.mp3"",","게 지글지글 굽는소리-새우,옥수수",
+,,,"YtLibSndEff_BLOCK_15,","""snd_eff_114.mp3"",","캔따는소리-올리브,파인애플",
+,,,"YtLibSndEff_BLOCK_16,","""snd_eff_115.mp3"",","소고기,돼지고기-고기굽는소리",
+,,,"YtLibSndEff_BLOCK_17,","""snd_eff_116.mp3"",","쌈야채,콩나물-야채씻기",
+,,,"YtLibSndEff_BLOCK_18,","""snd_eff_118.mp3"",",없음 -사용처없음,
+,,,"YtLibSndEff_BLOCK_BOILED,","""snd_eff_119.mp3"",",,
+,,,"YtLibSndEff_APPEAR_SPECIAL_BLOCK,        // 특수 블럭 출현","""snd_eff_09.mp3"",","크로스아이템 뿐만이 아니라 사탕,MSG,후광아이템나올때도 이것으로 적용함",크로스 아이템 생성
+,,,"YtLibSndEff_BLOCK_CLOSS,                 // 크로스 아이템","""snd_eff_10.mp3"",",09번(크로스아이템생성)과 소리가 너무 비슷한것 아닌가?,크로스 아이템 소멸
+,,,"YtLibSndEff_BLOCK_DECAY,                // 썩는 아이템 생성","""snd_eff_13.mp3"",",,썩는아이템 생성 1
+,,,"YtLibSndEff_BLOCK_DECAY_DESTROY,        // 썩는 아이템 소멸","""snd_eff_14.mp3"",",,썩는 아이템 소멸 2
+,,,"YtLibSndEff_FOOD_MSG,                   // MSG","""snd_eff_15.mp3"",",,msg 사용 2
+,,,"YtLibSndEff_CANDY,                      // 캔디","""snd_eff_16.mp3"",",,사탕사용 2
+,,,"YtLibSndEff_BLOCK_HINT,                 // 힌트","""snd_eff_17.mp3"",",,돋보기 사용
+,,,"YtLibSndEff_ADDTIME,                 // 시간더하기","""snd_eff_18.mp3"",",,시계 아이템 사용 2
+,,,"YtLibSndEff_REFRESH,                 // 새로고침","""snd_eff_19.mp3"",",,새로고침 아이템 사용 3
+,,,"YtLibSndEff_Quest_Step_Success,       // 미션 단계별 성공","""snd_eff_21.mp3"",",블럭터지는 소리와 너무 비슷하지 않은가?,퀘스트달성 2-2
+,,,"YtLibSndEff_Quest_Success,            // 미션 완전 성공","""snd_eff_22.mp3"",",좀 약함,퀘스트달성 2-1
+,,,"YtLibSndEff_Quest_Failure,            // 미션 실패","""snd_eff_23.mp3"",",,퀘스트 실패 2
+,,,"YtLibSndEff_BUTTON_CLOSE,               // 닫기 버튼","""snd_eff_24.mp3"",",,X버튼1
+,,,"YtLibSndEff_BUTTON_EAT,               // 씹는소리","""snd_eff_25.mp3"",",명호가 준거,개소리
+,,,"YtLibSndEff_CURTAIN_SPREAD,               // 커튼 펼치기","""snd_eff_26.mp3"",",,드르륵1
+,,,"YtLibSndEff_CURTAIN_FOLD,                 // 커튼 접기","""snd_eff_27.mp3"",",,드르륵2
+,,,"YtLibSndEff_WOW,                            // 환호성","""snd_eff_28.mp3"",",,환호성 2
+,,,"YtLibSndEff_FireFlower,                     // 불꽃","""snd_eff_29.mp3"",",혜경이가 준거,폭죽 3
+,,,"YtLibSndEff_Cry,                            // 우는 소리","""snd_eff_30.mp3"",",,실패1
+,,,"YtLibSndEff_ANGRY2,                      // 화내는소리2","""snd_eff_31.mp3"",",,우는소리
+,,," YtLibSndEff_Combo_Normal,               // 5콤보이상","""snd_eff_32.mp3"",",,일반콤보
+,,,"YtLibSndEff_Combo_High,               // 10콤보이상","""snd_eff_33.mp3"",",,10콤보
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,"YtLibSndEff_STAR_PANG0,// 팡1","""snd_eff_60.mp3"",",결과창별1,
+,,,"YtLibSndEff_STAR_PANG1,// 팡2","""snd_eff_61.mp3"",",결과창별2,
+,,,"YtLibSndEff_STAR_PANG2,// 팡3","""snd_eff_62.mp3"",",결과창별3,
+,,,,,,
+,,,,,,
+,,,"YtLibSndEff_BLOCK_MOVE,                 // 움직이는 소리","""snd_eff_70.mp3"",","블럭 움직이는 소리, 뼈다구 휙",
+,,,"YtLibSndEff_BLOCK_MOVEBACK,             // 움직이는 소리 돌아오는 소리","""snd_eff_71.mp3"",",블럭 헛움직여서 다시 돌아오는소리,
+,,,"YtLibSndEff_BLOCK_FIRE,                 // 불 소리","""snd_eff_72.mp3"",",불블럭 터지는 소리,
+,,,"YtLibSndEff_CHARACTER_ENTER,            // 캐릭터 들어 오는 소리","""snd_eff_73.mp3"",",손님이 들어올때 나는소리,
+,,,"YtLibSndEff_MONEY_REGISTER,             // 유저가 돈받는 소리","""snd_eff_74.mp3"",",게이머가 돈 터치했을때 나는 소리,
+,,,"YtLibSndEff_MONEY_REGISTER_BYCHASIER,   // 캐셔가 돈받는 소리","""snd_eff_75.mp3"",",캐셔가 돈받는 소리,
+,,,"YtLibSndEff_SIDE_READY,                 // 사이드 완료","""snd_eff_76.mp3"",",사이드메뉴 완료,<--
+,,,"YtLibSndEff_FOOD_COMPLETE,              // 음식 완성","""snd_eff_77.mp3"",",음식완성,
+,,,"YtLibSndEff_NOTTIME,                    // 시간 촉박","""snd_eff_78.mp3"",",째깎째깍 시간이 모자름(루프됨) 현재 아이폰만 적용됨,
+,,,"YtLibSndEff_TIMEOUT,                    // CLOSE 이벤트","""snd_eff_79.mp3"",",클로즈 이벤트 뜸,
+,,,"YtLibSndEff_CLOSE,                      // 문닫는 소리","""snd_eff_80.mp3"",",문닫는소리(클로즈가 시간바에 붙음),
+,,,"YtLibSndEff_EAT,                        // 먹는소리1","""snd_eff_81.mp3"",",먹는 소리1,
+,,,"YtLibSndEff_EAT2,                       // 먹는소리2","""snd_eff_82.mp3"",",먹는 소리2,
+,,,"YtLibSndEff_ANGRY,                      // 화내는소리","""snd_eff_83.mp3"",",화내는소리,
+,,,"YtLibSndEff_BLOCK_ICE_BREAK,            // 얼음 깨지는소리","""snd_eff_84.mp3"",",얼음블럭 깨지는 소리,
+,,,"YtLibSndEff_THROWBOMB,                  // 폭탄 날라가는 소리","""snd_eff_85.mp3"",",폭탄 날라가는 소리,
+,,,"YtLibSndEff_THROWBOMB_ANDBOMB,          // 폭탄 날라간다음에 터지는 소리","""snd_eff_86.mp3"",",폭탄 날라간다음에 터지는 소리,
+,,,"YtLibSndEff_BLOCK_HALO,                 // 후광 아이템 터지는 소리","""snd_eff_87.mp3"",",후광아이템 터지는 소리,
+,,,"YtLibSndEff_CLICK,                      // 게임중 아이템버튼이나 사이드 눌렀을 때","""snd_eff_88.mp3"",",게임중 아이템 버튼이나 사이드 메뉴 눌렀을때,
+,,,"YtLibSndEff_DOGGY_SHOW,                 // 게임 시작할때 도기 뿅 나오는 소리","""snd_eff_89.mp3"",",게임 시작할때 도기 뿅 나오는 소리,
+,,,"YtLibSndEff_BUTTON_CLICK,               // UI 기본 버튼 눌렀을때","""snd_eff_90.mp3"",",UI 기본 버튼 눌렀을 때,
+,,,"YtLibSndEff_GIVE_SIDE,                  // 싸이드 메뉴 캐릭터에 도착","""snd_eff_91.mp3"",",싸이드 메뉴 캐릭터에 도착,<--
+,,,"YtLibSndEff_POINT_CALC,//점수계산","""snd_eff_92.mp3"",",점수 올라가는 소리,
+,,,"YtLibSndEff_GUM_DROP,//뼈다구 붙었을때","""snd_eff_93.mp3"",",뼈다구 붙었을 때,
+,,,"YtLibSndEff_Goal,//골 일때","""snd_eff_94.mp3"",",골이나 퍼펙트 달성하자 마자 나는 소리,
+,,,"YtLibSndEff_BLOCK_PANG,//블럭 터졌을 때","""snd_eff_98.mp3"",",블럭 터졌을때,
+,,,"YtLibSndEff_GUM_FALL,// 껌떨어지는 소리","""snd_eff_99.mp3"",",뼈다구 떨어지는 소리,
+,,,"YtLibSndEff_BONUS_TIME,//보너스타임","""snd_eff_100.mp3"",",보너스타임,
+,,,"YtLibSndEff_AWARD_COMPLETE,// awards 달성 ","""snd_eff_101.mp3"",",awards 달성,
+,,,"YtLibSndEff_AWARD_DOJANG,// 도장받을 때","""snd_eff_102.mp3"",",awards 도장 받을 때,
+,,,"YtLibSndEff_AWARD_SHOWPICTURE,//사진 출현할때","""snd_eff_103.mp3"",",사진 출현할때,
+,,,"YtLibSndEff_ROULLETTE_RUN,//룰렛 돌리기","""snd_eff_104.mp3"",",룰렛 돌리기,
+,,,"YtLibSndEff_ROULLETTE_STOP,//룰렛 멈추기","""snd_eff_105.mp3"",",룰렛 멈추기,
+,,,,"""snd_eff_109.mp3"",",배달,
+,,,,"""snd_eff_110.mp3"",",철가방,
+,,,,"""snd_eff_111.mp3"",",전화소리,
+,,,,"""snd_eff_112.mp3"",",전화받는소리,
+,,,,"""snd_eff_117.mp3"",",노끈 풀리는 소리,

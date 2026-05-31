@@ -1,0 +1,15 @@
+fileformat,1,,,,
+resource_type,block,,,,
+resource_ver,1,,,,
+resource_id,block_coffee,,,,
+순번,블럭아이디,태그,사운드아이디,블록기본이미지,글로우이미지
+no,id,tag,sound_id,image,image_glow
+0,0,cake,7,block_coffee_cake.png,block_coffee_cake_glow.png
+1,1,choco,10,block_coffee_choco.png,block_coffee_choco_glow.png
+2,2,straw,9,block_coffee_straw.png,block_coffee_straw_glow.png
+3,3,coffeebean,5,block_coffee_coffeebean.png,block_coffee_coffeebean_glow.png
+4,4,cream,6,block_coffee_cream.png,block_coffee_cream_glow.png
+5,5,ice,4,block_coffee_ice.png,block_coffee_ice_glow.png
+6,6,milk,8,block_coffee_milk.png,block_coffee_milk_glow.png
+7,7,muffine,7,block_coffee_muffine.png,block_coffee_muffine_glow.png
+8,8,syrup,6,block_coffee_syrup.png,block_coffee_syrup_glow.png

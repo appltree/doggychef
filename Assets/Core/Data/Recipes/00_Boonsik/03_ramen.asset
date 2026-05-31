@@ -18,10 +18,14 @@ MonoBehaviour:
   Description: "\uD30C\uC1A1\uC1A1 \uACC4\uB780\uD0C1 \uC62C\uB9AC\uBA74 \uC644\uC131\uB418\uB294
     \uAE30\uBCF8\uB77C\uBA74"
   ResultSprite: {fileID: 2323467798448575245, guid: 1507d82b5dbecf8459c53601d2e65dba, type: 3}
-  ExclusiveStageNumber: 1
+  DisplayScale: 1
+  RequiresTray: 1
+  AdditionalHeartIncreaseAfterEat: 0
+  ExclusiveStageNumber: 0
   PurchasePrice: 0
   SpecialPrice: 0
   SellPrice: 100
   Ingredients:
   - MaterialGem: {fileID: 11400000, guid: 8cfec0c1f58a1594da10eb1fdba1438d, type: 2}
     Count: 4
+    IsMainIngredient: 1

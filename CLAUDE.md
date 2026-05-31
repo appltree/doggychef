@@ -228,6 +228,8 @@ private bool IsOrderSatisfied() { ... }
 - 반환값이 중요한 경우: `// Returns: true=...`
 - Unity lifecycle (Awake/Start/Update 등): 무엇을 초기화·처리하는지 한 줄 설명
 
+**기존 주석 보존 원칙**: 코드를 수정할 때 기존에 있던 주석을 삭제하지 않습니다. 내용이 달라졌다면 주석도 함께 업데이트합니다.
+
 ---
 
 ## 상태 머신 패턴
@@ -508,3 +510,4 @@ var gem = new Gem();    // ← var이므로 full name 필수
 - 중단하지 않는 코루틴의 반환값을 필드에 저장 금지 — `StartCoroutine(Foo())` 그대로 사용
 - **`?.` 연산자는 적극 활용** — 이벤트·delegate·MonoBehaviour 필드 모두 `?.` 사용 (UNT0008은 `.editorconfig`에서 억제)
 - 연속 빈 줄(2줄 이상) 금지 — 메서드 간격은 정확히 1줄
+- 기존 주석 삭제 금지 — 코드 수정 시 기존 주석은 반드시 유지하고, 내용이 달라진 경우에만 주석 내용을 업데이트
